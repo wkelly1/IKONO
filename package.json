@@ -1,0 +1,19 @@
+{
+  "name": "ikono",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "node ./scripts/index.js",
+    "generateWeb": "node ./scripts/generatePNG.js && npm run build"
+  },
+  "author": "",
+  "license": "MIT",
+  "files": [
+    "output"
+  ],
+  "devDependencies": {
+    "sharp": "^0.29.0",
+    "svg-to-jsx": "^1.0.3",
+    "svgo": "^2.5.0"
+  }
+}
