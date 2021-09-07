@@ -19,12 +19,25 @@ const convertCurrentColor = (svg) => {
   return svg;
 };
 
-async function main() {
-  let metaOut = {};
+function openMeta() {
+  // Check meta exists
+
+  const fileExists = fs.existsSync(srcInputLoc + path.sep + "meta.json");
+
+  if (!fileExists) {
+    console.log("Process Failed: meta.json file missing");
+    return;
+  }
 
   // Open Meta file
   const metaRaw = fs.readFileSync(srcInputLoc + path.sep + "meta.json");
-  const meta = JSON.parse(metaRaw);
+  return JSON.parse(metaRaw);
+}
+
+async function main() {
+  let metaOut = {};
+
+  const meta = openMeta();
 
   for (let i = 0; i < Object.keys(meta).length; i++) {
     let key = Object.keys(meta)[i];
@@ -35,6 +48,7 @@ async function main() {
     const fileExists = fs.existsSync(
       srcInputLoc + path.sep + "icons" + path.sep + key + ".svg"
     );
+
     if (!fileExists) {
       console.log("Process Failed: SVG missing for file '" + key + ".svg'");
       return;

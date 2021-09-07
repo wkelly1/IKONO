@@ -4,7 +4,9 @@
   "description": "",
   "scripts": {
     "build": "node ./scripts/index.js",
-    "generateWeb": "node ./scripts/generatePNG.js && npm run build"
+    "generate_web": "node ./scripts/generatePNG.js && npm run build",
+    "build_react": "node ./scripts/build_react.js",
+    "prebuild_react": "npm run build"
   },
   "author": "",
   "license": "MIT",
