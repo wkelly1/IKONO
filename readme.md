@@ -1,1 +1,1 @@
-![IKONO](/ikono/img/bannar.svg)
+![IKONO](/ikono/img/bannar.png)
