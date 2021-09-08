@@ -58,10 +58,12 @@ export default ${snakeToCamel(key)};
     imports.push(snakeToCamel(key));
   }
 
-  let indexjs = imports.map(
-    (value) => `import ${value} from "./icons/${value}";\n`
-  );
-  indexjs += `export { ${imports.join(",")}} ;`;
+  let indexjs =
+    "import React from 'react';\n" +
+    imports
+      .map((value) => `import ${value} from "./icons/${value}";`)
+      .join("\n");
+  indexjs += `\n\nexport { ${imports.join(",")}} ;`;
   fs.writeFile(
     generatesIndexJsLoc + path.sep + "index.js",
     indexjs,
