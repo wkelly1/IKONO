@@ -17,5 +17,10 @@
     "sharp": "^0.29.0",
     "svg-to-jsx": "^1.0.3",
     "svgo": "^2.5.0"
-  }
+  },
+  "tags": [
+    "icons",
+    "svg",
+    "library"
+  ]
 }
