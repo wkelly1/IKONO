@@ -18,7 +18,7 @@
     "svg-to-jsx": "^1.0.3",
     "svgo": "^2.5.0"
   },
-  "tags": [
+  "keywords": [
     "icons",
     "svg",
     "library"
