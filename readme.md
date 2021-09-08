@@ -7,11 +7,13 @@ A large collection of high quality SVG icons with an MIT license
 </p>
 
 <p align="center">
-    <img src="https://github.com/wkelly1/IKONO/blob/main/img/icons.png" alt="icons"/>
+    <a href="https://ikono.will-kelly.co.uk">More at ikono.will-kelly.co.uk</a>
 </p>
 
 <p align="center">
-    <a href="https://ikono.will-kelly.co.uk">See here for a demo</a>
+    <img src="https://github.com/wkelly1/IKONO/blob/main/img/icons.png" alt="icons"/>
 </p>
 
+<small>
 This is a work in progress, icons are being added daily so check back soon
+</small>
