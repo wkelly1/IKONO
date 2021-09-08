@@ -37,6 +37,7 @@ function main() {
   for (let key of Object.keys(meta)) {
     // Generate text for .js file
     const js = `
+    import React from 'react';
 const ${snakeToCamel(key)} = () =>(
     ${meta[key].jsx}
 );
