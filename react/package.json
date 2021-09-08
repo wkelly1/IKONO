@@ -1,7 +1,7 @@
 {
   "name": "@ikono/react",
   "version": "1.1.1",
-  "description": "",
+  "description": "A large collection of high quality SVG icons with an MIT license.",
   "main": "dist/index.js",
   "files": [
     "dist"
