@@ -16,6 +16,28 @@ A large collection of high quality SVG icons with an MIT license
 
 <hr/>
 
-<small>
+# Usage
+
+## React
+
+Install the package via [npm](https://www.npmjs.com/package/@ikono/react)
+
+```
+npm install @ikono/react
+```
+
+Then to use the icon import and insert into jsx.
+
+```jsx
+import { Home } from "@ikono/react";
+
+const Component = () => (
+  <div>
+    <Home />
+  </div>
+);
+```
+
+---
+
 This is a work in progress, icons are being added daily so check back soon
-</small>
