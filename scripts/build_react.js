@@ -65,6 +65,11 @@ export default ${snakeToCamel(key)};
       .map((value) => `import ${value} from "./icons/${value}";`)
       .join("\n");
   indexjs += `\n\nexport { ${imports.join(",")}} ;`;
+
+  if (!fs.existsSync(generatesIconJsLoc)) {
+    fs.mkdirSync(generatesIconJsLoc, { recursive: true });
+  }
+
   fs.writeFile(
     generatesIndexJsLoc + path.sep + "index.js",
     indexjs,

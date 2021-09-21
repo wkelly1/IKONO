@@ -23,7 +23,9 @@ async function main() {
     console.log("Directory already exists.");
   }
 
-  fs.mkdirSync(iconOutputLoc + path.sep + "png");
+  if (!fs.existsSync(iconOutputLoc)) {
+    fs.mkdirSync(iconOutputLoc + path.sep + "png", { recursive: true });
+  }
 
   if (!fs.existsSync(iconOutputLoc + path.sep + "png")) {
     fs.mkdirSync(iconOutputLoc + path.sep + "png");
