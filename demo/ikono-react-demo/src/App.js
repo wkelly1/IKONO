@@ -1,6 +1,14 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { BurgerSimple, Add, DivideStraight } from "@ikono/react";
+import {
+  BurgerSimple,
+  Add,
+  DivideStraight,
+  Cloud,
+  AddCircle,
+  CameraFlip,
+  Exit,
+} from "@ikono/react";
 
 function App() {
   return (
@@ -10,7 +18,7 @@ function App() {
 
         <BurgerSimple />
         <Add />
-        <DivideStraight />
+        <Exit />
       </header>
     </div>
   );

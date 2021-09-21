@@ -91,7 +91,7 @@
   "clock": ["time"],
   "code_tag": ["algorithm", "program", "programming"],
   "exit_text": ["exit", "emergency", "door"],
-  "exit": ["exit", "emergency", "door"],
+  "exit": ["exit", "emergency", "door", "logout"],
   "power": ["on", "off"],
   "dishwasher": ["appliance", "kitchen", "dishes"],
   "washing_machine": ["appliance", "laundry", "cloths"],
@@ -116,10 +116,10 @@
   "save": ["document", "file"],
   "notification_alarm": ["bell", "messages"],
   "key": ["lock", "unlock", "security"],
-  "padlock_outlined": ["lock", "unlock", "security"],
-  "padlock_unlocked_outlined": ["lock", "unlock", "security"],
-  "padlock": ["lock", "unlock", "security"],
-  "padlock_unlocked": ["lock", "unlock", "security"],
+  "padlock_outlined": ["lock", "unlock", "security", "password"],
+  "padlock_unlocked_outlined": ["lock", "unlock", "security", "password"],
+  "padlock": ["lock", "unlock", "security", "password"],
+  "padlock_unlocked": ["lock", "unlock", "security", "password"],
   "lowercase": ["text", "uppercase", "case", "caps"],
   "uppercase": ["text", "lowercase", "case", "caps"],
   "upper_lower": ["text", "lowercase", "case", "caps", "uppercase"],
@@ -176,5 +176,6 @@
   "swap": ["change", "reverse"],
   "swap_vertical": ["change", "reverse"],
   "shield": ["protect", "security"],
-  "add_circle": ["plus", "more", "save", "maths"]
+  "add_circle": ["plus", "more", "save", "maths"],
+  "preferences": ["settings", "options", "filters"]
 }

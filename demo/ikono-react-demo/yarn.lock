@@ -1181,10 +1181,10 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@ikono/react@^1.1.6":
-  "integrity" "sha512-7HwT66+FY09f0gdbjVpjfWjrzHWocZLvHdYmgP9MHZdBmlbtT+ApD/JesLpWQo9Jz4eN6QScd1LPqm7V0dxHIg=="
-  "resolved" "https://registry.npmjs.org/@ikono/react/-/react-1.1.6.tgz"
-  "version" "1.1.6"
+"@ikono/react@^1.2.0":
+  "integrity" "sha512-8SyC2IjNZzso2ckEcvPn+E3pWt6UEcWka/ukGF461wJJniPjCcLnOwEYtJd5tkPgq5H4ZXXjYm0uBHJcrC3U5A=="
+  "resolved" "https://registry.npmjs.org/@ikono/react/-/react-1.2.0.tgz"
+  "version" "1.2.0"
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   "integrity" "sha512-VjeHSlIzpv/NyD3N0YuHfXOPDIixcA1q2ZV98wsMqcYlPmv2n3Yb2lYP9XMElnaFVXg5A7YLTeLu6V84uQDjmQ=="
