@@ -200,6 +200,14 @@ const CopyBtn = (props) => {
 const Icon = (props) => {
   const [showOpts, setShowOpts] = useState(false);
   const [hover, setHover] = useState(false);
+  const [coppied, setCoppied] = useState(false);
+
+  const copyAnimation = () => {
+    setCoppied(true);
+    setTimeout(() => {
+      setCoppied(false);
+    }, 1000);
+  };
 
   return (
     <div
@@ -223,13 +231,26 @@ const Icon = (props) => {
           showOpts || props.selected === props.name || hover
             ? "border-blue-600"
             : "border-blue-200"
-        }  p-2  flex items-center justify-center relative w-full h-28`}
+        }  p-2  flex flex-col items-center justify-center relative w-full h-28`}
         style={{ borderWidth: "3px" }}
         onMouseEnter={() => setShowOpts(true)}
         onMouseLeave={() => setShowOpts(false)}
       >
-        {props.icon}
-        {showOpts && (
+        <motion.div>{props.icon}</motion.div>
+        <AnimatePresence>
+          {coppied && (
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="font-semibold text-xs tracking-tighter text-blue-500"
+            >
+              Copied!
+            </motion.p>
+          )}
+        </AnimatePresence>
+
+        {showOpts && !coppied && (
           <div className="absolute w-full h-full flex flex-col">
             <CopyBtn
               className="mb-1 mt-2"
@@ -237,6 +258,7 @@ const Icon = (props) => {
               onClick={(e) => {
                 navigator.clipboard.writeText(Meta[props.name].svg);
                 e.stopPropagation();
+                copyAnimation();
               }}
             />
 
@@ -246,34 +268,9 @@ const Icon = (props) => {
               onClick={(e) => {
                 navigator.clipboard.writeText(Meta[props.name].jsx);
                 e.stopPropagation();
+                copyAnimation();
               }}
             />
-
-            {/* <div className="hover:bg-opacity-50 bg-blue-600 bg-opacity-30 h-full mx-2 mb-1 mt-2 flex items-center justify-center cursor-pointer">
-              <p
-                className="font-semibold tracking-tighter text-blue-600 text-xs cursor-pointer"
-                href="https://www.will-kelly.co.uk"
-                onClick={(e) => {
-                  navigator.clipboard.writeText(Meta[props.name].svg);
-                  e.stopPropagation();
-                }}
-              >
-                Copy SVG
-              </p>
-            </div> */}
-
-            {/* <div className="hover:bg-opacity-50 bg-blue-600 bg-opacity-30 h-full mx-2 mb-2 mt-1 flex items-center justify-center cursor-pointer">
-              <p
-                className="font-semibold tracking-tighter text-blue-600 text-xs "
-                href="https://www.will-kelly.co.uk"
-                onClick={(e) => {
-                  navigator.clipboard.writeText(Meta[props.name].jsx);
-                  e.stopPropagation();
-                }}
-              >
-                Copy JSX
-              </p>
-            </div> */}
           </div>
         )}
       </div>
