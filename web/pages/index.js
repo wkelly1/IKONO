@@ -185,11 +185,11 @@ const CopyBtn = (props) => {
       className={`hover:bg-opacity-50 bg-blue-600 bg-opacity-30 h-full mx-2 flex items-center justify-center cursor-pointer ${
         props.className || ""
       }`}
+      onClick={props.onClick}
     >
       <p
         className="font-semibold tracking-tighter text-blue-600 text-xs cursor-pointer"
         href="https://www.will-kelly.co.uk"
-        onClick={props.onClick}
       >
         {props.title}
       </p>
