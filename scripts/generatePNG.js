@@ -7,7 +7,9 @@ const path = require("path");
 const sharp = require("sharp");
 
 const srcInputLoc = "." + path.sep + "src";
-const iconOutputLoc = "." + path.sep + "output" + path.sep + "web";
+// const iconOutputLoc = "." + path.sep + "output" + path.sep + "web";
+const iconOutputLoc =
+  "." + path.sep + "web" + path.sep + "public" + path.sep + "icons" + path.sep;
 
 async function main() {
   let metaOut = {};
@@ -15,24 +17,6 @@ async function main() {
   // Open Meta file
   const metaRaw = fs.readFileSync(srcInputLoc + path.sep + "meta.json");
   const meta = JSON.parse(metaRaw);
-
-  if (!fs.existsSync(iconOutputLoc)) {
-    fs.mkdirSync(iconOutputLoc);
-    console.log("- Created web folder");
-  } else {
-    console.log("Directory already exists.");
-  }
-
-  if (!fs.existsSync(iconOutputLoc)) {
-    fs.mkdirSync(iconOutputLoc + path.sep + "png", { recursive: true });
-  }
-
-  if (!fs.existsSync(iconOutputLoc + path.sep + "png")) {
-    fs.mkdirSync(iconOutputLoc + path.sep + "png");
-    console.log("- Created PNG folder");
-  } else {
-    console.log("Directory already exists.");
-  }
 
   for (let i = 0; i < Object.keys(meta).length; i++) {
     let key = Object.keys(meta)[i];

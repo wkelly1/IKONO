@@ -1,8 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const generatedMetaLoc =
-  "." + path.sep + "output" + path.sep + "web" + path.sep + "meta.json";
+const generatedMetaLoc = "." + path.sep + "output" + path.sep + "meta.json";
 const generatesIconJsLoc = "." + path.sep + "react" + path.sep + "icons";
 const generatesIndexJsLoc = "." + path.sep + "react";
 

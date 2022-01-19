@@ -6,7 +6,9 @@
     "build": "node ./scripts/index.js",
     "generate_web": "node ./scripts/generatePNG.js && npm run build",
     "build_react": "node ./scripts/build_react.js",
-    "prebuild_react": "npm run build"
+    "prebuild_react": "npm run build",
+    "prebuild_and_publish": "npm run generate_web && npm run build_react",
+    "build_and_publish": "np minor && cd react && np minor"
   },
   "author": "",
   "license": "MIT",
@@ -14,6 +16,7 @@
     "output"
   ],
   "devDependencies": {
+    "np": "^7.6.0",
     "sharp": "^0.29.0",
     "svg-to-jsx": "^1.0.3",
     "svgo": "^2.5.0"

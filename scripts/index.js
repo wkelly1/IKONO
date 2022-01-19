@@ -7,7 +7,8 @@ const { optimize } = require("svgo");
 const svgtojsx = require("svg-to-jsx");
 
 const iconOutputLoc = "." + path.sep + "output";
-const metaOutputLoc = "." + path.sep + "output" + path.sep + "web" + path.sep;
+const metaOutputLocWeb = "." + path.sep + "web" + path.sep;
+const metaOutputLoc = "." + path.sep + "output" + path.sep;
 const srcInputLoc = "." + path.sep + "src";
 
 const convertCurrentColor = (svg) => {
@@ -27,6 +28,13 @@ function openMeta() {
   if (!fileExists) {
     console.log("Process Failed: meta.json file missing");
     return;
+  }
+
+  if (!fs.existsSync("." + path.sep + "output")) {
+    fs.mkdirSync("." + path.sep + "output");
+    console.log("- Created output folder");
+  } else {
+    console.log("Directory already exists.");
   }
 
   // Open Meta file
@@ -127,6 +135,11 @@ async function main() {
   const metaOutJson = JSON.stringify(out);
   // console.log(metaOutJson);
   fs.writeFile(metaOutputLoc + "meta.json", metaOutJson, "utf-8", (err) => {
+    if (err) {
+      console.log(err);
+    }
+  });
+  fs.writeFile(metaOutputLocWeb + "meta.json", metaOutJson, "utf-8", (err) => {
     if (err) {
       console.log(err);
     }
