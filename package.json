@@ -2,6 +2,7 @@
   "name": "ikono",
   "version": "1.5.0",
   "description": "A large collection of high quality SVG icons with an MIT license",
+  "licence": "MIT",
   "scripts": {
     "build": "node ./scripts/index.js",
     "generate_web": "node ./scripts/generatePNG.js && npm run build",
