@@ -45,7 +45,7 @@ export default ${snakeToCamel(key)};
     `;
 
     fs.writeFile(
-      generatesIconJsLoc + path.sep + snakeToCamel(key) + ".js",
+      generatesIconJsLoc + path.sep + snakeToCamel(key) + ".tsx",
       js,
       "utf-8",
       (err) => {
@@ -70,7 +70,7 @@ export default ${snakeToCamel(key)};
   }
 
   fs.writeFile(
-    generatesIndexJsLoc + path.sep + "index.js",
+    generatesIndexJsLoc + path.sep + "index.ts",
     indexjs,
     "utf-8",
     (err) => {
