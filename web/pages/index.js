@@ -469,10 +469,11 @@ export default function Home({ s, selectedParam }) {
                 >
                   {Object.keys(data).map((icon) => {
                     if (
-                      (searchTerm !== "" && icon.includes(searchTerm)) ||
+                      (searchTerm !== "" &&
+                        icon.includes(searchTerm.toLowerCase())) ||
                       searchTerm === "" ||
                       data[icon].tags.some((value) =>
-                        value.includes(searchTerm)
+                        value.toLowerCase().includes(searchTerm.toLowerCase())
                       )
                     ) {
                       return (
