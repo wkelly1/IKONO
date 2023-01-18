@@ -18,7 +18,6 @@ const IconInfoPanel = (props) => {
         }
       }
     });
-    console.log(out);
     return out;
   };
 
@@ -217,6 +216,7 @@ const Icon = (props) => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={() => {
+        console.log("selecting", props.selecting);
         if (props.selected === "") {
           props.setDialog(true);
           props.setSelected(props.name);
@@ -297,7 +297,7 @@ export default function Home({ s, selectedParam }) {
   const [showDialog, setShowDialog] = useState(selectedParam !== undefined);
   const [data, setData] = useState(Meta);
   const [noShowing, setNoShowing] = useState(Object.keys(Meta).length);
-  const [selected, setSelected] = useState(selectedParam);
+  const [selected, setSelected] = useState(selectedParam || "");
   const [searchTerm, setSearchTerm] = useState(s || "");
   const searchInput = useRef(null);
 
