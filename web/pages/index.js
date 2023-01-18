@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useEffect, useRef, useState } from "react";
 import Meta from "../meta.json";
 import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
+import updateSearchParam from "../lib/updateSearchParam";
 
 const IconInfoPanel = (props) => {
   const findSimilar = (icon) => {
@@ -77,6 +78,7 @@ const IconInfoPanel = (props) => {
                 onClick={() => {
                   props.setDialog(false);
                   props.setSelected("");
+                  updateSearchParam("selected", "");
                 }}
               >
                 <svg
@@ -218,11 +220,14 @@ const Icon = (props) => {
         if (props.selected === "") {
           props.setDialog(true);
           props.setSelected(props.name);
+          updateSearchParam("selected", props.name);
         } else if (props.selected === props.name) {
           props.setDialog(false);
           props.setSelected("");
+          updateSearchParam("selected", "");
         } else {
           props.setSelected(props.name);
+          updateSearchParam("selected", props.name);
         }
       }}
     >
@@ -288,13 +293,21 @@ const Icon = (props) => {
   );
 };
 
-export default function Home() {
-  const [showDialog, setShowDialog] = useState(false);
+export default function Home({ s, selectedParam }) {
+  const [showDialog, setShowDialog] = useState(selectedParam !== undefined);
   const [data, setData] = useState(Meta);
   const [noShowing, setNoShowing] = useState(Object.keys(Meta).length);
-  const [selected, setSelected] = useState("");
-  const [searchTerm, setSearchTerm] = useState("");
+  const [selected, setSelected] = useState(selectedParam);
+  const [searchTerm, setSearchTerm] = useState(s);
   const searchInput = useRef(null);
+
+  // useEffect(() => {
+  //   console.log("load");
+  //   if (router.query) {
+  //     console.log(router.query["s"]);
+  //     setSearchTerm(router.query["s"]);
+  //   }
+  // }, []);
 
   useEffect(() => {
     let no = 0;
@@ -413,7 +426,35 @@ export default function Home() {
                 ref={searchInput}
                 className="ml-3 text-blue-600 placeholder-blue-400 font-semibold border-none outline-none w-full"
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={(e) => {
+                  updateSearchParam("s", e.target.value);
+                  // if ("URLSearchParams" in window) {
+                  //   const searchParams = new URLSearchParams(
+                  //     window.location.search
+                  //   );
+                  //   if (e.target.value.length === 0) {
+                  //     searchParams.delete("s");
+                  //     let newRelativePathQuery;
+                  //     if ([...searchParams.keys()].length === 0) {
+                  //       newRelativePathQuery = window.location.pathname;
+                  //     } else {
+                  //       newRelativePathQuery =
+                  //         window.location.pathname +
+                  //         "?" +
+                  //         searchParams.toString();
+                  //     }
+                  //     history.pushState(null, "", newRelativePathQuery);
+                  //   } else {
+                  //     searchParams.set("s", e.target.value);
+                  //     const newRelativePathQuery =
+                  //       window.location.pathname +
+                  //       "?" +
+                  //       searchParams.toString();
+                  //     history.pushState(null, "", newRelativePathQuery);
+                  //   }
+                  // }
+                  setSearchTerm(e.target.value);
+                }}
               ></input>
               <p className="text-xs font-semibold tracking-tighter pr-2">
                 {noShowing}/{Object.keys(data).length}
@@ -518,3 +559,9 @@ export default function Home() {
     </div>
   );
 }
+
+Home.getInitialProps = async ({ query }) => {
+  const { s, selected } = query;
+
+  return { s, selectedParam: selected };
+};
