@@ -298,7 +298,7 @@ export default function Home({ s, selectedParam }) {
   const [data, setData] = useState(Meta);
   const [noShowing, setNoShowing] = useState(Object.keys(Meta).length);
   const [selected, setSelected] = useState(selectedParam);
-  const [searchTerm, setSearchTerm] = useState(s);
+  const [searchTerm, setSearchTerm] = useState(s || "");
   const searchInput = useRef(null);
 
   // useEffect(() => {
