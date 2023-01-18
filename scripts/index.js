@@ -14,10 +14,24 @@ const srcInputLoc = "." + path.sep + "src";
 const convertCurrentColor = (svg) => {
   const reStroke = /stroke=("|')#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})("|')/g;
   const reFill = /fill=("|')#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})("|')/g;
+
+  // const reStokeLineCap = /stroke-linecap=/g;
+  // const reStrokeWidth = /stroke-width=/g;
+  // const reStrokeLineJoin = /stroke-linejoin=/g;
+  // const reStrokeLineJoin = /stroke-linejoin=/g;
   svg = svg.replaceAll(reStroke, "stroke='currentColor'");
   svg = svg.replaceAll(reFill, "fill='currentColor'");
+  // svg = svg.replaceAll(reStokeLineCap, "strokeLinecap=");
+  // svg = svg.replaceAll(reStrokeWidth, "strokeWidth=");
+  // svg = svg.replaceAll(reStrokeLineJoin, "strokeLineJoin=");
 
   return svg;
+};
+
+const convertToJSX = (svg) => {
+  return svg.replaceAll(/[a-z]*-[a-z]*=/g, (group) =>
+    group[group.indexOf("-") + 1].toUpperCase().replace("-", "")
+  );
 };
 
 function openMeta() {
@@ -100,7 +114,8 @@ async function main() {
 
     let optimizedSvgString = convertCurrentColor(result.data);
     console.log(" - Converting to JSX");
-    const jsx = await svgtojsx(optimizedSvgString);
+    let jsx = await svgtojsx(optimizedSvgString);
+    jsx = convertToJSX(jsx);
 
     console.log(" - Saving file: " + iconOutputLoc + path.sep + key + ".svg");
     console.log(optimizedSvgString);

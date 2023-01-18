@@ -30,6 +30,9 @@ function openMeta() {
 }
 
 function main() {
+  console.log("\n------------------------------");
+  console.log("----Building React Library----");
+
   let imports = [];
 
   const meta = openMeta();
@@ -79,6 +82,8 @@ export default ${snakeToCamel(key)};
       }
     }
   );
+  console.log("------------Done--------------");
+  console.log("------------------------------\n");
 }
 
 main();
