@@ -15,15 +15,8 @@ const convertCurrentColor = (svg) => {
   const reStroke = /stroke=("|')#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})("|')/g;
   const reFill = /fill=("|')#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})("|')/g;
 
-  // const reStokeLineCap = /stroke-linecap=/g;
-  // const reStrokeWidth = /stroke-width=/g;
-  // const reStrokeLineJoin = /stroke-linejoin=/g;
-  // const reStrokeLineJoin = /stroke-linejoin=/g;
   svg = svg.replaceAll(reStroke, "stroke='currentColor'");
   svg = svg.replaceAll(reFill, "fill='currentColor'");
-  // svg = svg.replaceAll(reStokeLineCap, "strokeLinecap=");
-  // svg = svg.replaceAll(reStrokeWidth, "strokeWidth=");
-  // svg = svg.replaceAll(reStrokeLineJoin, "strokeLineJoin=");
 
   return svg;
 };
@@ -56,13 +49,36 @@ function openMeta() {
   return JSON.parse(metaRaw);
 }
 
+function updateMeta(meta) {
+  fs.writeFileSync(
+    srcInputLoc + path.sep + "meta.json",
+    JSON.stringify(meta, null, 2)
+  );
+}
+
 async function main() {
   let metaOut = {};
 
+  let files = fs.readdirSync(srcInputLoc + path.sep + "icons");
+  files = files
+    .filter((file) => path.extname(file).toLowerCase() === ".svg")
+    .map((file) => path.parse(file).name);
+
   const meta = openMeta();
 
-  for (let i = 0; i < Object.keys(meta).length; i++) {
-    let key = Object.keys(meta)[i];
+  // Add any missing values to meta
+  files.forEach((file) => {
+    if (!meta[file]) {
+      console.log(`meta missing key ${file} - adding`);
+      meta[file] = [];
+    }
+  });
+
+  updateMeta(meta);
+
+  for (let i = 0; i < files.length; i++) {
+    // let key = Object.keys(meta)[i];
+    let key = files[i];
 
     console.log("Converting: " + key + ".svg");
     // Check if SVG exists
