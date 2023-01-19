@@ -22,9 +22,14 @@ const convertCurrentColor = (svg) => {
 };
 
 const convertToJSX = (svg) => {
-  return svg.replaceAll(/[a-z]*-[a-z]*=/g, (group) =>
-    group[group.indexOf("-") + 1].toUpperCase().replace("-", "")
-  );
+  return svg.replaceAll(/[a-z]*-[a-z]*=/g, (group) => {
+    let index = group.indexOf("-") + 1;
+    let newString =
+      group.substring(0, index) +
+      group[index].toUpperCase() +
+      group.substring(index + 1);
+    return newString.replace("-", "");
+  });
 };
 
 function openMeta() {
