@@ -1,13 +1,9 @@
 import Head from "next/head";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Meta from "../meta.json";
-import {
-  AnimatePresence,
-  AnimateSharedLayout,
-  LayoutGroup,
-  motion,
-} from "framer-motion";
+import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 import updateSearchParam from "../lib/updateSearchParam";
+import parse from "node-html-parser";
 
 const IconInfoPanel = (props) => {
   const [svgCopied, setSVGCopied] = useState(false);
@@ -54,45 +50,37 @@ const IconInfoPanel = (props) => {
             px-6 py-5 relative  w-full xs:w-full sm:w-full md:w-full bg-white lg:w-1/3 h-screen xs:h-auto sm:h-auto lg:h-auto ${props.className}`}
           style={{ borderWidth: "3px" }}
         >
-          {/* <div
-            className="flex justify-end -mx-6 -my-5 mb-3 px-6 py-3 border-blue-200 "
-            style={{ borderBottomWidth: "2px" }}
-          >
-            <svg
-              height="24"
-              width="24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M16.95 8.464a1 1 0 1 0-1.414-1.414L12 10.586 8.465 7.05A1 1 0 0 0 7.05 8.464L10.586 12 7.05 15.536a1 1 0 1 0 1.415 1.414L12 13.414l3.536 3.536a1 1 0 1 0 1.414-1.414L13.414 12l3.536-3.536Z"
-                fill="currentColor"
-                fillRule="evenodd"
-              />
-            </svg>
-          </div> */}
-
           <div className="flex justify-between">
             <h3 className="font-semibold text-blue-600 text-base">
               {props.selected}
             </h3>
             <div className="flex">
-              <a href={`icons/png/${props.selected}.png`} download>
-                <svg
-                  height="24"
-                  width="24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12.5 4v13m0 0L7 12.21M12.5 17l5.5-4.79M6 21h13"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                  />
-                </svg>
-              </a>
+              <AnimatePresence>
+                {props.allowDownload && (
+                  <motion.a
+                    initial={{ opacity: 0, transition: { duration: 0.1 } }}
+                    animate={{ opacity: 1, transition: { duration: 0.1 } }}
+                    exit={{ opacity: 0, transition: { duration: 0.1 } }}
+                    href={`icons/png/${props.selected}.png`}
+                    download
+                  >
+                    <svg
+                      height="24"
+                      width="24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.5 4v13m0 0L7 12.21M12.5 17l5.5-4.79M6 21h13"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                      />
+                    </svg>
+                  </motion.a>
+                )}
+              </AnimatePresence>
               <button
                 className="ml-4"
                 onClick={() => {
@@ -124,7 +112,7 @@ const IconInfoPanel = (props) => {
             >
               <div
                 dangerouslySetInnerHTML={{
-                  __html: Meta[props.selected].svg,
+                  __html: props.data[props.selected].svg,
                 }}
               ></div>
             </div>
@@ -146,7 +134,7 @@ const IconInfoPanel = (props) => {
                 className="hover:bg-opacity-50 bg-blue-600 bg-opacity-30 h-10 w-full mr-2 flex items-center justify-center font-semibold tracking-tighter text-blue-600 text-xs transition-all relative"
                 onClick={() => {
                   console.log(Meta[props.selected]);
-                  navigator.clipboard.writeText(Meta[props.selected].svg);
+                  navigator.clipboard.writeText(props.data[props.selected].svg);
                   copySVGAnimation();
                 }}
               >
@@ -179,7 +167,7 @@ const IconInfoPanel = (props) => {
                 className="hover:bg-opacity-50 bg-blue-600 bg-opacity-30 h-10 w-full mr-2 flex items-center justify-center font-semibold tracking-tighter text-blue-600 text-xs transition-all relative"
                 onClick={() => {
                   console.log(Meta[props.selected]);
-                  navigator.clipboard.writeText(Meta[props.selected].jsx);
+                  navigator.clipboard.writeText(props.data[props.selected].jsx);
                   copyJSXAnimation();
                 }}
               >
@@ -208,30 +196,6 @@ const IconInfoPanel = (props) => {
                   )}
                 </AnimatePresence>
               </button>
-              {/* <div className="hover:bg-opacity-50 bg-blue-600 bg-opacity-30 h-10 w-full mr-2 flex items-center justify-center cursor-pointer">
-                <button
-                  className="font-semibold tracking-tighter text-blue-600 text-xs cursor-pointer"
-                  href="https://www.will-kelly.co.uk"
-                  onClick={() => {
-                    console.log(Meta[props.selected]);
-                    navigator.clipboard.writeText(Meta[props.selected].svg);
-                  }}
-                >
-                  Copy SVG
-                </button>
-              </div> */}
-
-              {/* <div className="hover:bg-opacity-50 bg-blue-600 bg-opacity-30 h-10 w-full  ml-2 flex items-center justify-center cursor-pointer">
-                <button
-                  className="font-semibold tracking-tighter text-blue-600 text-xs cursor-pointer"
-                  href="https://www.will-kelly.co.uk"
-                  onClick={() => {
-                    navigator.clipboard.writeText(Meta[props.selected].jsx);
-                  }}
-                >
-                  Copy JSX
-                </button>
-              </div> */}
             </div>
 
             <h3 className="font-semibold text-blue-400 text-xs  mt-8 flex items-center">
@@ -242,6 +206,7 @@ const IconInfoPanel = (props) => {
               <div className="w-full grid grid-cols-2 xs:grid-cols-3   grid-flow-row  gap-5">
                 {findSimilar(props.selected).map((value) => (
                   <Icon
+                    key={value}
                     setDialog={props.setShowDialog}
                     selected={props.selected}
                     setSelected={props.setSelected}
@@ -349,7 +314,7 @@ const Icon = (props) => {
               className="mb-1 mt-2"
               title={"Copy SVG"}
               onClick={(e) => {
-                navigator.clipboard.writeText(Meta[props.name].svg);
+                navigator.clipboard.writeText(props.data.svg);
                 e.stopPropagation();
                 copyAnimation();
               }}
@@ -359,7 +324,7 @@ const Icon = (props) => {
               className="mt-1 mb-2"
               title={"Copy JSX"}
               onClick={(e) => {
-                navigator.clipboard.writeText(Meta[props.name].jsx);
+                navigator.clipboard.writeText(props.data.jsx);
                 e.stopPropagation();
                 copyAnimation();
               }}
@@ -383,19 +348,92 @@ const Icon = (props) => {
 
 export default function Home({ s, selectedParam }) {
   const [showDialog, setShowDialog] = useState(selectedParam !== undefined);
+  const [initialData, setInitialData] = useState(Meta);
   const [data, setData] = useState(Meta);
   const [noShowing, setNoShowing] = useState(Object.keys(Meta).length);
   const [selected, setSelected] = useState(selectedParam || "");
   const [searchTerm, setSearchTerm] = useState(s || "");
+  const [circleMode, setCircleMode] = useState(false);
+  const [squareMode, setSquareMode] = useState(false);
   const searchInput = useRef(null);
 
-  // useEffect(() => {
-  //   console.log("load");
-  //   if (router.query) {
-  //     console.log(router.query["s"]);
-  //     setSearchTerm(router.query["s"]);
-  //   }
-  // }, []);
+  const convertToJSX = (svg) => {
+    return svg.replaceAll(/[a-z]*-[a-z]*=/g, (group) => {
+      let index = group.indexOf("-") + 1;
+      let newString =
+        group.substring(0, index) +
+        group[index].toUpperCase() +
+        group.substring(index + 1);
+      return newString.replace("-", "");
+    });
+  };
+
+  const generateCircles = (dataToConvert) => {
+    const newData = {};
+
+    Object.entries(dataToConvert).forEach(function ([key, value]) {
+      const svg = parse(value.svg);
+      const path = parse(
+        '<path d="M23.25 12C23.25 18.2132 18.2132 23.25 12 23.25C5.7868 23.25 0.75 18.2132 0.75 12C0.75 5.7868 5.7868 0.75 12 0.75C18.2132 0.75 23.25 5.7868 23.25 12Z" stroke="currentColor" stroke-width="1.5"/>'
+      );
+      const g = parse("<g transform='scale(0.7) translate(5, 5)'/>");
+      svg.childNodes[0].childNodes.forEach((child) =>
+        g.childNodes[0].appendChild(child)
+      );
+      svg.childNodes[0].appendChild(g);
+      svg.childNodes[0].appendChild(path);
+
+      newData[key] = {
+        svg: svg.toString(),
+        jsx: convertToJSX(svg.toString()),
+        tags: value.tags,
+      };
+    });
+    return newData;
+  };
+  const generateSquares = (dataToConvert) => {
+    const newData = {};
+
+    Object.entries(dataToConvert).forEach(function ([key, value]) {
+      const svg = parse(value.svg);
+      const path = parse(
+        '<rect x="1.75" y="1.75" width="20.5" height="20.5" rx="3" stroke="currentColor" stroke-width="1.5"/>'
+      );
+      const g = parse("<g transform='scale(0.7) translate(5, 5)' />");
+      svg.childNodes[0].childNodes.forEach((child) =>
+        g.childNodes[0].appendChild(child)
+      );
+      svg.childNodes[0].appendChild(g);
+      svg.childNodes[0].appendChild(path);
+      newData[key] = {
+        svg: svg.toString(),
+        jsx: convertToJSX(svg.toString()),
+        tags: value.tags,
+      };
+    });
+    return newData;
+  };
+
+  const circleData = useMemo(() => generateCircles(initialData), [initialData]);
+  const squareData = useMemo(() => generateSquares(initialData), [initialData]);
+
+  useEffect(() => {
+    if (circleMode) {
+      setData(circleData);
+    } else {
+      setData(initialData);
+    }
+  }, [circleMode]);
+
+  useEffect(() => {
+    if (squareMode) {
+      setData(squareData);
+    } else {
+      if (!circleMode) {
+        setData(initialData);
+      }
+    }
+  }, [squareMode]);
 
   useEffect(() => {
     let no = 0;
@@ -459,7 +497,6 @@ export default function Home({ s, selectedParam }) {
               IKONO
             </h1>
             <nav className="font-sans text-sm flex font-semibold tracking-tighter">
-              {/* <p className="pr-5">VSCode</p> */}
               <a
                 href="https://github.com/wkelly1/IKONO"
                 alt="IKONO github"
@@ -467,7 +504,6 @@ export default function Home({ s, selectedParam }) {
               >
                 React
               </a>
-              {/* <p className="pl-5">Support Us</p> */}
             </nav>
           </header>
 
@@ -516,31 +552,6 @@ export default function Home({ s, selectedParam }) {
                 value={searchTerm}
                 onChange={(e) => {
                   updateSearchParam("s", e.target.value);
-                  // if ("URLSearchParams" in window) {
-                  //   const searchParams = new URLSearchParams(
-                  //     window.location.search
-                  //   );
-                  //   if (e.target.value.length === 0) {
-                  //     searchParams.delete("s");
-                  //     let newRelativePathQuery;
-                  //     if ([...searchParams.keys()].length === 0) {
-                  //       newRelativePathQuery = window.location.pathname;
-                  //     } else {
-                  //       newRelativePathQuery =
-                  //         window.location.pathname +
-                  //         "?" +
-                  //         searchParams.toString();
-                  //     }
-                  //     history.pushState(null, "", newRelativePathQuery);
-                  //   } else {
-                  //     searchParams.set("s", e.target.value);
-                  //     const newRelativePathQuery =
-                  //       window.location.pathname +
-                  //       "?" +
-                  //       searchParams.toString();
-                  //     history.pushState(null, "", newRelativePathQuery);
-                  //   }
-                  // }
                   setSearchTerm(e.target.value);
                 }}
               ></input>
@@ -549,8 +560,40 @@ export default function Home({ s, selectedParam }) {
               </p>
             </div>
 
-            <div className="flex w-full justify-between mt-8">
+            <div className="flex w-full justify-between mt-5">
               <div className="w-full">
+                <div className="w-full grid grid-cols-2  grid-flow-row  gap-5 mb-8">
+                  <button
+                    className={`border-2  py-2 font-semibold tracking-tighter text-xs ${
+                      circleMode
+                        ? "bg-blue-600 text-white border-blue-600"
+                        : "bg-transparent text-blue-400 border-blue-200"
+                    }`}
+                    style={{ borderWidth: "3px" }}
+                    onClick={() => {
+                      setSquareMode(false);
+                      setCircleMode((v) => !v);
+                    }}
+                    aria-pressed={circleMode}
+                  >
+                    Circle
+                  </button>
+                  <button
+                    className={`border-2  py-2 font-semibold tracking-tighter text-xs ${
+                      squareMode
+                        ? "bg-blue-600 text-white border-blue-600"
+                        : "bg-transparent text-blue-400 border-blue-200"
+                    }`}
+                    style={{ borderWidth: "3px" }}
+                    onClick={() => {
+                      setCircleMode(false);
+                      setSquareMode((v) => !v);
+                    }}
+                    aria-pressed={squareMode}
+                  >
+                    Square
+                  </button>
+                </div>
                 <motion.div
                   layout
                   className="w-full grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 lg:grid-cols-6 xl:grid-cols-8  grid-flow-row  gap-5"
@@ -566,14 +609,16 @@ export default function Home({ s, selectedParam }) {
                     ) {
                       return (
                         <Icon
+                          key={icon}
                           setDialog={setShowDialog}
                           selected={selected}
                           setSelected={setSelected}
                           name={icon}
+                          data={data[icon]}
                           icon={
                             <div
                               dangerouslySetInnerHTML={{
-                                __html: Meta[icon].svg,
+                                __html: data[icon].svg,
                               }}
                               className="text-gray-800"
                             ></div>
@@ -582,20 +627,6 @@ export default function Home({ s, selectedParam }) {
                       );
                     }
                   })}
-
-                  {/* <Icon showDialog={setShowDialog} />
-              <Icon showDialog={setShowDialog} />
-              <Icon showDialog={setShowDialog} />
-              <Icon showDialog={setShowDialog} />
-              <Icon showDialog={setShowDialog} />
-              <Icon showDialog={setShowDialog} />
-              <Icon showDialog={setShowDialog} />
-              <Icon showDialog={setShowDialog} />
-              <Icon showDialog={setShowDialog} />
-              <Icon showDialog={setShowDialog} />
-              <Icon showDialog={setShowDialog} />
-              <Icon showDialog={setShowDialog} />
-              <Icon showDialog={setShowDialog} /> */}
                 </motion.div>
               </div>
 
@@ -607,6 +638,7 @@ export default function Home({ s, selectedParam }) {
                 setDialog={setShowDialog}
                 setShowDialog={setShowDialog}
                 data={data}
+                allowDownload={!circleMode && !squareMode}
               />
             </div>
           </main>
@@ -654,3 +686,29 @@ Home.getInitialProps = async ({ query }) => {
 
   return { s, selectedParam: selected };
 };
+
+<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="scale(0.7) translate(5, 5)">
+    <circle
+      cx="8"
+      cy="3.5"
+      r="1.75"
+      fill="currentColor"
+      stroke="currentColor"
+      stroke-width="1.5"
+    ></circle>
+    <path d="M5 15.412V8h6v7.412H9V22H7v-6.588H5Z" fill="currentColor"></path>
+    <path
+      d="M7 15.412H5V8h6v7.412H9m-2 0V22h2v-6.588m-2 0h2"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    ></path>
+  </g>
+  <path
+    d="M23.25 12C23.25 18.2132 18.2132 23.25 12 23.25C5.7868 23.25 0.75 18.2132 0.75 12C0.75 5.7868 5.7868 0.75 12 0.75C18.2132 0.75 23.25 5.7868 23.25 12Z"
+    stroke="currentColor"
+    stroke-width="1.5"
+  ></path>
+</svg>;
