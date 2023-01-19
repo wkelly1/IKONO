@@ -358,7 +358,7 @@ export default function Home({ s, selectedParam }) {
   const searchInput = useRef(null);
 
   const convertToJSX = (svg) => {
-    return svg.replaceAll(/[a-z]*-[a-z]*=/g, (group) => {
+    return svg.replace(/[a-z]*-[a-z]*=/g, (group) => {
       let index = group.indexOf("-") + 1;
       let newString =
         group.substring(0, index) +
