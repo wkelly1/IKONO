@@ -1068,5 +1068,38 @@
     "lock",
     "unlock",
     "security"
+  ],
+  "terminal": [
+    "algorithm",
+    "program",
+    "programming",
+    "code"
+  ],
+  "cursor_text": [
+    "pointer",
+    "cursor",
+    "mouse",
+    "text",
+    "type"
+  ],
+  "angry": [
+    "face",
+    "emotion",
+    "feeling"
+  ],
+  "happy": [
+    "face",
+    "emotion",
+    "feeling"
+  ],
+  "neutral": [
+    "face",
+    "emotion",
+    "feeling"
+  ],
+  "sad": [
+    "face",
+    "emotion",
+    "feeling"
   ]
 }
