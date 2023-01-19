@@ -1,10 +1,31 @@
 import Head from "next/head";
 import { useEffect, useRef, useState } from "react";
 import Meta from "../meta.json";
-import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
+import {
+  AnimatePresence,
+  AnimateSharedLayout,
+  LayoutGroup,
+  motion,
+} from "framer-motion";
 import updateSearchParam from "../lib/updateSearchParam";
 
 const IconInfoPanel = (props) => {
+  const [svgCopied, setSVGCopied] = useState(false);
+  const [jsxCopied, setJSXCopied] = useState(false);
+
+  const copySVGAnimation = () => {
+    setSVGCopied(true);
+    setTimeout(() => {
+      setSVGCopied(false);
+    }, 1000);
+  };
+  const copyJSXAnimation = () => {
+    setJSXCopied(true);
+    setTimeout(() => {
+      setJSXCopied(false);
+    }, 1000);
+  };
+
   const findSimilar = (icon) => {
     let out = [];
     Object.keys(props.data).forEach((value) => {
@@ -121,20 +142,87 @@ const IconInfoPanel = (props) => {
             </h3>
 
             <div className="flex mt-7">
-              <div className="hover:bg-opacity-50 bg-blue-600 bg-opacity-30 h-10 w-full mr-2 flex items-center justify-center cursor-pointer">
-                <p
+              <button
+                className="hover:bg-opacity-50 bg-blue-600 bg-opacity-30 h-10 w-full mr-2 flex items-center justify-center font-semibold tracking-tighter text-blue-600 text-xs transition-all relative"
+                onClick={() => {
+                  console.log(Meta[props.selected]);
+                  navigator.clipboard.writeText(Meta[props.selected].svg);
+                  copySVGAnimation();
+                }}
+              >
+                <AnimatePresence>
+                  {svgCopied && (
+                    <motion.p
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      className="absolute inset-0 flex items-center justify-center"
+                    >
+                      Copied!
+                    </motion.p>
+                  )}
+                </AnimatePresence>
+                <AnimatePresence>
+                  {!svgCopied && (
+                    <motion.p
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      className="absolute inset-0 flex items-center justify-center"
+                    >
+                      Copy SVG
+                    </motion.p>
+                  )}
+                </AnimatePresence>
+              </button>
+              <button
+                className="hover:bg-opacity-50 bg-blue-600 bg-opacity-30 h-10 w-full mr-2 flex items-center justify-center font-semibold tracking-tighter text-blue-600 text-xs transition-all relative"
+                onClick={() => {
+                  console.log(Meta[props.selected]);
+                  navigator.clipboard.writeText(Meta[props.selected].jsx);
+                  copyJSXAnimation();
+                }}
+              >
+                <AnimatePresence>
+                  {jsxCopied && (
+                    <motion.p
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      className="absolute inset-0 flex items-center justify-center"
+                    >
+                      Copied!
+                    </motion.p>
+                  )}
+                </AnimatePresence>
+                <AnimatePresence>
+                  {!jsxCopied && (
+                    <motion.p
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      className="absolute inset-0 flex items-center justify-center"
+                    >
+                      Copy JSX
+                    </motion.p>
+                  )}
+                </AnimatePresence>
+              </button>
+              {/* <div className="hover:bg-opacity-50 bg-blue-600 bg-opacity-30 h-10 w-full mr-2 flex items-center justify-center cursor-pointer">
+                <button
                   className="font-semibold tracking-tighter text-blue-600 text-xs cursor-pointer"
                   href="https://www.will-kelly.co.uk"
                   onClick={() => {
+                    console.log(Meta[props.selected]);
                     navigator.clipboard.writeText(Meta[props.selected].svg);
                   }}
                 >
                   Copy SVG
-                </p>
-              </div>
+                </button>
+              </div> */}
 
-              <div className="hover:bg-opacity-50 bg-blue-600 bg-opacity-30 h-10 w-full  ml-2 flex items-center justify-center cursor-pointer">
-                <p
+              {/* <div className="hover:bg-opacity-50 bg-blue-600 bg-opacity-30 h-10 w-full  ml-2 flex items-center justify-center cursor-pointer">
+                <button
                   className="font-semibold tracking-tighter text-blue-600 text-xs cursor-pointer"
                   href="https://www.will-kelly.co.uk"
                   onClick={() => {
@@ -142,8 +230,8 @@ const IconInfoPanel = (props) => {
                   }}
                 >
                   Copy JSX
-                </p>
-              </div>
+                </button>
+              </div> */}
             </div>
 
             <h3 className="font-semibold text-blue-400 text-xs  mt-8 flex items-center">
