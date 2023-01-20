@@ -8,12 +8,24 @@ const sharp = require("sharp");
 
 const srcInputLoc = "." + path.sep + "src";
 // const iconOutputLoc = "." + path.sep + "output" + path.sep + "web";
-const iconOutputLoc =
-  "." + path.sep + "web" + path.sep + "public" + path.sep + "icons" + path.sep;
+let iconOutputLoc =
+  "." + path.sep + "web" + path.sep + "public" + path.sep + "icons";
 
 async function main() {
   let metaOut = {};
-
+  // Clear out icons file
+  fs.rmdirSync(iconOutputLoc, { recursive: true });
+  fs.mkdirSync(iconOutputLoc);
+  fs.mkdirSync(iconOutputLoc + path.sep + "png");
+  iconOutputLoc =
+    "." +
+    path.sep +
+    "web" +
+    path.sep +
+    "public" +
+    path.sep +
+    "icons" +
+    path.sep;
   // Open Meta file
   const metaRaw = fs.readFileSync(srcInputLoc + path.sep + "meta.json");
   const meta = JSON.parse(metaRaw);
