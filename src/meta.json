@@ -452,7 +452,8 @@
     "music"
   ],
   "clock": [
-    "time"
+    "time",
+    "hour"
   ],
   "code_tag": [
     "algorithm",
@@ -1101,5 +1102,107 @@
     "face",
     "emotion",
     "feeling"
+  ],
+  "clock-10oclock": [
+    "time",
+    "hour"
+  ],
+  "clock-11oclock": [
+    "time",
+    "hour"
+  ],
+  "clock-1oclock": [
+    "time",
+    "hour"
+  ],
+  "clock-2oclock": [
+    "time",
+    "hour"
+  ],
+  "clock-3oclock": [
+    "time",
+    "hour"
+  ],
+  "clock-4oclock": [
+    "time",
+    "hour"
+  ],
+  "clock-5oclock": [
+    "time",
+    "hour"
+  ],
+  "clock-6oclock": [
+    "time",
+    "hour"
+  ],
+  "clock-7oclock": [
+    "time",
+    "hour"
+  ],
+  "clock-8oclock": [
+    "time",
+    "hour"
+  ],
+  "clock-9oclock": [
+    "time",
+    "hour"
+  ],
+  "flag": [
+    "country",
+    "continent",
+    "location",
+    "pinpoint"
+  ],
+  "flag_filled": [
+    "country",
+    "continent",
+    "location",
+    "pinpoint"
+  ],
+  "weight": [
+    "gym",
+    "activity",
+    "exercise",
+    "workout"
+  ],
+  "world": [
+    "globe",
+    "network"
+  ],
+  "basketball": [
+    "movement",
+    "activity",
+    "exercise",
+    "sport"
+  ],
+  "football": [
+    "movement",
+    "activity",
+    "exercise",
+    "sport"
+  ],
+  "cricket_ball": [
+    "movement",
+    "activity",
+    "exercise",
+    "sport"
+  ],
+  "rugby_ball": [
+    "movement",
+    "activity",
+    "exercise",
+    "sport"
+  ],
+  "tennis_ball": [
+    "movement",
+    "activity",
+    "exercise",
+    "sport"
+  ],
+  "american_football": [
+    "movement",
+    "activity",
+    "exercise",
+    "sport"
   ]
 }
