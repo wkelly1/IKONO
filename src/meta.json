@@ -1103,50 +1103,6 @@
     "emotion",
     "feeling"
   ],
-  "clock-10oclock": [
-    "time",
-    "hour"
-  ],
-  "clock-11oclock": [
-    "time",
-    "hour"
-  ],
-  "clock-1oclock": [
-    "time",
-    "hour"
-  ],
-  "clock-2oclock": [
-    "time",
-    "hour"
-  ],
-  "clock-3oclock": [
-    "time",
-    "hour"
-  ],
-  "clock-4oclock": [
-    "time",
-    "hour"
-  ],
-  "clock-5oclock": [
-    "time",
-    "hour"
-  ],
-  "clock-6oclock": [
-    "time",
-    "hour"
-  ],
-  "clock-7oclock": [
-    "time",
-    "hour"
-  ],
-  "clock-8oclock": [
-    "time",
-    "hour"
-  ],
-  "clock-9oclock": [
-    "time",
-    "hour"
-  ],
   "flag": [
     "country",
     "continent",
@@ -1204,5 +1160,65 @@
     "activity",
     "exercise",
     "sport"
+  ],
+  "clock_eight_oclock": [
+    "time",
+    "hour",
+    "8"
+  ],
+  "clock_eleven_oclock": [
+    "time",
+    "hour",
+    "11"
+  ],
+  "clock_five_oclock": [
+    "time",
+    "hour",
+    "5"
+  ],
+  "clock_four_oclock": [
+    "time",
+    "hour",
+    "4"
+  ],
+  "clock_nine_oclock": [
+    "time",
+    "hour",
+    "9"
+  ],
+  "clock_one_oclock": [
+    "time",
+    "hour",
+    "1"
+  ],
+  "clock_seven_oclock": [
+    "time",
+    "hour",
+    "7"
+  ],
+  "clock_six_oclock": [
+    "time",
+    "hour",
+    "6"
+  ],
+  "clock_ten_oclock": [
+    "time",
+    "hour",
+    "10"
+  ],
+  "clock_three_oclock": [
+    "time",
+    "hour",
+    "3"
+  ],
+  "clock_twelve_oclock": [
+    "time",
+    "hour",
+    "12"
+  ],
+  "clock_two_oclock": [
+    "time",
+    "hour",
+    "2"
   ]
 }
