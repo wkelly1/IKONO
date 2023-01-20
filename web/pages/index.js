@@ -1,7 +1,12 @@
 import Head from "next/head";
 import { useEffect, useMemo, useRef, useState } from "react";
 import Meta from "../meta.json";
-import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
+import {
+  AnimatePresence,
+  AnimateSharedLayout,
+  LayoutGroup,
+  motion,
+} from "framer-motion";
 import updateSearchParam from "../lib/updateSearchParam";
 import parse from "node-html-parser";
 
@@ -42,12 +47,26 @@ const IconInfoPanel = (props) => {
     <AnimatePresence>
       {props.showDialog && (
         <motion.div
-          initial={{ scaleX: 0, opacity: 0, originX: 1 }}
-          animate={{ scaleX: 1, opacity: 1, originX: 1 }}
-          exit={{ scaleX: 0, opacity: 0, originX: 1 }}
+          initial={{
+            scaleX: 0,
+            opacity: 0,
+            originX: 1,
+            transition: { duration: 0.3, type: "spring" },
+          }}
+          animate={{
+            scaleX: 1,
+            opacity: 1,
+            originX: 1,
+            transition: { duration: 0.3, type: "spring" },
+          }}
+          exit={{
+            opacity: 0,
+            originX: 1,
+            transition: { duration: 0.2, type: "spring" },
+          }}
           className={`
-              border-blue-600
-            px-6 py-5 relative  w-full xs:w-full sm:w-full md:w-full bg-white lg:w-1/3 h-screen xs:h-auto sm:h-auto lg:h-auto ${props.className}`}
+              border-blue-600 w-full xs:w-full sm:w-full md:w-full bg-white lg:w-1/3
+            px-6 py-5 relative h-screen xs:h-auto sm:h-auto lg:h-auto ${props.className}`}
           style={{ borderWidth: "3px" }}
         >
           <div className="flex justify-between">
@@ -264,7 +283,7 @@ const Icon = (props) => {
   };
 
   return (
-    <div
+    <motion.div
       className="flex flex-col items-center cursor-pointer"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
@@ -342,7 +361,7 @@ const Icon = (props) => {
       >
         {props.name}
       </p>
-    </div>
+    </motion.div>
   );
 };
 
@@ -451,184 +470,204 @@ export default function Home({ s, selectedParam }) {
 
   return (
     <div className=" font-sans flex flex-col justify-between min-h-screen">
-      <AnimateSharedLayout>
-        <div>
-          <Head>
-            <title>IKONO</title>
-            <link rel="icon" href="/favicon.ico" />
+      <div>
+        <Head>
+          <title>IKONO</title>
+          <link rel="icon" href="/favicon.ico" />
 
-            <meta name="og:url" content="https://ikono.will-kelly.co.uk" />
-            <meta property="og:type" content="website" />
-            <meta property="og:site_name" content="IKONO" />
-            <meta
-              property="og:description"
-              content="Free SVG icon pack with MIT license."
-            />
-            <meta property="og:title" content="IKONO" />
-            <meta
-              property="og:image"
-              content="https://ikono.will-kelly.co.uk/banner.png"
-            />
-            <meta name="twitter:card" content="summary" />
-            <meta name="twitter:site" content="@WillKelly__" />
-            <meta name="twitter:title" content="IKONO" />
-            <meta name="twitter:text:title" content="IKONO" />
-            <meta
-              name="twitter:description"
-              content="Free SVG icon pack with MIT license"
-            />
-            <meta name="twitter:app:name:iphone" content="IKONO" />
-            <meta name="twitter:app:name:ipad" content="IKONO" />
-            <meta name="twitter:app:name:googleplay" content="IKONO" />
-            <meta
-              name="twitter:image"
-              content="https://ikono.will-kelly.co.uk/banner.png"
-            />
+          <meta name="og:url" content="https://ikono.will-kelly.co.uk" />
+          <meta property="og:type" content="website" />
+          <meta property="og:site_name" content="IKONO" />
+          <meta
+            property="og:description"
+            content="Free SVG icon pack with MIT license."
+          />
+          <meta property="og:title" content="IKONO" />
+          <meta
+            property="og:image"
+            content="https://ikono.will-kelly.co.uk/banner.png"
+          />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:site" content="@WillKelly__" />
+          <meta name="twitter:title" content="IKONO" />
+          <meta name="twitter:text:title" content="IKONO" />
+          <meta
+            name="twitter:description"
+            content="Free SVG icon pack with MIT license"
+          />
+          <meta name="twitter:app:name:iphone" content="IKONO" />
+          <meta name="twitter:app:name:ipad" content="IKONO" />
+          <meta name="twitter:app:name:googleplay" content="IKONO" />
+          <meta
+            name="twitter:image"
+            content="https://ikono.will-kelly.co.uk/banner.png"
+          />
 
-            <link
-              rel="apple-touch-icon"
-              href="/app_icons/apple-touch-icon-180x180.png"
-              sizes="180x180"
-            />
-          </Head>
+          <link
+            rel="apple-touch-icon"
+            href="/app_icons/apple-touch-icon-180x180.png"
+            sizes="180x180"
+          />
+        </Head>
 
-          <header className="flex items-center justify-between px-5 pt-10 sm:px-16 sm:pt-14">
-            <h1 className="text-blue-600 font-display font-bold text-xl">
-              IKONO
-            </h1>
-            <nav className="font-sans text-sm flex font-semibold tracking-tighter">
-              <a
-                href="https://github.com/wkelly1/IKONO"
-                alt="IKONO github"
-                className="px-5"
-              >
-                React
-              </a>
-            </nav>
-          </header>
-
-          <div className="visible sm:hidden fixed z-10 top-0 right-0 w-5/6 max-h-screen">
-            <IconInfoPanel
-              setSelected={setSelected}
-              setDialog={setShowDialog}
-              showDialog={showDialog}
-              selected={selected}
-              setShowDialog={setShowDialog}
-              data={data}
-            />
-          </div>
-
-          <main className="mt-10 px-5  sm:px-16 ">
-            <div className="bg-blue-600 h-60 flex flex-col justify-between px-10 py-6">
-              <div></div>
-              <div>
-                <p className="font-bold text-white text-3xl">
-                  ICONS ARE EASIER THAN WORDS
-                </p>
-              </div>
-            </div>
-
-            <div
-              className="mt-8 border-blue-200 p-2 h-14 flex items-center"
-              style={{ borderWidth: "3px" }}
+        <header className="flex items-center justify-between px-5 pt-10 sm:px-16 sm:pt-14">
+          <h1 className="text-blue-600 font-display font-bold text-xl">
+            IKONO
+          </h1>
+          <nav className="font-sans text-sm flex font-semibold tracking-tighter">
+            <a
+              href="https://github.com/wkelly1/IKONO"
+              alt="IKONO github"
+              className="px-5"
             >
-              <div className="text-blue-700 ml-1">
-                <svg
-                  height="24"
-                  width="24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21.293 22.707a1 1 0 0 0 1.414-1.414l-1.414 1.414ZM17 10a7 7 0 0 1-7 7v2a9 9 0 0 0 9-9h-2Zm-7 7a7 7 0 0 1-7-7H1a9 9 0 0 0 9 9v-2Zm-7-7a7 7 0 0 1 7-7V1a9 9 0 0 0-9 9h2Zm7-7a7 7 0 0 1 7 7h2a9 9 0 0 0-9-9v2Zm4.793 13.207 6.5 6.5 1.414-1.414-6.5-6.5-1.414 1.414Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-              <input
-                placeholder="Search"
-                ref={searchInput}
-                className="ml-3 text-blue-600 placeholder-blue-400 font-semibold border-none outline-none w-full"
-                value={searchTerm}
-                onChange={(e) => {
-                  updateSearchParam("s", e.target.value);
-                  setSearchTerm(e.target.value);
-                }}
-              ></input>
-              <p className="text-xs font-semibold tracking-tighter pr-2">
-                {noShowing}/{Object.keys(data).length}
+              React
+            </a>
+          </nav>
+        </header>
+
+        <div className="visible sm:hidden fixed z-10 top-0 right-0 w-5/6 max-h-screen">
+          <IconInfoPanel
+            setSelected={setSelected}
+            setDialog={setShowDialog}
+            showDialog={showDialog}
+            selected={selected}
+            setShowDialog={setShowDialog}
+            data={data}
+          />
+        </div>
+
+        <main className="mt-10 px-5  sm:px-16 ">
+          <div className="bg-blue-600 h-60 flex flex-col justify-between px-10 py-6">
+            <div></div>
+            <div>
+              <p className="font-bold text-white text-3xl">
+                ICONS ARE EASIER THAN WORDS
               </p>
             </div>
+          </div>
 
-            <div className="flex w-full justify-between mt-5">
-              <div className="w-full">
-                <div className="w-full grid grid-cols-2  grid-flow-row  gap-5 mb-8">
-                  <button
-                    className={`border-2  py-2 font-semibold tracking-tighter text-xs ${
-                      circleMode
-                        ? "bg-blue-600 text-white border-blue-600"
-                        : "bg-transparent text-blue-400 border-blue-200"
-                    }`}
-                    style={{ borderWidth: "3px" }}
-                    onClick={() => {
-                      setSquareMode(false);
-                      setCircleMode((v) => !v);
-                    }}
-                    aria-pressed={circleMode}
+          <div
+            className="mt-8 border-blue-200 p-2 h-14 flex items-center"
+            style={{ borderWidth: "3px" }}
+          >
+            <div className="text-blue-700 ml-1">
+              <svg
+                height="24"
+                width="24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.293 22.707a1 1 0 0 0 1.414-1.414l-1.414 1.414ZM17 10a7 7 0 0 1-7 7v2a9 9 0 0 0 9-9h-2Zm-7 7a7 7 0 0 1-7-7H1a9 9 0 0 0 9 9v-2Zm-7-7a7 7 0 0 1 7-7V1a9 9 0 0 0-9 9h2Zm7-7a7 7 0 0 1 7 7h2a9 9 0 0 0-9-9v2Zm4.793 13.207 6.5 6.5 1.414-1.414-6.5-6.5-1.414 1.414Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <input
+              placeholder="Search"
+              ref={searchInput}
+              className="ml-3 text-blue-600 placeholder-blue-400 font-semibold border-none outline-none w-full"
+              value={searchTerm}
+              onChange={(e) => {
+                updateSearchParam("s", e.target.value);
+                setSearchTerm(e.target.value);
+              }}
+            ></input>
+            <p className="text-xs font-semibold tracking-tighter pr-2">
+              {noShowing}/{Object.keys(data).length}
+            </p>
+          </div>
+
+          <div className="flex w-full justify-between mt-5">
+            <LayoutGroup>
+              <motion.div className="w-full" layout>
+                <div className="w-full">
+                  <motion.div
+                    className="w-full grid grid-cols-2  grid-flow-row  gap-5 mb-8"
+                    layout
                   >
-                    Circle
-                  </button>
-                  <button
-                    className={`border-2  py-2 font-semibold tracking-tighter text-xs ${
-                      squareMode
-                        ? "bg-blue-600 text-white border-blue-600"
-                        : "bg-transparent text-blue-400 border-blue-200"
-                    }`}
-                    style={{ borderWidth: "3px" }}
-                    onClick={() => {
-                      setCircleMode(false);
-                      setSquareMode((v) => !v);
-                    }}
-                    aria-pressed={squareMode}
-                  >
-                    Square
-                  </button>
+                    <button
+                      className={`border-2  py-2 font-semibold tracking-tighter text-xs ${
+                        circleMode
+                          ? "bg-blue-600 text-white border-blue-600"
+                          : "bg-transparent text-blue-400 border-blue-200"
+                      }`}
+                      style={{ borderWidth: "3px" }}
+                      onClick={() => {
+                        setSquareMode(false);
+                        setCircleMode((v) => !v);
+                      }}
+                      aria-pressed={circleMode}
+                    >
+                      Circle
+                    </button>
+                    <button
+                      className={`border-2  py-2 font-semibold tracking-tighter text-xs ${
+                        squareMode
+                          ? "bg-blue-600 text-white border-blue-600"
+                          : "bg-transparent text-blue-400 border-blue-200"
+                      }`}
+                      style={{ borderWidth: "3px" }}
+                      onClick={() => {
+                        setCircleMode(false);
+                        setSquareMode((v) => !v);
+                      }}
+                      aria-pressed={squareMode}
+                    >
+                      Square
+                    </button>
+                  </motion.div>
                 </div>
+
                 <motion.div
                   layout
                   className="w-full grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 lg:grid-cols-6 xl:grid-cols-8  grid-flow-row  gap-5"
                 >
-                  {Object.keys(data).map((icon) => {
-                    if (
-                      (searchTerm !== "" &&
-                        icon.includes(searchTerm.toLowerCase())) ||
-                      searchTerm === "" ||
-                      data[icon].tags.some((value) =>
-                        value.toLowerCase().includes(searchTerm.toLowerCase())
-                      )
-                    ) {
-                      return (
-                        <Icon
-                          key={icon}
-                          setDialog={setShowDialog}
-                          selected={selected}
-                          setSelected={setSelected}
-                          name={icon}
-                          data={data[icon]}
-                          icon={
-                            <div
-                              dangerouslySetInnerHTML={{
-                                __html: data[icon].svg,
-                              }}
-                              className="text-gray-800"
-                            ></div>
-                          }
-                        />
-                      );
-                    }
-                  })}
+                  <AnimatePresence>
+                    {Object.keys(data).map((icon) => {
+                      if (
+                        (searchTerm !== "" &&
+                          icon.includes(searchTerm.toLowerCase())) ||
+                        searchTerm === "" ||
+                        data[icon].tags.some((value) =>
+                          value.toLowerCase().includes(searchTerm.toLowerCase())
+                        )
+                      ) {
+                        return (
+                          <motion.div
+                            key={icon}
+                            layout
+                            initial={{ scale: 0.6, origin: "center" }}
+                            animate={{
+                              scale: 1,
+                              origin: "center",
+                              transition: { type: "spring" },
+                            }}
+                            exit={{ opacity: 0, origin: "center" }}
+                            className="bg-white"
+                          >
+                            <Icon
+                              setDialog={setShowDialog}
+                              selected={selected}
+                              setSelected={setSelected}
+                              name={icon}
+                              data={data[icon]}
+                              icon={
+                                <div
+                                  dangerouslySetInnerHTML={{
+                                    __html: data[icon].svg,
+                                  }}
+                                  className="text-gray-800"
+                                ></div>
+                              }
+                            />
+                          </motion.div>
+                        );
+                      }
+                    })}
+                  </AnimatePresence>
                 </motion.div>
-              </div>
+              </motion.div>
 
               <IconInfoPanel
                 className="ml-5 hidden xs:block sm:block lg:block"
@@ -640,43 +679,43 @@ export default function Home({ s, selectedParam }) {
                 data={data}
                 allowDownload={!circleMode && !squareMode}
               />
-            </div>
-          </main>
-        </div>
-        <motion.footer
-          layout
-          className="mt-10 bg-blue-200 h-32 w-full px-5 py-10 sm:px-16 sm:py-14 flex items-center justify-between"
-        >
-          <div
-            className="flex items-center"
-            role="img"
-            aria-label="Will Kelly profile picture"
-          >
-            <img
-              className=" mr-3 w-8 h-8 rounded-full"
-              src="/images/profile_picture.webp"
-              alt="Will Kelly profile picture"
-            />
-            <div className="text-sm tracking-tighter leading-3">
-              <p className="font-medium text-blue-500">Created by</p>
-              <a
-                className="font-semibold text-blue-600 text-base cursor-pointer"
-                href="https://www.will-kelly.co.uk"
-              >
-                @Will Kelly
-              </a>
-            </div>
+            </LayoutGroup>
           </div>
-          <a
-            className="font-semibold text-blue-600 text-base cursor-pointer"
-            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-              "Check out this icon pack IKONO by @WillKelly__ 😮"
-            )}&url=${encodeURIComponent("https://ikono.will-kelly.co.uk")}`}
-          >
-            Share
-          </a>
-        </motion.footer>
-      </AnimateSharedLayout>
+        </main>
+      </div>
+      <motion.footer
+        layout
+        className="mt-10 bg-blue-200 h-32 w-full px-5 py-10 sm:px-16 sm:py-14 flex items-center justify-between"
+      >
+        <div
+          className="flex items-center"
+          role="img"
+          aria-label="Will Kelly profile picture"
+        >
+          <img
+            className=" mr-3 w-8 h-8 rounded-full"
+            src="/images/profile_picture.webp"
+            alt="Will Kelly profile picture"
+          />
+          <div className="text-sm tracking-tighter leading-3">
+            <p className="font-medium text-blue-500">Created by</p>
+            <a
+              className="font-semibold text-blue-600 text-base cursor-pointer"
+              href="https://www.will-kelly.co.uk"
+            >
+              @Will Kelly
+            </a>
+          </div>
+        </div>
+        <a
+          className="font-semibold text-blue-600 text-base cursor-pointer"
+          href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+            "Check out this icon pack IKONO by @WillKelly__ 😮"
+          )}&url=${encodeURIComponent("https://ikono.will-kelly.co.uk")}`}
+        >
+          Share
+        </a>
+      </motion.footer>
     </div>
   );
 }
