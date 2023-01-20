@@ -33,6 +33,10 @@ function main() {
   console.log("\n------------------------------");
   console.log("----Building React Library----");
 
+  // Clear out icons file
+  fs.rmdirSync(generatesIconJsLoc, { recursive: true });
+  fs.mkdirSync(generatesIconJsLoc);
+
   let imports = [];
 
   const meta = openMeta();

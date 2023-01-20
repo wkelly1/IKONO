@@ -4,7 +4,7 @@
   "description": "A large collection of high quality SVG icons with an MIT license",
   "licence": "MIT",
   "scripts": {
-    "update_icons": "node ./scripts/generatePNG.js && node ./scripts/index.js && node ./scripts/build_react.js",
+    "update_icons": "node ./scripts/generatePNG.js && node ./scripts/index.js && node ./scripts/build_react.js && cd react && npm run build",
     "publish_svg_library": "np minor --tests=false",
     "publish_react_library": "cd react && np minor --tests=false",
     "build": "node ./scripts/index.js",
