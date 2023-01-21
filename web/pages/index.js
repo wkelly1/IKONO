@@ -619,6 +619,54 @@ export default function Home({ s, selectedParam }) {
                   </motion.div>
                 </div>
 
+                {Object.keys(data).filter((icon) => {
+                  if (
+                    (searchTerm !== "" &&
+                      icon.includes(searchTerm.toLowerCase())) ||
+                    searchTerm === "" ||
+                    data[icon].tags.some((value) =>
+                      value.toLowerCase().includes(searchTerm.toLowerCase())
+                    )
+                  ) {
+                    return true;
+                  }
+                }).length === 0 && (
+                  <motion.div
+                    layout
+                    className="w-full pt-32 justify-center flex flex-col gap-4 items-center text-blue-400"
+                  >
+                    <span className="scale-150">
+                      <svg
+                        height="24"
+                        width="24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="8.25"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                        />
+                        <path
+                          d="M8.96 15.474c-.176.178-.453.228-.657.082a6.582 6.582 0 0 1-.48-.38.449.449 0 0 1-.035-.648c1.084-1.157 2.57-1.87 4.212-1.87 1.7 0 3.235.765 4.326 1.996a.449.449 0 0 1-.052.647 6.27 6.27 0 0 1-.492.366c-.207.14-.482.082-.653-.1-.827-.883-1.947-1.41-3.129-1.41-1.14 0-2.222.49-3.04 1.317Z"
+                          fill="currentColor"
+                          fillRule="evenodd"
+                        />
+                        <path
+                          d="M10 9a1.25 1.25 0 1 1-2.5 0A1.25 1.25 0 0 1 10 9Zm6.5 0A1.25 1.25 0 1 1 14 9a1.25 1.25 0 0 1 2.5 0Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </span>
+                    <p className="text-sm font-medium">
+                      No icons found with the name{" "}
+                      <span className="font-bold">{searchTerm}</span>
+                    </p>
+                  </motion.div>
+                )}
+
                 <motion.div
                   layout
                   className="w-full grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 lg:grid-cols-6 xl:grid-cols-8  grid-flow-row  gap-5"
