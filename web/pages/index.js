@@ -633,7 +633,7 @@ export default function Home({ s, selectedParam }) {
                 }).length === 0 && (
                   <motion.div
                     layout
-                    className="w-full pt-32 justify-center flex flex-col gap-4 items-center text-blue-400"
+                    className="w-full pt-3 sm:pt-10 md:pt-32 justify-center flex flex-col gap-4 items-center text-blue-400"
                   >
                     <span className="scale-150">
                       <svg
