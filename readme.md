@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/wkelly1/IKONO/blob/main/img/bannar.png" alt="IKONO"/>
+    <img src="https://github.com/wkelly1/IKONO/blob/main/.github/img/bannar.png" alt="IKONO"/>
 </p>
 
 <p align="center">
@@ -11,7 +11,7 @@ A large collection of high quality SVG icons with an MIT license
 </p>
 
 <p align="center">
-    <img src="https://github.com/wkelly1/IKONO/blob/main/img/icons.png" alt="icons"/>
+    <img src="https://github.com/wkelly1/IKONO/blob/main/.github/img/icons.png" alt="icons"/>
 </p>
 
 <hr/>
@@ -40,4 +40,6 @@ const Component = () => (
 
 ---
 
-This is a work in progress, icons are being added daily so check back soon
+## Contribution
+
+If there are icons you think are missing feel free to contribute to the project. Alternatively, add a new idea to the [discussions page](https://github.com/wkelly1/IKONO/discussions/new?category=ideas)!
