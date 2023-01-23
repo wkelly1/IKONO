@@ -24,7 +24,12 @@ function UIImage({ src, date, title }) {
       >
         <div className="w-[95vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] p-2 md:p-5">
           <div className="relative w-full h-full  bg-cover rounded-lg aspect-[1600/1200] ">
-            <Image src={src} fill style={{ objectFit: "contain" }} />
+            <Image
+              src={src}
+              fill
+              style={{ objectFit: "contain" }}
+              placeholder="blur"
+            />
           </div>
         </div>
       </Popup>
