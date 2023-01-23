@@ -10,6 +10,7 @@ import {
 import updateSearchParam from "../lib/updateSearchParam";
 import parse from "node-html-parser";
 import { DebounceInput } from "react-debounce-input";
+import Link from "next/link";
 
 const IconInfoPanel = (props) => {
   const [svgCopied, setSVGCopied] = useState(false);
@@ -487,8 +488,8 @@ export default function Home({ s, selectedParam }) {
   }, []);
 
   return (
-    <div className=" font-sans flex flex-col justify-between min-h-screen">
-      <div>
+    <div className=" font-sans flex flex-col justify-between min-h-screen ">
+      <div className="overflow-x-hidden">
         <Head>
           <title>IKONO</title>
           <link rel="icon" href="/favicon.ico" />
@@ -529,17 +530,29 @@ export default function Home({ s, selectedParam }) {
         </Head>
 
         <header className="flex items-center justify-between px-5 pt-10 sm:px-16 sm:pt-14">
-          <h1 className="text-blue-600 font-display font-bold text-xl">
+          <Link
+            href="/"
+            className="text-blue-600 font-display font-bold text-xl"
+          >
             IKONO
-          </h1>
+          </Link>
           <nav className="font-sans text-sm flex font-semibold tracking-tighter">
-            <a
+            <Link href="/" className="px-5 text-blue-600">
+              Icons
+            </Link>
+            <Link
+              href="/ui"
+              className="px-5 hover:text-blue-600 transition-all "
+            >
+              Example UI
+            </Link>
+            <Link
               href="https://github.com/wkelly1/IKONO"
               alt="IKONO github"
-              className="px-5"
+              className="px-5  hover:text-blue-600 transition-all "
             >
               React
-            </a>
+            </Link>
           </nav>
         </header>
 
@@ -795,29 +808,3 @@ Home.getInitialProps = async ({ query }) => {
 
   return { s, selectedParam: selected };
 };
-
-<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <g transform="scale(0.7) translate(5, 5)">
-    <circle
-      cx="8"
-      cy="3.5"
-      r="1.75"
-      fill="currentColor"
-      stroke="currentColor"
-      stroke-width="1.5"
-    ></circle>
-    <path d="M5 15.412V8h6v7.412H9V22H7v-6.588H5Z" fill="currentColor"></path>
-    <path
-      d="M7 15.412H5V8h6v7.412H9m-2 0V22h2v-6.588m-2 0h2"
-      stroke="currentColor"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    ></path>
-  </g>
-  <path
-    d="M23.25 12C23.25 18.2132 18.2132 23.25 12 23.25C5.7868 23.25 0.75 18.2132 0.75 12C0.75 5.7868 5.7868 0.75 12 0.75C18.2132 0.75 23.25 5.7868 23.25 12Z"
-    stroke="currentColor"
-    stroke-width="1.5"
-  ></path>
-</svg>;
