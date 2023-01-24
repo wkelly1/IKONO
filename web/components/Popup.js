@@ -19,21 +19,22 @@ export default function Popup({ header, show, close, children }) {
     <AnimatePresence>
       {show && (
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, scaleY: 0, originY: 1 }}
+          animate={{ opacity: 1, scaleY: 1, originY: 1 }}
           exit={{ opacity: 0 }}
           transition={{
-            duration: 0.1,
+            duration: 0.3,
+            type: "spring",
           }}
           onClick={() => close()}
-          className="z-20 absolute left-0 top-0 right-0 backdrop-blur-sm flex justify-center pt-10 "
+          className="z-20 fixed left-0 top-0 right-0 backdrop-blur-sm flex justify-center pt-0 sm:pt-10 overflow-y-auto h-screen"
         >
-          <div className="p-5 ">
+          <div className="">
             <div
               className="bg-white shadow-xl border flex flex-col rounded-sm md:w-full"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="w-full flex items-center justify-between p-2 bg-blue-100">
+              <div className="w-full flex items-center justify-between p-2 bg-blue-100 h-12">
                 <p className="text-sm font-semibold text-blue-800 tracking-tight ml-3">
                   {header}
                 </p>

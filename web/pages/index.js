@@ -786,7 +786,7 @@ export default function Home({ s, selectedParam }) {
               className="font-semibold text-blue-600 text-base cursor-pointer"
               href="https://www.will-kelly.co.uk"
             >
-              @Will Kelly
+              Will Kelly
             </a>
           </div>
         </div>
