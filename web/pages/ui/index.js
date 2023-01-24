@@ -10,11 +10,12 @@ import ui2 from "../../public/images/ui/ui2.png";
 import ui3 from "../../public/images/ui/ui3.png";
 import ui4 from "../../public/images/ui/ui4.png";
 import ui5 from "../../public/images/ui/ui5.png";
+import ui6 from "../../public/images/ui/ui6.png";
 
 function UIImage({ src, date, title }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col ">
       <Popup
         header={
           <div className="flex flex-col ">
@@ -59,10 +60,10 @@ function UIImage({ src, date, title }) {
 export default function Home() {
   return (
     <div
-      className=" font-sans flex flex-col justify-between min-h-screen "
+      className=" font-sans flex flex-col justify-between min-h-screen  "
       style={{ width: "100vw", overflowX: "hidden" }}
     >
-      <div className="overflow-x-none">
+      <div className="overflow-x-none flex items-center flex-col">
         <Head>
           <title>IKONO</title>
           <link rel="icon" href="/favicon.ico" />
@@ -103,7 +104,7 @@ export default function Home() {
         </Head>
 
         <header
-          className="flex items-center justify-between px-5 pt-10 sm:px-16 sm:pt-14"
+          className="flex items-center justify-between px-5 pt-10 sm:px-16 sm:pt-14 max-w-[2500px] "
           style={{ width: "100vw", overflowX: "hidden" }}
         >
           <Link
@@ -129,7 +130,7 @@ export default function Home() {
           </nav>
         </header>
 
-        <main className="mt-10 px-5  sm:px-16 ">
+        <main className="mt-10 px-5  sm:px-16 max-w-[2500px] w-full">
           <div className="bg-blue-600 h-60 flex flex-col justify-between px-10 py-6">
             <div></div>
             <div>
@@ -146,12 +147,13 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6  auto-rows-fr grid-flow-row mt-7 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  auto-rows-fr grid-flow-row mt-7 gap-8">
             <UIImage src={ui1} title="E-Commerce" date="Jan 22, 2023" />
             <UIImage src={ui2} title="Travel Planner" date="Jan 22, 2023" />
             <UIImage src={ui3} title="File Explorer" date="Jan 22, 2023" />
             <UIImage src={ui4} title="Product Page" date="Jan 22, 2023" />
             <UIImage src={ui5} title="Signup Page" date="Jan 24, 2023" />
+            <UIImage src={ui6} title="Dashboard" date="Jan 24, 2023" />
           </div>
         </main>
       </div>
