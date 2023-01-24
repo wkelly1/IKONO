@@ -26,7 +26,7 @@ function UIImage({ src, date, title }) {
         show={open}
         close={() => setOpen(false)}
       >
-        <div className="w-[100vw] h-[calc(100vh-3.2rem)] sm:h-auto sm:w-[80vw] md:w-[70vw] lg:w-[60vw] p-0 pt-2 sm:p-2 md:p-5">
+        <div className="w-[100vw] h-[calc(100vh-3.2rem)] sm:h-auto sm:w-[80vw] md:w-[70vw] lg:w-[60vw] xl:max-w-[1300px] p-0 pt-2 sm:p-2 md:p-5">
           <div className="relative w-full   bg-cover rounded-lg aspect-[1600/1200] ">
             <Image
               src={src}
