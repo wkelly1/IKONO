@@ -1270,5 +1270,20 @@
   "money_note": [
     "currency",
     "note"
+  ],
+  "cross_circle": [
+    "exit",
+    "multiply",
+    "times",
+    "close",
+    "maths"
+  ],
+  "expand": [
+    "fullscreen",
+    "arrow"
+  ],
+  "fullscreen": [
+    "expand",
+    "arrow"
   ]
 }
