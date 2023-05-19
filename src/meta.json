@@ -979,13 +979,44 @@
     "day",
     "light",
     "lightmode",
-    "sky"
+    "sky",
+    "weather"
+  ],
+  "rain": [
+    "weather",
+    "cloud",
+    "water",
+    "raining"
+  ],
+  "snow": [
+    "weather",
+    "cloud",
+    "ice"
+  ],
+  "hail": [
+    "weather",
+    "cloud",
+    "ice"
+  ],
+  "lightning": [
+    "weather",
+    "cloud",
+    "water",
+    "raining",
+    "thunder"
+  ],
+  "sunny_rain": [
+    "weather",
+    "cloud",
+    "sun",
+    "sunny"
   ],
   "sun_outlined": [
     "day",
     "light",
     "lightmode",
-    "sky"
+    "sky",
+    "weather"
   ],
   "transgender": [
     "gender"
@@ -1286,5 +1317,11 @@
   "fullscreen": [
     "expand",
     "arrow"
+  ],
+  "life_ring": [
+    "life guard",
+    "safety",
+    "water",
+    "life boat"
   ]
 }

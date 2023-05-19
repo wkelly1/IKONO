@@ -18,6 +18,8 @@ A large collection of high quality SVG icons with an MIT license
 
 # Usage
 
+IKONO is now built into Figma! Explore the plugin [here](https://www.figma.com/community/plugin/1230547475211377845/IKONO-Icons)!
+
 ## React
 
 Install the package via [npm](https://www.npmjs.com/package/@ikono/react)
