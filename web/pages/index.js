@@ -72,7 +72,7 @@ const IconInfoPanel = (props) => {
           style={{ borderWidth: "3px" }}
         >
           <div className="flex justify-between">
-            <h3 className="font-semibold text-blue-600 text-base">
+            <h3 className="text-base font-semibold text-blue-600">
               {props.selected}
             </h3>
             <div className="flex">
@@ -128,7 +128,7 @@ const IconInfoPanel = (props) => {
 
           <div className="flex flex-col items-center">
             <div
-              className="border-blue-200 mt-8  p-2  flex items-center justify-center relative w-full h-24"
+              className="relative flex items-center justify-center w-full h-24 p-2 mt-8 border-blue-200"
               style={{ borderWidth: "3px" }}
             >
               <div
@@ -140,19 +140,19 @@ const IconInfoPanel = (props) => {
           </div>
 
           <div
-            className=" h-full overflow-y-auto"
+            className="h-full overflow-y-auto "
             style={{ scrollbarWidth: "none" }}
           >
-            <h3 className="font-semibold text-blue-600 text-base mt-8 flex items-center">
+            <h3 className="flex items-center mt-8 text-base font-semibold text-blue-600">
               #
-              <span className="text-blue-400 text-xs ml-1">
+              <span className="ml-1 text-xs text-blue-400">
                 {Meta[props.selected].tags.join(", ")}
               </span>
             </h3>
 
             <div className="flex mt-7">
               <button
-                className="hover:bg-opacity-50 bg-blue-600 bg-opacity-30 h-10 w-full mr-2 flex items-center justify-center font-semibold tracking-tighter text-blue-600 text-xs transition-all relative"
+                className="relative flex items-center justify-center w-full h-10 mr-2 text-xs font-semibold tracking-tighter text-blue-600 transition-all bg-blue-600 hover:bg-opacity-50 bg-opacity-30"
                 onClick={() => {
                   console.log(Meta[props.selected]);
                   navigator.clipboard.writeText(props.data[props.selected].svg);
@@ -185,7 +185,7 @@ const IconInfoPanel = (props) => {
                 </AnimatePresence>
               </button>
               <button
-                className="hover:bg-opacity-50 bg-blue-600 bg-opacity-30 h-10 w-full mr-2 flex items-center justify-center font-semibold tracking-tighter text-blue-600 text-xs transition-all relative"
+                className="relative flex items-center justify-center w-full h-10 mr-2 text-xs font-semibold tracking-tighter text-blue-600 transition-all bg-blue-600 hover:bg-opacity-50 bg-opacity-30"
                 onClick={() => {
                   console.log(Meta[props.selected]);
                   navigator.clipboard.writeText(props.data[props.selected].jsx);
@@ -219,12 +219,12 @@ const IconInfoPanel = (props) => {
               </button>
             </div>
 
-            <h3 className="font-semibold text-blue-400 text-xs  mt-8 flex items-center">
+            <h3 className="flex items-center mt-8 text-xs font-semibold text-blue-400">
               More like this...
             </h3>
 
             <div className="w-full mt-8">
-              <div className="w-full grid grid-cols-2 xs:grid-cols-3   grid-flow-row  gap-5">
+              <div className="grid w-full grid-flow-row grid-cols-2 gap-5 xs:grid-cols-3">
                 {findSimilar(props.selected).map((value) => (
                   <Icon
                     key={value}
@@ -263,7 +263,7 @@ const CopyBtn = (props) => {
       onClick={props.onClick}
     >
       <p
-        className="font-semibold tracking-tighter text-blue-600 text-xs cursor-pointer"
+        className="text-xs font-semibold tracking-tighter text-blue-600 cursor-pointer"
         href="https://www.will-kelly.co.uk"
       >
         {props.title}
@@ -322,7 +322,7 @@ const Icon = (props) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="font-semibold text-xs tracking-tighter text-blue-500"
+              className="text-xs font-semibold tracking-tighter text-blue-500"
             >
               Copied!
             </motion.p>
@@ -330,9 +330,9 @@ const Icon = (props) => {
         </AnimatePresence>
 
         {showOpts && !coppied && (
-          <div className="absolute w-full h-full flex flex-col">
+          <div className="absolute flex flex-col w-full h-full">
             <CopyBtn
-              className="mb-1 mt-2"
+              className="mt-2 mb-1"
               title={"Copy SVG"}
               onClick={(e) => {
                 navigator.clipboard.writeText(props.data.svg);
@@ -488,7 +488,7 @@ export default function Home({ s, selectedParam }) {
   }, []);
 
   return (
-    <div className=" font-sans flex flex-col justify-between min-h-screen ">
+    <div className="flex flex-col justify-between min-h-screen font-sans ">
       <div className="overflow-x-hidden">
         <Head>
           <title>IKONO</title>
@@ -528,35 +528,88 @@ export default function Home({ s, selectedParam }) {
             sizes="180x180"
           />
         </Head>
+        <Link
+          href="https://www.buymeacoffee.com/willk"
+          className="flex items-center justify-between visible w-full gap-1 px-5 py-2 font-sans text-sm font-semibold tracking-tighter bg-yellow-400 shadow-sm sm:hidden shrink-0"
+        >
+          <div className="flex items-center">
+            <svg
+              height="24"
+              width="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15.429 7H4v6.6C4 16.35 6.856 18 9.714 18c2.858 0 5.715-1.65 5.715-4.4v-1.1m0-5.5C17.714 7 20 7.724 20 9.75s-1.143 3.3-4.571 2.75m0-5.5v5.5"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+              />
+            </svg>
+            Buy me a coffee
+          </div>
+          <svg
+            height="24"
+            width="24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m12.5 18.5 5.646-5.646a.5.5 0 0 0 0-.708L12.5 6.5m6 6h-13"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+            />
+          </svg>
+        </Link>
 
         <header className="flex items-center justify-between px-5 pt-10 sm:px-16 sm:pt-14">
           <Link
             href="/"
-            className="text-blue-600 font-display font-bold text-xl"
+            className="text-xl font-bold text-blue-600 font-display"
           >
             IKONO
           </Link>
-          <nav className="font-sans text-sm flex font-semibold tracking-tighter">
-            <Link href="/" className="px-5 text-blue-600">
+          <nav className="flex flex-wrap items-center justify-end font-sans text-sm font-semibold tracking-tighter gap-x-10 gap-y-2">
+            <Link
+              href="https://www.buymeacoffee.com/willk"
+              className="items-center hidden gap-1 px-5 py-1 bg-yellow-400 rounded-lg sm:flex shrink-0"
+            >
+              <svg
+                height="24"
+                width="24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.429 7H4v6.6C4 16.35 6.856 18 9.714 18c2.858 0 5.715-1.65 5.715-4.4v-1.1m0-5.5C17.714 7 20 7.724 20 9.75s-1.143 3.3-4.571 2.75m0-5.5v5.5"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                />
+              </svg>
+              Buy me a coffee
+            </Link>
+            <Link href="/" className="text-blue-600 ">
               Icons
             </Link>
-            <Link
-              href="/ui"
-              className="px-5 hover:text-blue-600 transition-all "
-            >
+            <Link href="/ui" className="transition-all hover:text-blue-600">
               Example UI
             </Link>
             <Link
               href="https://github.com/wkelly1/IKONO"
               alt="IKONO github"
-              className="px-5  hover:text-blue-600 transition-all "
+              className="transition-all hover:text-blue-600 "
             >
               React
             </Link>
           </nav>
         </header>
 
-        <div className="visible sm:hidden fixed z-10 top-0 right-0 w-5/6 max-h-screen">
+        <div className="fixed top-0 right-0 z-10 visible w-5/6 max-h-screen sm:hidden">
           <IconInfoPanel
             setSelected={setSelected}
             setDialog={setShowDialog}
@@ -567,21 +620,21 @@ export default function Home({ s, selectedParam }) {
           />
         </div>
 
-        <main className="mt-10 px-5  sm:px-16 ">
-          <div className="bg-blue-600 h-60 flex flex-col justify-between px-10 py-6">
+        <main className="px-5 mt-10 sm:px-16 ">
+          <div className="flex flex-col justify-between px-10 py-6 bg-blue-600 h-60">
             <div></div>
             <div>
-              <p className="font-bold text-white text-3xl">
+              <p className="text-3xl font-bold text-white">
                 ICONS ARE EASIER THAN WORDS
               </p>
             </div>
           </div>
 
           <div
-            className="mt-8 border-blue-200 p-2 h-14 flex items-center"
+            className="flex items-center p-2 mt-8 border-blue-200 h-14"
             style={{ borderWidth: "3px" }}
           >
-            <div className="text-blue-700 ml-1">
+            <div className="ml-1 text-blue-700">
               <svg
                 height="24"
                 width="24"
@@ -598,14 +651,14 @@ export default function Home({ s, selectedParam }) {
               debounceTimeout={200}
               placeholder="Search"
               inputRef={searchInput}
-              className="ml-3 text-blue-600 placeholder-blue-400 font-semibold border-none outline-none w-full"
+              className="w-full ml-3 font-semibold text-blue-600 placeholder-blue-400 border-none outline-none"
               value={searchTerm}
               onChange={(e) => {
                 updateSearchParam("s", e.target.value);
                 setSearchTerm(e.target.value);
               }}
             ></DebounceInput>
-            <p className="flex px-2 py-1 text-blue-300 border-2 border-blue-100 mr-4 text-sm font-normal">
+            <p className="flex px-2 py-1 mr-4 text-sm font-normal text-blue-300 border-2 border-blue-100">
               <span className="text-blue-200">⌘</span> K
             </p>
             <p className="flex justify-end text-xs font-semibold tracking-tighter pr-2 max-w-[50px] min-w-[50px]">
@@ -613,12 +666,12 @@ export default function Home({ s, selectedParam }) {
             </p>
           </div>
 
-          <div className="flex w-full justify-between mt-5">
+          <div className="flex justify-between w-full mt-5">
             <LayoutGroup>
               <motion.div className="w-full" layout>
                 <div className="w-full">
                   <motion.div
-                    className="w-full grid grid-cols-2  grid-flow-row  gap-5 mb-8"
+                    className="grid w-full grid-flow-row grid-cols-2 gap-5 mb-8"
                     layout
                   >
                     <button
@@ -668,7 +721,7 @@ export default function Home({ s, selectedParam }) {
                 }).length === 0 && (
                   <motion.div
                     layout
-                    className="w-full pt-3 sm:pt-10 md:pt-14 justify-center flex flex-col gap-4 items-center text-blue-400"
+                    className="flex flex-col items-center justify-center w-full gap-4 pt-3 text-blue-400 sm:pt-10 md:pt-14"
                   >
                     <span className="scale-150">
                       <svg
@@ -704,7 +757,7 @@ export default function Home({ s, selectedParam }) {
 
                 <motion.div
                   layout
-                  className="w-full grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 lg:grid-cols-6 xl:grid-cols-8  grid-flow-row  gap-5"
+                  className="grid w-full grid-flow-row grid-cols-2 gap-5 xs:grid-cols-2 sm:grid-cols-2 lg:grid-cols-6 xl:grid-cols-8"
                 >
                   <AnimatePresence>
                     {Object.keys(data).map((icon) => {
@@ -753,7 +806,7 @@ export default function Home({ s, selectedParam }) {
               </motion.div>
 
               <IconInfoPanel
-                className="ml-5 hidden xs:block sm:block lg:block"
+                className="hidden ml-5 xs:block sm:block lg:block"
                 showDialog={showDialog}
                 selected={selected}
                 setSelected={setSelected}
@@ -768,7 +821,7 @@ export default function Home({ s, selectedParam }) {
       </div>
       <motion.footer
         layout
-        className="mt-10 bg-blue-200 h-32 w-full px-5 py-10 sm:px-16 sm:py-14 flex items-center justify-between"
+        className="flex items-center justify-between w-full h-32 px-5 py-10 mt-10 bg-blue-200 sm:px-16 sm:py-14"
       >
         <div
           className="flex items-center"
@@ -776,14 +829,14 @@ export default function Home({ s, selectedParam }) {
           aria-label="Will Kelly profile picture"
         >
           <img
-            className=" mr-3 w-8 h-8 rounded-full"
+            className="w-8 h-8 mr-3 rounded-full "
             src="/images/profile_picture.webp"
             alt="Will Kelly profile picture"
           />
-          <div className="text-sm tracking-tighter leading-3">
+          <div className="text-sm leading-3 tracking-tighter">
             <p className="font-medium text-blue-500">Created by</p>
             <a
-              className="font-semibold text-blue-600 text-base cursor-pointer"
+              className="text-base font-semibold text-blue-600 cursor-pointer"
               href="https://www.will-kelly.co.uk"
             >
               Will Kelly
@@ -792,13 +845,13 @@ export default function Home({ s, selectedParam }) {
         </div>
         <div className="flex gap-4">
           <a
-            className="font-semibold text-blue-600 text-base cursor-pointer"
+            className="text-base font-semibold text-blue-600 cursor-pointer"
             href={`https://www.will-kelly.co.uk/legal/privacy-policy`}
           >
             Legal
           </a>
           <a
-            className="font-semibold text-blue-600 text-base cursor-pointer"
+            className="text-base font-semibold text-blue-600 cursor-pointer"
             href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
               "Check out this icon pack IKONO by @WillKelly__ 😮"
             )}&url=${encodeURIComponent("https://ikono.will-kelly.co.uk")}`}
