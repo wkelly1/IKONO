@@ -6,3 +6,4 @@ react/dist
 react/index.js
 react
 .DS_Store
+.vercel
