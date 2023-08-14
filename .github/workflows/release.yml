@@ -18,22 +18,17 @@ jobs:
       - name: Display version
         run: |
           VERSION=${{ github.event.release.tag_name}}
-          echo '${{ VERSION#v }}'
-
+          echo '${{ VERSION:1 }}'
+      - name: Setup git config
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
       - name: Update package.json version
         run: |
-          npm version ${{ VERSION#v }}
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add .
-          git commit -m "[Automated Commit] Update version to ${{ VERSION#v }}"
+          npm version ${{ VERSION:1 }} --git-tag-version false
           git push
       - name: Update react package.json version
         run: |
           cd react
-          npm version ${{ VERSION#v }}
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add .
-          git commit -m "[Automated Commit] Update version to ${{ VERSION#v }}"
+          npm version ${{ VERSION:1 }} --git-tag-version false
           git push
