@@ -22,18 +22,18 @@ jobs:
 
       - name: Update package.json version
         run: |
-          npm version ${{ github.event.release.tag_name }}
+          npm version ${{ VERSION#v }}
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add .
-          git commit -m "[Automated Commit] Update version to ${{ github.event.release.tag_name }}"
+          git commit -m "[Automated Commit] Update version to ${{ VERSION#v }}"
           git push
       - name: Update react package.json version
         run: |
           cd react
-          npm version ${{ github.event.release.tag_name }}
+          npm version ${{ VERSION#v }}
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add .
-          git commit -m "[Automated Commit] Update version to ${{ github.event.release.tag_name }}"
+          git commit -m "[Automated Commit] Update version to ${{ VERSION#v }}"
           git push
