@@ -18,8 +18,8 @@ module.exports = withPWA({
         headers: nextSafe({
           isDev,
           contentSecurityPolicy: {
-            'font-src': "'self' fonts.gstatic.com",
-            'style-src': "'self' fonts.googleapis.com",
+            'font-src': ["'self'", 'fonts.gstatic.com'],
+            'style-src': ["'self'", 'fonts.googleapis.com'],
             'script-src': ["'self'", 'va.vercel-scripts.com'],
             'upgrade-insecure-requests': [],
             'prefetch-src': false
