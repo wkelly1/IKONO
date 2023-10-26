@@ -790,14 +790,22 @@ export default function Home({ s, selectedParam }) {
             </a>
           </div>
         </div>
-        <a
-          className="font-semibold text-blue-600 text-base cursor-pointer"
-          href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-            "Check out this icon pack IKONO by @WillKelly__ 😮"
-          )}&url=${encodeURIComponent("https://ikono.will-kelly.co.uk")}`}
-        >
-          Share
-        </a>
+        <div className="flex gap-4">
+          <a
+            className="font-semibold text-blue-600 text-base cursor-pointer"
+            href={`https://www.will-kelly.co.uk/legal/privacy-policy`}
+          >
+            Legal
+          </a>
+          <a
+            className="font-semibold text-blue-600 text-base cursor-pointer"
+            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+              "Check out this icon pack IKONO by @WillKelly__ 😮"
+            )}&url=${encodeURIComponent("https://ikono.will-kelly.co.uk")}`}
+          >
+            Share
+          </a>
+        </div>
       </motion.footer>
     </div>
   );
