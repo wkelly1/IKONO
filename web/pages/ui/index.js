@@ -26,8 +26,8 @@ function UIImage({ src, date, title }) {
         show={open}
         close={() => setOpen(false)}
       >
-        <div className="w-[95vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] p-2 md:p-5">
-          <div className="relative w-full h-full  bg-cover rounded-lg aspect-[1600/1200] ">
+        <div className="w-[100vw] h-[calc(100vh-3.2rem)] sm:h-auto sm:w-[80vw] md:w-[70vw] lg:w-[60vw] p-0 pt-2 sm:p-2 md:p-5">
+          <div className="relative w-full   bg-cover rounded-lg aspect-[1600/1200] ">
             <Image
               src={src}
               fill
@@ -45,7 +45,7 @@ function UIImage({ src, date, title }) {
         className="relative w-full aspect-[1600/1200]  bg-cover rounded-lg cursor-pointer"
         onClick={() => setOpen(true)}
       >
-        <Image src={src} style={{ objectFit: "cover" }} fill />
+        <Image src={src} alt={title} style={{ objectFit: "cover" }} fill />
       </motion.div>
       <div className="px-3 flex justify-between mt-3">
         <p className="text-sm font-semibold">{title}</p>
@@ -145,7 +145,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr grid-flow-row mt-7 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6  auto-rows-fr grid-flow-row mt-7 gap-8">
             <UIImage src={ui1} title="E-Commerce" date="Jan 22, 2023" />
             <UIImage src={ui2} title="Travel Planner" date="Jan 22, 2023" />
             <UIImage src={ui3} title="File Explorer" date="Jan 22, 2023" />
@@ -173,7 +173,7 @@ export default function Home() {
               className="font-semibold text-blue-600 text-base cursor-pointer"
               href="https://www.will-kelly.co.uk"
             >
-              @Will Kelly
+              Will Kelly
             </a>
           </div>
         </div>
