@@ -22,8 +22,10 @@ const metaOutputLoc = "." + path.sep + "output" + path.sep;
 const srcInputLoc = "." + path.sep + "src";
 
 const convertCurrentColor = (svg) => {
-  const reStroke = /stroke=("|')#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})("|')/g;
-  const reFill = /fill=("|')#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})("|')/g;
+  const reStroke =
+    /stroke=("|')#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3}|black|white)("|')/g;
+  const reFill =
+    /fill=("|')#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3}|black|white)("|')/g;
 
   svg = svg.replaceAll(reStroke, "stroke='currentColor'");
   svg = svg.replaceAll(reFill, "fill='currentColor'");
@@ -74,6 +76,7 @@ function updateMeta(meta) {
 async function optimizeAndJSX(svg, key) {
   console.log(" - Optimizing");
 
+  svg = convertCurrentColor(svg);
   const result = optimize(svg, {
     // optional but recommended field
     path: srcInputLoc + path.sep + "icons" + path.sep + key + ".svg",
@@ -82,12 +85,11 @@ async function optimizeAndJSX(svg, key) {
     fill: { name: "fill", value: "currentColor" },
   });
 
-  let optimizedSvgString = convertCurrentColor(result.data);
   console.log(" - Converting to JSX");
-  let jsx = await svgtojsx(optimizedSvgString);
+  let jsx = await svgtojsx(result.data);
   jsx = convertToJSX(jsx);
 
-  return [optimizedSvgString, jsx];
+  return [result.data, jsx];
 }
 
 async function main() {
@@ -97,6 +99,7 @@ async function main() {
   files = files
     .filter((file) => path.extname(file).toLowerCase() === ".svg")
     .map((file) => path.parse(file).name);
+  // .filter((v) => v === "accessibility");
 
   const meta = openMeta();
 
