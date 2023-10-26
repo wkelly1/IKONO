@@ -46,3 +46,4 @@ yarn-error.log*
 **/public/fallback-*.js
 
 meta.json
+web/public/icons/**/*

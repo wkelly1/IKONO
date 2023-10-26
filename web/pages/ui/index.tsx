@@ -9,9 +9,7 @@ import ui6 from '../../public/images/ui/ui6.png';
 import ui7 from '../../public/images/ui/ui7.png';
 import ui8 from '../../public/images/ui/ui8.png';
 import { motion } from 'framer-motion';
-import Head from 'next/head';
 import Image, { StaticImageData } from 'next/image';
-import Link from 'next/link';
 import { useState } from 'react';
 
 interface UIImageProps {
@@ -157,7 +155,7 @@ export default function Home() {
           role="img"
           aria-label="Will Kelly profile picture"
         >
-          <img
+          <Image
             className="mr-3 h-8 w-8 rounded-full "
             src="/images/profile_picture.webp"
             alt="Will Kelly profile picture"

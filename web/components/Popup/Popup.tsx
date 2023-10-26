@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { KeyboardEvent, useCallback, useEffect } from 'react';
+import { useCallback, useEffect } from 'react';
 
 interface PopupProps {
   header: JSX.Element;
@@ -9,18 +9,21 @@ interface PopupProps {
 }
 
 export default function Popup({ header, show, close, children }: PopupProps) {
-  const keyListener = useCallback((e: globalThis.KeyboardEvent) => {
-    if (e.key === 'Escape') {
-      close();
-    }
-  }, []);
+  const keyListener = useCallback(
+    (e: globalThis.KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        close();
+      }
+    },
+    [close]
+  );
 
   useEffect(() => {
     document.addEventListener('keydown', keyListener, false);
     return () => {
       document.removeEventListener('keydown', keyListener, false);
     };
-  }, []);
+  }, [keyListener]);
 
   return (
     <AnimatePresence>

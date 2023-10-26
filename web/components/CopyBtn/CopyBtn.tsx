@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { MouseEventHandler } from 'react';
 
 interface CopyBtnProps {
   className: string;

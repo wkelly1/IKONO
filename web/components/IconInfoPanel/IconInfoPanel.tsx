@@ -44,9 +44,9 @@ export default function IconInfoPanel({
   };
 
   const findSimilar = (icon: string) => {
-    let out = [];
+    const out = [];
     Object.keys(data).forEach(value => {
-      let tags = data[value].tags;
+      const tags = data[value].tags;
       tags.filter((value: string) => data[icon].tags.includes(value));
       if (
         tags.filter((value: string) => data[icon].tags.includes(value)).length >

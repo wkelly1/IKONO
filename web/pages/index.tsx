@@ -4,8 +4,7 @@ import Navbar from '../components/Navbar/Navbar';
 import updateSearchParam from '../lib/updateSearchParam';
 import Meta from '../meta.json';
 import { AnimatePresence, LayoutGroup, motion } from 'framer-motion';
-import Head from 'next/head';
-import Link from 'next/link';
+import Image from 'next/image';
 import parse from 'node-html-parser';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { DebounceInput } from 'react-debounce-input';
@@ -21,7 +20,7 @@ export default function Home({ s, selectedParam }: HomeProps) {
   const [showDialog, setShowDialog] = useState<boolean>(
     selectedParam !== undefined
   );
-  const [initialData, setInitialData] = useState(Meta);
+  const [initialData] = useState(Meta);
   const [data, setData] = useState<MetaType>(Meta);
   const [noShowing, setNoShowing] = useState<number>(Object.keys(Meta).length);
   const [selected, setSelected] = useState<string>(selectedParam || '');
@@ -34,8 +33,8 @@ export default function Home({ s, selectedParam }: HomeProps) {
 
   const convertToJSX = (svg: string) => {
     return svg.replace(/[a-z]*-[a-z]*=/g, group => {
-      let index = group.indexOf('-') + 1;
-      let newString =
+      const index = group.indexOf('-') + 1;
+      const newString =
         group.substring(0, index) +
         group[index].toUpperCase() +
         group.substring(index + 1);
@@ -60,11 +59,14 @@ export default function Home({ s, selectedParam }: HomeProps) {
       })'/>`
     );
     svg.childNodes[0].childNodes.forEach(child =>
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       g.childNodes[0].appendChild(child)
     );
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     svg.childNodes[0].appendChild(g);
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     svg.childNodes[0].appendChild(path);
     return svg;
@@ -107,11 +109,14 @@ export default function Home({ s, selectedParam }: HomeProps) {
       })'/>`
     );
     svg.childNodes[0].childNodes.forEach(child =>
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       g.childNodes[0].appendChild(child)
     );
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     svg.childNodes[0].appendChild(g);
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     svg.childNodes[0].appendChild(path);
     return svg;
@@ -442,7 +447,7 @@ export default function Home({ s, selectedParam }: HomeProps) {
           role="img"
           aria-label="Will Kelly profile picture"
         >
-          <img
+          <Image
             className="mr-3 h-8 w-8 rounded-full "
             src="/images/profile_picture.webp"
             alt="Will Kelly profile picture"
