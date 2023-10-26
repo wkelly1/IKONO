@@ -4,16 +4,10 @@
   "description": "A large collection of high quality SVG icons with an MIT license",
   "licence": "MIT",
   "scripts": {
-    "build": "node ./scripts/build.js",
-    "update_icons": "node ./scripts/generatePNG.js && node ./scripts/build.js && node ./scripts/build_react.js && cd react && npm run build",
-    "publish_svg_library": "np minor --tests=false",
-    "publish_react_library": "cd react && np minor --tests=false",
-    "generate_web": "node ./scripts/generatePNG.js && npm run build",
-    "build_react": "node ./scripts/build_react.js",
-    "prebuild_react": "npm run build",
-    "prebuild_and_publish": "npm run generate_web && npm run build_react",
-    "build_and_publish": "np minor --tests=false && cd react && np minor --tests=false",
-    "publish_react": "cd react && np minor --tests=false"
+    "build:react_library": "ts-node ./scripts/build.ts && ts-node ./scripts/build_react.ts && cd react && npm run build",
+    "build:web": "ts-node ./scripts/generatePNG.ts && ts-node ./scripts/build.ts",
+    "publish:react_library": "npm run build:react_library && cd react && np minor --tests=false",
+    "publish:svg_library": "npm run build:web && np minor --tests=false"
   },
   "author": "",
   "license": "MIT",
@@ -21,10 +15,15 @@
     "output"
   ],
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
+    "eslint": "^8.51.0",
     "np": "^7.6.0",
     "sharp": "^0.31.3",
     "svg-to-jsx": "^1.0.3",
-    "svgo": "^2.5.0"
+    "svgo": "^3.0.2",
+    "ts-node": "^10.9.1"
   },
   "keywords": [
     "icons",
