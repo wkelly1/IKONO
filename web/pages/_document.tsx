@@ -11,11 +11,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-            crossOrigin="true"
-          />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap"
             rel="stylesheet"
@@ -25,7 +21,6 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <link rel="manifest" href="/manifest.json" />
-          <title>IKONO</title>
           <meta
             name="description"
             content="A large collection of high quality SVG icons with an MIT license"

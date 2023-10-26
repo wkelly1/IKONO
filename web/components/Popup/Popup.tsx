@@ -1,8 +1,15 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useCallback, useEffect } from "react";
+import { KeyboardEvent, useCallback, useEffect } from "react";
 
-export default function Popup({ header, show, close, children }) {
-  const keyListener = useCallback((e) => {
+interface PopupProps {
+  header: JSX.Element;
+  show: boolean;
+  close: () => void;
+  children: JSX.Element;
+}
+
+export default function Popup({ header, show, close, children }: PopupProps) {
+  const keyListener = useCallback((e: globalThis.KeyboardEvent) => {
     if (e.key === "Escape") {
       close();
     }
@@ -27,20 +34,20 @@ export default function Popup({ header, show, close, children }) {
             type: "spring",
           }}
           onClick={() => close()}
-          className="z-20 fixed left-0 top-0 right-0 backdrop-blur-sm flex justify-center pt-0 sm:pt-10 overflow-y-auto h-screen"
+          className="fixed top-0 left-0 right-0 z-20 flex justify-center h-screen pt-0 overflow-y-auto backdrop-blur-sm sm:pt-10"
         >
           <div className="">
             <div
-              className="bg-white shadow-xl border flex flex-col rounded-sm md:w-full"
+              className="flex flex-col bg-white border rounded-sm shadow-xl md:w-full"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="w-full flex items-center justify-between p-2 bg-blue-100 h-12">
-                <p className="text-sm font-semibold text-blue-800 tracking-tight ml-3">
+              <div className="flex items-center justify-between w-full h-12 p-2 bg-blue-100">
+                <p className="ml-3 text-sm font-semibold tracking-tight text-blue-800">
                   {header}
                 </p>
                 <button
                   onClick={() => close()}
-                  className="hover:bg-blue-200 text-blue-800 p-1 rounded transition-all"
+                  className="p-1 text-blue-800 transition-all rounded hover:bg-blue-200"
                 >
                   <svg
                     height="24"
@@ -56,7 +63,6 @@ export default function Popup({ header, show, close, children }) {
                   </svg>
                 </button>
               </div>
-              {/* <hr className="mx-2"></hr> */}
               {children}
             </div>
           </div>
