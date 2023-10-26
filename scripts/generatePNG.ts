@@ -3,7 +3,7 @@
 /* Generates PNGs for all of the icons */
 import * as fs from 'fs';
 import * as path from 'path';
-import * as sharp from 'sharp';
+import sharp from 'sharp';
 
 const srcInputLoc = '.' + path.sep + 'src';
 // const iconOutputLoc = "." + path.sep + "output" + path.sep + "web";
@@ -49,6 +49,7 @@ async function main() {
         .png()
         .toFile(iconOutputLoc + path.sep + 'png' + path.sep + key + '.png');
     } catch (err) {
+      console.log(err);
       console.log(
         "Process Failed: Could not convert to png for file '" + key + ".svg'"
       );

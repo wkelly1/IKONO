@@ -8,3 +8,4 @@ react
 .DS_Store
 .vercel
 built
+web/public/icons/png/**/*
