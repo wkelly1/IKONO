@@ -1,5 +1,14 @@
 "use strict";
 
+/**
+ * Opens the meta.json file in src/meta.json
+ * Generates an output folder
+ * Reads the files located in src/icons
+ * For each file it optimizes and generates the JSX then saves the new SVG to output/<key>.svg
+ * A meta file is generated which contains the SVG, the JSX and the tags
+ * Meta file is output to output/meta.json and web/meta.json
+ */
+
 const fs = require("fs");
 const path = require("path");
 const sharp = require("sharp");
