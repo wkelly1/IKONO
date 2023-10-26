@@ -9,6 +9,7 @@ import ui1 from "../../public/images/ui/ui1.png";
 import ui2 from "../../public/images/ui/ui2.png";
 import ui3 from "../../public/images/ui/ui3.png";
 import ui4 from "../../public/images/ui/ui4.png";
+import ui5 from "../../public/images/ui/ui5.png";
 
 function UIImage({ src, date, title }) {
   const [open, setOpen] = useState(false);
@@ -150,6 +151,7 @@ export default function Home() {
             <UIImage src={ui2} title="Travel Planner" date="Jan 22, 2023" />
             <UIImage src={ui3} title="File Explorer" date="Jan 22, 2023" />
             <UIImage src={ui4} title="Product Page" date="Jan 22, 2023" />
+            <UIImage src={ui5} title="Signup Page" date="Jan 24, 2023" />
           </div>
         </main>
       </div>
