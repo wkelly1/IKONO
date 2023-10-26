@@ -24,7 +24,7 @@ function UIImage({ src, date, title }) {
         header={
           <div className="flex flex-col ">
             <p className="leading-tight">{title}</p>
-            <p className="text-xs font-medium text-gray-500 leading-tight">
+            <p className="text-xs font-medium leading-tight text-gray-500">
               {date}
             </p>
           </div>
@@ -61,10 +61,10 @@ function UIImage({ src, date, title }) {
           }}
         />
         {loading && (
-          <div className="absolute inset-0  bg-gray-100  animate-pulse z-100"></div>
+          <div className="absolute inset-0 bg-gray-100 animate-pulse z-100"></div>
         )}
       </motion.div>
-      <div className="px-3 flex justify-between mt-3">
+      <div className="flex justify-between px-3 mt-3">
         <p className="text-sm font-semibold">{title}</p>
         <p className="text-xs font-normal">{date}</p>
       </div>
@@ -75,10 +75,10 @@ function UIImage({ src, date, title }) {
 export default function Home() {
   return (
     <div
-      className=" font-sans flex flex-col justify-between min-h-screen  "
+      className="flex flex-col justify-between min-h-screen font-sans "
       style={{ width: "100vw", overflowX: "hidden" }}
     >
-      <div className="overflow-x-none flex items-center flex-col">
+      <div className="flex flex-col items-center overflow-x-none">
         <Head>
           <title>IKONO</title>
           <link rel="icon" href="/favicon.ico" />
@@ -118,27 +118,81 @@ export default function Home() {
           />
         </Head>
 
-        <header
-          className="flex items-center justify-between px-5 pt-10 sm:px-16 sm:pt-14 max-w-[2500px] "
-          style={{ width: "100vw", overflowX: "hidden" }}
+        <Link
+          href="https://www.buymeacoffee.com/willk"
+          className="flex items-center justify-between visible w-full gap-1 px-5 py-2 font-sans text-sm font-semibold tracking-tighter bg-yellow-400 shadow-sm sm:hidden shrink-0"
         >
+          <div className="flex items-center">
+            <svg
+              height="24"
+              width="24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15.429 7H4v6.6C4 16.35 6.856 18 9.714 18c2.858 0 5.715-1.65 5.715-4.4v-1.1m0-5.5C17.714 7 20 7.724 20 9.75s-1.143 3.3-4.571 2.75m0-5.5v5.5"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+              />
+            </svg>
+            Buy me a coffee
+          </div>
+          <svg
+            height="24"
+            width="24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m12.5 18.5 5.646-5.646a.5.5 0 0 0 0-.708L12.5 6.5m6 6h-13"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+            />
+          </svg>
+        </Link>
+
+        <header className="flex items-center justify-between w-full px-5 pt-10 sm:px-16 sm:pt-14">
           <Link
             href="/"
-            className="text-blue-600 font-display font-bold text-xl"
+            className="text-xl font-bold text-blue-600 font-display"
           >
             IKONO
           </Link>
-          <nav className="font-sans text-sm flex font-semibold tracking-tighter ">
-            <Link href="/" className="px-5 hover:text-blue-600 transition-all">
+          <nav className="flex flex-wrap items-center justify-end font-sans text-sm font-semibold tracking-tighter gap-x-10 gap-y-2">
+            <Link
+              href="https://www.buymeacoffee.com/willk"
+              className="items-center hidden gap-1 px-5 py-1 bg-yellow-400 rounded-lg sm:flex shrink-0"
+            >
+              <svg
+                height="24"
+                width="24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.429 7H4v6.6C4 16.35 6.856 18 9.714 18c2.858 0 5.715-1.65 5.715-4.4v-1.1m0-5.5C17.714 7 20 7.724 20 9.75s-1.143 3.3-4.571 2.75m0-5.5v5.5"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                />
+              </svg>
+              Buy me a coffee
+            </Link>
+            <Link href="/" className="hover:text-blue-600 ">
               Icons
             </Link>
-            <Link href="/ui" className="px-5 text-blue-600">
+            <Link href="/ui" className="text-blue-600 transition-all">
               Example UI
             </Link>
             <Link
               href="https://github.com/wkelly1/IKONO"
               alt="IKONO github"
-              className="px-5"
+              className="transition-all hover:text-blue-600 "
             >
               React
             </Link>
@@ -146,10 +200,10 @@ export default function Home() {
         </header>
 
         <main className="mt-10 px-5  sm:px-16 max-w-[2500px] w-full">
-          <div className="bg-blue-600 h-60 flex flex-col justify-between px-10 py-6">
+          <div className="flex flex-col justify-between px-10 py-6 bg-blue-600 h-60">
             <div></div>
             <div>
-              <p className="font-bold text-white text-3xl">
+              <p className="text-3xl font-bold text-white">
                 ICONS ARE EASIER THAN WORDS
               </p>
             </div>
@@ -162,7 +216,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  auto-rows-fr grid-flow-row mt-7 gap-8">
+          <div className="grid grid-flow-row grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 auto-rows-fr mt-7">
             <UIImage src={ui1} title="E-Commerce" date="Jan 22, 2023" />
             <UIImage src={ui2} title="Travel Planner" date="Jan 22, 2023" />
             <UIImage src={ui3} title="File Explorer" date="Jan 22, 2023" />
@@ -176,7 +230,7 @@ export default function Home() {
       </div>
       <motion.footer
         layout
-        className="mt-10 bg-blue-200 h-32 w-full px-5 py-10 sm:px-16 sm:py-14 flex items-center justify-between"
+        className="flex items-center justify-between w-full h-32 px-5 py-10 mt-10 bg-blue-200 sm:px-16 sm:py-14"
       >
         <div
           className="flex items-center"
@@ -184,14 +238,14 @@ export default function Home() {
           aria-label="Will Kelly profile picture"
         >
           <img
-            className=" mr-3 w-8 h-8 rounded-full"
+            className="w-8 h-8 mr-3 rounded-full "
             src="/images/profile_picture.webp"
             alt="Will Kelly profile picture"
           />
-          <div className="text-sm tracking-tighter leading-3">
+          <div className="text-sm leading-3 tracking-tighter">
             <p className="font-medium text-blue-500">Created by</p>
             <a
-              className="font-semibold text-blue-600 text-base cursor-pointer"
+              className="text-base font-semibold text-blue-600 cursor-pointer"
               href="https://www.will-kelly.co.uk"
             >
               Will Kelly
@@ -200,13 +254,13 @@ export default function Home() {
         </div>
         <div className="flex gap-4">
           <a
-            className="font-semibold text-blue-600 text-base cursor-pointer"
+            className="text-base font-semibold text-blue-600 cursor-pointer"
             href={`https://www.will-kelly.co.uk/legal/privacy-policy`}
           >
             Legal
           </a>
           <a
-            className="font-semibold text-blue-600 text-base cursor-pointer"
+            className="text-base font-semibold text-blue-600 cursor-pointer"
             href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
               "Check out this icon pack IKONO by @WillKelly__ 😮"
             )}&url=${encodeURIComponent("https://ikono.will-kelly.co.uk")}`}

@@ -12,7 +12,8 @@
     "build_react": "node ./scripts/build_react.js",
     "prebuild_react": "npm run build",
     "prebuild_and_publish": "npm run generate_web && npm run build_react",
-    "build_and_publish": "np minor --tests=false && cd react && np minor --tests=false"
+    "build_and_publish": "np minor --tests=false && cd react && np minor --tests=false",
+    "publish_react": "cd react && np minor --tests=false"
   },
   "author": "",
   "license": "MIT",
