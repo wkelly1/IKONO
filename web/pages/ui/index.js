@@ -5,6 +5,10 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Popup from "../../components/Popup";
 import { useState } from "react";
+import ui1 from "../../public/images/ui/ui1.png";
+import ui2 from "../../public/images/ui/ui2.png";
+import ui3 from "../../public/images/ui/ui3.png";
+import ui4 from "../../public/images/ui/ui4.png";
 
 function UIImage({ src, date, title }) {
   const [open, setOpen] = useState(false);
@@ -142,26 +146,10 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr grid-flow-row mt-7 gap-8">
-            <UIImage
-              src="/images/ui/ui1.png"
-              title="E-Commerce"
-              date="Jan 22, 2023"
-            />
-            <UIImage
-              src="/images/ui/ui2.png"
-              title="Travel Planner"
-              date="Jan 22, 2023"
-            />
-            <UIImage
-              src="/images/ui/ui3.png"
-              title="File Explorer"
-              date="Jan 22, 2023"
-            />
-            <UIImage
-              src="/images/ui/ui4.png"
-              title="Product Page"
-              date="Jan 22, 2023"
-            />
+            <UIImage src={ui1} title="E-Commerce" date="Jan 22, 2023" />
+            <UIImage src={ui2} title="Travel Planner" date="Jan 22, 2023" />
+            <UIImage src={ui3} title="File Explorer" date="Jan 22, 2023" />
+            <UIImage src={ui4} title="Product Page" date="Jan 22, 2023" />
           </div>
         </main>
       </div>

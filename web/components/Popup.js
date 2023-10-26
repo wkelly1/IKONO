@@ -26,9 +26,9 @@ export default function Popup({ header, show, close, children }) {
             duration: 0.1,
           }}
           onClick={() => close()}
-          className="z-20 fixed inset-0 backdrop-blur-sm flex justify-center pt-10"
+          className="z-20 absolute left-0 top-0 right-0 backdrop-blur-sm flex justify-center pt-10 "
         >
-          <div className="p-5">
+          <div className="p-5 ">
             <div
               className="bg-white shadow-xl border flex flex-col rounded-sm md:w-full"
               onClick={(e) => e.stopPropagation()}
