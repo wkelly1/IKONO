@@ -30,6 +30,8 @@ export default function IconInfoPanel({
   const [svgCopied, setSVGCopied] = useState(false);
   const [jsxCopied, setJSXCopied] = useState(false);
 
+  const [codeCopied, setCodeCopied] = useState(false);
+
   const copySVGAnimation = () => {
     setSVGCopied(true);
     setTimeout(() => {
@@ -40,6 +42,13 @@ export default function IconInfoPanel({
     setJSXCopied(true);
     setTimeout(() => {
       setJSXCopied(false);
+    }, 1000);
+  };
+
+  const copyCodeAnimation = () => {
+    setCodeCopied(true);
+    setTimeout(() => {
+      setCodeCopied(false);
     }, 1000);
   };
 
@@ -59,6 +68,15 @@ export default function IconInfoPanel({
     });
     return out;
   };
+
+  function snakeToCamel(str: string) {
+    return str
+      .toLowerCase()
+      .replace(/([-_][a-z])/g, group =>
+        group.toUpperCase().replace('-', '').replace('_', '')
+      )
+      .replace(/^\w/g, group => group.toUpperCase());
+  }
 
   return (
     <AnimatePresence>
@@ -167,9 +185,9 @@ export default function IconInfoPanel({
               </span>
             </h3>
 
-            <div className="mt-7 flex">
+            <div className="mt-7 flex justify-between gap-2">
               <button
-                className="relative mr-2 flex h-10 w-full items-center justify-center bg-blue-600 bg-opacity-30 text-xs font-semibold tracking-tighter text-blue-600 transition-all hover:bg-opacity-50"
+                className="relative flex h-10 w-full items-center justify-center bg-blue-600 bg-opacity-30 text-xs font-semibold tracking-tighter text-blue-600 transition-all hover:bg-opacity-50"
                 onClick={() => {
                   navigator.clipboard.writeText(
                     size === 'normal'
@@ -205,7 +223,7 @@ export default function IconInfoPanel({
                 </AnimatePresence>
               </button>
               <button
-                className="relative mr-2 flex h-10 w-full items-center justify-center bg-blue-600 bg-opacity-30 text-xs font-semibold tracking-tighter text-blue-600 transition-all hover:bg-opacity-50"
+                className="relative flex h-10 w-full items-center justify-center bg-blue-600 bg-opacity-30 text-xs font-semibold tracking-tighter text-blue-600 transition-all hover:bg-opacity-50"
                 onClick={() => {
                   navigator.clipboard.writeText(
                     size === 'normal'
@@ -240,6 +258,81 @@ export default function IconInfoPanel({
                   )}
                 </AnimatePresence>
               </button>
+            </div>
+
+            <h3 className="mt-8 flex items-center text-xs font-semibold text-blue-400">
+              <svg width="20" height="20" className="mr-1 text-blue-600">
+                <path
+                  fill="currentColor"
+                  fillRule="evenodd"
+                  d="M6.67 5.727a.745.745 0 0 1-.022 1.053L3.893 9.425a.745.745 0 0 0 0 1.075l2.755 2.645a.745.745 0 0 1 .022 1.053l-.258.27a.745.745 0 0 1-1.054.02l-3.755-3.604a1.28 1.28 0 0 1 0-1.843l3.755-3.604a.745.745 0 0 1 1.054.02l.258.27Zm6.855-.269a.745.745 0 0 1 1.053-.021l3.755 3.604a1.28 1.28 0 0 1 0 1.843l-3.755 3.604a.745.745 0 0 1-1.053-.02l-.258-.27a.745.745 0 0 1 .021-1.053l2.756-2.645a.745.745 0 0 0 0-1.075L13.288 6.78a.745.745 0 0 1-.02-1.053l.257-.27ZM10.68 3.222a.745.745 0 0 1 .904-.541l.361.09c.4.1.642.504.542.904l-3.07 12.282a.745.745 0 0 1-.904.542l-.361-.09a.745.745 0 0 1-.542-.904l3.07-12.283Z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              React Code
+            </h3>
+            <div className="mt-8 cursor-pointer overflow-x-auto rounded-sm border-2 border-blue-300 p-2 text-xs">
+              <pre>
+                <code>
+                  <span className="text-purple-400">import</span>{' '}
+                  <span className="text-gray-500">{'{'}</span>
+                  <span className="text-blue-600">
+                    {' '}
+                    {snakeToCamel(selected)}{' '}
+                  </span>
+                  <span className="text-gray-500">{'}'}</span>{' '}
+                  <span className="text-purple-400">from</span>{' '}
+                  <span className="text-blue-600">{'"@ikono/react"'}</span>
+                  <span className="text-gray-500">;</span>
+                  <br />
+                  <br />
+                  <span
+                    className="group relative flex items-center"
+                    onClick={() => {
+                      copyCodeAnimation();
+                      navigator.clipboard.writeText(
+                        `<${snakeToCamel(selected)} />`
+                      );
+                    }}
+                  >
+                    <span className="text-gray-500">{'<'}</span>
+                    <span className="text-blue-600">
+                      {snakeToCamel(selected)}
+                    </span>
+                    <span className="text-gray-500">{' />'}</span>
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      className="invisible  relative ml-2 select-none rounded bg-blue-100 p-1 font-sans text-[0.6rem] text-blue-600 opacity-0 shadow transition-all group-hover:visible group-hover:opacity-100"
+                    >
+                      <div className="absolute -left-[5px] top-1/2 h-0 w-0 -translate-y-1/2 border-t-[5px] border-b-[5px] border-r-[6px] border-r-blue-100 border-t-transparent border-b-transparent"></div>
+
+                      {codeCopied && (
+                        <motion.p
+                          layout
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                        >
+                          Copied!
+                        </motion.p>
+                      )}
+
+                      {!codeCopied && (
+                        <motion.p
+                          layout
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                        >
+                          Copy
+                        </motion.p>
+                      )}
+                    </motion.div>
+                  </span>
+                </code>
+              </pre>
             </div>
 
             <h3 className="mt-8 flex items-center text-xs font-semibold text-blue-400">
