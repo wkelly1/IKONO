@@ -16,6 +16,8 @@ import ui8 from "../../public/images/ui/ui8.png";
 
 function UIImage({ src, date, title }) {
   const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
+
   return (
     <div className="flex flex-col ">
       <Popup
@@ -49,7 +51,18 @@ function UIImage({ src, date, title }) {
         className="relative w-full aspect-[1600/1200]  bg-cover rounded-lg cursor-pointer"
         onClick={() => setOpen(true)}
       >
-        <Image src={src} alt={title} style={{ objectFit: "cover" }} fill />
+        <Image
+          src={src}
+          alt={title}
+          style={{ objectFit: "cover" }}
+          fill
+          onLoadingComplete={() => {
+            setLoading(false);
+          }}
+        />
+        {loading && (
+          <div className="absolute inset-0  bg-gray-100  animate-pulse z-100"></div>
+        )}
       </motion.div>
       <div className="px-3 flex justify-between mt-3">
         <p className="text-sm font-semibold">{title}</p>
