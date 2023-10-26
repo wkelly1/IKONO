@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Meta from "../meta.json";
 import {
   AnimatePresence,
@@ -469,6 +469,23 @@ export default function Home({ s, selectedParam }) {
     setNoShowing(no);
   }, [searchTerm]);
 
+  const handleKeyPress = useCallback((e) => {
+    if (e.metaKey && e.key === "k") {
+      e.preventDefault();
+      searchInput.current.focus();
+    }
+    if (e.key === "Escape") {
+      setSearchTerm("");
+    }
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyPress);
+    return () => {
+      document.removeEventListener("keydown", handleKeyPress);
+    };
+  }, []);
+
   return (
     <div className=" font-sans flex flex-col justify-between min-h-screen">
       <div>
@@ -567,7 +584,7 @@ export default function Home({ s, selectedParam }) {
             <DebounceInput
               debounceTimeout={200}
               placeholder="Search"
-              ref={searchInput}
+              inputRef={searchInput}
               className="ml-3 text-blue-600 placeholder-blue-400 font-semibold border-none outline-none w-full"
               value={searchTerm}
               onChange={(e) => {
@@ -575,7 +592,10 @@ export default function Home({ s, selectedParam }) {
                 setSearchTerm(e.target.value);
               }}
             ></DebounceInput>
-            <p className="text-xs font-semibold tracking-tighter pr-2">
+            <p className="flex px-2 py-1 text-blue-300 border-2 border-blue-100 mr-4 text-sm font-normal">
+              <span className="text-blue-200">⌘</span> K
+            </p>
+            <p className="flex justify-end text-xs font-semibold tracking-tighter pr-2 max-w-[50px] min-w-[50px]">
               {noShowing}/{Object.keys(data).length}
             </p>
           </div>
