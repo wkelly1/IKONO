@@ -9,6 +9,7 @@ import {
 } from "framer-motion";
 import updateSearchParam from "../lib/updateSearchParam";
 import parse from "node-html-parser";
+import { DebounceInput } from "react-debounce-input";
 
 const IconInfoPanel = (props) => {
   const [svgCopied, setSVGCopied] = useState(false);
@@ -563,7 +564,8 @@ export default function Home({ s, selectedParam }) {
                 />
               </svg>
             </div>
-            <input
+            <DebounceInput
+              debounceTimeout={200}
               placeholder="Search"
               ref={searchInput}
               className="ml-3 text-blue-600 placeholder-blue-400 font-semibold border-none outline-none w-full"
@@ -572,7 +574,7 @@ export default function Home({ s, selectedParam }) {
                 updateSearchParam("s", e.target.value);
                 setSearchTerm(e.target.value);
               }}
-            ></input>
+            ></DebounceInput>
             <p className="text-xs font-semibold tracking-tighter pr-2">
               {noShowing}/{Object.keys(data).length}
             </p>
@@ -633,7 +635,7 @@ export default function Home({ s, selectedParam }) {
                 }).length === 0 && (
                   <motion.div
                     layout
-                    className="w-full pt-3 sm:pt-10 md:pt-32 justify-center flex flex-col gap-4 items-center text-blue-400"
+                    className="w-full pt-3 sm:pt-10 md:pt-14 justify-center flex flex-col gap-4 items-center text-blue-400"
                   >
                     <span className="scale-150">
                       <svg
