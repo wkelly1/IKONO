@@ -1,8 +1,8 @@
-import Head from "next/head";
-import Link from "next/link";
+import Head from 'next/head';
+import Link from 'next/link';
 
 interface NavbarProps {
-  active: "Example UI" | "Icons";
+  active: 'Example UI' | 'Icons';
 }
 
 export default function Navbar({ active }: NavbarProps) {
@@ -48,7 +48,7 @@ export default function Navbar({ active }: NavbarProps) {
       </Head>
       <Link
         href="https://www.buymeacoffee.com/willk"
-        className="flex items-center justify-between visible w-full gap-1 px-5 py-2 font-sans text-sm font-semibold tracking-tighter bg-yellow-400 shadow-sm sm:hidden shrink-0"
+        className="visible flex w-full shrink-0 items-center justify-between gap-1 bg-yellow-400 px-5 py-2 font-sans text-sm font-semibold tracking-tighter shadow-sm sm:hidden"
       >
         <div className="flex items-center">
           <svg
@@ -84,13 +84,13 @@ export default function Navbar({ active }: NavbarProps) {
       </Link>
 
       <header className="flex items-center justify-between px-5 pt-10 sm:px-16 sm:pt-14">
-        <Link href="/" className="text-xl font-bold text-blue-600 font-display">
+        <Link href="/" className="font-display text-xl font-bold text-blue-600">
           IKONO
         </Link>
-        <nav className="flex flex-wrap items-center justify-end font-sans text-sm font-semibold tracking-tighter gap-x-10 gap-y-2">
+        <nav className="flex flex-wrap items-center justify-end gap-x-10 gap-y-2 font-sans text-sm font-semibold tracking-tighter">
           <Link
             href="https://www.buymeacoffee.com/willk"
-            className="items-center hidden gap-1 px-5 py-1 bg-yellow-400 rounded-lg sm:flex shrink-0"
+            className="hidden shrink-0 items-center gap-1 rounded-lg bg-yellow-400 px-5 py-1 sm:flex"
           >
             <svg
               height="24"
@@ -111,9 +111,9 @@ export default function Navbar({ active }: NavbarProps) {
           <Link
             href="/"
             className={`${
-              active === "Icons"
-                ? "text-blue-600"
-                : "transition-all hover:text-blue-600"
+              active === 'Icons'
+                ? 'text-blue-600'
+                : 'transition-all hover:text-blue-600'
             }`}
           >
             Icons
@@ -121,9 +121,9 @@ export default function Navbar({ active }: NavbarProps) {
           <Link
             href="/ui"
             className={`${
-              active === "Example UI"
-                ? "text-blue-600"
-                : "transition-all hover:text-blue-600"
+              active === 'Example UI'
+                ? 'text-blue-600'
+                : 'transition-all hover:text-blue-600'
             }`}
           >
             Example UI
@@ -136,12 +136,12 @@ export default function Navbar({ active }: NavbarProps) {
           </Link>
         </nav>
       </header>
-      <div className="px-5 mt-10 sm:px-16 ">
-        <div className="flex flex-col justify-between px-10 py-6 bg-blue-600 h-60">
+      <div className="mt-10 px-5 sm:px-16 ">
+        <div className="flex h-60 flex-col justify-between bg-blue-600 px-10 py-6">
           <div className="flex justify-end">
             <a
               href="https://www.figma.com/community/plugin/1230547475211377845/ikono-icons"
-              className="flex items-center gap-2 text-xs font-semibold text-white transition-opacity opacity-70 hover:opacity-100"
+              className="flex items-center gap-2 text-xs font-semibold text-white opacity-70 transition-opacity hover:opacity-100"
             >
               Figma Plugin
               <svg

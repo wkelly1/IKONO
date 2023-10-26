@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -28,7 +28,7 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#2563EB" />
         </Head>
         <body
-          style={{ width: "100vw", overflowX: "hidden", margin: 0, padding: 0 }}
+          style={{ width: '100vw', overflowX: 'hidden', margin: 0, padding: 0 }}
         >
           <Main />
           <NextScript />

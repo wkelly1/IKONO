@@ -1,5 +1,5 @@
-import { AnimatePresence, motion } from "framer-motion";
-import { KeyboardEvent, useCallback, useEffect } from "react";
+import { AnimatePresence, motion } from 'framer-motion';
+import { KeyboardEvent, useCallback, useEffect } from 'react';
 
 interface PopupProps {
   header: JSX.Element;
@@ -10,15 +10,15 @@ interface PopupProps {
 
 export default function Popup({ header, show, close, children }: PopupProps) {
   const keyListener = useCallback((e: globalThis.KeyboardEvent) => {
-    if (e.key === "Escape") {
+    if (e.key === 'Escape') {
       close();
     }
   }, []);
 
   useEffect(() => {
-    document.addEventListener("keydown", keyListener, false);
+    document.addEventListener('keydown', keyListener, false);
     return () => {
-      document.removeEventListener("keydown", keyListener, false);
+      document.removeEventListener('keydown', keyListener, false);
     };
   }, []);
 
@@ -31,23 +31,23 @@ export default function Popup({ header, show, close, children }: PopupProps) {
           exit={{ opacity: 0 }}
           transition={{
             duration: 0.3,
-            type: "spring",
+            type: 'spring'
           }}
           onClick={() => close()}
-          className="fixed top-0 left-0 right-0 z-20 flex justify-center h-screen pt-0 overflow-y-auto backdrop-blur-sm sm:pt-10"
+          className="fixed top-0 left-0 right-0 z-20 flex h-screen justify-center overflow-y-auto pt-0 backdrop-blur-sm sm:pt-10"
         >
           <div className="">
             <div
-              className="flex flex-col bg-white border rounded-sm shadow-xl md:w-full"
-              onClick={(e) => e.stopPropagation()}
+              className="flex flex-col rounded-sm border bg-white shadow-xl md:w-full"
+              onClick={e => e.stopPropagation()}
             >
-              <div className="flex items-center justify-between w-full h-12 p-2 bg-blue-100">
+              <div className="flex h-12 w-full items-center justify-between bg-blue-100 p-2">
                 <p className="ml-3 text-sm font-semibold tracking-tight text-blue-800">
                   {header}
                 </p>
                 <button
                   onClick={() => close()}
-                  className="p-1 text-blue-800 transition-all rounded hover:bg-blue-200"
+                  className="rounded p-1 text-blue-800 transition-all hover:bg-blue-200"
                 >
                   <svg
                     height="24"

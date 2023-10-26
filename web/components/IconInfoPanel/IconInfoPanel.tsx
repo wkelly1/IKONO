@@ -1,8 +1,8 @@
-import { Dispatch, SetStateAction, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import updateSearchParam from "../../lib/updateSearchParam";
-import Meta from "../../meta.json";
-import Icon from "../Icon/Icon";
+import updateSearchParam from '../../lib/updateSearchParam';
+import Meta from '../../meta.json';
+import Icon from '../Icon/Icon';
+import { AnimatePresence, motion } from 'framer-motion';
+import { Dispatch, SetStateAction, useState } from 'react';
 
 interface IconInfoPanelProps {
   setSelected: Dispatch<SetStateAction<string>>;
@@ -23,7 +23,7 @@ export default function IconInfoPanel({
   setShowDialog,
   data,
   className,
-  allowDownload,
+  allowDownload
 }: IconInfoPanelProps) {
   const [svgCopied, setSVGCopied] = useState(false);
   const [jsxCopied, setJSXCopied] = useState(false);
@@ -43,7 +43,7 @@ export default function IconInfoPanel({
 
   const findSimilar = (icon: string) => {
     let out = [];
-    Object.keys(data).forEach((value) => {
+    Object.keys(data).forEach(value => {
       let tags = data[value].tags;
       tags.filter((value: string) => data[icon].tags.includes(value));
       if (
@@ -65,23 +65,23 @@ export default function IconInfoPanel({
           initial={{
             scaleX: 0,
             opacity: 0,
-            originX: 1,
+            originX: 1
           }}
           animate={{
             scaleX: 1,
             opacity: 1,
             originX: 1,
-            transition: { duration: 0.3, type: "spring" },
+            transition: { duration: 0.3, type: 'spring' }
           }}
           exit={{
             opacity: 0,
             originX: 1,
-            transition: { duration: 0.2, type: "spring" },
+            transition: { duration: 0.2, type: 'spring' }
           }}
           className={`
-                border-blue-600 w-full xs:w-full sm:w-full md:w-full bg-white lg:w-1/3
-              px-6 py-5 relative h-screen xs:h-auto sm:h-auto lg:h-auto ${className}`}
-          style={{ borderWidth: "3px" }}
+                xs:w-full xs:h-auto relative h-screen w-full border-blue-600 bg-white
+              px-6 py-5 sm:h-auto sm:w-full md:w-full lg:h-auto lg:w-1/3 ${className}`}
+          style={{ borderWidth: '3px' }}
         >
           <div className="flex justify-between">
             <h3 className="text-base font-semibold text-blue-600">
@@ -118,8 +118,8 @@ export default function IconInfoPanel({
                 className="ml-4"
                 onClick={() => {
                   setDialog(false);
-                  setSelected("");
-                  updateSearchParam("selected", "");
+                  setSelected('');
+                  updateSearchParam('selected', '');
                 }}
               >
                 <svg
@@ -140,12 +140,12 @@ export default function IconInfoPanel({
 
           <div className="flex flex-col items-center">
             <div
-              className="relative flex items-center justify-center w-full h-24 p-2 mt-8 border-blue-200"
-              style={{ borderWidth: "3px" }}
+              className="relative mt-8 flex h-24 w-full items-center justify-center border-blue-200 p-2"
+              style={{ borderWidth: '3px' }}
             >
               <div
                 dangerouslySetInnerHTML={{
-                  __html: data[selected].svg,
+                  __html: data[selected].svg
                 }}
               ></div>
             </div>
@@ -153,18 +153,18 @@ export default function IconInfoPanel({
 
           <div
             className="h-full overflow-y-auto "
-            style={{ scrollbarWidth: "none" }}
+            style={{ scrollbarWidth: 'none' }}
           >
-            <h3 className="flex items-center mt-8 text-base font-semibold text-blue-600">
+            <h3 className="mt-8 flex items-center text-base font-semibold text-blue-600">
               #
               <span className="ml-1 text-xs text-blue-400">
-                {Meta[selected].tags.join(", ")}
+                {Meta[selected].tags.join(', ')}
               </span>
             </h3>
 
-            <div className="flex mt-7">
+            <div className="mt-7 flex">
               <button
-                className="relative flex items-center justify-center w-full h-10 mr-2 text-xs font-semibold tracking-tighter text-blue-600 transition-all bg-blue-600 hover:bg-opacity-50 bg-opacity-30"
+                className="relative mr-2 flex h-10 w-full items-center justify-center bg-blue-600 bg-opacity-30 text-xs font-semibold tracking-tighter text-blue-600 transition-all hover:bg-opacity-50"
                 onClick={() => {
                   navigator.clipboard.writeText(data[selected].svg);
                   copySVGAnimation();
@@ -196,7 +196,7 @@ export default function IconInfoPanel({
                 </AnimatePresence>
               </button>
               <button
-                className="relative flex items-center justify-center w-full h-10 mr-2 text-xs font-semibold tracking-tighter text-blue-600 transition-all bg-blue-600 hover:bg-opacity-50 bg-opacity-30"
+                className="relative mr-2 flex h-10 w-full items-center justify-center bg-blue-600 bg-opacity-30 text-xs font-semibold tracking-tighter text-blue-600 transition-all hover:bg-opacity-50"
                 onClick={() => {
                   navigator.clipboard.writeText(data[selected].jsx);
                   copyJSXAnimation();
@@ -229,13 +229,13 @@ export default function IconInfoPanel({
               </button>
             </div>
 
-            <h3 className="flex items-center mt-8 text-xs font-semibold text-blue-400">
+            <h3 className="mt-8 flex items-center text-xs font-semibold text-blue-400">
               More like this...
             </h3>
 
-            <div className="w-full mt-8">
-              <div className="grid w-full grid-flow-row grid-cols-2 gap-5 xs:grid-cols-3">
-                {findSimilar(selected).map((value) => (
+            <div className="mt-8 w-full">
+              <div className="xs:grid-cols-3 grid w-full grid-flow-row grid-cols-2 gap-5">
+                {findSimilar(selected).map(value => (
                   <Icon
                     key={value}
                     setDialog={setShowDialog}
@@ -245,7 +245,7 @@ export default function IconInfoPanel({
                     icon={
                       <div
                         dangerouslySetInnerHTML={{
-                          __html: Meta[value].svg,
+                          __html: Meta[value].svg
                         }}
                         className="text-gray-800"
                       ></div>

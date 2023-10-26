@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import updateSearchParam from "../../lib/updateSearchParam";
-import CopyBtn from "../CopyBtn/CopyBtn";
+import updateSearchParam from '../../lib/updateSearchParam';
+import CopyBtn from '../CopyBtn/CopyBtn';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useState } from 'react';
 
 export default function Icon(props) {
   const [showOpts, setShowOpts] = useState(false);
@@ -17,31 +17,31 @@ export default function Icon(props) {
 
   return (
     <motion.div
-      className="flex flex-col items-center cursor-pointer"
+      className="flex cursor-pointer flex-col items-center"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={() => {
-        if (props.selected === "") {
+        if (props.selected === '') {
           props.setDialog(true);
           props.setSelected(props.name);
-          updateSearchParam("selected", props.name);
+          updateSearchParam('selected', props.name);
         } else if (props.selected === props.name) {
           props.setDialog(false);
-          props.setSelected("");
-          updateSearchParam("selected", "");
+          props.setSelected('');
+          updateSearchParam('selected', '');
         } else {
           props.setSelected(props.name);
-          updateSearchParam("selected", props.name);
+          updateSearchParam('selected', props.name);
         }
       }}
     >
       <div
         className={`${
           showOpts || props.selected === props.name || hover
-            ? "border-blue-600"
-            : "border-blue-200"
-        }  p-2  flex flex-col items-center justify-center relative w-full h-28`}
-        style={{ borderWidth: "3px" }}
+            ? 'border-blue-600'
+            : 'border-blue-200'
+        }  relative  flex h-28 w-full flex-col items-center justify-center p-2`}
+        style={{ borderWidth: '3px' }}
         onMouseEnter={() => setShowOpts(true)}
         onMouseLeave={() => setShowOpts(false)}
       >
@@ -60,11 +60,11 @@ export default function Icon(props) {
         </AnimatePresence>
 
         {showOpts && !coppied && (
-          <div className="absolute flex flex-col w-full h-full">
+          <div className="absolute flex h-full w-full flex-col">
             <CopyBtn
               className="mt-2 mb-1"
-              title={"Copy SVG"}
-              onClick={(e) => {
+              title={'Copy SVG'}
+              onClick={e => {
                 navigator.clipboard.writeText(props.data.svg);
                 e.stopPropagation();
                 copyAnimation();
@@ -73,8 +73,8 @@ export default function Icon(props) {
 
             <CopyBtn
               className="mt-1 mb-2"
-              title={"Copy JSX"}
-              onClick={(e) => {
+              title={'Copy JSX'}
+              onClick={e => {
                 navigator.clipboard.writeText(props.data.jsx);
                 e.stopPropagation();
                 copyAnimation();
@@ -87,9 +87,9 @@ export default function Icon(props) {
       <p
         className={`${
           showOpts || props.selected === props.name || hover
-            ? "text-blue-600"
-            : "text-black"
-        } font-semibold text-xs tracking-tighter mt-2`}
+            ? 'text-blue-600'
+            : 'text-black'
+        } mt-2 text-xs font-semibold tracking-tighter`}
       >
         {props.name}
       </p>

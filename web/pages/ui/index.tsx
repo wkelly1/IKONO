@@ -1,19 +1,18 @@
-import Head from "next/head";
-import Link from "next/link";
-import Image, { StaticImageData } from "next/image";
-
-import { motion } from "framer-motion";
-import Popup from "../../components/Popup/Popup";
-import { useState } from "react";
-import ui1 from "../../public/images/ui/ui1.png";
-import ui2 from "../../public/images/ui/ui2.png";
-import ui3 from "../../public/images/ui/ui3.png";
-import ui4 from "../../public/images/ui/ui4.png";
-import ui5 from "../../public/images/ui/ui5.png";
-import ui6 from "../../public/images/ui/ui6.png";
-import ui7 from "../../public/images/ui/ui7.png";
-import ui8 from "../../public/images/ui/ui8.png";
-import Navbar from "../../components/Navbar/Navbar";
+import Navbar from '../../components/Navbar/Navbar';
+import Popup from '../../components/Popup/Popup';
+import ui1 from '../../public/images/ui/ui1.png';
+import ui2 from '../../public/images/ui/ui2.png';
+import ui3 from '../../public/images/ui/ui3.png';
+import ui4 from '../../public/images/ui/ui4.png';
+import ui5 from '../../public/images/ui/ui5.png';
+import ui6 from '../../public/images/ui/ui6.png';
+import ui7 from '../../public/images/ui/ui7.png';
+import ui8 from '../../public/images/ui/ui8.png';
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Image, { StaticImageData } from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
 
 interface UIImageProps {
   src: StaticImageData;
@@ -40,13 +39,13 @@ function UIImage({ src, date, title, alt }: UIImageProps) {
         show={open}
         close={() => setOpen(false)}
       >
-        <div className="w-[100vw] h-[calc(100vh-3.2rem)] sm:h-auto sm:w-[80vw] md:w-[70vw] lg:w-[60vw] xl:max-w-[1300px] p-0 pt-2 sm:p-2 md:p-5">
-          <div className="relative w-full   bg-cover rounded-lg aspect-[1600/1200] ">
+        <div className="h-[calc(100vh-3.2rem)] w-[100vw] p-0 pt-2 sm:h-auto sm:w-[80vw] sm:p-2 md:w-[70vw] md:p-5 lg:w-[60vw] xl:max-w-[1300px]">
+          <div className="relative aspect-[1600/1200]   w-full rounded-lg bg-cover ">
             <Image
               alt={alt}
               src={src}
               fill
-              style={{ objectFit: "contain" }}
+              style={{ objectFit: 'contain' }}
               placeholder="blur"
             />
           </div>
@@ -55,25 +54,25 @@ function UIImage({ src, date, title, alt }: UIImageProps) {
       <motion.div
         whileHover={{
           scale: 1.03,
-          transition: { duration: 0.2, type: "spring" },
+          transition: { duration: 0.2, type: 'spring' }
         }}
-        className="relative w-full aspect-[1600/1200]  bg-cover rounded-lg cursor-pointer"
+        className="relative aspect-[1600/1200] w-full  cursor-pointer rounded-lg bg-cover"
         onClick={() => setOpen(true)}
       >
         <Image
           src={src}
           alt={title}
-          style={{ objectFit: "cover" }}
+          style={{ objectFit: 'cover' }}
           fill
           onLoadingComplete={() => {
             setLoading(false);
           }}
         />
         {loading && (
-          <div className="absolute inset-0 bg-gray-100 animate-pulse z-100"></div>
+          <div className="z-100 absolute inset-0 animate-pulse bg-gray-100"></div>
         )}
       </motion.div>
-      <div className="flex justify-between px-3 mt-3">
+      <div className="mt-3 flex justify-between px-3">
         <p className="text-sm font-semibold">{title}</p>
         <p className="text-xs font-normal">{date}</p>
       </div>
@@ -84,12 +83,12 @@ function UIImage({ src, date, title, alt }: UIImageProps) {
 export default function Home() {
   return (
     <div
-      className="flex flex-col justify-between min-h-screen font-sans "
-      style={{ width: "100vw", overflowX: "hidden" }}
+      className="flex min-h-screen flex-col justify-between font-sans"
+      style={{ width: '100vw', overflowX: 'hidden' }}
     >
       <Navbar active="Example UI" />
-      <div className="flex flex-col items-center overflow-x-none">
-        <main className="mt-10 px-5  sm:px-16 max-w-[2500px] w-full">
+      <div className="overflow-x-none flex flex-col items-center">
+        <main className="mt-10 w-full max-w-[2500px] px-5 sm:px-16">
           <div className="pt-5">
             <p className="text-xl font-semibold text-blue-600">Example UIs</p>
             <p className="text-sm font-medium text-gray-500">
@@ -97,7 +96,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-flow-row grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 auto-rows-fr mt-7">
+          <div className="mt-7 grid grid-flow-row auto-rows-fr grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             <UIImage
               src={ui1}
               title="E-Commerce"
@@ -151,7 +150,7 @@ export default function Home() {
       </div>
       <motion.footer
         layout
-        className="flex items-center justify-between w-full h-32 px-5 py-10 mt-10 bg-blue-200 sm:px-16 sm:py-14"
+        className="mt-10 flex h-32 w-full items-center justify-between bg-blue-200 px-5 py-10 sm:px-16 sm:py-14"
       >
         <div
           className="flex items-center"
@@ -159,14 +158,14 @@ export default function Home() {
           aria-label="Will Kelly profile picture"
         >
           <img
-            className="w-8 h-8 mr-3 rounded-full "
+            className="mr-3 h-8 w-8 rounded-full "
             src="/images/profile_picture.webp"
             alt="Will Kelly profile picture"
           />
           <div className="text-sm leading-3 tracking-tighter">
             <p className="font-medium text-blue-500">Created by</p>
             <a
-              className="text-base font-semibold text-blue-600 cursor-pointer"
+              className="cursor-pointer text-base font-semibold text-blue-600"
               href="https://www.will-kelly.co.uk"
             >
               Will Kelly
@@ -175,16 +174,16 @@ export default function Home() {
         </div>
         <div className="flex gap-4">
           <a
-            className="text-base font-semibold text-blue-600 cursor-pointer"
+            className="cursor-pointer text-base font-semibold text-blue-600"
             href={`https://www.will-kelly.co.uk/legal/privacy-policy`}
           >
             Legal
           </a>
           <a
-            className="text-base font-semibold text-blue-600 cursor-pointer"
+            className="cursor-pointer text-base font-semibold text-blue-600"
             href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-              "Check out this icon pack IKONO by @WillKelly__ 😮"
-            )}&url=${encodeURIComponent("https://ikono.will-kelly.co.uk")}`}
+              'Check out this icon pack IKONO by @WillKelly__ 😮'
+            )}&url=${encodeURIComponent('https://ikono.will-kelly.co.uk')}`}
           >
             Share
           </a>
