@@ -13,6 +13,7 @@ interface IconInfoPanelProps {
   data: typeof Meta;
   className?: string;
   allowDownload?: boolean;
+  size: 'small' | 'normal';
 }
 
 export default function IconInfoPanel({
@@ -23,7 +24,8 @@ export default function IconInfoPanel({
   setShowDialog,
   data,
   className,
-  allowDownload
+  allowDownload,
+  size
 }: IconInfoPanelProps) {
   const [svgCopied, setSVGCopied] = useState(false);
   const [jsxCopied, setJSXCopied] = useState(false);
@@ -145,7 +147,10 @@ export default function IconInfoPanel({
             >
               <div
                 dangerouslySetInnerHTML={{
-                  __html: data[selected].svg
+                  __html:
+                    size === 'normal'
+                      ? data[selected].svg
+                      : data[selected].svgMini
                 }}
               ></div>
             </div>
@@ -166,7 +171,11 @@ export default function IconInfoPanel({
               <button
                 className="relative mr-2 flex h-10 w-full items-center justify-center bg-blue-600 bg-opacity-30 text-xs font-semibold tracking-tighter text-blue-600 transition-all hover:bg-opacity-50"
                 onClick={() => {
-                  navigator.clipboard.writeText(data[selected].svg);
+                  navigator.clipboard.writeText(
+                    size === 'normal'
+                      ? data[selected].svg
+                      : data[selected].svgMini
+                  );
                   copySVGAnimation();
                 }}
               >
@@ -198,7 +207,11 @@ export default function IconInfoPanel({
               <button
                 className="relative mr-2 flex h-10 w-full items-center justify-center bg-blue-600 bg-opacity-30 text-xs font-semibold tracking-tighter text-blue-600 transition-all hover:bg-opacity-50"
                 onClick={() => {
-                  navigator.clipboard.writeText(data[selected].jsx);
+                  navigator.clipboard.writeText(
+                    size === 'normal'
+                      ? data[selected].jsxMini
+                      : data[selected].jsxMini
+                  );
                   copyJSXAnimation();
                 }}
               >
@@ -242,10 +255,15 @@ export default function IconInfoPanel({
                     selected={selected}
                     setSelected={setSelected}
                     name={value}
+                    size={size}
+                    data={data[value]}
                     icon={
                       <div
                         dangerouslySetInnerHTML={{
-                          __html: Meta[value].svg
+                          __html:
+                            size === 'normal'
+                              ? data[value].svg
+                              : data[value].svgMini
                         }}
                         className="text-gray-800"
                       ></div>

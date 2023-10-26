@@ -32,6 +32,7 @@
     "library"
   ],
   "dependencies": {
+    "@iconify/tools": "^3.0.5",
     "nextjs-cors": "^2.1.2"
   }
 }

@@ -14,6 +14,7 @@ const path = require("path");
 const sharp = require("sharp");
 const { optimize } = require("svgo");
 const svgtojsx = require("svg-to-jsx");
+const { scaleSVG, SVG, cleanupSVG, parseColors } = require("@iconify/tools");
 
 const iconOutputLoc = "." + path.sep + "output";
 const metaOutputLocWeb = "." + path.sep + "web" + path.sep;
@@ -68,6 +69,25 @@ function updateMeta(meta) {
     srcInputLoc + path.sep + "meta.json",
     JSON.stringify(meta, null, 2)
   );
+}
+
+async function optimizeAndJSX(svg, key) {
+  console.log(" - Optimizing");
+
+  const result = optimize(svg, {
+    // optional but recommended field
+    path: srcInputLoc + path.sep + "icons" + path.sep + key + ".svg",
+    // all config fields are also available here
+    multipass: true,
+    fill: { name: "fill", value: "currentColor" },
+  });
+
+  let optimizedSvgString = convertCurrentColor(result.data);
+  console.log(" - Converting to JSX");
+  let jsx = await svgtojsx(optimizedSvgString);
+  jsx = convertToJSX(jsx);
+
+  return [optimizedSvgString, jsx];
 }
 
 async function main() {
@@ -132,20 +152,33 @@ async function main() {
       srcInputLoc + path.sep + "icons" + path.sep + key + ".svg",
       { encoding: "utf-8" }
     );
-    console.log(" - Optimizing");
+    console.log(" - Resizing");
 
-    const result = optimize(data, {
-      // optional but recommended field
-      path: srcInputLoc + path.sep + "icons" + path.sep + key + ".svg",
-      // all config fields are also available here
-      multipass: true,
-      fill: { name: "fill", value: "currentColor" },
-    });
+    // console.log(" - Optimizing");
 
-    let optimizedSvgString = convertCurrentColor(result.data);
-    console.log(" - Converting to JSX");
-    let jsx = await svgtojsx(optimizedSvgString);
-    jsx = convertToJSX(jsx);
+    // const result = optimize(data, {
+    //   // optional but recommended field
+    //   path: srcInputLoc + path.sep + "icons" + path.sep + key + ".svg",
+    //   // all config fields are also available here
+    //   multipass: true,
+    //   fill: { name: "fill", value: "currentColor" },
+    // });
+
+    // let optimizedSvgString = convertCurrentColor(result.data);
+    // console.log(" - Converting to JSX");
+    // let jsx = await svgtojsx(optimizedSvgString);
+    // jsx = convertToJSX(jsx);
+    const svgClass = new SVG(data);
+    cleanupSVG(svgClass);
+    const [optimizedSvgString, jsx] = await optimizeAndJSX(
+      svgClass.toString(),
+      key
+    );
+    scaleSVG(svgClass, 5 / 6);
+    const [optimizedSvgStringMini, jsxMini] = await optimizeAndJSX(
+      svgClass.toString(),
+      key
+    );
 
     console.log(" - Saving file: " + iconOutputLoc + path.sep + key + ".svg");
     console.log(optimizedSvgString);
@@ -165,6 +198,8 @@ async function main() {
       tags: meta[key],
       svg: optimizedSvgString,
       jsx: jsx,
+      svgMini: optimizedSvgStringMini,
+      jsxMini: optimizedSvgStringMini,
     };
     metaOut[key] = keyMetaData;
     console.log(" - Moving on");

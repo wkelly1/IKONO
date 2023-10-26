@@ -1,9 +1,33 @@
 import updateSearchParam from '../../lib/updateSearchParam';
 import CopyBtn from '../CopyBtn/CopyBtn';
 import { AnimatePresence, motion } from 'framer-motion';
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 
-export default function Icon(props) {
+interface IconProps {
+  setDialog: Dispatch<SetStateAction<boolean>>;
+  selected: string;
+  setSelected: Dispatch<SetStateAction<string>>;
+  name: string;
+  data: {
+    tags: string[];
+    jsx: string;
+    jsxMini: string;
+    svg: string;
+    svgMini: string;
+  };
+  size: 'small' | 'normal';
+  icon: JSX.Element;
+}
+
+export default function Icon({
+  setDialog,
+  selected,
+  setSelected,
+  name,
+  data,
+  size,
+  icon
+}: IconProps) {
   const [showOpts, setShowOpts] = useState(false);
   const [hover, setHover] = useState(false);
   const [coppied, setCoppied] = useState(false);
@@ -21,23 +45,23 @@ export default function Icon(props) {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={() => {
-        if (props.selected === '') {
-          props.setDialog(true);
-          props.setSelected(props.name);
-          updateSearchParam('selected', props.name);
-        } else if (props.selected === props.name) {
-          props.setDialog(false);
-          props.setSelected('');
+        if (selected === '') {
+          setDialog(true);
+          setSelected(name);
+          updateSearchParam('selected', name);
+        } else if (selected === name) {
+          setDialog(false);
+          setSelected('');
           updateSearchParam('selected', '');
         } else {
-          props.setSelected(props.name);
-          updateSearchParam('selected', props.name);
+          setSelected(name);
+          updateSearchParam('selected', name);
         }
       }}
     >
       <div
         className={`${
-          showOpts || props.selected === props.name || hover
+          showOpts || selected === name || hover
             ? 'border-blue-600'
             : 'border-blue-200'
         }  relative  flex h-28 w-full flex-col items-center justify-center p-2`}
@@ -45,7 +69,7 @@ export default function Icon(props) {
         onMouseEnter={() => setShowOpts(true)}
         onMouseLeave={() => setShowOpts(false)}
       >
-        <motion.div>{props.icon}</motion.div>
+        <motion.div>{icon}</motion.div>
         <AnimatePresence>
           {coppied && (
             <motion.p
@@ -65,7 +89,9 @@ export default function Icon(props) {
               className="mt-2 mb-1"
               title={'Copy SVG'}
               onClick={e => {
-                navigator.clipboard.writeText(props.data.svg);
+                navigator.clipboard.writeText(
+                  size === 'normal' ? data.svg : data.svgMini
+                );
                 e.stopPropagation();
                 copyAnimation();
               }}
@@ -75,7 +101,9 @@ export default function Icon(props) {
               className="mt-1 mb-2"
               title={'Copy JSX'}
               onClick={e => {
-                navigator.clipboard.writeText(props.data.jsx);
+                navigator.clipboard.writeText(
+                  size === 'normal' ? data.jsx : data.jsxMini
+                );
                 e.stopPropagation();
                 copyAnimation();
               }}
@@ -86,12 +114,12 @@ export default function Icon(props) {
 
       <p
         className={`${
-          showOpts || props.selected === props.name || hover
+          showOpts || selected === name || hover
             ? 'text-blue-600'
             : 'text-black'
         } mt-2 text-xs font-semibold tracking-tighter`}
       >
-        {props.name}
+        {name}
       </p>
     </motion.div>
   );
