@@ -30,12 +30,12 @@ export default function Icon({
 }: IconProps) {
   const [showOpts, setShowOpts] = useState(false);
   const [hover, setHover] = useState(false);
-  const [coppied, setCoppied] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   const copyAnimation = () => {
-    setCoppied(true);
+    setCopied(true);
     setTimeout(() => {
-      setCoppied(false);
+      setCopied(false);
     }, 1000);
   };
 
@@ -71,7 +71,7 @@ export default function Icon({
       >
         <motion.div>{icon}</motion.div>
         <AnimatePresence>
-          {coppied && (
+          {copied && (
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -83,7 +83,7 @@ export default function Icon({
           )}
         </AnimatePresence>
 
-        {showOpts && !coppied && (
+        {showOpts && !copied && (
           <div className="absolute flex h-full w-full flex-col">
             <CopyBtn
               className="mt-2 mb-1"

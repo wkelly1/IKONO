@@ -86,7 +86,6 @@ export default function Home({ s, selectedParam }: HomeProps) {
         jsxMini: convertToJSX(svgMini.toString()),
         tags: value.tags
       };
-      console.log(newData[key]);
     });
     return newData as MetaType;
   };
