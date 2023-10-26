@@ -12,9 +12,11 @@ let iconOutputLoc =
 
 async function main() {
   // Clear out icons file
-  fs.rmdirSync(iconOutputLoc, { recursive: true });
+  if (fs.existsSync(iconOutputLoc)) {
+    fs.rmSync(iconOutputLoc, { recursive: true });
+  }
   fs.mkdirSync(iconOutputLoc);
-  fs.mkdirSync(iconOutputLoc + path.sep + 'png');
+  fs.mkdirSync(iconOutputLoc + path.sep + 'png', { recursive: true });
   iconOutputLoc =
     '.' +
     path.sep +
@@ -24,6 +26,7 @@ async function main() {
     path.sep +
     'icons' +
     path.sep;
+
   // Open Meta file
   const metaRaw = fs.readFileSync(srcInputLoc + path.sep + 'meta.json');
   const meta = JSON.parse(metaRaw.toString());
