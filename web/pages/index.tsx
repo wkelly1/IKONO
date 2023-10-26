@@ -200,6 +200,7 @@ export default function Home({ s, selectedParam }: HomeProps) {
 
         <div className="visible fixed top-0 right-0 z-10 max-h-screen w-5/6 sm:hidden">
           <IconInfoPanel
+            size={size}
             setSelected={setSelected}
             setDialog={setShowDialog}
             showDialog={showDialog}

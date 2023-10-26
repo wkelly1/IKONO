@@ -138,7 +138,7 @@ export default function Navbar({ active }: NavbarProps) {
       </header>
       <div className="mt-10 px-5 sm:px-16 ">
         <div className="flex h-60 flex-col justify-between bg-blue-600 px-10 py-6">
-          <div className="flex justify-end">
+          <div className="flex justify-end gap-2">
             <a
               href="https://www.figma.com/community/plugin/1230547475211377845/ikono-icons"
               className="flex items-center gap-2 text-xs font-semibold text-white opacity-70 transition-opacity hover:opacity-100"
@@ -158,6 +158,13 @@ export default function Navbar({ active }: NavbarProps) {
                   clip-rule="evenodd"
                 ></path>
               </svg>
+            </a>
+            <span className="text-white opacity-20">•</span>
+            <a
+              href="https://github.com/wkelly1/IKONO/blob/main/LICENCE"
+              className="flex items-center gap-2 text-xs font-semibold text-white opacity-70 transition-opacity hover:opacity-100"
+            >
+              MIT License
             </a>
           </div>
           <div>
