@@ -5,3 +5,4 @@ react/icons/*
 react/dist
 react/index.js
 react
+.DS_Store
