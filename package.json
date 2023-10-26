@@ -29,5 +29,8 @@
     "icons",
     "svg",
     "library"
-  ]
+  ],
+  "dependencies": {
+    "nextjs-cors": "^2.1.2"
+  }
 }
