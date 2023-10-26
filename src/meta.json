@@ -1220,5 +1220,55 @@
     "time",
     "hour",
     "2"
+  ],
+  "bag": [
+    "shopping",
+    "tab"
+  ],
+  "bag_outlined": [
+    "shopping",
+    "tab"
+  ],
+  "basket_simple": [
+    "shopping",
+    "tab"
+  ],
+  "car": [
+    "travel",
+    "vehicle"
+  ],
+  "chevron_updown": [
+    "direction",
+    "expand",
+    "arrow"
+  ],
+  "minus": [
+    "less",
+    "remove",
+    "maths",
+    "delete"
+  ],
+  "moped": [
+    "travel",
+    "vehicle",
+    "bike"
+  ],
+  "train": [
+    "travel",
+    "vehicle",
+    "tram"
+  ],
+  "translate": [
+    "language"
+  ],
+  "bookmark": [
+    "save"
+  ],
+  "bookmark_outlined": [
+    "save"
+  ],
+  "money_note": [
+    "currency",
+    "note"
   ]
 }

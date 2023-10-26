@@ -32,7 +32,9 @@ class MyDocument extends Document {
           />
           <meta name="theme-color" content="#2563EB" />
         </Head>
-        <body style={{ width: "100vw", overflowX: "hidden" }}>
+        <body
+          style={{ width: "100vw", overflowX: "hidden", margin: 0, padding: 0 }}
+        >
           <Main />
           <NextScript />
         </body>
