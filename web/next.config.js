@@ -33,7 +33,6 @@ module.exports = withPWA({
             'script-src': "'self'",
             'style-src': "'self' 'unsafe-inline'",
             'worker-src': "'self'",
-            'require-trusted-types-for': "'script'",
             reportOnly: false
           }
         })
