@@ -18,11 +18,23 @@ module.exports = withPWA({
         headers: nextSafe({
           isDev,
           contentSecurityPolicy: {
-            'font-src': ["'self'", 'fonts.gstatic.com'],
-            'style-src': ["'self'", 'fonts.googleapis.com'],
-            'script-src': ["'self'", 'va.vercel-scripts.com'],
-            'upgrade-insecure-requests': [],
-            'prefetch-src': false
+            'base-uri': "'none'",
+            'child-src': "'none'",
+            'connect-src': "'self'",
+            'default-src': "'self'",
+            'font-src': "'self'",
+            'form-action': "'self'",
+            'frame-ancestors': "'none'",
+            'frame-src': "'none'",
+            'img-src': "'self'",
+            'manifest-src': "'self'",
+            'object-src': "'none'",
+            'prefetch-src': "'self'",
+            'script-src': "'self'",
+            'style-src': "'self' 'unsafe-inline'",
+            'worker-src': "'self'",
+            'require-trusted-types-for': "'script'",
+            reportOnly: false
           }
         })
       }
