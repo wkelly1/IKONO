@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Link from 'next/link';
 
 interface NavbarProps {
@@ -8,44 +7,6 @@ interface NavbarProps {
 export default function Navbar({ active }: NavbarProps) {
   return (
     <>
-      <Head>
-        <title>IKONO</title>
-        <link rel="icon" href="/favicon.ico" />
-
-        <meta name="og:url" content="https://ikono.will-kelly.co.uk" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="IKONO" />
-        <meta
-          property="og:description"
-          content="Free SVG icon pack with MIT license."
-        />
-        <meta property="og:title" content="IKONO" />
-        <meta
-          property="og:image"
-          content="https://ikono.will-kelly.co.uk/banner.png"
-        />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@WillKelly__" />
-        <meta name="twitter:title" content="IKONO" />
-        <meta name="twitter:text:title" content="IKONO" />
-        <meta
-          name="twitter:description"
-          content="Free SVG icon pack with MIT license"
-        />
-        <meta name="twitter:app:name:iphone" content="IKONO" />
-        <meta name="twitter:app:name:ipad" content="IKONO" />
-        <meta name="twitter:app:name:googleplay" content="IKONO" />
-        <meta
-          name="twitter:image"
-          content="https://ikono.will-kelly.co.uk/banner.png"
-        />
-
-        <link
-          rel="apple-touch-icon"
-          href="/app_icons/apple-touch-icon-180x180.png"
-          sizes="180x180"
-        />
-      </Head>
       <Link
         href="https://www.buymeacoffee.com/willk"
         className="visible flex w-full shrink-0 items-center justify-between gap-1 bg-yellow-400 px-5 py-2 font-sans text-sm font-semibold tracking-tighter shadow-sm sm:hidden"

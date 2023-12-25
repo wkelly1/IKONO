@@ -6,11 +6,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Poppins']
+        sans: ['var(--font-poppins)']
       }
     },
     fontFamily: {
-      display: ['Archivo Black']
+      display: ['var(--font-archivo)']
     }
   },
   variants: {

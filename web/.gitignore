@@ -45,5 +45,5 @@ yarn-error.log*
 **/public/worker-*.js.map
 **/public/fallback-*.js
 
-meta.json
+/meta.json
 web/public/icons/**/*
