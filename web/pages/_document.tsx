@@ -15,7 +15,7 @@ class MyDocument extends Document {
           <link rel="manifest" href="/manifest.json" />
           <meta
             name="description"
-            content="A large collection of high quality SVG icons with an MIT license"
+            content="IKONO icons are a large collection of high quality, hand-crafted SVG icons with an MIT license. They are accompanied by their own Figma plugin and React library."
           />
           <meta name="theme-color" content="#2563EB" />
         </Head>
