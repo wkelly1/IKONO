@@ -27,10 +27,12 @@ export interface Meta {
   };
 }
 
-const iconOutputLoc = '.' + path.sep + 'output';
+const iconVariants = ['standard'];
+const iconSizes = ['24x24'];
+
 const metaOutputLocWeb = '.' + path.sep + 'web' + path.sep;
 const metaOutputLoc = '.' + path.sep + 'output' + path.sep;
-const srcInputLoc = '.' + path.sep + 'src';
+const metaLoc = '.' + path.sep + 'src';
 
 const convertCurrentColor = (svg: string) => {
   const reStroke =
@@ -56,41 +58,42 @@ const convertToJSX = (svg: string) => {
 };
 
 function openMeta(): MetaRaw {
+  console.log('Reading meta file');
   // Check meta exists
-
-  const fileExists = fs.existsSync(srcInputLoc + path.sep + 'meta.json');
+  const fileExists = fs.existsSync(path.resolve(metaLoc, 'meta.json'));
 
   if (!fileExists) {
-    console.log('Process Failed: meta.json file missing');
-    return;
+    console.error('Process Failed: meta.json file missing');
+    return process.exit(1);
   }
 
-  if (!fs.existsSync('.' + path.sep + 'output')) {
-    fs.mkdirSync('.' + path.sep + 'output');
-    console.log('- Created output folder');
+  if (!fs.existsSync(path.resolve('.', 'output'))) {
+    fs.mkdirSync(path.resolve('.', 'output'));
+    console.log('Created output folder');
   } else {
     console.log('Directory already exists.');
   }
 
   // Open Meta file
-  const metaRaw: Buffer = fs.readFileSync(srcInputLoc + path.sep + 'meta.json');
+  const metaRaw: Buffer = fs.readFileSync(path.resolve(metaLoc, 'meta.json'));
   return JSON.parse(metaRaw.toString());
 }
 
 function updateMeta(meta: Meta | MetaRaw) {
+  console.log('Updating meta file with missing keys');
   fs.writeFileSync(
-    srcInputLoc + path.sep + 'meta.json',
+    path.resolve(metaLoc, 'meta.json'),
     JSON.stringify(meta, null, 2)
   );
 }
 
-async function optimizeAndJSX(svg: string, key: string) {
+async function optimizeAndJSX(svgPath: string, svg: string, key: string) {
   console.log(' - Optimizing');
 
   svg = convertCurrentColor(svg);
   const result = optimize(svg, {
     // optional but recommended field
-    path: srcInputLoc + path.sep + 'icons' + path.sep + key + '.svg',
+    path: path.resolve(svgPath, key + '.svg'),
     // all config fields are also available here
     multipass: true
   });
@@ -102,10 +105,17 @@ async function optimizeAndJSX(svg: string, key: string) {
   return [result.data, jsx];
 }
 
-async function main() {
+async function buildIcons(inputLocation: string, outputLocation: string) {
+  console.log('## Building and optimising icons ##');
   const metaOut = {};
 
-  let files: string[] = fs.readdirSync(srcInputLoc + path.sep + 'icons');
+  // Delete output folder and create it again
+  if (fs.existsSync(outputLocation)) {
+    fs.rmSync(outputLocation, { recursive: true });
+  }
+  fs.mkdirSync(outputLocation, { recursive: true });
+
+  let files: string[] = fs.readdirSync(inputLocation);
   files = files
     .filter(file => path.extname(file).toLowerCase() === '.svg')
     .map(file => path.parse(file).name);
@@ -123,43 +133,43 @@ async function main() {
   updateMeta(meta);
 
   for (let i = 0; i < files.length; i++) {
-    // let key = Object.keys(meta)[i];
     const key = files[i];
 
     console.log('Converting: ' + key + '.svg');
-    // Check if SVG exists
 
-    const fileExists = fs.existsSync(
-      srcInputLoc + path.sep + 'icons' + path.sep + key + '.svg'
-    );
+    // Check if SVG exists
+    const fileExists = fs.existsSync(path.resolve(inputLocation, key + '.svg'));
 
     if (!fileExists) {
-      console.log("Process Failed: SVG missing for file '" + key + ".svg'");
-      return;
+      console.error("Process Failed: SVG missing for file '" + key + ".svg'");
+      return process.exit(1);
     }
 
-    const data = fs.readFileSync(
-      srcInputLoc + path.sep + 'icons' + path.sep + key + '.svg',
-      { encoding: 'utf-8' }
-    );
+    const data = fs.readFileSync(path.resolve(inputLocation, key + '.svg'), {
+      encoding: 'utf-8'
+    });
     console.log(' - Resizing');
 
     const svgClass = new SVG(data);
     cleanupSVG(svgClass);
     const [optimizedSvgString, jsx] = await optimizeAndJSX(
+      inputLocation,
       svgClass.toString(),
       key
     );
     scaleSVG(svgClass, 5 / 6);
     const [optimizedSvgStringMini, jsxMini] = await optimizeAndJSX(
+      inputLocation,
       svgClass.toString(),
       key
     );
 
-    console.log(' - Saving file: ' + iconOutputLoc + path.sep + key + '.svg');
+    console.log(
+      ' - Saving file: ' + path.resolve(outputLocation, key + '.svg')
+    );
     console.log(optimizedSvgString);
     fs.writeFile(
-      iconOutputLoc + path.sep + key + '.svg',
+      path.resolve(outputLocation, key + '.svg'),
       optimizedSvgString,
       'utf-8',
       err => {
@@ -189,19 +199,28 @@ async function main() {
   const metaOutJson = JSON.stringify(out);
   fs.writeFile(metaOutputLoc + 'meta.json', metaOutJson, 'utf-8', err => {
     if (err) {
-      console.log(err);
+      console.error('here2', err);
+      return process.exit(1);
     }
   });
   fs.writeFile(metaOutputLocWeb + 'meta.json', metaOutJson, 'utf-8', err => {
     if (err) {
-      console.log(err);
+      console.error('here', err);
+      return process.exit(1);
     }
   });
   console.log('Done');
 }
 
-try {
-  main();
-} catch (err) {
-  console.log(err);
+function main() {
+  for (const variant of iconVariants) {
+    for (const size of iconSizes) {
+      buildIcons(
+        path.resolve('.', 'src', 'icons', variant, size),
+        path.resolve('.', 'src', 'optimised', variant, size)
+      );
+    }
+  }
 }
+
+main();

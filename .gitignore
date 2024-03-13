@@ -7,4 +7,4 @@ react/index.js
 .DS_Store
 .vercel
 built
-web/public/icons/png/**/*
+web/public/icons/**/*
