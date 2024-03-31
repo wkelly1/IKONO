@@ -1,1322 +1,1846 @@
 {
-  "hamburger": {
-    "keywords": ["burger", "menu", "side-bar", "hamburger"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "burger_advanced": {
-    "keywords": ["burger", "menu", "side-bar", "hamburger"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "search": {
-    "keywords": ["search", "find", "magnifying-glass"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "graph_desc": {
-    "keywords": ["line", "bar", "chart", "data", "analysis"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "graph_asc": {
-    "keywords": ["line", "bar", "chart", "data", "analysis"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "chart_asc": {
-    "keywords": ["line", "bar", "chart", "data", "graph", "analysis"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "chart_desc": {
-    "keywords": ["line", "bar", "chart", "data", "graph", "analysis"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "phone_modern": {
-    "keywords": ["phone", "contact", "message", "talk", "iphone", "android"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "phone": {
-    "keywords": ["phone", "contact", "message", "talk", "iphone", "android"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "phone_old": {
-    "keywords": ["phone", "contact", "talk"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "incoming_phone": {
-    "keywords": ["phone", "contact", "talk", "incoming", "answer"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "outgoing_phone": {
-    "keywords": ["phone", "contact", "talk", "outgoing", "end", "hangup"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "chevron_right": {
-    "keywords": ["direction", "right", "arrow", "forward"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "chevron_left": {
-    "keywords": ["direction", "left", "arrow", "backward"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "chevron_up": {
-    "keywords": ["direction", "up", "arrow"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "chevron_down": {
-    "keywords": ["direction", "down", "arrow"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "arrow_right_large": {
-    "keywords": ["direction", "right", "arrow", "forward"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "arrow_left_large": {
-    "keywords": ["direction", "left", "arrow", "back"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "arrow_up_large": {
-    "keywords": ["direction", "up", "arrow"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "arrow_down_large": {
-    "keywords": ["direction", "down", "arrow"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "arrow_right": {
-    "keywords": ["direction", "right", "arrow", "forward"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "arrow_left": {
-    "keywords": ["direction", "left", "arrow", "back"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "arrow_up": {
-    "keywords": ["direction", "up", "arrow"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "arrow_down": {
-    "keywords": ["direction", "down", "arrow"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "folder": {
-    "keywords": ["folder", "file", "data"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "folder_open": {
-    "keywords": ["folder", "file", "data", "open"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "folder_open_simple": {
-    "keywords": ["folder", "file", "data", "open"],
-    "created": "1.0.0",
-    "updated": ["1.7.0"]
-  },
-  "message": {
-    "keywords": ["message", "msg", "text", "memo"],
-    "created": "1.0.0",
-    "updated": ["1.7.0"]
-  },
-  "message_filled": {
-    "keywords": ["message", "msg", "text", "memo"],
-    "created": "1.0.0",
-    "updated": ["1.7.0"]
-  },
-  "download": {
-    "keywords": ["save"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "upload": {
-    "keywords": ["save"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "heart": {
-    "keywords": ["love", "like", "save", "beat"],
-    "created": "1.0.0",
-    "updated": ["1.7.0"]
-  },
-  "heart_outlined": {
-    "keywords": ["love", "like", "save", "beat"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "heart_broken": {
-    "keywords": ["love", "like", "save", "beat", "broken", "destroyed"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "heart_beat": {
-    "keywords": ["love", "alive", "doctor", "nurse", "hospital", "dead"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "code": {
-    "keywords": ["algorithm", "program", "programming"],
-    "created": "1.0.0",
-    "updated": ["1.7.0"]
-  },
-  "share_arrow": {
-    "keywords": ["social"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "share": {
-    "keywords": ["social"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "share_mobile": {
-    "keywords": ["social"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "profile": {
-    "keywords": ["person", "avatar", "user"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "star": {
-    "keywords": ["like", "rate", "space"],
-    "created": "1.0.0",
-    "updated": ["1.7.0"]
-  },
-  "star_outlined": {
-    "keywords": ["like", "rate", "space"],
-    "created": "1.0.0",
-    "updated": ["1.7.0"]
-  },
-  "ellipsis": {
-    "keywords": ["menu", "more", "info", "dot", "meatballs"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "dot": {
-    "keywords": ["full stop", "end"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "compass": {
-    "keywords": ["direction", "location"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "add": {
-    "keywords": ["plus", "more", "save", "maths"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "cross": {
-    "keywords": ["exit", "multiply", "times", "close", "maths"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "divide": {
-    "keywords": ["division", "maths"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "divide_straight": {
-    "keywords": ["division", "maths"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "percent": {
-    "keywords": ["proportion", "maths"],
-    "created": "1.0.0",
-    "updated": ["1.6.0"]
-  },
-  "info": {
-    "keywords": ["information", "notification"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "info_circle": {
-    "keywords": ["information", "notification"],
-    "created": "1.0.0",
-    "updated": ["1.9.0"]
-  },
-  "question": {
-    "keywords": ["notification"],
-    "created": "1.0.0",
-    "updated": ["1.6.0"]
-  },
-  "question_circle": {
-    "keywords": ["notification"],
-    "created": "1.0.0",
-    "updated": ["1.9.0"]
-  },
-  "warning": {
-    "keywords": ["notification", "error"],
-    "created": "1.0.0",
-    "updated": ["1.6.0"]
-  },
-  "warning_circle": {
-    "keywords": ["notification", "error"],
-    "created": "1.0.0",
-    "updated": ["1.9.0"]
-  },
-  "bin": {
-    "keywords": ["waste", "dustbin", "trash", "delete", "discard"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "battery_full": {
-    "keywords": ["charge"],
-    "created": "1.0.0",
-    "updated": ["1.7.0"]
-  },
-  "battery_medium": {
-    "keywords": ["charge"],
-    "created": "1.0.0",
-    "updated": ["1.7.0"]
-  },
-  "battery_low": {
-    "keywords": ["charge"],
-    "created": "1.0.0",
-    "updated": ["1.7.0"]
-  },
-  "battery_empty": {
-    "keywords": ["charge"],
-    "created": "1.0.0",
-    "updated": ["1.7.0"]
-  },
-  "battery_warning": {
-    "keywords": ["charge"],
-    "created": "1.0.0",
-    "updated": ["1.7.0"]
-  },
-  "battery_charging": {
-    "keywords": ["charge"],
-    "created": "1.0.0",
-    "updated": ["1.7.0"]
-  },
-  "wi-fi": {
-    "keywords": ["internet", "wifi", "network"],
-    "created": "1.0.0",
-    "updated": ["1.4.0", "1.7.0"]
-  },
-  "visible": {
-    "keywords": ["see"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "not_visible": {
-    "keywords": ["see"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "ice_cream": {
-    "keywords": ["food", "dessert"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "shopping_cart": {
-    "keywords": ["basket", "tab"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "basket": {
-    "keywords": ["shopping", "tab"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "hashtag": {
-    "keywords": ["numbers", "social", "link", "octothorpe"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "hand": {
-    "keywords": ["drag", "pointer", "cursor", "mouse"],
-    "created": "1.0.0",
-    "updated": ["1.6.0"]
-  },
-  "hand_point": {
-    "keywords": ["point", "pointer", "cursor", "mouse"],
-    "created": "1.0.0",
-    "updated": ["1.6.0"]
-  },
-  "pointer": {
-    "keywords": ["point", "cursor", "mouse"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "pointer_pressed": {
-    "keywords": ["point", "cursor", "pressed", "mouse"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "refresh": {
-    "keywords": ["reload", "recycle"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "play": {
-    "keywords": ["media", "continue"],
-    "created": "1.0.0",
-    "updated": ["1.6.0"]
-  },
-  "play_outlined": {
-    "keywords": ["media", "continue"],
-    "created": "1.0.0",
-    "updated": ["1.6.0"]
-  },
-  "pause": {
-    "keywords": ["media", "stop"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "fast_forward": {
-    "keywords": ["media", "skip"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "fast_forward_outlined": {
-    "keywords": ["media", "skip"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "rewind": {
-    "keywords": ["media", "skip"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "rewind_outlined": {
-    "keywords": ["media", "skip"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "speaker": {
-    "keywords": ["media", "sound", "volume", "music"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "speaker_full": {
-    "keywords": ["media", "sound", "volume", "music"],
-    "created": "1.0.0",
-    "updated": ["1.4.0"]
-  },
-  "speaker_medium": {
-    "keywords": ["media", "sound", "volume", "music"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "speaker_low": {
-    "keywords": ["media", "sound", "volume", "music"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "speaker_off": {
-    "keywords": ["media", "sound", "volume"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "speaker_muted": {
-    "keywords": ["media", "sound", "volume", "music"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "speaker_warning": {
-    "keywords": ["media", "sound", "volume", "music"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "clock": {
-    "keywords": ["time", "hour"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "code_tag": {
-    "keywords": ["algorithm", "program", "programming"],
-    "created": "1.0.0",
-    "updated": ["1.4.0", "1.7.0"]
-  },
-  "exit_text": {
-    "keywords": ["exit", "emergency", "door"],
-    "created": "1.0.0",
-    "updated": ["1.6.0"]
-  },
-  "exit": {
-    "keywords": ["exit", "emergency", "door", "logout"],
-    "created": "1.0.0",
-    "updated": ["1.7.0"]
-  },
-  "power": {
-    "keywords": ["on", "off"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "dishwasher": {
-    "keywords": ["appliance", "kitchen", "dishes"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "washing_machine": {
-    "keywords": ["appliance", "laundry", "cloths"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "oven": {
-    "keywords": ["appliance", "kitchen", "cook", "cooking"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "bulb": {
-    "keywords": ["light", "bright", "off"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "bulb_on": {
-    "keywords": ["light", "bright", "on"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "qr": {
-    "keywords": ["code", "scan"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "qr_detailed": {
-    "keywords": ["code", "scan"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "email": {
-    "keywords": ["mail", "message", "inbox", "compose", "post"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "send": {
-    "keywords": ["deliver", "compose", "mail"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "draft": {
-    "keywords": ["document", "mail", "file"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "archive": {
-    "keywords": ["folder", "save", "mail"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "compose": {
-    "keywords": ["mail", "message", "new"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "print": {
-    "keywords": ["document"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "inbox": {
-    "keywords": ["mail"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "camera": {
-    "keywords": ["video", "call", "photo"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "camera_outlined": {
-    "keywords": ["video", "call", "photo"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "microphone": {
-    "keywords": ["audio", "record", "call"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "microphone_outlined": {
-    "keywords": ["audio", "record", "call"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "microphone_muted": {
-    "keywords": ["audio", "record", "call", "off", "mute"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "microphone_muted_outlined": {
-    "keywords": ["audio", "record", "call", "off", "mute"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "save": {
-    "keywords": ["document", "file"],
-    "created": "1.0.0",
-    "updated": []
-  },
-  "notification_alarm": {
-    "keywords": ["bell", "messages"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "key": {
-    "keywords": ["lock", "unlock", "security"],
-    "created": "1.1.0",
-    "updated": ["1.6.0"]
-  },
-  "padlock_outlined": {
-    "keywords": ["lock", "unlock", "security", "password"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "padlock_unlocked_outlined": {
-    "keywords": ["lock", "unlock", "security", "password"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "padlock": {
-    "keywords": ["lock", "unlock", "security", "password"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "padlock_unlocked": {
-    "keywords": ["lock", "unlock", "security", "password"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "lowercase": {
-    "keywords": ["text", "uppercase", "case", "caps"],
-    "created": "1.1.0",
-    "updated": ["1.6.0"]
-  },
-  "uppercase": {
-    "keywords": ["text", "lowercase", "case", "caps"],
-    "created": "1.1.0",
-    "updated": ["1.6.0"]
-  },
-  "upper_lower": {
-    "keywords": ["text", "lowercase", "case", "caps", "uppercase"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "profile_outlined": {
-    "keywords": ["person", "avatar", "user"],
-    "created": "1.1.0",
-    "updated": ["1.6.0"]
-  },
-  "profile_pair": {
-    "keywords": ["person", "avatar", "user"],
-    "created": "1.1.0",
-    "updated": ["1.1.1", "1.6.0"]
-  },
-  "present": {
-    "keywords": [
-      "gift",
-      "christmas",
-      "birthday",
-      "anniversary",
-      "holiday",
-      "wrap"
-    ],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "male_toilet": {
-    "keywords": ["female_toilet", "sign"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "female_toilet": {
-    "keywords": ["male_toilet", "sign"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "wc": {
-    "keywords": ["toilet", "female", "male", "sign"],
-    "created": "1.1.0",
-    "updated": ["1.7.0"]
-  },
-  "wc_sign": {
-    "keywords": ["toilet", "female", "male", "sign"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "disabled_toilet": {
-    "keywords": ["toilet", "female", "male", "sign"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "coffee": {
-    "keywords": ["drink", "food", "mug", "cup"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "lamp": {
-    "keywords": ["light", "bulb", "house", "bedroom", "livingroom"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "video_cassette": {
-    "keywords": ["media", "video", "tape", "film", "tunes", "song", "album"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "cd": {
-    "keywords": ["media", "video", "tape", "film", "tunes", "song", "album"],
-    "created": "1.1.0",
-    "updated": ["1.6.0"]
-  },
-  "music": {
-    "keywords": ["sound", "notes", "tunes", "song", "album"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "cut": {
-    "keywords": ["paste", "document", "file"],
-    "created": "1.1.0",
-    "updated": ["1.6.0"]
-  },
-  "pin": {
-    "keywords": ["save", "location"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "calendar": {
-    "keywords": ["date", "schedule"],
-    "created": "1.1.0",
-    "updated": ["1.9.0"]
-  },
-  "pen": {
-    "keywords": ["write", "edit", "note"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "pencil": {
-    "keywords": ["write", "edit", "note"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "cloud": {
-    "keywords": ["internet", "files", "documents"],
-    "created": "1.1.0",
-    "updated": ["1.2.0"]
-  },
-  "dial_phone": {
-    "keywords": ["phone", "contact", "talk"],
-    "created": "1.1.0",
-    "updated": ["1.4.0", "1.9.0"]
-  },
-  "camera_flip": {
-    "keywords": ["rotate", "spin", "photo"],
-    "created": "1.1.0",
-    "updated": ["1.9.0"]
-  },
-  "hangup_phone": {
-    "keywords": ["phone", "contact", "talk", "end"],
-    "created": "1.1.0",
-    "updated": ["1.4.0"]
-  },
-  "attachment": {
-    "keywords": ["document", "file", "image", "picture"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "settings": {
-    "keywords": ["preferences", "gear", "cog", "password"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "profile_circle": {
-    "keywords": ["person", "avatar", "user"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "tick": {
-    "keywords": ["accept", "agree", "check"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "tick_circle": {
-    "keywords": ["accept", "agree", "check"],
-    "created": "1.1.0",
-    "updated": ["1.9.0"]
-  },
-  "money_pounds": {
-    "keywords": ["currency"],
-    "created": "1.1.0",
-    "updated": ["1.9.0"]
-  },
-  "money_dollars": {
-    "keywords": ["currency"],
-    "created": "1.1.0",
-    "updated": ["1.9.0"]
-  },
-  "new_document": {
-    "keywords": ["file", "add"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "home": {
-    "keywords": ["house", "family"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "home_outlined": {
-    "keywords": ["house", "family"],
-    "created": "1.1.0",
-    "updated": ["1.6.0", "1.7.0"]
-  },
-  "calculator": {
-    "keywords": ["maths", "sum", "add", "multiply", "subtract", "divide"],
-    "created": "1.1.0",
-    "updated": ["1.6.0"]
-  },
-  "shopping_cart_reversed": {
-    "keywords": ["basket", "tab"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "picture": {
-    "keywords": ["image", "camera"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "swap": {
-    "keywords": ["change", "reverse"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "swap_vertical": {
-    "keywords": ["change", "reverse"],
-    "created": "1.1.0",
-    "updated": []
-  },
-  "shield": {
-    "keywords": ["protect", "security"],
-    "created": "1.1.0",
-    "updated": ["1.6.0"]
-  },
-  "add_circle": {
-    "keywords": ["plus", "more", "save", "maths"],
-    "created": "1.1.0",
-    "updated": ["1.9.0"]
-  },
-  "preferences": {
-    "keywords": ["settings", "options", "filters"],
-    "created": "1.1.1",
-    "updated": []
-  },
-  "fire_outlined": {
-    "keywords": ["flame", "burn", "hot", "warm", "heat"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "fire": {
-    "keywords": ["flame", "burn", "hot", "warm", "heat"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "bike": {
-    "keywords": [
-      "movement",
-      "activity",
-      "exercies",
-      "sport",
-      "row",
-      "cycle",
-      "ride"
-    ],
-    "created": "1.6.0",
-    "updated": ["1.7.0"]
-  },
-  "ergo": {
-    "keywords": ["movement", "activity", "exercies", "sport", "row", "machine"],
-    "created": "1.6.0",
-    "updated": ["1.7.0"]
-  },
-  "sprinting": {
-    "keywords": [
-      "movement",
-      "activity",
-      "hike",
-      "walk",
-      "run",
-      "sprint",
-      "exercise"
-    ],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "walking": {
-    "keywords": [
-      "movement",
-      "activity",
-      "hike",
-      "walk",
-      "run",
-      "sprint",
-      "exercise"
-    ],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "running": {
-    "keywords": [
-      "movement",
-      "activity",
-      "hike",
-      "walk",
-      "run",
-      "sprint",
-      "exercise"
-    ],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "alarm": {
-    "keywords": ["wake", "clock", "time"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "graduation": {
-    "keywords": ["university", "school", "high school", "secondary school"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "graduation_outlined": {
-    "keywords": ["university", "school", "high school", "secondary school"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "moon": {
-    "keywords": ["night", "dark", "darkmode", "sky"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "moon_outlined": {
-    "keywords": ["night", "dark", "darkmode", "sky"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "rss": {
-    "keywords": ["feed"],
-    "created": "1.6.0",
-    "updated": ["1.7.0"]
-  },
-  "rss_outlined": {
-    "keywords": ["feed"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "thumbprint": {
-    "keywords": ["biometrics"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "accessibility": {
-    "keywords": ["WCAG", "person"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "accessibility_outlined": {
-    "keywords": ["WCAG", "person"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "female": {
-    "keywords": ["gender"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "infinity": {
-    "keywords": ["infinite"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "link": {
-    "keywords": ["chain", "url", "address"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "male": {
-    "keywords": ["gender"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "mouse": {
-    "keywords": ["computer", "input"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "shield_outlined": {
-    "keywords": ["protect", "security"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "sun": {
-    "keywords": ["day", "light", "lightmode", "sky", "weather"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "rain": {
-    "keywords": ["weather", "cloud", "water", "raining"],
-    "created": "1.9.0",
-    "updated": []
-  },
-  "snow": {
-    "keywords": ["weather", "cloud", "ice"],
-    "created": "1.9.0",
-    "updated": []
-  },
-  "hail": {
-    "keywords": ["weather", "cloud", "ice"],
-    "created": "1.9.0",
-    "updated": []
-  },
-  "lightning": {
-    "keywords": ["weather", "cloud", "water", "raining", "thunder"],
-    "created": "1.9.0",
-    "updated": []
-  },
-  "sunny_rain": {
-    "keywords": ["weather", "cloud", "sun", "sunny"],
-    "created": "1.9.0",
-    "updated": []
-  },
-  "sun_outlined": {
-    "keywords": ["day", "light", "lightmode", "sky", "weather"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "transgender": {
-    "keywords": ["gender"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "loading_spinner": {
-    "keywords": ["progress"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "mountain": {
-    "keywords": ["hill", "outdoors"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "mountain_outlined": {
-    "keywords": ["hill", "outdoors"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "bento": {
-    "keywords": ["navigation", "menu", "more", "info", "dot"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "doner": {
-    "keywords": ["navigation", "menu", "filter"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "grid_view": {
-    "keywords": ["navigation", "menu", "ellipsis", "more", "info"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "kebab": {
-    "keywords": ["navigation", "menu", "ellipsis", "more", "info", "dot"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "justify_center": {
-    "keywords": [
-      "navigation",
-      "menu",
-      "more",
-      "justify",
-      "burger",
-      "hamburger"
-    ],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "justify_left": {
-    "keywords": [
-      "navigation",
-      "menu",
-      "more",
-      "justify",
-      "burger",
-      "hamburger"
-    ],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "justify_right": {
-    "keywords": [
-      "navigation",
-      "menu",
-      "more",
-      "justify",
-      "burger",
-      "hamburger"
-    ],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "filter": {
-    "keywords": ["sort", "funnel"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "filter_outlined": {
-    "keywords": ["sort", "funnel"],
-    "created": "1.6.0",
-    "updated": ["1.8.0"]
-  },
-  "key_outlined": {
-    "keywords": ["lock", "unlock", "security"],
-    "created": "1.6.0",
-    "updated": []
-  },
-  "terminal": {
-    "keywords": ["algorithm", "program", "programming", "code"],
-    "created": "1.7.0",
-    "updated": []
-  },
-  "cursor_text": {
-    "keywords": ["pointer", "cursor", "mouse", "text", "type"],
-    "created": "1.7.0",
-    "updated": []
-  },
-  "angry": {
-    "keywords": ["face", "emotion", "feeling"],
-    "created": "1.7.0",
-    "updated": []
-  },
-  "happy": {
-    "keywords": ["face", "emotion", "feeling"],
-    "created": "1.7.0",
-    "updated": []
-  },
-  "neutral": {
-    "keywords": ["face", "emotion", "feeling"],
-    "created": "1.7.0",
-    "updated": []
-  },
-  "sad": {
-    "keywords": ["face", "emotion", "feeling"],
-    "created": "1.7.0",
-    "updated": []
-  },
-  "flag": {
-    "keywords": ["country", "continent", "location", "pinpoint"],
-    "created": "1.8.0",
-    "updated": []
-  },
-  "flag_filled": {
-    "keywords": ["country", "continent", "location", "pinpoint"],
-    "created": "1.8.0",
-    "updated": []
-  },
-  "weight": {
-    "keywords": ["gym", "activity", "exercise", "workout"],
-    "created": "1.8.0",
-    "updated": []
-  },
-  "world": {
-    "keywords": ["globe", "network"],
-    "created": "1.8.0",
-    "updated": []
-  },
-  "basketball": {
-    "keywords": ["movement", "activity", "exercise", "sport"],
-    "created": "1.8.0",
-    "updated": []
-  },
-  "football": {
-    "keywords": ["movement", "activity", "exercise", "sport"],
-    "created": "1.8.0",
-    "updated": []
-  },
-  "cricket_ball": {
-    "keywords": ["movement", "activity", "exercise", "sport"],
-    "created": "1.8.0",
-    "updated": []
-  },
-  "rugby_ball": {
-    "keywords": ["movement", "activity", "exercise", "sport"],
-    "created": "1.8.0",
-    "updated": []
-  },
-  "tennis_ball": {
-    "keywords": ["movement", "activity", "exercise", "sport"],
-    "created": "1.8.0",
-    "updated": []
-  },
-  "american_football": {
-    "keywords": ["movement", "activity", "exercise", "sport"],
-    "created": "1.8.0",
-    "updated": []
-  },
-  "clock_eight_oclock": {
-    "keywords": ["time", "hour", "8"],
-    "created": "1.8.0",
-    "updated": []
-  },
-  "clock_eleven_oclock": {
-    "keywords": ["time", "hour", "11"],
-    "created": "1.8.0",
-    "updated": []
-  },
-  "clock_five_oclock": {
-    "keywords": ["time", "hour", "5"],
-    "created": "1.8.0",
-    "updated": []
-  },
-  "clock_four_oclock": {
-    "keywords": ["time", "hour", "4"],
-    "created": "1.8.0",
-    "updated": []
-  },
-  "clock_nine_oclock": {
-    "keywords": ["time", "hour", "9"],
-    "created": "1.8.0",
-    "updated": []
-  },
-  "clock_one_oclock": {
-    "keywords": ["time", "hour", "1"],
-    "created": "1.8.0",
-    "updated": []
-  },
-  "clock_seven_oclock": {
-    "keywords": ["time", "hour", "7"],
-    "created": "1.8.0",
-    "updated": []
-  },
-  "clock_six_oclock": {
-    "keywords": ["time", "hour", "6"],
-    "created": "1.8.0",
-    "updated": []
-  },
-  "clock_ten_oclock": {
-    "keywords": ["time", "hour", "10"],
-    "created": "1.8.0",
-    "updated": []
-  },
-  "clock_three_oclock": {
-    "keywords": ["time", "hour", "3"],
-    "created": "1.8.0",
-    "updated": []
-  },
-  "clock_twelve_oclock": {
-    "keywords": ["time", "hour", "12"],
-    "created": "1.8.0",
-    "updated": []
-  },
-  "clock_two_oclock": {
-    "keywords": ["time", "hour", "2"],
-    "created": "1.8.0",
-    "updated": []
-  },
-  "bag": {
-    "keywords": ["shopping", "tab"],
-    "created": "1.9.0",
-    "updated": []
-  },
-  "bag_outlined": {
-    "keywords": ["shopping", "tab"],
-    "created": "1.9.0",
-    "updated": []
-  },
-  "basket_simple": {
-    "keywords": ["shopping", "tab"],
-    "created": "1.9.0",
-    "updated": []
-  },
-  "car": {
-    "keywords": ["travel", "vehicle"],
-    "created": "1.9.0",
-    "updated": []
-  },
-  "chevron_updown": {
-    "keywords": ["direction", "expand", "arrow"],
-    "created": "1.9.0",
-    "updated": []
-  },
-  "minus": {
-    "keywords": ["less", "remove", "maths", "delete"],
-    "created": "1.9.0",
-    "updated": []
-  },
-  "moped": {
-    "keywords": ["travel", "vehicle", "bike"],
-    "created": "1.9.0",
-    "updated": []
-  },
-  "train": {
-    "keywords": ["travel", "vehicle", "tram"],
-    "created": "1.9.0",
-    "updated": []
-  },
-  "translate": {
-    "keywords": ["language"],
-    "created": "1.9.0",
-    "updated": []
-  },
-  "bookmark": {
-    "keywords": ["save"],
-    "created": "1.9.0",
-    "updated": []
-  },
-  "bookmark_outlined": {
-    "keywords": ["save"],
-    "created": "1.9.0",
-    "updated": []
-  },
-  "money_note": {
-    "keywords": ["currency", "note"],
-    "created": "1.9.0",
-    "updated": []
-  },
-  "cross_circle": {
-    "keywords": ["exit", "multiply", "times", "close", "maths"],
-    "created": "1.9.0",
-    "updated": []
-  },
-  "expand": {
-    "keywords": ["fullscreen", "arrow"],
-    "created": "1.9.0",
-    "updated": []
-  },
-  "fullscreen": {
-    "keywords": ["expand", "arrow"],
-    "created": "1.9.0",
-    "updated": []
-  },
-  "life_ring": {
-    "keywords": ["life guard", "safety", "water", "life boat"],
-    "created": "1.9.0",
-    "updated": []
+  "variants": {
+    "standard": {
+      "description": "Icons with a 1.5px stroke."
+    }
+  },
+  "sizes": {
+    "base": {
+      "width": 24,
+      "height": 24
+    }
+  },
+  "icons": {
+    "hamburger": {
+      "keywords": ["burger", "menu", "side-bar", "hamburger"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "burger_advanced": {
+      "keywords": ["burger", "menu", "side-bar", "hamburger"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "search": {
+      "keywords": ["search", "find", "magnifying-glass"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "graph_desc": {
+      "keywords": ["line", "bar", "chart", "data", "analysis"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "graph_asc": {
+      "keywords": ["line", "bar", "chart", "data", "analysis"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "chart_asc": {
+      "keywords": ["line", "bar", "chart", "data", "graph", "analysis"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "chart_desc": {
+      "keywords": ["line", "bar", "chart", "data", "graph", "analysis"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "phone_modern": {
+      "keywords": ["phone", "contact", "message", "talk", "iphone", "android"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "phone": {
+      "keywords": ["phone", "contact", "message", "talk", "iphone", "android"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "phone_old": {
+      "keywords": ["phone", "contact", "talk"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "incoming_phone": {
+      "keywords": ["phone", "contact", "talk", "incoming", "answer"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "outgoing_phone": {
+      "keywords": ["phone", "contact", "talk", "outgoing", "end", "hangup"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "chevron_right": {
+      "keywords": ["direction", "right", "arrow", "forward"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "chevron_left": {
+      "keywords": ["direction", "left", "arrow", "backward"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "chevron_up": {
+      "keywords": ["direction", "up", "arrow"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "chevron_down": {
+      "keywords": ["direction", "down", "arrow"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "arrow_right_large": {
+      "keywords": ["direction", "right", "arrow", "forward"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "arrow_left_large": {
+      "keywords": ["direction", "left", "arrow", "back"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "arrow_up_large": {
+      "keywords": ["direction", "up", "arrow"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "arrow_down_large": {
+      "keywords": ["direction", "down", "arrow"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "arrow_right": {
+      "keywords": ["direction", "right", "arrow", "forward"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "arrow_left": {
+      "keywords": ["direction", "left", "arrow", "back"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "arrow_up": {
+      "keywords": ["direction", "up", "arrow"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "arrow_down": {
+      "keywords": ["direction", "down", "arrow"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "folder": {
+      "keywords": ["folder", "file", "data"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "folder_open": {
+      "keywords": ["folder", "file", "data", "open"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "folder_open_simple": {
+      "keywords": ["folder", "file", "data", "open"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.7.0"]
+      }
+    },
+    "message": {
+      "keywords": ["message", "msg", "text", "memo"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.7.0"]
+      }
+    },
+    "message_filled": {
+      "keywords": ["message", "msg", "text", "memo"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.7.0"]
+      }
+    },
+    "download": {
+      "keywords": ["save"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "upload": {
+      "keywords": ["save"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "heart": {
+      "keywords": ["love", "like", "save", "beat"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.7.0"]
+      }
+    },
+    "heart_outlined": {
+      "keywords": ["love", "like", "save", "beat"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "heart_broken": {
+      "keywords": ["love", "like", "save", "beat", "broken", "destroyed"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "heart_beat": {
+      "keywords": ["love", "alive", "doctor", "nurse", "hospital", "dead"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "code": {
+      "keywords": ["algorithm", "program", "programming"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.7.0"]
+      }
+    },
+    "share_arrow": {
+      "keywords": ["social"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "share": {
+      "keywords": ["social"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "share_mobile": {
+      "keywords": ["social"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "profile": {
+      "keywords": ["person", "avatar", "user"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "star": {
+      "keywords": ["like", "rate", "space"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.7.0"]
+      }
+    },
+    "star_outlined": {
+      "keywords": ["like", "rate", "space"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.7.0"]
+      }
+    },
+    "ellipsis": {
+      "keywords": ["menu", "more", "info", "dot", "meatballs"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "dot": {
+      "keywords": ["full stop", "end"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "compass": {
+      "keywords": ["direction", "location"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "add": {
+      "keywords": ["plus", "more", "save", "maths"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "cross": {
+      "keywords": ["exit", "multiply", "times", "close", "maths"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "divide": {
+      "keywords": ["division", "maths"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "divide_straight": {
+      "keywords": ["division", "maths"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "percent": {
+      "keywords": ["proportion", "maths"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.6.0"]
+      }
+    },
+    "info": {
+      "keywords": ["information", "notification"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "info_circle": {
+      "keywords": ["information", "notification"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.9.0"]
+      }
+    },
+    "question": {
+      "keywords": ["notification"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.6.0"]
+      }
+    },
+    "question_circle": {
+      "keywords": ["notification"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.9.0"]
+      }
+    },
+    "warning": {
+      "keywords": ["notification", "error"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.6.0"]
+      }
+    },
+    "warning_circle": {
+      "keywords": ["notification", "error"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.9.0"]
+      }
+    },
+    "bin": {
+      "keywords": ["waste", "dustbin", "trash", "delete", "discard"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "battery_full": {
+      "keywords": ["charge"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.7.0"]
+      }
+    },
+    "battery_medium": {
+      "keywords": ["charge"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.7.0"]
+      }
+    },
+    "battery_low": {
+      "keywords": ["charge"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.7.0"]
+      }
+    },
+    "battery_empty": {
+      "keywords": ["charge"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.7.0"]
+      }
+    },
+    "battery_warning": {
+      "keywords": ["charge"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.7.0"]
+      }
+    },
+    "battery_charging": {
+      "keywords": ["charge"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.7.0"]
+      }
+    },
+    "wi-fi": {
+      "keywords": ["internet", "wifi", "network"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.4.0", "1.7.0"]
+      }
+    },
+    "visible": {
+      "keywords": ["see"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "not_visible": {
+      "keywords": ["see"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "ice_cream": {
+      "keywords": ["food", "dessert"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "shopping_cart": {
+      "keywords": ["basket", "tab"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "basket": {
+      "keywords": ["shopping", "tab"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "hashtag": {
+      "keywords": ["numbers", "social", "link", "octothorpe"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "hand": {
+      "keywords": ["drag", "pointer", "cursor", "mouse"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.6.0"]
+      }
+    },
+    "hand_point": {
+      "keywords": ["point", "pointer", "cursor", "mouse"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.6.0"]
+      }
+    },
+    "pointer": {
+      "keywords": ["point", "cursor", "mouse"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "pointer_pressed": {
+      "keywords": ["point", "cursor", "pressed", "mouse"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "refresh": {
+      "keywords": ["reload", "recycle"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "play": {
+      "keywords": ["media", "continue"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.6.0"]
+      }
+    },
+    "play_outlined": {
+      "keywords": ["media", "continue"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.6.0"]
+      }
+    },
+    "pause": {
+      "keywords": ["media", "stop"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "fast_forward": {
+      "keywords": ["media", "skip"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "fast_forward_outlined": {
+      "keywords": ["media", "skip"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "rewind": {
+      "keywords": ["media", "skip"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "rewind_outlined": {
+      "keywords": ["media", "skip"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "speaker": {
+      "keywords": ["media", "sound", "volume", "music"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "speaker_full": {
+      "keywords": ["media", "sound", "volume", "music"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.4.0"]
+      }
+    },
+    "speaker_medium": {
+      "keywords": ["media", "sound", "volume", "music"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "speaker_low": {
+      "keywords": ["media", "sound", "volume", "music"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "speaker_off": {
+      "keywords": ["media", "sound", "volume"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "speaker_muted": {
+      "keywords": ["media", "sound", "volume", "music"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "speaker_warning": {
+      "keywords": ["media", "sound", "volume", "music"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "clock": {
+      "keywords": ["time", "hour"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "code_tag": {
+      "keywords": ["algorithm", "program", "programming"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.4.0", "1.7.0"]
+      }
+    },
+    "exit_text": {
+      "keywords": ["exit", "emergency", "door"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.6.0"]
+      }
+    },
+    "exit": {
+      "keywords": ["exit", "emergency", "door", "logout"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": ["1.7.0"]
+      }
+    },
+    "power": {
+      "keywords": ["on", "off"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "dishwasher": {
+      "keywords": ["appliance", "kitchen", "dishes"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "washing_machine": {
+      "keywords": ["appliance", "laundry", "cloths"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "oven": {
+      "keywords": ["appliance", "kitchen", "cook", "cooking"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "bulb": {
+      "keywords": ["light", "bright", "off"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "bulb_on": {
+      "keywords": ["light", "bright", "on"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "qr": {
+      "keywords": ["code", "scan"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "qr_detailed": {
+      "keywords": ["code", "scan"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "email": {
+      "keywords": ["mail", "message", "inbox", "compose", "post"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "send": {
+      "keywords": ["deliver", "compose", "mail"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "draft": {
+      "keywords": ["document", "mail", "file"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "archive": {
+      "keywords": ["folder", "save", "mail"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "compose": {
+      "keywords": ["mail", "message", "new"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "print": {
+      "keywords": ["document"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "inbox": {
+      "keywords": ["mail"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "camera": {
+      "keywords": ["video", "call", "photo"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "camera_outlined": {
+      "keywords": ["video", "call", "photo"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "microphone": {
+      "keywords": ["audio", "record", "call"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "microphone_outlined": {
+      "keywords": ["audio", "record", "call"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "microphone_muted": {
+      "keywords": ["audio", "record", "call", "off", "mute"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "microphone_muted_outlined": {
+      "keywords": ["audio", "record", "call", "off", "mute"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "save": {
+      "keywords": ["document", "file"],
+      "standard_base": {
+        "created": "1.0.0",
+        "updated": []
+      }
+    },
+    "notification_alarm": {
+      "keywords": ["bell", "messages"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "key": {
+      "keywords": ["lock", "unlock", "security"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": ["1.6.0"]
+      }
+    },
+    "padlock_outlined": {
+      "keywords": ["lock", "unlock", "security", "password"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "padlock_unlocked_outlined": {
+      "keywords": ["lock", "unlock", "security", "password"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "padlock": {
+      "keywords": ["lock", "unlock", "security", "password"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "padlock_unlocked": {
+      "keywords": ["lock", "unlock", "security", "password"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "lowercase": {
+      "keywords": ["text", "uppercase", "case", "caps"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": ["1.6.0"]
+      }
+    },
+    "uppercase": {
+      "keywords": ["text", "lowercase", "case", "caps"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": ["1.6.0"]
+      }
+    },
+    "upper_lower": {
+      "keywords": ["text", "lowercase", "case", "caps", "uppercase"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "profile_outlined": {
+      "keywords": ["person", "avatar", "user"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": ["1.6.0"]
+      }
+    },
+    "profile_pair": {
+      "keywords": ["person", "avatar", "user"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": ["1.1.1", "1.6.0"]
+      }
+    },
+    "present": {
+      "keywords": [
+        "gift",
+        "christmas",
+        "birthday",
+        "anniversary",
+        "holiday",
+        "wrap"
+      ],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "male_toilet": {
+      "keywords": ["female_toilet", "sign"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "female_toilet": {
+      "keywords": ["male_toilet", "sign"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "wc": {
+      "keywords": ["toilet", "female", "male", "sign"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": ["1.7.0"]
+      }
+    },
+    "wc_sign": {
+      "keywords": ["toilet", "female", "male", "sign"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "disabled_toilet": {
+      "keywords": ["toilet", "female", "male", "sign"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "coffee": {
+      "keywords": ["drink", "food", "mug", "cup"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "lamp": {
+      "keywords": ["light", "bulb", "house", "bedroom", "livingroom"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "video_cassette": {
+      "keywords": ["media", "video", "tape", "film", "tunes", "song", "album"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "cd": {
+      "keywords": ["media", "video", "tape", "film", "tunes", "song", "album"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": ["1.6.0"]
+      }
+    },
+    "music": {
+      "keywords": ["sound", "notes", "tunes", "song", "album"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "cut": {
+      "keywords": ["paste", "document", "file"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": ["1.6.0"]
+      }
+    },
+    "pin": {
+      "keywords": ["save", "location"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "calendar": {
+      "keywords": ["date", "schedule"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": ["1.9.0"]
+      }
+    },
+    "pen": {
+      "keywords": ["write", "edit", "note"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "pencil": {
+      "keywords": ["write", "edit", "note"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "cloud": {
+      "keywords": ["internet", "files", "documents"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": ["1.2.0"]
+      }
+    },
+    "dial_phone": {
+      "keywords": ["phone", "contact", "talk"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": ["1.4.0", "1.9.0"]
+      }
+    },
+    "camera_flip": {
+      "keywords": ["rotate", "spin", "photo"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": ["1.9.0"]
+      }
+    },
+    "hangup_phone": {
+      "keywords": ["phone", "contact", "talk", "end"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": ["1.4.0"]
+      }
+    },
+    "attachment": {
+      "keywords": ["document", "file", "image", "picture"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "settings": {
+      "keywords": ["preferences", "gear", "cog", "password"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "profile_circle": {
+      "keywords": ["person", "avatar", "user"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "tick": {
+      "keywords": ["accept", "agree", "check"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "tick_circle": {
+      "keywords": ["accept", "agree", "check"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": ["1.9.0"]
+      }
+    },
+    "money_pounds": {
+      "keywords": ["currency"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": ["1.9.0"]
+      }
+    },
+    "money_dollars": {
+      "keywords": ["currency"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": ["1.9.0"]
+      }
+    },
+    "new_document": {
+      "keywords": ["file", "add"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "home": {
+      "keywords": ["house", "family"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "home_outlined": {
+      "keywords": ["house", "family"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": ["1.6.0", "1.7.0"]
+      }
+    },
+    "calculator": {
+      "keywords": ["maths", "sum", "add", "multiply", "subtract", "divide"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": ["1.6.0"]
+      }
+    },
+    "shopping_cart_reversed": {
+      "keywords": ["basket", "tab"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "picture": {
+      "keywords": ["image", "camera"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "swap": {
+      "keywords": ["change", "reverse"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "swap_vertical": {
+      "keywords": ["change", "reverse"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": []
+      }
+    },
+    "shield": {
+      "keywords": ["protect", "security"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": ["1.6.0"]
+      }
+    },
+    "add_circle": {
+      "keywords": ["plus", "more", "save", "maths"],
+      "standard_base": {
+        "created": "1.1.0",
+        "updated": ["1.9.0"]
+      }
+    },
+    "preferences": {
+      "keywords": ["settings", "options", "filters"],
+      "standard_base": {
+        "created": "1.1.1",
+        "updated": []
+      }
+    },
+    "fire_outlined": {
+      "keywords": ["flame", "burn", "hot", "warm", "heat"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "fire": {
+      "keywords": ["flame", "burn", "hot", "warm", "heat"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "bike": {
+      "keywords": [
+        "movement",
+        "activity",
+        "exercies",
+        "sport",
+        "row",
+        "cycle",
+        "ride"
+      ],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": ["1.7.0"]
+      }
+    },
+    "ergo": {
+      "keywords": [
+        "movement",
+        "activity",
+        "exercies",
+        "sport",
+        "row",
+        "machine"
+      ],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": ["1.7.0"]
+      }
+    },
+    "sprinting": {
+      "keywords": [
+        "movement",
+        "activity",
+        "hike",
+        "walk",
+        "run",
+        "sprint",
+        "exercise"
+      ],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "walking": {
+      "keywords": [
+        "movement",
+        "activity",
+        "hike",
+        "walk",
+        "run",
+        "sprint",
+        "exercise"
+      ],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "running": {
+      "keywords": [
+        "movement",
+        "activity",
+        "hike",
+        "walk",
+        "run",
+        "sprint",
+        "exercise"
+      ],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "alarm": {
+      "keywords": ["wake", "clock", "time"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "graduation": {
+      "keywords": ["university", "school", "high school", "secondary school"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "graduation_outlined": {
+      "keywords": ["university", "school", "high school", "secondary school"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "moon": {
+      "keywords": ["night", "dark", "darkmode", "sky"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "moon_outlined": {
+      "keywords": ["night", "dark", "darkmode", "sky"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "rss": {
+      "keywords": ["feed"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": ["1.7.0"]
+      }
+    },
+    "rss_outlined": {
+      "keywords": ["feed"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "thumbprint": {
+      "keywords": ["biometrics"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "accessibility": {
+      "keywords": ["wcag", "person"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "accessibility_outlined": {
+      "keywords": ["wcag", "person"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "female": {
+      "keywords": ["gender"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "infinity": {
+      "keywords": ["infinite"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "link": {
+      "keywords": ["chain", "url", "address"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "male": {
+      "keywords": ["gender"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "mouse": {
+      "keywords": ["computer", "input"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "shield_outlined": {
+      "keywords": ["protect", "security"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "sun": {
+      "keywords": ["day", "light", "lightmode", "sky", "weather"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "rain": {
+      "keywords": ["weather", "cloud", "water", "raining"],
+      "standard_base": {
+        "created": "1.9.0",
+        "updated": []
+      }
+    },
+    "snow": {
+      "keywords": ["weather", "cloud", "ice"],
+      "standard_base": {
+        "created": "1.9.0",
+        "updated": []
+      }
+    },
+    "hail": {
+      "keywords": ["weather", "cloud", "ice"],
+      "standard_base": {
+        "created": "1.9.0",
+        "updated": []
+      }
+    },
+    "lightning": {
+      "keywords": ["weather", "cloud", "water", "raining", "thunder"],
+      "standard_base": {
+        "created": "1.9.0",
+        "updated": []
+      }
+    },
+    "sunny_rain": {
+      "keywords": ["weather", "cloud", "sun", "sunny"],
+      "standard_base": {
+        "created": "1.9.0",
+        "updated": []
+      }
+    },
+    "sun_outlined": {
+      "keywords": ["day", "light", "lightmode", "sky", "weather"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "transgender": {
+      "keywords": ["gender"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "loading_spinner": {
+      "keywords": ["progress"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "mountain": {
+      "keywords": ["hill", "outdoors"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "mountain_outlined": {
+      "keywords": ["hill", "outdoors"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "bento": {
+      "keywords": ["navigation", "menu", "more", "info", "dot"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "doner": {
+      "keywords": ["navigation", "menu", "filter"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "grid_view": {
+      "keywords": ["navigation", "menu", "ellipsis", "more", "info"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "kebab": {
+      "keywords": ["navigation", "menu", "ellipsis", "more", "info", "dot"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "justify_center": {
+      "keywords": [
+        "navigation",
+        "menu",
+        "more",
+        "justify",
+        "burger",
+        "hamburger"
+      ],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "justify_left": {
+      "keywords": [
+        "navigation",
+        "menu",
+        "more",
+        "justify",
+        "burger",
+        "hamburger"
+      ],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "justify_right": {
+      "keywords": [
+        "navigation",
+        "menu",
+        "more",
+        "justify",
+        "burger",
+        "hamburger"
+      ],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "filter": {
+      "keywords": ["sort", "funnel"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "filter_outlined": {
+      "keywords": ["sort", "funnel"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": ["1.8.0"]
+      }
+    },
+    "key_outlined": {
+      "keywords": ["lock", "unlock", "security"],
+      "standard_base": {
+        "created": "1.6.0",
+        "updated": []
+      }
+    },
+    "terminal": {
+      "keywords": ["algorithm", "program", "programming", "code"],
+      "standard_base": {
+        "created": "1.7.0",
+        "updated": []
+      }
+    },
+    "cursor_text": {
+      "keywords": ["pointer", "cursor", "mouse", "text", "type"],
+      "standard_base": {
+        "created": "1.7.0",
+        "updated": []
+      }
+    },
+    "angry": {
+      "keywords": ["face", "emotion", "feeling"],
+      "standard_base": {
+        "created": "1.7.0",
+        "updated": []
+      }
+    },
+    "happy": {
+      "keywords": ["face", "emotion", "feeling"],
+      "standard_base": {
+        "created": "1.7.0",
+        "updated": []
+      }
+    },
+    "neutral": {
+      "keywords": ["face", "emotion", "feeling"],
+      "standard_base": {
+        "created": "1.7.0",
+        "updated": []
+      }
+    },
+    "sad": {
+      "keywords": ["face", "emotion", "feeling"],
+      "standard_base": {
+        "created": "1.7.0",
+        "updated": []
+      }
+    },
+    "flag": {
+      "keywords": ["country", "continent", "location", "pinpoint"],
+      "standard_base": {
+        "created": "1.8.0",
+        "updated": []
+      }
+    },
+    "flag_filled": {
+      "keywords": ["country", "continent", "location", "pinpoint"],
+      "standard_base": {
+        "created": "1.8.0",
+        "updated": []
+      }
+    },
+    "weight": {
+      "keywords": ["gym", "activity", "exercise", "workout"],
+      "standard_base": {
+        "created": "1.8.0",
+        "updated": []
+      }
+    },
+    "world": {
+      "keywords": ["globe", "network"],
+      "standard_base": {
+        "created": "1.8.0",
+        "updated": []
+      }
+    },
+    "basketball": {
+      "keywords": ["movement", "activity", "exercise", "sport"],
+      "standard_base": {
+        "created": "1.8.0",
+        "updated": []
+      }
+    },
+    "football": {
+      "keywords": ["movement", "activity", "exercise", "sport"],
+      "standard_base": {
+        "created": "1.8.0",
+        "updated": []
+      }
+    },
+    "cricket_ball": {
+      "keywords": ["movement", "activity", "exercise", "sport"],
+      "standard_base": {
+        "created": "1.8.0",
+        "updated": []
+      }
+    },
+    "rugby_ball": {
+      "keywords": ["movement", "activity", "exercise", "sport"],
+      "standard_base": {
+        "created": "1.8.0",
+        "updated": []
+      }
+    },
+    "tennis_ball": {
+      "keywords": ["movement", "activity", "exercise", "sport"],
+      "standard_base": {
+        "created": "1.8.0",
+        "updated": []
+      }
+    },
+    "american_football": {
+      "keywords": ["movement", "activity", "exercise", "sport"],
+      "standard_base": {
+        "created": "1.8.0",
+        "updated": []
+      }
+    },
+    "clock_eight_oclock": {
+      "keywords": ["time", "hour", "8"],
+      "standard_base": {
+        "created": "1.8.0",
+        "updated": []
+      }
+    },
+    "clock_eleven_oclock": {
+      "keywords": ["time", "hour", "11"],
+      "standard_base": {
+        "created": "1.8.0",
+        "updated": []
+      }
+    },
+    "clock_five_oclock": {
+      "keywords": ["time", "hour", "5"],
+      "standard_base": {
+        "created": "1.8.0",
+        "updated": []
+      }
+    },
+    "clock_four_oclock": {
+      "keywords": ["time", "hour", "4"],
+      "standard_base": {
+        "created": "1.8.0",
+        "updated": []
+      }
+    },
+    "clock_nine_oclock": {
+      "keywords": ["time", "hour", "9"],
+      "standard_base": {
+        "created": "1.8.0",
+        "updated": []
+      }
+    },
+    "clock_one_oclock": {
+      "keywords": ["time", "hour", "1"],
+      "standard_base": {
+        "created": "1.8.0",
+        "updated": []
+      }
+    },
+    "clock_seven_oclock": {
+      "keywords": ["time", "hour", "7"],
+      "standard_base": {
+        "created": "1.8.0",
+        "updated": []
+      }
+    },
+    "clock_six_oclock": {
+      "keywords": ["time", "hour", "6"],
+      "standard_base": {
+        "created": "1.8.0",
+        "updated": []
+      }
+    },
+    "clock_ten_oclock": {
+      "keywords": ["time", "hour", "10"],
+      "standard_base": {
+        "created": "1.8.0",
+        "updated": []
+      }
+    },
+    "clock_three_oclock": {
+      "keywords": ["time", "hour", "3"],
+      "standard_base": {
+        "created": "1.8.0",
+        "updated": []
+      }
+    },
+    "clock_twelve_oclock": {
+      "keywords": ["time", "hour", "12"],
+      "standard_base": {
+        "created": "1.8.0",
+        "updated": []
+      }
+    },
+    "clock_two_oclock": {
+      "keywords": ["time", "hour", "2"],
+      "standard_base": {
+        "created": "1.8.0",
+        "updated": []
+      }
+    },
+    "bag": {
+      "keywords": ["shopping", "tab"],
+      "standard_base": {
+        "created": "1.9.0",
+        "updated": []
+      }
+    },
+    "bag_outlined": {
+      "keywords": ["shopping", "tab"],
+      "standard_base": {
+        "created": "1.9.0",
+        "updated": []
+      }
+    },
+    "basket_simple": {
+      "keywords": ["shopping", "tab"],
+      "standard_base": {
+        "created": "1.9.0",
+        "updated": []
+      }
+    },
+    "car": {
+      "keywords": ["travel", "vehicle"],
+      "standard_base": {
+        "created": "1.9.0",
+        "updated": []
+      }
+    },
+    "chevron_updown": {
+      "keywords": ["direction", "expand", "arrow"],
+      "standard_base": {
+        "created": "1.9.0",
+        "updated": []
+      }
+    },
+    "minus": {
+      "keywords": ["less", "remove", "maths", "delete"],
+      "standard_base": {
+        "created": "1.9.0",
+        "updated": []
+      }
+    },
+    "moped": {
+      "keywords": ["travel", "vehicle", "bike"],
+      "standard_base": {
+        "created": "1.9.0",
+        "updated": []
+      }
+    },
+    "train": {
+      "keywords": ["travel", "vehicle", "tram"],
+      "standard_base": {
+        "created": "1.9.0",
+        "updated": []
+      }
+    },
+    "translate": {
+      "keywords": ["language"],
+      "standard_base": {
+        "created": "1.9.0",
+        "updated": []
+      }
+    },
+    "bookmark": {
+      "keywords": ["save"],
+      "standard_base": {
+        "created": "1.9.0",
+        "updated": []
+      }
+    },
+    "bookmark_outlined": {
+      "keywords": ["save"],
+      "standard_base": {
+        "created": "1.9.0",
+        "updated": []
+      }
+    },
+    "money_note": {
+      "keywords": ["currency", "note"],
+      "standard_base": {
+        "created": "1.9.0",
+        "updated": []
+      }
+    },
+    "cross_circle": {
+      "keywords": ["exit", "multiply", "times", "close", "maths"],
+      "standard_base": {
+        "created": "1.9.0",
+        "updated": []
+      }
+    },
+    "expand": {
+      "keywords": ["fullscreen", "arrow"],
+      "standard_base": {
+        "created": "1.9.0",
+        "updated": []
+      }
+    },
+    "fullscreen": {
+      "keywords": ["expand", "arrow"],
+      "standard_base": {
+        "created": "1.9.0",
+        "updated": []
+      }
+    },
+    "life_ring": {
+      "keywords": ["life guard", "safety", "water", "life boat"],
+      "standard_base": {
+        "created": "1.9.0",
+        "updated": []
+      }
+    }
   }
 }
