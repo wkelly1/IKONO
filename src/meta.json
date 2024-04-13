@@ -2349,6 +2349,24 @@
           "updated": []
         }
       }
+    },
+    "burger_simple": {
+      "keywords": ["burger", "menu", "side-bar", "hamburger"],
+      "history": {
+        "standard_base": {
+          "created": "1.0.0",
+          "updated": ["deleted"]
+        }
+      }
+    },
+    "speaker_error": {
+      "keywords": ["media", "sound", "volume", "music"],
+      "history": {
+        "standard_base": {
+          "created": "1.6.0",
+          "updated": ["deleted"]
+        }
+      }
     }
   }
 }
