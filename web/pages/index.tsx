@@ -198,8 +198,8 @@ export default function Home({ s, selectedParam }: HomeProps) {
   }, [handleKeyPress]);
 
   return (
-    <div className="flex min-h-screen flex-col justify-between font-sans ">
-      <div className="overflow-x-hidden">
+    <div className="flex min-h-screen flex-col items-center justify-between font-sans ">
+      <div className="w-full max-w-screen-2xl overflow-x-hidden overflow-y-hidden">
         <Navbar active={'Icons'} />
 
         <div className="visible fixed top-0 right-0 z-10 max-h-screen w-5/6 sm:hidden">
@@ -214,21 +214,21 @@ export default function Home({ s, selectedParam }: HomeProps) {
           />
         </div>
 
-        <main className="mt-10 px-5 sm:px-16 ">
+        <motion.main
+          className="mt-10 px-5 sm:px-16 "
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ stiffness: 100 }}
+        >
           <div
             className="mt-8 flex h-14 items-center border-blue-200 p-2"
             style={{ borderWidth: '3px' }}
           >
             <div className="ml-1 text-blue-700">
-              <svg
-                height="24"
-                width="24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                 <path
-                  d="M21.293 22.707a1 1 0 0 0 1.414-1.414l-1.414 1.414ZM17 10a7 7 0 0 1-7 7v2a9 9 0 0 0 9-9h-2Zm-7 7a7 7 0 0 1-7-7H1a9 9 0 0 0 9 9v-2Zm-7-7a7 7 0 0 1 7-7V1a9 9 0 0 0-9 9h2Zm7-7a7 7 0 0 1 7 7h2a9 9 0 0 0-9-9v2Zm4.793 13.207 6.5 6.5 1.414-1.414-6.5-6.5-1.414 1.414Z"
                   fill="currentColor"
+                  d="M20.338 21.399a.75.75 0 0 0 1.06-1.062l-1.06 1.062Zm-3.767-11.173a6.344 6.344 0 0 1-6.345 6.345v1.5a7.844 7.844 0 0 0 7.845-7.845h-1.5Zm-6.345 6.345a6.344 6.344 0 0 1-6.344-6.345h-1.5a7.844 7.844 0 0 0 7.844 7.845v-1.5Zm-6.344-6.345a6.344 6.344 0 0 1 6.344-6.344v-1.5a7.844 7.844 0 0 0-7.844 7.844h1.5Zm6.344-6.344a6.344 6.344 0 0 1 6.345 6.344h1.5a7.844 7.844 0 0 0-7.845-7.844v1.5Zm4.478 11.9 5.634 5.617 1.06-1.062-5.635-5.617-1.059 1.063Z"
                 />
               </svg>
             </div>
@@ -242,7 +242,7 @@ export default function Home({ s, selectedParam }: HomeProps) {
                 updateSearchParam('s', e.target.value);
                 setSearchTerm(e.target.value);
               }}
-            ></DebounceInput>
+            />
             <p className="mr-4 flex border-2 border-blue-100 px-2 py-1 text-sm font-normal text-blue-300">
               <span className="text-blue-200">⌘</span> K
             </p>
@@ -253,10 +253,10 @@ export default function Home({ s, selectedParam }: HomeProps) {
 
           <div className="mt-5 flex w-full justify-between">
             <LayoutGroup>
-              <motion.div className="w-full" layout>
-                <div className="w-full">
+              <motion.div className="@container w-full" layout>
+                <div className="w-full ">
                   <motion.div
-                    className="mb-8 grid w-full grid-flow-row grid-cols-2 gap-5 sm:grid-cols-4"
+                    className="@sm:grid-cols-4 mb-8 grid w-full grid-flow-row grid-cols-1 gap-5"
                     layout
                   >
                     <button
@@ -291,20 +291,6 @@ export default function Home({ s, selectedParam }: HomeProps) {
                     </button>
                     <button
                       className={`border-2  py-2 text-xs font-semibold tracking-tighter ${
-                        size === 'small'
-                          ? 'border-blue-600 bg-blue-600 text-white'
-                          : 'border-blue-200 bg-transparent text-blue-400'
-                      }`}
-                      style={{ borderWidth: '3px' }}
-                      onClick={() => {
-                        setSize('small');
-                      }}
-                      aria-pressed={squareMode}
-                    >
-                      Mini - <span className="font-normal">20x20</span>
-                    </button>
-                    <button
-                      className={`border-2  py-2 text-xs font-semibold tracking-tighter ${
                         size === 'normal'
                           ? 'border-blue-600 bg-blue-600 text-white'
                           : 'border-blue-200 bg-transparent text-blue-400'
@@ -316,6 +302,20 @@ export default function Home({ s, selectedParam }: HomeProps) {
                       aria-pressed={squareMode}
                     >
                       Normal - <span className="font-normal">24x24</span>
+                    </button>
+                    <button
+                      className={`border-2  py-2 text-xs font-semibold tracking-tighter ${
+                        size === 'small'
+                          ? 'border-blue-600 bg-blue-600 text-white'
+                          : 'border-blue-200 bg-transparent text-blue-400'
+                      }`}
+                      style={{ borderWidth: '3px' }}
+                      onClick={() => {
+                        setSize('small');
+                      }}
+                      aria-pressed={squareMode}
+                    >
+                      Mini - <span className="font-normal">20x20</span>
                     </button>
                   </motion.div>
                 </div>
@@ -370,7 +370,7 @@ export default function Home({ s, selectedParam }: HomeProps) {
 
                 <motion.div
                   layout
-                  className="xs:grid-cols-2 grid w-full grid-flow-row grid-cols-2 gap-5 sm:grid-cols-2 lg:grid-cols-6 xl:grid-cols-8"
+                  className="@xs:grid-cols-2  @xl:grid-cols-4 @2xl:grid-cols-6 @3xl:grid-cols-8 grid w-full grid-flow-row grid-cols-1 gap-5"
                 >
                   <AnimatePresence>
                     {Object.keys(data).map(icon => {
@@ -386,13 +386,10 @@ export default function Home({ s, selectedParam }: HomeProps) {
                           <motion.div
                             key={icon}
                             layout
-                            initial={{ scale: 0.6, origin: 'center' }}
-                            animate={{
-                              scale: 1,
-                              origin: 'center',
-                              transition: { type: 'spring' }
-                            }}
-                            exit={{ opacity: 0, origin: 'center' }}
+                            initial={{ y: 20, opacity: 0.6 }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            transition={{ stiffness: 100 }}
+                            viewport={{ once: true }}
                             className="bg-white"
                           >
                             <Icon
@@ -435,7 +432,7 @@ export default function Home({ s, selectedParam }: HomeProps) {
               />
             </LayoutGroup>
           </div>
-        </main>
+        </motion.main>
       </div>
       <Footer />
     </div>

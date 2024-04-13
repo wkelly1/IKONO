@@ -12,18 +12,14 @@ export default function Navbar({ active }: NavbarProps) {
         className="visible flex w-full shrink-0 items-center justify-between gap-1 bg-yellow-400 px-5 py-2 font-sans text-sm font-semibold tracking-tighter shadow-sm sm:hidden"
       >
         <div className="flex items-center">
-          <svg
-            height="24"
-            width="24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
             <path
-              d="M15.429 7H4v6.6C4 16.35 6.856 18 9.714 18c2.858 0 5.715-1.65 5.715-4.4v-1.1m0-5.5C17.714 7 20 7.724 20 9.75s-1.143 3.3-4.571 2.75m0-5.5v5.5"
+              fill="none"
               stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M15.774 5.946H3.194v7.265c0 3.027 3.144 4.843 6.29 4.843s6.29-1.816 6.29-4.843V12m0-6.054c2.516 0 5.032.797 5.032 3.027S19.548 12.605 15.774 12m0-6.054V12"
             />
           </svg>
           Buy me a coffee
@@ -53,18 +49,14 @@ export default function Navbar({ active }: NavbarProps) {
             href="https://www.buymeacoffee.com/willk"
             className="hidden shrink-0 items-center gap-1 rounded-lg bg-yellow-400 px-5 py-1 sm:flex"
           >
-            <svg
-              height="24"
-              width="24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
               <path
-                d="M15.429 7H4v6.6C4 16.35 6.856 18 9.714 18c2.858 0 5.715-1.65 5.715-4.4v-1.1m0-5.5C17.714 7 20 7.724 20 9.75s-1.143 3.3-4.571 2.75m0-5.5v5.5"
+                fill="none"
                 stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M15.774 5.946H3.194v7.265c0 3.027 3.144 4.843 6.29 4.843s6.29-1.816 6.29-4.843V12m0-6.054c2.516 0 5.032.797 5.032 3.027S19.548 12.605 15.774 12m0-6.054V12"
               />
             </svg>
             Buy me a coffee

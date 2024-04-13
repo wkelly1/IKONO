@@ -1,5 +1,6 @@
 import updateSearchParam from '../../lib/updateSearchParam';
 import Meta from '../../meta.json';
+import IconButton from '../Button/IconBtn';
 import Icon from '../Icon/Icon';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Dispatch, SetStateAction, useState } from 'react';
@@ -107,34 +108,38 @@ export default function IconInfoPanel({
             <h3 className="text-base font-semibold text-blue-600">
               {selected}
             </h3>
-            <div className="flex">
+            <div className="flex gap-1">
               <AnimatePresence>
                 {allowDownload && (
-                  <motion.a
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1, transition: { duration: 0.1 } }}
-                    exit={{ opacity: 0, transition: { duration: 0.1 } }}
-                    href={`icons/standard/24x24/${selected}.png`}
-                    download
-                  >
+                  <IconButton>
                     <svg
-                      height="24"
-                      width="24"
-                      fill="none"
                       xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
                     >
                       <path
-                        d="M12.5 4v13m0 0L7 12.21M12.5 17l5.5-4.79M6 21h13"
+                        fill="none"
                         stroke="currentColor"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth="2"
+                        strokeWidth="1.5"
+                        d="M12 3.215V17m0 0-5.5-4.79M12 17l5.5-4.79M5.5 21h13"
                       />
                     </svg>
-                  </motion.a>
+                  </IconButton>
+
+                  // <motion.a
+                  //   initial={{ opacity: 0 }}
+                  //   animate={{ opacity: 1, transition: { duration: 0.1 } }}
+                  //   exit={{ opacity: 0, transition: { duration: 0.1 } }}
+                  //   href={`icons/standard/24x24/${selected}.png`}
+                  //   download
+                  // >
+
+                  // </motion.a>
                 )}
               </AnimatePresence>
-              <button
+              <IconButton
                 className="ml-4"
                 onClick={() => {
                   setDialog(false);
@@ -142,19 +147,17 @@ export default function IconInfoPanel({
                   updateSearchParam('selected', '');
                 }}
               >
-                <svg
-                  height="24"
-                  width="24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                   <path
-                    d="M16.95 8.464a1 1 0 1 0-1.414-1.414L12 10.586 8.465 7.05A1 1 0 0 0 7.05 8.464L10.586 12 7.05 15.536a1 1 0 1 0 1.415 1.414L12 13.414l3.536 3.536a1 1 0 1 0 1.414-1.414L13.414 12l3.536-3.536Z"
-                    fill="currentColor"
-                    fillRule="evenodd"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
+                    d="M16.87 7.13 12 12m-4.87 4.87L12 12m4.87 4.87L12 12M7.13 7.13 12 12"
                   />
                 </svg>
-              </button>
+              </IconButton>
             </div>
           </div>
 
@@ -179,7 +182,15 @@ export default function IconInfoPanel({
             style={{ scrollbarWidth: 'none' }}
           >
             <h3 className="mt-8 flex items-center text-base font-semibold text-blue-600">
-              #
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeWidth="1.5"
+                  d="m10.692 6-3 13M6.385 9.5h12.5M16.192 6l-3 13M5 15.5h12.5"
+                />
+              </svg>
               <span className="ml-1 text-xs text-blue-400">
                 {Meta[selected].tags.join(', ')}
               </span>
@@ -260,16 +271,25 @@ export default function IconInfoPanel({
               </button>
             </div>
 
-            <h3 className="mt-8 flex items-center text-xs font-semibold text-blue-400">
-              <svg width="20" height="20" className="mr-1 text-blue-600">
-                <path
-                  fill="currentColor"
-                  fillRule="evenodd"
-                  d="M6.67 5.727a.745.745 0 0 1-.022 1.053L3.893 9.425a.745.745 0 0 0 0 1.075l2.755 2.645a.745.745 0 0 1 .022 1.053l-.258.27a.745.745 0 0 1-1.054.02l-3.755-3.604a1.28 1.28 0 0 1 0-1.843l3.755-3.604a.745.745 0 0 1 1.054.02l.258.27Zm6.855-.269a.745.745 0 0 1 1.053-.021l3.755 3.604a1.28 1.28 0 0 1 0 1.843l-3.755 3.604a.745.745 0 0 1-1.053-.02l-.258-.27a.745.745 0 0 1 .021-1.053l2.756-2.645a.745.745 0 0 0 0-1.075L13.288 6.78a.745.745 0 0 1-.02-1.053l.257-.27ZM10.68 3.222a.745.745 0 0 1 .904-.541l.361.09c.4.1.642.504.542.904l-3.07 12.282a.745.745 0 0 1-.904.542l-.361-.09a.745.745 0 0 1-.542-.904l3.07-12.283Z"
-                  clipRule="evenodd"
-                />
+            <h3 className="mt-8 flex items-center gap-1 text-xs font-semibold text-blue-400">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <g fill="currentColor">
+                  <path
+                    fillRule="evenodd"
+                    d="M15.887 6.886a.875.875 0 0 1 1.246-.036l4.178 4c.626.6.626 1.61 0 2.21l-4.178 4a.875.875 0 0 1-1.211-1.263l3.33-3.197a.894.894 0 0 0 0-1.29l-3.33-3.197a.875.875 0 0 1-.035-1.227ZM7.693 17.024a.875.875 0 0 1-1.246.036l-4.178-4a1.537 1.537 0 0 1 0-2.21l4.178-4a.875.875 0 0 1 1.21 1.263l-3.33 3.197a.894.894 0 0 0 0 1.29l3.33 3.197c.345.33.36.877.036 1.227Z"
+                    clipRule="evenodd"
+                  />
+                  <rect
+                    width="2"
+                    height="16.592"
+                    x="13.018"
+                    y="3.274"
+                    rx=".5"
+                    transform="rotate(13.873 13.018 3.274)"
+                  />
+                </g>
               </svg>
-              React Code
+              <span>React Code</span>
             </h3>
             <div className="mt-8 cursor-pointer overflow-x-auto rounded-sm border-2 border-blue-300 p-2 text-xs">
               <pre>
