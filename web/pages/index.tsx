@@ -1,6 +1,9 @@
 import Footer from '../components/Footer/Footer';
 import Icon from '../components/Icon/Icon';
-import IconInfoPanel from '../components/IconInfoPanel/IconInfoPanel';
+import {
+  IconInfoPanelSideBar,
+  IconInfoPanelPopup
+} from '../components/IconInfoPanel/IconInfoPanel';
 import Navbar from '../components/Navbar/Navbar';
 import updateSearchParam from '../lib/updateSearchParam';
 import Meta from '../meta.json';
@@ -12,11 +15,12 @@ import { DebounceInput } from 'react-debounce-input';
 interface HomeProps {
   s: string;
   selectedParam: string;
+  sizeParam: 'sm' | 'base';
 }
 
 export type MetaType = typeof Meta;
 
-export default function Home({ s, selectedParam }: HomeProps) {
+export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
   const [showDialog, setShowDialog] = useState<boolean>(
     selectedParam !== undefined
   );
@@ -27,7 +31,7 @@ export default function Home({ s, selectedParam }: HomeProps) {
   const [searchTerm, setSearchTerm] = useState<string>(s || '');
   const [circleMode, setCircleMode] = useState<boolean>(false);
   const [squareMode, setSquareMode] = useState<boolean>(false);
-  const [size, setSize] = useState<'small' | 'normal'>('normal');
+  const [size, setSize] = useState<'sm' | 'base'>(sizeParam || 'base');
 
   const searchInput = useRef(null);
 
@@ -76,15 +80,23 @@ export default function Home({ s, selectedParam }: HomeProps) {
     const newData = {};
 
     Object.entries(dataToConvert).forEach(function ([key, value]) {
-      const svg = wrapInCircle(value.svg);
-      const svgMini = wrapInCircle(value.svgMini, 'mini');
+      const svg = wrapInCircle(value.variants.standard.base.svg);
+      const svgMini = wrapInCircle(value.variants.standard.sm.svg, 'mini');
 
       newData[key] = {
-        svg: svg.toString(),
-        svgMini: svgMini.toString(),
-        jsx: convertToJSX(svg.toString()),
-        jsxMini: convertToJSX(svgMini.toString()),
-        tags: value.tags
+        variants: {
+          standard: {
+            base: {
+              jsx: convertToJSX(svg.toString()),
+              svg: svg.toString()
+            },
+            sm: {
+              jsx: convertToJSX(svgMini.toString()),
+              svg: svgMini.toString()
+            }
+          }
+        },
+        keywords: value.keywords
       };
     });
     return newData as MetaType;
@@ -125,15 +137,23 @@ export default function Home({ s, selectedParam }: HomeProps) {
     const newData = {};
 
     Object.entries(dataToConvert).forEach(function ([key, value]) {
-      const svg = wrapInSquare(value.svg);
-      const svgMini = wrapInSquare(value.svgMini, 'mini');
+      const svg = wrapInSquare(value.variants.standard.base.svg);
+      const svgMini = wrapInSquare(value.variants.standard.sm.svg, 'mini');
 
       newData[key] = {
-        svg: svg.toString(),
-        svgMini: svgMini.toString(),
-        jsx: convertToJSX(svg.toString()),
-        jsxMini: convertToJSX(svgMini.toString()),
-        tags: value.tags
+        variants: {
+          standard: {
+            base: {
+              jsx: convertToJSX(svg.toString()),
+              svg: svg.toString()
+            },
+            sm: {
+              jsx: convertToJSX(svgMini.toString()),
+              svg: svgMini.toString()
+            }
+          }
+        },
+        keywords: value.keywords
       };
     });
     return newData as MetaType;
@@ -172,7 +192,7 @@ export default function Home({ s, selectedParam }: HomeProps) {
       if (
         (searchTerm !== '' && icon.includes(searchTerm)) ||
         searchTerm === '' ||
-        data[icon].tags.some((value: string) => value.includes(searchTerm))
+        data[icon].keywords.some((value: string) => value.includes(searchTerm))
       ) {
         no++;
       }
@@ -198,21 +218,22 @@ export default function Home({ s, selectedParam }: HomeProps) {
   }, [handleKeyPress]);
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-between font-sans ">
-      <div className="w-full max-w-screen-2xl overflow-x-hidden overflow-y-hidden">
+    <div
+      className={`flex min-h-screen flex-col items-center justify-between font-sans`}
+    >
+      <div className="max-w-screen-3xl w-full overflow-x-hidden overflow-y-hidden">
         <Navbar active={'Icons'} />
 
-        <div className="visible fixed top-0 right-0 z-10 max-h-screen w-5/6 sm:hidden">
-          <IconInfoPanel
-            size={size}
-            setSelected={setSelected}
-            setDialog={setShowDialog}
-            showDialog={showDialog}
-            selected={selected}
-            setShowDialog={setShowDialog}
-            data={data}
-          />
-        </div>
+        <IconInfoPanelPopup
+          size={size}
+          setSelected={setSelected}
+          setDialog={setShowDialog}
+          showDialog={showDialog}
+          selected={selected}
+          setShowDialog={setShowDialog}
+          data={data}
+          className="block sm:hidden"
+        />
 
         <motion.main
           className="mt-10 px-5 sm:px-16 "
@@ -253,10 +274,10 @@ export default function Home({ s, selectedParam }: HomeProps) {
 
           <div className="mt-5 flex w-full justify-between">
             <LayoutGroup>
-              <motion.div className="@container w-full" layout>
+              <motion.div className="w-full @container" layout>
                 <div className="w-full ">
                   <motion.div
-                    className="@sm:grid-cols-4 mb-8 grid w-full grid-flow-row grid-cols-1 gap-5"
+                    className="mb-8 grid w-full grid-flow-row grid-cols-1 gap-5 @sm:grid-cols-4"
                     layout
                   >
                     <button
@@ -291,13 +312,13 @@ export default function Home({ s, selectedParam }: HomeProps) {
                     </button>
                     <button
                       className={`border-2  py-2 text-xs font-semibold tracking-tighter ${
-                        size === 'normal'
+                        size === 'base'
                           ? 'border-blue-600 bg-blue-600 text-white'
                           : 'border-blue-200 bg-transparent text-blue-400'
                       }`}
                       style={{ borderWidth: '3px' }}
                       onClick={() => {
-                        setSize('normal');
+                        setSize('base');
                       }}
                       aria-pressed={squareMode}
                     >
@@ -305,13 +326,13 @@ export default function Home({ s, selectedParam }: HomeProps) {
                     </button>
                     <button
                       className={`border-2  py-2 text-xs font-semibold tracking-tighter ${
-                        size === 'small'
+                        size === 'sm'
                           ? 'border-blue-600 bg-blue-600 text-white'
                           : 'border-blue-200 bg-transparent text-blue-400'
                       }`}
                       style={{ borderWidth: '3px' }}
                       onClick={() => {
-                        setSize('small');
+                        setSize('sm');
                       }}
                       aria-pressed={squareMode}
                     >
@@ -325,7 +346,7 @@ export default function Home({ s, selectedParam }: HomeProps) {
                     (searchTerm !== '' &&
                       icon.includes(searchTerm.toLowerCase())) ||
                     searchTerm === '' ||
-                    data[icon].tags.some((value: string) =>
+                    data[icon].keywords.some((value: string) =>
                       value.toLowerCase().includes(searchTerm.toLowerCase())
                     )
                   ) {
@@ -370,7 +391,7 @@ export default function Home({ s, selectedParam }: HomeProps) {
 
                 <motion.div
                   layout
-                  className="@xs:grid-cols-2  @xl:grid-cols-4 @2xl:grid-cols-6 @3xl:grid-cols-8 grid w-full grid-flow-row grid-cols-1 gap-5"
+                  className="grid  w-full grid-flow-row grid-cols-1 gap-5 @xs:grid-cols-2 @md:grid-cols-4 @2xl:grid-cols-6 @[59rem]:grid-cols-10"
                 >
                   <AnimatePresence>
                     {Object.keys(data).map(icon => {
@@ -378,7 +399,7 @@ export default function Home({ s, selectedParam }: HomeProps) {
                         (searchTerm !== '' &&
                           icon.includes(searchTerm.toLowerCase())) ||
                         searchTerm === '' ||
-                        data[icon].tags.some((value: string) =>
+                        data[icon].keywords.some((value: string) =>
                           value.toLowerCase().includes(searchTerm.toLowerCase())
                         )
                       ) {
@@ -403,9 +424,9 @@ export default function Home({ s, selectedParam }: HomeProps) {
                                 <div
                                   dangerouslySetInnerHTML={{
                                     __html:
-                                      size === 'normal'
-                                        ? data[icon].svg
-                                        : data[icon].svgMini
+                                      size === 'base'
+                                        ? data[icon].variants.standard.base.svg
+                                        : data[icon].variants.standard.sm.svg
                                   }}
                                   className="text-gray-800"
                                 ></div>
@@ -419,8 +440,8 @@ export default function Home({ s, selectedParam }: HomeProps) {
                 </motion.div>
               </motion.div>
 
-              <IconInfoPanel
-                className="xs:block ml-5 hidden sm:block lg:block"
+              <IconInfoPanelSideBar
+                className="hidden sm:block"
                 showDialog={showDialog}
                 selected={selected}
                 setSelected={setSelected}
@@ -440,6 +461,6 @@ export default function Home({ s, selectedParam }: HomeProps) {
 }
 
 Home.getInitialProps = async ({ query }) => {
-  const { s, selected } = query;
-  return { s, selectedParam: selected };
+  const { s, selected, size, variant } = query;
+  return { s, selectedParam: selected, sizeParam: size, variant };
 };

@@ -9,13 +9,21 @@ interface IconProps {
   setSelected: Dispatch<SetStateAction<string>>;
   name: string;
   data: {
-    tags: string[];
-    jsx: string;
-    jsxMini: string;
-    svg: string;
-    svgMini: string;
+    keywords: string[];
+    variants: {
+      standard: {
+        base: {
+          svg: string;
+          jsx: string;
+        };
+        sm: {
+          svg: string;
+          jsx: string;
+        };
+      };
+    };
   };
-  size: 'small' | 'normal';
+  size: 'sm' | 'base';
   icon: JSX.Element;
 }
 
@@ -49,13 +57,20 @@ export default function Icon({
           setDialog(true);
           setSelected(name);
           updateSearchParam('selected', name);
+          updateSearchParam('size', size);
+          updateSearchParam('variant', 'standard');
         } else if (selected === name) {
           setDialog(false);
           setSelected('');
           updateSearchParam('selected', '');
+          updateSearchParam('size', '');
+          updateSearchParam('variant', '');
         } else {
+          setDialog(true);
           setSelected(name);
           updateSearchParam('selected', name);
+          updateSearchParam('size', size);
+          updateSearchParam('variant', 'standard');
         }
       }}
     >
@@ -64,7 +79,7 @@ export default function Icon({
           showOpts || selected === name || hover
             ? 'border-blue-600'
             : 'border-blue-200'
-        }  relative  flex h-28 w-full flex-col items-center justify-center p-2`}
+        }  relative  flex aspect-square w-full flex-col items-center justify-center p-2`}
         style={{ borderWidth: '3px' }}
         onMouseEnter={() => setShowOpts(true)}
         onMouseLeave={() => setShowOpts(false)}
@@ -86,11 +101,13 @@ export default function Icon({
         {showOpts && !copied && (
           <div className="absolute flex h-full w-full flex-col">
             <CopyBtn
-              className="mt-2 mb-1"
+              className="mb-1 mt-2"
               title={'Copy SVG'}
               onClick={e => {
                 navigator.clipboard.writeText(
-                  size === 'normal' ? data.svg : data.svgMini
+                  size === 'base'
+                    ? data.variants.standard.base.svg
+                    : data.variants.standard.sm.svg
                 );
                 e.stopPropagation();
                 copyAnimation();
@@ -98,11 +115,13 @@ export default function Icon({
             />
 
             <CopyBtn
-              className="mt-1 mb-2"
+              className="mb-2 mt-1"
               title={'Copy JSX'}
               onClick={e => {
                 navigator.clipboard.writeText(
-                  size === 'normal' ? data.jsx : data.jsxMini
+                  size === 'base'
+                    ? data.variants.standard.base.jsx
+                    : data.variants.standard.sm.jsx
                 );
                 e.stopPropagation();
                 copyAnimation();

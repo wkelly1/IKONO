@@ -1,3 +1,5 @@
+import Logo from '../Logo/logo';
+import Navigation from './Navigation';
 import Link from 'next/link';
 
 interface NavbarProps {
@@ -16,9 +18,9 @@ export default function Navbar({ active }: NavbarProps) {
             <path
               fill="none"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.5"
               d="M15.774 5.946H3.194v7.265c0 3.027 3.144 4.843 6.29 4.843s6.29-1.816 6.29-4.843V12m0-6.054c2.516 0 5.032.797 5.032 3.027S19.548 12.605 15.774 12m0-6.054V12"
             />
           </svg>
@@ -41,57 +43,12 @@ export default function Navbar({ active }: NavbarProps) {
       </Link>
 
       <header className="flex items-center justify-between px-5 pt-10 sm:px-16 sm:pt-14">
-        <Link href="/" className="font-display text-xl font-bold text-blue-600">
-          IKONO
-        </Link>
-        <nav className="flex flex-wrap items-center justify-end gap-x-10 gap-y-2 font-sans text-sm font-semibold tracking-tighter">
-          <Link
-            href="https://www.buymeacoffee.com/willk"
-            className="hidden shrink-0 items-center gap-1 rounded-lg bg-yellow-400 px-5 py-1 sm:flex"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-              <path
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                d="M15.774 5.946H3.194v7.265c0 3.027 3.144 4.843 6.29 4.843s6.29-1.816 6.29-4.843V12m0-6.054c2.516 0 5.032.797 5.032 3.027S19.548 12.605 15.774 12m0-6.054V12"
-              />
-            </svg>
-            Buy me a coffee
-          </Link>
-          <Link
-            href="/"
-            className={`${
-              active === 'Icons'
-                ? 'text-blue-600'
-                : 'transition-all hover:text-blue-600'
-            }`}
-          >
-            Icons
-          </Link>
-          <Link
-            href="/ui"
-            className={`${
-              active === 'Example UI'
-                ? 'text-blue-600'
-                : 'transition-all hover:text-blue-600'
-            }`}
-          >
-            Example UI
-          </Link>
-          <Link
-            href="https://github.com/wkelly1/IKONO"
-            className="transition-all hover:text-blue-600 "
-          >
-            React
-          </Link>
-        </nav>
+        <Logo />
+        <Navigation active={active} />
       </header>
       <div className="mt-10 px-5 sm:px-16 ">
         <div className="flex h-60 flex-col justify-between bg-blue-600 px-10 py-6">
-          <div className="flex justify-end gap-2">
+          <div className="flex items-center justify-end gap-2">
             <a
               href="https://www.figma.com/community/plugin/1230547475211377845/ikono-icons"
               className="flex items-center gap-2 text-xs font-semibold text-white opacity-70 transition-opacity hover:opacity-100"
@@ -120,7 +77,7 @@ export default function Navbar({ active }: NavbarProps) {
               MIT License
             </a>
           </div>
-          <div>
+          <div className="flex flex-col gap-2">
             <p className="text-3xl font-bold text-white">
               ICONS ARE EASIER THAN WORDS
             </p>
