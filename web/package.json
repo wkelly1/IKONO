@@ -11,6 +11,7 @@
     "@trivago/prettier-plugin-sort-imports": "^4.2.0",
     "@types/node": "^20.8.2",
     "@types/react": "^18.2.24",
+    "@types/react-color": "^3.0.12",
     "autoprefixer": "^10.2.6",
     "eslint-config-next": "^14.2.3",
     "eslint-config-prettier": "^9.0.0",
@@ -21,6 +22,8 @@
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-popover": "^1.0.7",
+    "@radix-ui/react-tooltip": "^1.0.7",
     "@tailwindcss/container-queries": "^0.1.1",
     "@vercel/analytics": "^1.1.0",
     "@vercel/og": "^0.6.2",
@@ -31,10 +34,13 @@
     "nextjs-cors": "^2.2.0",
     "node-html-parser": "^6.1.4",
     "react": "^18.3.1",
+    "react-color": "^2.19.3",
     "react-debounce-input": "^3.3.0",
     "react-dom": "^18.3.1",
     "react-hotkeys": "^2.0.0",
     "react-window": "^1.8.9",
+    "sharp": "^0.33.3",
+    "tailwind-merge": "^2.3.0",
     "tailwindcss": "^3.4.3"
   }
 }

@@ -2,6 +2,7 @@ import updateSearchParam from '../../lib/updateSearchParam';
 import CopyBtn from '../CopyBtn/CopyBtn';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Dispatch, SetStateAction, useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 interface IconProps {
   setDialog: Dispatch<SetStateAction<boolean>>;
@@ -48,8 +49,8 @@ export default function Icon({
   };
 
   return (
-    <motion.div
-      className="flex cursor-pointer flex-col items-center"
+    <motion.button
+      className="group flex h-full w-full cursor-pointer flex-col items-center focus:outline-none"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={() => {
@@ -75,11 +76,12 @@ export default function Icon({
       }}
     >
       <div
-        className={`${
+        className={twMerge(
+          'relative flex aspect-square w-full flex-col items-center justify-center p-2',
           showOpts || selected === name || hover
-            ? 'border-blue-600'
-            : 'border-blue-200'
-        }  relative  flex aspect-square w-full flex-col items-center justify-center p-2`}
+            ? 'border-blue-600 group-focus:outline group-focus:outline-2 group-focus:outline-blue-300'
+            : 'border-blue-200 group-focus:outline group-focus:outline-2 group-focus:outline-blue-500'
+        )}
         style={{ borderWidth: '3px' }}
         onMouseEnter={() => setShowOpts(true)}
         onMouseLeave={() => setShowOpts(false)}
@@ -140,6 +142,6 @@ export default function Icon({
       >
         {name}
       </p>
-    </motion.div>
+    </motion.button>
   );
 }

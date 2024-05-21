@@ -12,7 +12,7 @@ const IconButton: React.FC<IconButtonProps> = forwardRef(
       <motion.button
         {...props}
         ref={ref}
-        className="size-7 flex items-center justify-center transition-all"
+        className="flex size-7 items-center justify-center rounded-sm transition-all hover:bg-blue-50"
         whileTap={{ scale: 0.9 }}
       >
         {children}

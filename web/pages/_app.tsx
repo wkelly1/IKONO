@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:title" content="IKONO Icons" />
         <meta
           property="og:image"
-          content={`http://localhost:3000/api/og?icon=${
+          content={`${process.env.BASE_URL}/api/og?icon=${
             pageProps.selectedParam
           }&variant=${pageProps.variant}&size=${[
             pageProps.sizeParam
