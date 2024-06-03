@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/wkelly1/IKONO/blob/main/.github/img/banner.png" alt="IKONO"/>
+    <img src="/.github/img/banner.png" alt="IKONO"/>
 </p>
 
 <p align="center">
