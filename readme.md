@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/wkelly1/IKONO/blob/main/.github/img/bannar.png" alt="IKONO"/>
+    <img src="https://github.com/wkelly1/IKONO/blob/main/.github/img/banner.png" alt="IKONO"/>
 </p>
 
 <p align="center">
@@ -31,11 +31,11 @@ npm install @ikono/react
 Then to use the icon import and insert into jsx.
 
 ```jsx
-import { Home } from "@ikono/react";
+import { Home } from '@ikono/react';
 
 const Component = () => (
   <div>
-    <Home />
+    <Home color="#ffffff" size="base" />
   </div>
 );
 ```
