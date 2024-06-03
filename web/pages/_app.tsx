@@ -36,7 +36,7 @@ function MyApp({ Component, pageProps }) {
             pageProps.selectedParam
           }&variant=${pageProps.variant}&size=${[
             pageProps.sizeParam
-          ]}&version=${Version.iconVersion}&similar_count=6`}
+          ]}&version=${Version.version}&similar_count=6`}
         />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@WillKelly__" />
