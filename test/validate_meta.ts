@@ -46,7 +46,7 @@ Object.keys(meta.icons).forEach(icon => {
     // Check that all icons in meta.json have associated SVG files.
     if (
       !icons.includes(icon) &&
-      !meta.icons[icon].history[`${variant}_${size}`].removed
+      !meta.icons[icon].history[`${variant}_${size}`]?.removed
     ) {
       log(
         `Icon: ${`'${icon}'`.padEnd(

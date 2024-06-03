@@ -1,12 +1,10 @@
 'use strict';
 
 /* Generates PNGs for all of the icons */
+import { iterateVariants } from './lib';
 import * as fs from 'fs';
 import * as path from 'path';
 import sharp from 'sharp';
-
-const iconVariants = ['standard'];
-const iconSizes = ['24x24'];
 
 async function generatePNGs(
   metaLoc: string,
@@ -50,15 +48,13 @@ async function generatePNGs(
 }
 
 async function main() {
-  for (const variant of iconVariants) {
-    for (const size of iconSizes) {
-      await generatePNGs(
-        path.resolve('.', 'src'),
-        path.resolve('.', 'src', 'icons', variant, size),
-        path.resolve('.', 'web', 'public', 'icons', variant, size)
-      );
-    }
-  }
+  iterateVariants(async (variant: string, size: string) => {
+    await generatePNGs(
+      path.resolve('.', 'src'),
+      path.resolve('.', 'src', 'icons', variant, size),
+      path.resolve('.', 'web', 'public', 'icons', variant, size)
+    );
+  });
 }
 
 main();

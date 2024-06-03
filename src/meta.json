@@ -16,18 +16,11 @@
   },
   "icons": {
     "hamburger": {
-      "keywords": [
-        "burger",
-        "menu",
-        "side-bar",
-        "hamburger"
-      ],
+      "keywords": ["burger", "menu", "side-bar", "hamburger"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -36,18 +29,11 @@
       }
     },
     "burger_advanced": {
-      "keywords": [
-        "burger",
-        "menu",
-        "side-bar",
-        "hamburger"
-      ],
+      "keywords": ["burger", "menu", "side-bar", "hamburger"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -56,17 +42,11 @@
       }
     },
     "search": {
-      "keywords": [
-        "search",
-        "find",
-        "magnifying-glass"
-      ],
+      "keywords": ["search", "find", "magnifying-glass"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -75,19 +55,11 @@
       }
     },
     "graph_desc": {
-      "keywords": [
-        "line",
-        "bar",
-        "chart",
-        "data",
-        "analysis"
-      ],
+      "keywords": ["line", "bar", "chart", "data", "analysis"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -96,19 +68,11 @@
       }
     },
     "graph_asc": {
-      "keywords": [
-        "line",
-        "bar",
-        "chart",
-        "data",
-        "analysis"
-      ],
+      "keywords": ["line", "bar", "chart", "data", "analysis"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -117,20 +81,11 @@
       }
     },
     "chart_asc": {
-      "keywords": [
-        "line",
-        "bar",
-        "chart",
-        "data",
-        "graph",
-        "analysis"
-      ],
+      "keywords": ["line", "bar", "chart", "data", "graph", "analysis"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -139,20 +94,11 @@
       }
     },
     "chart_desc": {
-      "keywords": [
-        "line",
-        "bar",
-        "chart",
-        "data",
-        "graph",
-        "analysis"
-      ],
+      "keywords": ["line", "bar", "chart", "data", "graph", "analysis"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -161,20 +107,11 @@
       }
     },
     "phone_modern": {
-      "keywords": [
-        "phone",
-        "contact",
-        "message",
-        "talk",
-        "iphone",
-        "android"
-      ],
+      "keywords": ["phone", "contact", "message", "talk", "iphone", "android"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -183,20 +120,11 @@
       }
     },
     "phone": {
-      "keywords": [
-        "phone",
-        "contact",
-        "message",
-        "talk",
-        "iphone",
-        "android"
-      ],
+      "keywords": ["phone", "contact", "message", "talk", "iphone", "android"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -205,17 +133,11 @@
       }
     },
     "phone_old": {
-      "keywords": [
-        "phone",
-        "contact",
-        "talk"
-      ],
+      "keywords": ["phone", "contact", "talk"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -224,19 +146,11 @@
       }
     },
     "incoming_phone": {
-      "keywords": [
-        "phone",
-        "contact",
-        "talk",
-        "incoming",
-        "answer"
-      ],
+      "keywords": ["phone", "contact", "talk", "incoming", "answer"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -245,20 +159,11 @@
       }
     },
     "outgoing_phone": {
-      "keywords": [
-        "phone",
-        "contact",
-        "talk",
-        "outgoing",
-        "end",
-        "hangup"
-      ],
+      "keywords": ["phone", "contact", "talk", "outgoing", "end", "hangup"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -267,18 +172,11 @@
       }
     },
     "chevron_right": {
-      "keywords": [
-        "direction",
-        "right",
-        "arrow",
-        "forward"
-      ],
+      "keywords": ["direction", "right", "arrow", "forward"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -287,18 +185,11 @@
       }
     },
     "chevron_left": {
-      "keywords": [
-        "direction",
-        "left",
-        "arrow",
-        "backward"
-      ],
+      "keywords": ["direction", "left", "arrow", "backward"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -307,17 +198,11 @@
       }
     },
     "chevron_up": {
-      "keywords": [
-        "direction",
-        "up",
-        "arrow"
-      ],
+      "keywords": ["direction", "up", "arrow"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -326,17 +211,11 @@
       }
     },
     "chevron_down": {
-      "keywords": [
-        "direction",
-        "down",
-        "arrow"
-      ],
+      "keywords": ["direction", "down", "arrow"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -345,18 +224,11 @@
       }
     },
     "arrow_right_large": {
-      "keywords": [
-        "direction",
-        "right",
-        "arrow",
-        "forward"
-      ],
+      "keywords": ["direction", "right", "arrow", "forward"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -365,18 +237,11 @@
       }
     },
     "arrow_left_large": {
-      "keywords": [
-        "direction",
-        "left",
-        "arrow",
-        "back"
-      ],
+      "keywords": ["direction", "left", "arrow", "back"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -385,17 +250,11 @@
       }
     },
     "arrow_up_large": {
-      "keywords": [
-        "direction",
-        "up",
-        "arrow"
-      ],
+      "keywords": ["direction", "up", "arrow"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -404,17 +263,11 @@
       }
     },
     "arrow_down_large": {
-      "keywords": [
-        "direction",
-        "down",
-        "arrow"
-      ],
+      "keywords": ["direction", "down", "arrow"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -423,18 +276,11 @@
       }
     },
     "arrow_right": {
-      "keywords": [
-        "direction",
-        "right",
-        "arrow",
-        "forward"
-      ],
+      "keywords": ["direction", "right", "arrow", "forward"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -443,18 +289,11 @@
       }
     },
     "arrow_left": {
-      "keywords": [
-        "direction",
-        "left",
-        "arrow",
-        "back"
-      ],
+      "keywords": ["direction", "left", "arrow", "back"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -463,17 +302,11 @@
       }
     },
     "arrow_up": {
-      "keywords": [
-        "direction",
-        "up",
-        "arrow"
-      ],
+      "keywords": ["direction", "up", "arrow"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -482,17 +315,11 @@
       }
     },
     "arrow_down": {
-      "keywords": [
-        "direction",
-        "down",
-        "arrow"
-      ],
+      "keywords": ["direction", "down", "arrow"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -501,17 +328,11 @@
       }
     },
     "folder": {
-      "keywords": [
-        "folder",
-        "file",
-        "data"
-      ],
+      "keywords": ["folder", "file", "data"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -520,18 +341,11 @@
       }
     },
     "folder_open": {
-      "keywords": [
-        "folder",
-        "file",
-        "data",
-        "open"
-      ],
+      "keywords": ["folder", "file", "data", "open"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -540,19 +354,11 @@
       }
     },
     "folder_open_simple": {
-      "keywords": [
-        "folder",
-        "file",
-        "data",
-        "open"
-      ],
+      "keywords": ["folder", "file", "data", "open"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.7.0",
-            "unreleased"
-          ]
+          "updated": ["1.7.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -561,19 +367,11 @@
       }
     },
     "message": {
-      "keywords": [
-        "message",
-        "msg",
-        "text",
-        "memo"
-      ],
+      "keywords": ["message", "msg", "text", "memo"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.7.0",
-            "unreleased"
-          ]
+          "updated": ["1.7.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -582,19 +380,11 @@
       }
     },
     "message_filled": {
-      "keywords": [
-        "message",
-        "msg",
-        "text",
-        "memo"
-      ],
+      "keywords": ["message", "msg", "text", "memo"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.7.0",
-            "unreleased"
-          ]
+          "updated": ["1.7.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -603,15 +393,11 @@
       }
     },
     "download": {
-      "keywords": [
-        "save"
-      ],
+      "keywords": ["save"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -620,15 +406,11 @@
       }
     },
     "upload": {
-      "keywords": [
-        "save"
-      ],
+      "keywords": ["save"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -637,19 +419,11 @@
       }
     },
     "heart": {
-      "keywords": [
-        "love",
-        "like",
-        "save",
-        "beat"
-      ],
+      "keywords": ["love", "like", "save", "beat"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.7.0",
-            "unreleased"
-          ]
+          "updated": ["1.7.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -658,18 +432,11 @@
       }
     },
     "heart_outlined": {
-      "keywords": [
-        "love",
-        "like",
-        "save",
-        "beat"
-      ],
+      "keywords": ["love", "like", "save", "beat"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -678,20 +445,11 @@
       }
     },
     "heart_broken": {
-      "keywords": [
-        "love",
-        "like",
-        "save",
-        "beat",
-        "broken",
-        "destroyed"
-      ],
+      "keywords": ["love", "like", "save", "beat", "broken", "destroyed"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -700,20 +458,11 @@
       }
     },
     "heart_beat": {
-      "keywords": [
-        "love",
-        "alive",
-        "doctor",
-        "nurse",
-        "hospital",
-        "dead"
-      ],
+      "keywords": ["love", "alive", "doctor", "nurse", "hospital", "dead"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -722,18 +471,11 @@
       }
     },
     "code": {
-      "keywords": [
-        "algorithm",
-        "program",
-        "programming"
-      ],
+      "keywords": ["algorithm", "program", "programming"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.7.0",
-            "unreleased"
-          ]
+          "updated": ["1.7.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -742,15 +484,11 @@
       }
     },
     "share_arrow": {
-      "keywords": [
-        "social"
-      ],
+      "keywords": ["social"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -759,15 +497,11 @@
       }
     },
     "share": {
-      "keywords": [
-        "social"
-      ],
+      "keywords": ["social"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -776,15 +510,11 @@
       }
     },
     "share_mobile": {
-      "keywords": [
-        "social"
-      ],
+      "keywords": ["social"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -793,17 +523,11 @@
       }
     },
     "profile": {
-      "keywords": [
-        "person",
-        "avatar",
-        "user"
-      ],
+      "keywords": ["person", "avatar", "user"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -812,18 +536,11 @@
       }
     },
     "star": {
-      "keywords": [
-        "like",
-        "rate",
-        "space"
-      ],
+      "keywords": ["like", "rate", "space"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.7.0",
-            "unreleased"
-          ]
+          "updated": ["1.7.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -832,18 +549,11 @@
       }
     },
     "star_outlined": {
-      "keywords": [
-        "like",
-        "rate",
-        "space"
-      ],
+      "keywords": ["like", "rate", "space"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.7.0",
-            "unreleased"
-          ]
+          "updated": ["1.7.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -852,19 +562,11 @@
       }
     },
     "ellipsis": {
-      "keywords": [
-        "menu",
-        "more",
-        "info",
-        "dot",
-        "meatballs"
-      ],
+      "keywords": ["menu", "more", "info", "dot", "meatballs"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -873,16 +575,11 @@
       }
     },
     "dot": {
-      "keywords": [
-        "full stop",
-        "end"
-      ],
+      "keywords": ["full stop", "end"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -891,16 +588,11 @@
       }
     },
     "compass": {
-      "keywords": [
-        "direction",
-        "location"
-      ],
+      "keywords": ["direction", "location"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -909,18 +601,11 @@
       }
     },
     "add": {
-      "keywords": [
-        "plus",
-        "more",
-        "save",
-        "maths"
-      ],
+      "keywords": ["plus", "more", "save", "maths"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -929,19 +614,11 @@
       }
     },
     "cross": {
-      "keywords": [
-        "exit",
-        "multiply",
-        "times",
-        "close",
-        "maths"
-      ],
+      "keywords": ["exit", "multiply", "times", "close", "maths"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -950,16 +627,11 @@
       }
     },
     "divide": {
-      "keywords": [
-        "division",
-        "maths"
-      ],
+      "keywords": ["division", "maths"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -968,16 +640,11 @@
       }
     },
     "divide_straight": {
-      "keywords": [
-        "division",
-        "maths"
-      ],
+      "keywords": ["division", "maths"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -986,17 +653,11 @@
       }
     },
     "percent": {
-      "keywords": [
-        "proportion",
-        "maths"
-      ],
+      "keywords": ["proportion", "maths"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.6.0",
-            "unreleased"
-          ]
+          "updated": ["1.6.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1005,16 +666,11 @@
       }
     },
     "info": {
-      "keywords": [
-        "information",
-        "notification"
-      ],
+      "keywords": ["information", "notification"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1023,17 +679,11 @@
       }
     },
     "info_circle": {
-      "keywords": [
-        "information",
-        "notification"
-      ],
+      "keywords": ["information", "notification"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.9.0",
-            "unreleased"
-          ]
+          "updated": ["1.9.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1042,16 +692,11 @@
       }
     },
     "question": {
-      "keywords": [
-        "notification"
-      ],
+      "keywords": ["notification"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.6.0",
-            "unreleased"
-          ]
+          "updated": ["1.6.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1060,16 +705,11 @@
       }
     },
     "question_circle": {
-      "keywords": [
-        "notification"
-      ],
+      "keywords": ["notification"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.9.0",
-            "unreleased"
-          ]
+          "updated": ["1.9.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1078,17 +718,11 @@
       }
     },
     "warning": {
-      "keywords": [
-        "notification",
-        "error"
-      ],
+      "keywords": ["notification", "error"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.6.0",
-            "unreleased"
-          ]
+          "updated": ["1.6.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1097,17 +731,11 @@
       }
     },
     "warning_circle": {
-      "keywords": [
-        "notification",
-        "error"
-      ],
+      "keywords": ["notification", "error"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.9.0",
-            "unreleased"
-          ]
+          "updated": ["1.9.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1116,19 +744,11 @@
       }
     },
     "bin": {
-      "keywords": [
-        "waste",
-        "dustbin",
-        "trash",
-        "delete",
-        "discard"
-      ],
+      "keywords": ["waste", "dustbin", "trash", "delete", "discard"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1137,16 +757,11 @@
       }
     },
     "battery_full": {
-      "keywords": [
-        "charge"
-      ],
+      "keywords": ["charge"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.7.0",
-            "unreleased"
-          ]
+          "updated": ["1.7.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1155,16 +770,11 @@
       }
     },
     "battery_medium": {
-      "keywords": [
-        "charge"
-      ],
+      "keywords": ["charge"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.7.0",
-            "unreleased"
-          ]
+          "updated": ["1.7.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1173,16 +783,11 @@
       }
     },
     "battery_low": {
-      "keywords": [
-        "charge"
-      ],
+      "keywords": ["charge"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.7.0",
-            "unreleased"
-          ]
+          "updated": ["1.7.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1191,16 +796,11 @@
       }
     },
     "battery_empty": {
-      "keywords": [
-        "charge"
-      ],
+      "keywords": ["charge"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.7.0",
-            "unreleased"
-          ]
+          "updated": ["1.7.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1209,16 +809,11 @@
       }
     },
     "battery_warning": {
-      "keywords": [
-        "charge"
-      ],
+      "keywords": ["charge"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.7.0",
-            "unreleased"
-          ]
+          "updated": ["1.7.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1227,16 +822,11 @@
       }
     },
     "battery_charging": {
-      "keywords": [
-        "charge"
-      ],
+      "keywords": ["charge"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.7.0",
-            "unreleased"
-          ]
+          "updated": ["1.7.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1245,19 +835,11 @@
       }
     },
     "wi-fi": {
-      "keywords": [
-        "internet",
-        "wifi",
-        "network"
-      ],
+      "keywords": ["internet", "wifi", "network"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.4.0",
-            "1.7.0",
-            "unreleased"
-          ]
+          "updated": ["1.4.0", "1.7.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1266,15 +848,11 @@
       }
     },
     "visible": {
-      "keywords": [
-        "see"
-      ],
+      "keywords": ["see", "eye", "look", "show"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1283,15 +861,11 @@
       }
     },
     "not_visible": {
-      "keywords": [
-        "see"
-      ],
+      "keywords": ["see", "eye", "look", "hide"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1300,16 +874,11 @@
       }
     },
     "ice_cream": {
-      "keywords": [
-        "food",
-        "dessert"
-      ],
+      "keywords": ["food", "dessert"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1318,16 +887,11 @@
       }
     },
     "shopping_cart": {
-      "keywords": [
-        "basket",
-        "tab"
-      ],
+      "keywords": ["basket", "tab"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1336,16 +900,11 @@
       }
     },
     "basket": {
-      "keywords": [
-        "shopping",
-        "tab"
-      ],
+      "keywords": ["shopping", "tab"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1354,18 +913,11 @@
       }
     },
     "hashtag": {
-      "keywords": [
-        "numbers",
-        "social",
-        "link",
-        "octothorpe"
-      ],
+      "keywords": ["numbers", "social", "link", "octothorpe"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1374,19 +926,11 @@
       }
     },
     "hand": {
-      "keywords": [
-        "drag",
-        "pointer",
-        "cursor",
-        "mouse"
-      ],
+      "keywords": ["drag", "pointer", "cursor", "mouse"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.6.0",
-            "unreleased"
-          ]
+          "updated": ["1.6.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1395,19 +939,11 @@
       }
     },
     "hand_point": {
-      "keywords": [
-        "point",
-        "pointer",
-        "cursor",
-        "mouse"
-      ],
+      "keywords": ["point", "pointer", "cursor", "mouse"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.6.0",
-            "unreleased"
-          ]
+          "updated": ["1.6.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1416,17 +952,11 @@
       }
     },
     "pointer": {
-      "keywords": [
-        "point",
-        "cursor",
-        "mouse"
-      ],
+      "keywords": ["point", "cursor", "mouse"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1435,18 +965,11 @@
       }
     },
     "pointer_pressed": {
-      "keywords": [
-        "point",
-        "cursor",
-        "pressed",
-        "mouse"
-      ],
+      "keywords": ["point", "cursor", "pressed", "mouse"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1455,16 +978,11 @@
       }
     },
     "refresh": {
-      "keywords": [
-        "reload",
-        "recycle"
-      ],
+      "keywords": ["reload", "recycle"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1473,17 +991,11 @@
       }
     },
     "play": {
-      "keywords": [
-        "media",
-        "continue"
-      ],
+      "keywords": ["media", "continue"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.6.0",
-            "unreleased"
-          ]
+          "updated": ["1.6.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1492,17 +1004,11 @@
       }
     },
     "play_outlined": {
-      "keywords": [
-        "media",
-        "continue"
-      ],
+      "keywords": ["media", "continue"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.6.0",
-            "unreleased"
-          ]
+          "updated": ["1.6.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1511,16 +1017,11 @@
       }
     },
     "pause": {
-      "keywords": [
-        "media",
-        "stop"
-      ],
+      "keywords": ["media", "stop"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1529,16 +1030,11 @@
       }
     },
     "fast_forward": {
-      "keywords": [
-        "media",
-        "skip"
-      ],
+      "keywords": ["media", "skip"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1547,16 +1043,11 @@
       }
     },
     "fast_forward_outlined": {
-      "keywords": [
-        "media",
-        "skip"
-      ],
+      "keywords": ["media", "skip"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1565,16 +1056,11 @@
       }
     },
     "rewind": {
-      "keywords": [
-        "media",
-        "skip"
-      ],
+      "keywords": ["media", "skip"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1583,16 +1069,11 @@
       }
     },
     "rewind_outlined": {
-      "keywords": [
-        "media",
-        "skip"
-      ],
+      "keywords": ["media", "skip"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1601,18 +1082,11 @@
       }
     },
     "speaker": {
-      "keywords": [
-        "media",
-        "sound",
-        "volume",
-        "music"
-      ],
+      "keywords": ["media", "sound", "volume", "music"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1621,19 +1095,11 @@
       }
     },
     "speaker_full": {
-      "keywords": [
-        "media",
-        "sound",
-        "volume",
-        "music"
-      ],
+      "keywords": ["media", "sound", "volume", "music"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.4.0",
-            "unreleased"
-          ]
+          "updated": ["1.4.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1642,18 +1108,11 @@
       }
     },
     "speaker_medium": {
-      "keywords": [
-        "media",
-        "sound",
-        "volume",
-        "music"
-      ],
+      "keywords": ["media", "sound", "volume", "music"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1662,18 +1121,11 @@
       }
     },
     "speaker_low": {
-      "keywords": [
-        "media",
-        "sound",
-        "volume",
-        "music"
-      ],
+      "keywords": ["media", "sound", "volume", "music"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1682,17 +1134,11 @@
       }
     },
     "speaker_off": {
-      "keywords": [
-        "media",
-        "sound",
-        "volume"
-      ],
+      "keywords": ["media", "sound", "volume"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1701,18 +1147,11 @@
       }
     },
     "speaker_muted": {
-      "keywords": [
-        "media",
-        "sound",
-        "volume",
-        "music"
-      ],
+      "keywords": ["media", "sound", "volume", "music"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1721,18 +1160,11 @@
       }
     },
     "speaker_warning": {
-      "keywords": [
-        "media",
-        "sound",
-        "volume",
-        "music"
-      ],
+      "keywords": ["media", "sound", "volume", "music"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1741,16 +1173,11 @@
       }
     },
     "clock": {
-      "keywords": [
-        "time",
-        "hour"
-      ],
+      "keywords": ["time", "hour"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1759,19 +1186,11 @@
       }
     },
     "code_tag": {
-      "keywords": [
-        "algorithm",
-        "program",
-        "programming"
-      ],
+      "keywords": ["algorithm", "program", "programming"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.4.0",
-            "1.7.0",
-            "unreleased"
-          ]
+          "updated": ["1.4.0", "1.7.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1780,18 +1199,11 @@
       }
     },
     "exit_text": {
-      "keywords": [
-        "exit",
-        "emergency",
-        "door"
-      ],
+      "keywords": ["exit", "emergency", "door"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.6.0",
-            "unreleased"
-          ]
+          "updated": ["1.6.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1800,19 +1212,11 @@
       }
     },
     "exit": {
-      "keywords": [
-        "exit",
-        "emergency",
-        "door",
-        "logout"
-      ],
+      "keywords": ["exit", "emergency", "door", "logout"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "1.7.0",
-            "unreleased"
-          ]
+          "updated": ["1.7.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1821,16 +1225,11 @@
       }
     },
     "power": {
-      "keywords": [
-        "on",
-        "off"
-      ],
+      "keywords": ["on", "off"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1839,17 +1238,11 @@
       }
     },
     "dishwasher": {
-      "keywords": [
-        "appliance",
-        "kitchen",
-        "dishes"
-      ],
+      "keywords": ["appliance", "kitchen", "dishes"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1858,17 +1251,11 @@
       }
     },
     "washing_machine": {
-      "keywords": [
-        "appliance",
-        "laundry",
-        "cloths"
-      ],
+      "keywords": ["appliance", "laundry", "cloths"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1877,18 +1264,11 @@
       }
     },
     "oven": {
-      "keywords": [
-        "appliance",
-        "kitchen",
-        "cook",
-        "cooking"
-      ],
+      "keywords": ["appliance", "kitchen", "cook", "cooking"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1897,17 +1277,11 @@
       }
     },
     "bulb": {
-      "keywords": [
-        "light",
-        "bright",
-        "off"
-      ],
+      "keywords": ["light", "bright", "off"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1916,17 +1290,11 @@
       }
     },
     "bulb_on": {
-      "keywords": [
-        "light",
-        "bright",
-        "on"
-      ],
+      "keywords": ["light", "bright", "on"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1935,16 +1303,11 @@
       }
     },
     "qr": {
-      "keywords": [
-        "code",
-        "scan"
-      ],
+      "keywords": ["code", "scan"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1953,16 +1316,11 @@
       }
     },
     "qr_detailed": {
-      "keywords": [
-        "code",
-        "scan"
-      ],
+      "keywords": ["code", "scan"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1971,19 +1329,11 @@
       }
     },
     "email": {
-      "keywords": [
-        "mail",
-        "message",
-        "inbox",
-        "compose",
-        "post"
-      ],
+      "keywords": ["mail", "message", "inbox", "compose", "post"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -1992,17 +1342,11 @@
       }
     },
     "send": {
-      "keywords": [
-        "deliver",
-        "compose",
-        "mail"
-      ],
+      "keywords": ["deliver", "compose", "mail"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2011,17 +1355,11 @@
       }
     },
     "draft": {
-      "keywords": [
-        "document",
-        "mail",
-        "file"
-      ],
+      "keywords": ["document", "mail", "file"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2030,17 +1368,11 @@
       }
     },
     "archive": {
-      "keywords": [
-        "folder",
-        "save",
-        "mail"
-      ],
+      "keywords": ["folder", "save", "mail"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2049,17 +1381,11 @@
       }
     },
     "compose": {
-      "keywords": [
-        "mail",
-        "message",
-        "new"
-      ],
+      "keywords": ["mail", "message", "new"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2068,15 +1394,11 @@
       }
     },
     "print": {
-      "keywords": [
-        "document"
-      ],
+      "keywords": ["document"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2085,15 +1407,11 @@
       }
     },
     "inbox": {
-      "keywords": [
-        "mail"
-      ],
+      "keywords": ["mail"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2102,17 +1420,11 @@
       }
     },
     "camera": {
-      "keywords": [
-        "video",
-        "call",
-        "photo"
-      ],
+      "keywords": ["video", "call", "photo"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2121,17 +1433,11 @@
       }
     },
     "camera_outlined": {
-      "keywords": [
-        "video",
-        "call",
-        "photo"
-      ],
+      "keywords": ["video", "call", "photo"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2140,17 +1446,11 @@
       }
     },
     "microphone": {
-      "keywords": [
-        "audio",
-        "record",
-        "call"
-      ],
+      "keywords": ["audio", "record", "call"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2159,17 +1459,11 @@
       }
     },
     "microphone_outlined": {
-      "keywords": [
-        "audio",
-        "record",
-        "call"
-      ],
+      "keywords": ["audio", "record", "call"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2178,19 +1472,11 @@
       }
     },
     "microphone_muted": {
-      "keywords": [
-        "audio",
-        "record",
-        "call",
-        "off",
-        "mute"
-      ],
+      "keywords": ["audio", "record", "call", "off", "mute"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2199,19 +1485,11 @@
       }
     },
     "microphone_muted_outlined": {
-      "keywords": [
-        "audio",
-        "record",
-        "call",
-        "off",
-        "mute"
-      ],
+      "keywords": ["audio", "record", "call", "off", "mute"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2220,16 +1498,11 @@
       }
     },
     "save": {
-      "keywords": [
-        "document",
-        "file"
-      ],
+      "keywords": ["document", "file"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2238,16 +1511,11 @@
       }
     },
     "notification_alarm": {
-      "keywords": [
-        "bell",
-        "messages"
-      ],
+      "keywords": ["bell", "messages"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2256,18 +1524,11 @@
       }
     },
     "key": {
-      "keywords": [
-        "lock",
-        "unlock",
-        "security"
-      ],
+      "keywords": ["lock", "unlock", "security"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "1.6.0",
-            "unreleased"
-          ]
+          "updated": ["1.6.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2276,18 +1537,11 @@
       }
     },
     "padlock_outlined": {
-      "keywords": [
-        "lock",
-        "unlock",
-        "security",
-        "password"
-      ],
+      "keywords": ["lock", "unlock", "security", "password"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2296,18 +1550,11 @@
       }
     },
     "padlock_unlocked_outlined": {
-      "keywords": [
-        "lock",
-        "unlock",
-        "security",
-        "password"
-      ],
+      "keywords": ["lock", "unlock", "security", "password"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2316,18 +1563,11 @@
       }
     },
     "padlock": {
-      "keywords": [
-        "lock",
-        "unlock",
-        "security",
-        "password"
-      ],
+      "keywords": ["lock", "unlock", "security", "password"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2336,18 +1576,11 @@
       }
     },
     "padlock_unlocked": {
-      "keywords": [
-        "lock",
-        "unlock",
-        "security",
-        "password"
-      ],
+      "keywords": ["lock", "unlock", "security", "password"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2356,19 +1589,11 @@
       }
     },
     "lowercase": {
-      "keywords": [
-        "text",
-        "uppercase",
-        "case",
-        "caps"
-      ],
+      "keywords": ["text", "uppercase", "case", "caps"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "1.6.0",
-            "unreleased"
-          ]
+          "updated": ["1.6.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2377,19 +1602,11 @@
       }
     },
     "uppercase": {
-      "keywords": [
-        "text",
-        "lowercase",
-        "case",
-        "caps"
-      ],
+      "keywords": ["text", "lowercase", "case", "caps"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "1.6.0",
-            "unreleased"
-          ]
+          "updated": ["1.6.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2398,19 +1615,11 @@
       }
     },
     "upper_lower": {
-      "keywords": [
-        "text",
-        "lowercase",
-        "case",
-        "caps",
-        "uppercase"
-      ],
+      "keywords": ["text", "lowercase", "case", "caps", "uppercase"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2419,18 +1628,11 @@
       }
     },
     "profile_outlined": {
-      "keywords": [
-        "person",
-        "avatar",
-        "user"
-      ],
+      "keywords": ["person", "avatar", "user"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "1.6.0",
-            "unreleased"
-          ]
+          "updated": ["1.6.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2439,19 +1641,11 @@
       }
     },
     "profile_pair": {
-      "keywords": [
-        "person",
-        "avatar",
-        "user"
-      ],
+      "keywords": ["person", "avatar", "user"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "1.1.1",
-            "1.6.0",
-            "unreleased"
-          ]
+          "updated": ["1.1.1", "1.6.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2471,9 +1665,7 @@
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2482,16 +1674,11 @@
       }
     },
     "male_toilet": {
-      "keywords": [
-        "female_toilet",
-        "sign"
-      ],
+      "keywords": ["female_toilet", "sign"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2500,16 +1687,11 @@
       }
     },
     "female_toilet": {
-      "keywords": [
-        "male_toilet",
-        "sign"
-      ],
+      "keywords": ["male_toilet", "sign"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2518,19 +1700,11 @@
       }
     },
     "wc": {
-      "keywords": [
-        "toilet",
-        "female",
-        "male",
-        "sign"
-      ],
+      "keywords": ["toilet", "female", "male", "sign"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "1.7.0",
-            "unreleased"
-          ]
+          "updated": ["1.7.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2539,18 +1713,11 @@
       }
     },
     "wc_sign": {
-      "keywords": [
-        "toilet",
-        "female",
-        "male",
-        "sign"
-      ],
+      "keywords": ["toilet", "female", "male", "sign"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2559,18 +1726,11 @@
       }
     },
     "disabled_toilet": {
-      "keywords": [
-        "toilet",
-        "female",
-        "male",
-        "sign"
-      ],
+      "keywords": ["toilet", "female", "male", "sign"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2579,18 +1739,11 @@
       }
     },
     "coffee": {
-      "keywords": [
-        "drink",
-        "food",
-        "mug",
-        "cup"
-      ],
+      "keywords": ["drink", "food", "mug", "cup"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2599,19 +1752,11 @@
       }
     },
     "lamp": {
-      "keywords": [
-        "light",
-        "bulb",
-        "house",
-        "bedroom",
-        "livingroom"
-      ],
+      "keywords": ["light", "bulb", "house", "bedroom", "livingroom"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2620,21 +1765,11 @@
       }
     },
     "video_cassette": {
-      "keywords": [
-        "media",
-        "video",
-        "tape",
-        "film",
-        "tunes",
-        "song",
-        "album"
-      ],
+      "keywords": ["media", "video", "tape", "film", "tunes", "song", "album"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2643,22 +1778,11 @@
       }
     },
     "cd": {
-      "keywords": [
-        "media",
-        "video",
-        "tape",
-        "film",
-        "tunes",
-        "song",
-        "album"
-      ],
+      "keywords": ["media", "video", "tape", "film", "tunes", "song", "album"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "1.6.0",
-            "unreleased"
-          ]
+          "updated": ["1.6.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2667,19 +1791,11 @@
       }
     },
     "music": {
-      "keywords": [
-        "sound",
-        "notes",
-        "tunes",
-        "song",
-        "album"
-      ],
+      "keywords": ["sound", "notes", "tunes", "song", "album"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2688,18 +1804,11 @@
       }
     },
     "cut": {
-      "keywords": [
-        "paste",
-        "document",
-        "file"
-      ],
+      "keywords": ["paste", "document", "file"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "1.6.0",
-            "unreleased"
-          ]
+          "updated": ["1.6.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2708,16 +1817,11 @@
       }
     },
     "pin": {
-      "keywords": [
-        "save",
-        "location"
-      ],
+      "keywords": ["save", "location"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2726,17 +1830,11 @@
       }
     },
     "calendar": {
-      "keywords": [
-        "date",
-        "schedule"
-      ],
+      "keywords": ["date", "schedule"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "1.9.0",
-            "unreleased"
-          ]
+          "updated": ["1.9.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2745,17 +1843,11 @@
       }
     },
     "pen": {
-      "keywords": [
-        "write",
-        "edit",
-        "note"
-      ],
+      "keywords": ["write", "edit", "note"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2764,17 +1856,11 @@
       }
     },
     "pencil": {
-      "keywords": [
-        "write",
-        "edit",
-        "note"
-      ],
+      "keywords": ["write", "edit", "note"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2783,18 +1869,11 @@
       }
     },
     "cloud": {
-      "keywords": [
-        "internet",
-        "files",
-        "documents"
-      ],
+      "keywords": ["internet", "files", "documents"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "1.2.0",
-            "unreleased"
-          ]
+          "updated": ["1.2.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2803,19 +1882,11 @@
       }
     },
     "dial_phone": {
-      "keywords": [
-        "phone",
-        "contact",
-        "talk"
-      ],
+      "keywords": ["phone", "contact", "talk"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "1.4.0",
-            "1.9.0",
-            "unreleased"
-          ]
+          "updated": ["1.4.0", "1.9.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2824,18 +1895,11 @@
       }
     },
     "camera_flip": {
-      "keywords": [
-        "rotate",
-        "spin",
-        "photo"
-      ],
+      "keywords": ["rotate", "spin", "photo"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "1.9.0",
-            "unreleased"
-          ]
+          "updated": ["1.9.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2844,19 +1908,11 @@
       }
     },
     "hangup_phone": {
-      "keywords": [
-        "phone",
-        "contact",
-        "talk",
-        "end"
-      ],
+      "keywords": ["phone", "contact", "talk", "end"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "1.4.0",
-            "unreleased"
-          ]
+          "updated": ["1.4.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2865,18 +1921,11 @@
       }
     },
     "attachment": {
-      "keywords": [
-        "document",
-        "file",
-        "image",
-        "picture"
-      ],
+      "keywords": ["document", "file", "image", "picture"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2885,18 +1934,11 @@
       }
     },
     "settings": {
-      "keywords": [
-        "preferences",
-        "gear",
-        "cog",
-        "password"
-      ],
+      "keywords": ["preferences", "gear", "cog", "password"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2905,17 +1947,11 @@
       }
     },
     "profile_circle": {
-      "keywords": [
-        "person",
-        "avatar",
-        "user"
-      ],
+      "keywords": ["person", "avatar", "user"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2924,17 +1960,11 @@
       }
     },
     "tick": {
-      "keywords": [
-        "accept",
-        "agree",
-        "check"
-      ],
+      "keywords": ["accept", "agree", "check"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2943,18 +1973,11 @@
       }
     },
     "tick_circle": {
-      "keywords": [
-        "accept",
-        "agree",
-        "check"
-      ],
+      "keywords": ["accept", "agree", "check"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "1.9.0",
-            "unreleased"
-          ]
+          "updated": ["1.9.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2963,16 +1986,11 @@
       }
     },
     "money_pounds": {
-      "keywords": [
-        "currency"
-      ],
+      "keywords": ["currency"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "1.9.0",
-            "unreleased"
-          ]
+          "updated": ["1.9.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2981,16 +1999,11 @@
       }
     },
     "money_dollars": {
-      "keywords": [
-        "currency"
-      ],
+      "keywords": ["currency"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "1.9.0",
-            "unreleased"
-          ]
+          "updated": ["1.9.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -2999,16 +2012,11 @@
       }
     },
     "new_document": {
-      "keywords": [
-        "file",
-        "add"
-      ],
+      "keywords": ["file", "add"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3017,16 +2025,11 @@
       }
     },
     "home": {
-      "keywords": [
-        "house",
-        "family"
-      ],
+      "keywords": ["house", "family"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3035,18 +2038,11 @@
       }
     },
     "home_outlined": {
-      "keywords": [
-        "house",
-        "family"
-      ],
+      "keywords": ["house", "family"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "1.6.0",
-            "1.7.0",
-            "unreleased"
-          ]
+          "updated": ["1.6.0", "1.7.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3055,21 +2051,11 @@
       }
     },
     "calculator": {
-      "keywords": [
-        "maths",
-        "sum",
-        "add",
-        "multiply",
-        "subtract",
-        "divide"
-      ],
+      "keywords": ["maths", "sum", "add", "multiply", "subtract", "divide"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "1.6.0",
-            "unreleased"
-          ]
+          "updated": ["1.6.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3078,16 +2064,11 @@
       }
     },
     "shopping_cart_reversed": {
-      "keywords": [
-        "basket",
-        "tab"
-      ],
+      "keywords": ["basket", "tab"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3096,16 +2077,11 @@
       }
     },
     "picture": {
-      "keywords": [
-        "image",
-        "camera"
-      ],
+      "keywords": ["image", "camera"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3114,16 +2090,11 @@
       }
     },
     "swap": {
-      "keywords": [
-        "change",
-        "reverse"
-      ],
+      "keywords": ["change", "reverse"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3132,16 +2103,11 @@
       }
     },
     "swap_vertical": {
-      "keywords": [
-        "change",
-        "reverse"
-      ],
+      "keywords": ["change", "reverse"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3150,17 +2116,11 @@
       }
     },
     "shield": {
-      "keywords": [
-        "protect",
-        "security"
-      ],
+      "keywords": ["protect", "security"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "1.6.0",
-            "unreleased"
-          ]
+          "updated": ["1.6.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3169,19 +2129,11 @@
       }
     },
     "add_circle": {
-      "keywords": [
-        "plus",
-        "more",
-        "save",
-        "maths"
-      ],
+      "keywords": ["plus", "more", "save", "maths"],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": [
-            "1.9.0",
-            "unreleased"
-          ]
+          "updated": ["1.9.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3190,17 +2142,11 @@
       }
     },
     "preferences": {
-      "keywords": [
-        "settings",
-        "options",
-        "filters"
-      ],
+      "keywords": ["settings", "options", "filters"],
       "history": {
         "standard_base": {
           "created": "1.1.1",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3209,19 +2155,11 @@
       }
     },
     "fire_outlined": {
-      "keywords": [
-        "flame",
-        "burn",
-        "hot",
-        "warm",
-        "heat"
-      ],
+      "keywords": ["flame", "burn", "hot", "warm", "heat"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3230,19 +2168,11 @@
       }
     },
     "fire": {
-      "keywords": [
-        "flame",
-        "burn",
-        "hot",
-        "warm",
-        "heat"
-      ],
+      "keywords": ["flame", "burn", "hot", "warm", "heat"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3263,10 +2193,7 @@
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "1.7.0",
-            "unreleased"
-          ]
+          "updated": ["1.7.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3286,10 +2213,7 @@
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "1.7.0",
-            "unreleased"
-          ]
+          "updated": ["1.7.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3310,9 +2234,7 @@
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3333,9 +2255,7 @@
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3356,9 +2276,7 @@
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3367,17 +2285,11 @@
       }
     },
     "alarm": {
-      "keywords": [
-        "wake",
-        "clock",
-        "time"
-      ],
+      "keywords": ["wake", "clock", "time"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3386,18 +2298,11 @@
       }
     },
     "graduation": {
-      "keywords": [
-        "university",
-        "school",
-        "high school",
-        "secondary school"
-      ],
+      "keywords": ["university", "school", "high school", "secondary school"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3406,18 +2311,11 @@
       }
     },
     "graduation_outlined": {
-      "keywords": [
-        "university",
-        "school",
-        "high school",
-        "secondary school"
-      ],
+      "keywords": ["university", "school", "high school", "secondary school"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3426,18 +2324,11 @@
       }
     },
     "moon": {
-      "keywords": [
-        "night",
-        "dark",
-        "darkmode",
-        "sky"
-      ],
+      "keywords": ["night", "dark", "darkmode", "sky"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3446,18 +2337,11 @@
       }
     },
     "moon_outlined": {
-      "keywords": [
-        "night",
-        "dark",
-        "darkmode",
-        "sky"
-      ],
+      "keywords": ["night", "dark", "darkmode", "sky"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3466,16 +2350,11 @@
       }
     },
     "rss": {
-      "keywords": [
-        "feed"
-      ],
+      "keywords": ["feed"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "1.7.0",
-            "unreleased"
-          ]
+          "updated": ["1.7.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3484,15 +2363,11 @@
       }
     },
     "rss_outlined": {
-      "keywords": [
-        "feed"
-      ],
+      "keywords": ["feed"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3501,15 +2376,11 @@
       }
     },
     "thumbprint": {
-      "keywords": [
-        "biometrics"
-      ],
+      "keywords": ["biometrics"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3518,16 +2389,11 @@
       }
     },
     "accessibility": {
-      "keywords": [
-        "wcag",
-        "person"
-      ],
+      "keywords": ["wcag", "person"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3536,16 +2402,11 @@
       }
     },
     "accessibility_outlined": {
-      "keywords": [
-        "wcag",
-        "person"
-      ],
+      "keywords": ["wcag", "person"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3554,15 +2415,11 @@
       }
     },
     "female": {
-      "keywords": [
-        "gender"
-      ],
+      "keywords": ["gender"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3571,15 +2428,11 @@
       }
     },
     "infinity": {
-      "keywords": [
-        "infinite"
-      ],
+      "keywords": ["infinite"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3588,17 +2441,11 @@
       }
     },
     "link": {
-      "keywords": [
-        "chain",
-        "url",
-        "address"
-      ],
+      "keywords": ["chain", "url", "address"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3607,15 +2454,11 @@
       }
     },
     "male": {
-      "keywords": [
-        "gender"
-      ],
+      "keywords": ["gender"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3624,16 +2467,11 @@
       }
     },
     "mouse": {
-      "keywords": [
-        "computer",
-        "input"
-      ],
+      "keywords": ["computer", "input"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3642,16 +2480,11 @@
       }
     },
     "shield_outlined": {
-      "keywords": [
-        "protect",
-        "security"
-      ],
+      "keywords": ["protect", "security"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3660,19 +2493,11 @@
       }
     },
     "sun": {
-      "keywords": [
-        "day",
-        "light",
-        "lightmode",
-        "sky",
-        "weather"
-      ],
+      "keywords": ["day", "light", "lightmode", "sky", "weather"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3681,18 +2506,11 @@
       }
     },
     "rain": {
-      "keywords": [
-        "weather",
-        "cloud",
-        "water",
-        "raining"
-      ],
+      "keywords": ["weather", "cloud", "water", "raining"],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3701,17 +2519,11 @@
       }
     },
     "snow": {
-      "keywords": [
-        "weather",
-        "cloud",
-        "ice"
-      ],
+      "keywords": ["weather", "cloud", "ice"],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3720,17 +2532,11 @@
       }
     },
     "hail": {
-      "keywords": [
-        "weather",
-        "cloud",
-        "ice"
-      ],
+      "keywords": ["weather", "cloud", "ice"],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3739,19 +2545,11 @@
       }
     },
     "lightning": {
-      "keywords": [
-        "weather",
-        "cloud",
-        "water",
-        "raining",
-        "thunder"
-      ],
+      "keywords": ["weather", "cloud", "water", "raining", "thunder"],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3760,18 +2558,11 @@
       }
     },
     "sunny_rain": {
-      "keywords": [
-        "weather",
-        "cloud",
-        "sun",
-        "sunny"
-      ],
+      "keywords": ["weather", "cloud", "sun", "sunny"],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3780,19 +2571,11 @@
       }
     },
     "sun_outlined": {
-      "keywords": [
-        "day",
-        "light",
-        "lightmode",
-        "sky",
-        "weather"
-      ],
+      "keywords": ["day", "light", "lightmode", "sky", "weather"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3801,15 +2584,11 @@
       }
     },
     "transgender": {
-      "keywords": [
-        "gender"
-      ],
+      "keywords": ["gender"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3818,15 +2597,11 @@
       }
     },
     "loading_spinner": {
-      "keywords": [
-        "progress"
-      ],
+      "keywords": ["progress"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3835,16 +2610,11 @@
       }
     },
     "mountain": {
-      "keywords": [
-        "hill",
-        "outdoors"
-      ],
+      "keywords": ["hill", "outdoors"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3853,16 +2623,11 @@
       }
     },
     "mountain_outlined": {
-      "keywords": [
-        "hill",
-        "outdoors"
-      ],
+      "keywords": ["hill", "outdoors"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3871,19 +2636,11 @@
       }
     },
     "bento": {
-      "keywords": [
-        "navigation",
-        "menu",
-        "more",
-        "info",
-        "dot"
-      ],
+      "keywords": ["navigation", "menu", "more", "info", "dot"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3892,17 +2649,11 @@
       }
     },
     "doner": {
-      "keywords": [
-        "navigation",
-        "menu",
-        "filter"
-      ],
+      "keywords": ["navigation", "menu", "filter"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3911,19 +2662,11 @@
       }
     },
     "grid_view": {
-      "keywords": [
-        "navigation",
-        "menu",
-        "ellipsis",
-        "more",
-        "info"
-      ],
+      "keywords": ["navigation", "menu", "ellipsis", "more", "info"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3932,20 +2675,11 @@
       }
     },
     "kebab": {
-      "keywords": [
-        "navigation",
-        "menu",
-        "ellipsis",
-        "more",
-        "info",
-        "dot"
-      ],
+      "keywords": ["navigation", "menu", "ellipsis", "more", "info", "dot"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3965,9 +2699,7 @@
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -3987,9 +2719,7 @@
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4009,9 +2739,7 @@
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4020,16 +2748,11 @@
       }
     },
     "filter": {
-      "keywords": [
-        "sort",
-        "funnel"
-      ],
+      "keywords": ["sort", "funnel"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4038,17 +2761,11 @@
       }
     },
     "filter_outlined": {
-      "keywords": [
-        "sort",
-        "funnel"
-      ],
+      "keywords": ["sort", "funnel"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "1.8.0",
-            "unreleased"
-          ]
+          "updated": ["1.8.0", "unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4057,17 +2774,11 @@
       }
     },
     "key_outlined": {
-      "keywords": [
-        "lock",
-        "unlock",
-        "security"
-      ],
+      "keywords": ["lock", "unlock", "security"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4076,18 +2787,11 @@
       }
     },
     "terminal": {
-      "keywords": [
-        "algorithm",
-        "program",
-        "programming",
-        "code"
-      ],
+      "keywords": ["algorithm", "program", "programming", "code"],
       "history": {
         "standard_base": {
           "created": "1.7.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4096,19 +2800,11 @@
       }
     },
     "cursor_text": {
-      "keywords": [
-        "pointer",
-        "cursor",
-        "mouse",
-        "text",
-        "type"
-      ],
+      "keywords": ["pointer", "cursor", "mouse", "text", "type"],
       "history": {
         "standard_base": {
           "created": "1.7.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4117,17 +2813,11 @@
       }
     },
     "angry": {
-      "keywords": [
-        "face",
-        "emotion",
-        "feeling"
-      ],
+      "keywords": ["face", "emotion", "feeling"],
       "history": {
         "standard_base": {
           "created": "1.7.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4136,17 +2826,11 @@
       }
     },
     "happy": {
-      "keywords": [
-        "face",
-        "emotion",
-        "feeling"
-      ],
+      "keywords": ["face", "emotion", "feeling"],
       "history": {
         "standard_base": {
           "created": "1.7.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4155,17 +2839,11 @@
       }
     },
     "neutral": {
-      "keywords": [
-        "face",
-        "emotion",
-        "feeling"
-      ],
+      "keywords": ["face", "emotion", "feeling"],
       "history": {
         "standard_base": {
           "created": "1.7.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4174,17 +2852,11 @@
       }
     },
     "sad": {
-      "keywords": [
-        "face",
-        "emotion",
-        "feeling"
-      ],
+      "keywords": ["face", "emotion", "feeling"],
       "history": {
         "standard_base": {
           "created": "1.7.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4193,18 +2865,11 @@
       }
     },
     "flag": {
-      "keywords": [
-        "country",
-        "continent",
-        "location",
-        "pinpoint"
-      ],
+      "keywords": ["country", "continent", "location", "pinpoint"],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4213,18 +2878,11 @@
       }
     },
     "flag_filled": {
-      "keywords": [
-        "country",
-        "continent",
-        "location",
-        "pinpoint"
-      ],
+      "keywords": ["country", "continent", "location", "pinpoint"],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4233,18 +2891,11 @@
       }
     },
     "weight": {
-      "keywords": [
-        "gym",
-        "activity",
-        "exercise",
-        "workout"
-      ],
+      "keywords": ["gym", "activity", "exercise", "workout"],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4253,16 +2904,11 @@
       }
     },
     "world": {
-      "keywords": [
-        "globe",
-        "network"
-      ],
+      "keywords": ["globe", "network"],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4271,18 +2917,11 @@
       }
     },
     "basketball": {
-      "keywords": [
-        "movement",
-        "activity",
-        "exercise",
-        "sport"
-      ],
+      "keywords": ["movement", "activity", "exercise", "sport"],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4291,18 +2930,11 @@
       }
     },
     "football": {
-      "keywords": [
-        "movement",
-        "activity",
-        "exercise",
-        "sport"
-      ],
+      "keywords": ["movement", "activity", "exercise", "sport"],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4311,18 +2943,11 @@
       }
     },
     "cricket_ball": {
-      "keywords": [
-        "movement",
-        "activity",
-        "exercise",
-        "sport"
-      ],
+      "keywords": ["movement", "activity", "exercise", "sport"],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4331,18 +2956,11 @@
       }
     },
     "rugby_ball": {
-      "keywords": [
-        "movement",
-        "activity",
-        "exercise",
-        "sport"
-      ],
+      "keywords": ["movement", "activity", "exercise", "sport"],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4351,18 +2969,11 @@
       }
     },
     "tennis_ball": {
-      "keywords": [
-        "movement",
-        "activity",
-        "exercise",
-        "sport"
-      ],
+      "keywords": ["movement", "activity", "exercise", "sport"],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4371,18 +2982,11 @@
       }
     },
     "american_football": {
-      "keywords": [
-        "movement",
-        "activity",
-        "exercise",
-        "sport"
-      ],
+      "keywords": ["movement", "activity", "exercise", "sport"],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4391,17 +2995,11 @@
       }
     },
     "clock_eight_oclock": {
-      "keywords": [
-        "time",
-        "hour",
-        "8"
-      ],
+      "keywords": ["time", "hour", "8"],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4410,17 +3008,11 @@
       }
     },
     "clock_eleven_oclock": {
-      "keywords": [
-        "time",
-        "hour",
-        "11"
-      ],
+      "keywords": ["time", "hour", "11"],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4429,17 +3021,11 @@
       }
     },
     "clock_five_oclock": {
-      "keywords": [
-        "time",
-        "hour",
-        "5"
-      ],
+      "keywords": ["time", "hour", "5"],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4448,17 +3034,11 @@
       }
     },
     "clock_four_oclock": {
-      "keywords": [
-        "time",
-        "hour",
-        "4"
-      ],
+      "keywords": ["time", "hour", "4"],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4467,17 +3047,11 @@
       }
     },
     "clock_nine_oclock": {
-      "keywords": [
-        "time",
-        "hour",
-        "9"
-      ],
+      "keywords": ["time", "hour", "9"],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4486,17 +3060,11 @@
       }
     },
     "clock_one_oclock": {
-      "keywords": [
-        "time",
-        "hour",
-        "1"
-      ],
+      "keywords": ["time", "hour", "1"],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4505,17 +3073,11 @@
       }
     },
     "clock_seven_oclock": {
-      "keywords": [
-        "time",
-        "hour",
-        "7"
-      ],
+      "keywords": ["time", "hour", "7"],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4524,17 +3086,11 @@
       }
     },
     "clock_six_oclock": {
-      "keywords": [
-        "time",
-        "hour",
-        "6"
-      ],
+      "keywords": ["time", "hour", "6"],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4543,17 +3099,11 @@
       }
     },
     "clock_ten_oclock": {
-      "keywords": [
-        "time",
-        "hour",
-        "10"
-      ],
+      "keywords": ["time", "hour", "10"],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4562,17 +3112,11 @@
       }
     },
     "clock_three_oclock": {
-      "keywords": [
-        "time",
-        "hour",
-        "3"
-      ],
+      "keywords": ["time", "hour", "3"],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4581,17 +3125,11 @@
       }
     },
     "clock_twelve_oclock": {
-      "keywords": [
-        "time",
-        "hour",
-        "12"
-      ],
+      "keywords": ["time", "hour", "12"],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4600,17 +3138,11 @@
       }
     },
     "clock_two_oclock": {
-      "keywords": [
-        "time",
-        "hour",
-        "2"
-      ],
+      "keywords": ["time", "hour", "2"],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4619,16 +3151,11 @@
       }
     },
     "bag": {
-      "keywords": [
-        "shopping",
-        "tab"
-      ],
+      "keywords": ["shopping", "tab"],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4637,16 +3164,11 @@
       }
     },
     "bag_outlined": {
-      "keywords": [
-        "shopping",
-        "tab"
-      ],
+      "keywords": ["shopping", "tab"],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4655,16 +3177,11 @@
       }
     },
     "basket_simple": {
-      "keywords": [
-        "shopping",
-        "tab"
-      ],
+      "keywords": ["shopping", "tab"],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4673,16 +3190,11 @@
       }
     },
     "car": {
-      "keywords": [
-        "travel",
-        "vehicle"
-      ],
+      "keywords": ["travel", "vehicle"],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4691,17 +3203,11 @@
       }
     },
     "chevron_updown": {
-      "keywords": [
-        "direction",
-        "expand",
-        "arrow"
-      ],
+      "keywords": ["direction", "expand", "arrow"],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4710,18 +3216,11 @@
       }
     },
     "minus": {
-      "keywords": [
-        "less",
-        "remove",
-        "maths",
-        "delete"
-      ],
+      "keywords": ["less", "remove", "maths", "delete"],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4730,17 +3229,11 @@
       }
     },
     "moped": {
-      "keywords": [
-        "travel",
-        "vehicle",
-        "bike"
-      ],
+      "keywords": ["travel", "vehicle", "bike"],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4749,17 +3242,11 @@
       }
     },
     "train": {
-      "keywords": [
-        "travel",
-        "vehicle",
-        "tram"
-      ],
+      "keywords": ["travel", "vehicle", "tram"],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4768,15 +3255,11 @@
       }
     },
     "translate": {
-      "keywords": [
-        "language"
-      ],
+      "keywords": ["language"],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4785,15 +3268,11 @@
       }
     },
     "bookmark": {
-      "keywords": [
-        "save"
-      ],
+      "keywords": ["save"],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4802,15 +3281,11 @@
       }
     },
     "bookmark_outlined": {
-      "keywords": [
-        "save"
-      ],
+      "keywords": ["save"],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4819,16 +3294,11 @@
       }
     },
     "money_note": {
-      "keywords": [
-        "currency",
-        "note"
-      ],
+      "keywords": ["currency", "note"],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4837,19 +3307,11 @@
       }
     },
     "cross_circle": {
-      "keywords": [
-        "exit",
-        "multiply",
-        "times",
-        "close",
-        "maths"
-      ],
+      "keywords": ["exit", "multiply", "times", "close", "maths"],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4858,16 +3320,11 @@
       }
     },
     "expand": {
-      "keywords": [
-        "fullscreen",
-        "arrow"
-      ],
+      "keywords": ["fullscreen", "arrow"],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4876,16 +3333,11 @@
       }
     },
     "fullscreen": {
-      "keywords": [
-        "expand",
-        "arrow"
-      ],
+      "keywords": ["expand", "arrow"],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4894,18 +3346,11 @@
       }
     },
     "life_ring": {
-      "keywords": [
-        "life guard",
-        "safety",
-        "water",
-        "life boat"
-      ],
+      "keywords": ["life guard", "safety", "water", "life boat"],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": [
-            "unreleased"
-          ]
+          "updated": ["unreleased"]
         },
         "standard_sm": {
           "created": "unreleased",
@@ -4914,12 +3359,7 @@
       }
     },
     "burger_simple": {
-      "keywords": [
-        "burger",
-        "menu",
-        "side-bar",
-        "hamburger"
-      ],
+      "keywords": ["burger", "menu", "side-bar", "hamburger"],
       "history": {
         "standard_base": {
           "created": "1.0.0",
@@ -4929,12 +3369,7 @@
       }
     },
     "speaker_error": {
-      "keywords": [
-        "media",
-        "sound",
-        "volume",
-        "music"
-      ],
+      "keywords": ["media", "sound", "volume", "music"],
       "history": {
         "standard_base": {
           "created": "1.6.0",
@@ -4944,7 +3379,7 @@
       }
     },
     "apple": {
-      "keywords": [],
+      "keywords": ["fruit", "food"],
       "history": {
         "standard_base": {
           "created": "unreleased",
@@ -4957,7 +3392,7 @@
       }
     },
     "crop": {
-      "keywords": [],
+      "keywords": ["scale", "clip", "trim", "cut"],
       "history": {
         "standard_base": {
           "created": "unreleased",
@@ -4970,7 +3405,7 @@
       }
     },
     "forward": {
-      "keywords": [],
+      "keywords": ["arrow", "right", "corner"],
       "history": {
         "standard_base": {
           "created": "unreleased",
@@ -4983,7 +3418,7 @@
       }
     },
     "map": {
-      "keywords": [],
+      "keywords": ["pin", "location"],
       "history": {
         "standard_base": {
           "created": "unreleased",
@@ -4996,7 +3431,7 @@
       }
     },
     "recycle": {
-      "keywords": [],
+      "keywords": ["rubbish", "reuse", "salvage"],
       "history": {
         "standard_base": {
           "created": "unreleased",
@@ -5009,7 +3444,7 @@
       }
     },
     "reply": {
-      "keywords": [],
+      "keywords": ["respond", "email", "mail", "answer"],
       "history": {
         "standard_base": {
           "created": "unreleased",
@@ -5022,7 +3457,7 @@
       }
     },
     "reply_all": {
-      "keywords": [],
+      "keywords": ["respond", "email", "mail", "answer"],
       "history": {
         "standard_base": {
           "created": "unreleased",
@@ -5035,7 +3470,7 @@
       }
     },
     "stop": {
-      "keywords": [],
+      "keywords": ["pause", "media"],
       "history": {
         "standard_base": {
           "created": "unreleased",
@@ -5048,7 +3483,7 @@
       }
     },
     "train_side": {
-      "keywords": [],
+      "keywords": ["travel", "vehicle", "tram"],
       "history": {
         "standard_base": {
           "created": "unreleased",

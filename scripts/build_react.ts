@@ -29,6 +29,58 @@ function openMeta() {
   return JSON.parse(metaRaw.toString());
 }
 
+function generateProps() {
+  return {
+    type: `export interface IconProps extends React.ComponentPropsWithRef<'svg'> {
+      color: string,
+      size: "sm" | "base"
+    }`,
+    props: `{ color, size, ...props }`
+  };
+}
+
+function generateImports() {
+  return "import React, { forwardRef } from 'react';\n";
+}
+
+function updateColour(svg: string) {
+  return svg.replaceAll('"currentColor"', '{color}');
+}
+
+function addKeysToSVG(svg: string) {
+  const endChar = svg.indexOf('>');
+
+  return (
+    svg.substring(0, endChar) + ' ref={ref} {...props}' + svg.substring(endChar)
+  );
+}
+
+function generateIconComponent(
+  iconVariants: { size: string; jsx: string }[],
+  name: string
+) {
+  const { props } = generateProps();
+  iconVariants.push(
+    iconVariants.splice(
+      iconVariants.findIndex(variant => variant.size === 'base'),
+      1
+    )[0]
+  );
+  return `const ${snakeToCamel(
+    name
+  )}: React.FC<IconProps> = forwardRef((${props}, ref) => {
+    ${iconVariants
+      .map(variant =>
+        variant.size === 'base'
+          ? `return (${addKeysToSVG(updateColour(variant.jsx))})`
+          : `if (size === "${variant.size}") {
+      return (${addKeysToSVG(updateColour(variant.jsx))})
+    }`
+      )
+      .join('\n')}
+  });`;
+}
+
 function main() {
   console.log('\n------------------------------');
   console.log('----Building React Library----');
@@ -42,14 +94,17 @@ function main() {
   const meta = openMeta();
   for (const key of Object.keys(meta)) {
     // Generate text for .js file
-    const js = `
-    import React from 'react';
-const ${snakeToCamel(key)} = () =>(
-    ${meta[key].jsx}
-);
-
-export default ${snakeToCamel(key)};
-    `;
+    const js =
+      generateImports() +
+      generateProps().type +
+      generateIconComponent(
+        Object.keys(meta[key].variants.standard).map(size => ({
+          size,
+          jsx: meta[key].variants.standard[size].jsx
+        })),
+        key
+      ) +
+      `\nexport default ${snakeToCamel(key)};`;
 
     fs.writeFile(
       generatesIconJsLoc + path.sep + snakeToCamel(key) + '.tsx',
