@@ -1,7 +1,7 @@
 'use strict';
 
 /* Generates PNGs for all of the icons */
-import { iterateVariants } from './lib';
+import { iterateVariants, readInputMeta } from './lib';
 import * as fs from 'fs';
 import * as path from 'path';
 import sharp from 'sharp';
@@ -18,10 +18,9 @@ async function generatePNGs(
   fs.mkdirSync(iconOutputLoc, { recursive: true });
 
   // Open Meta file
-  const metaRaw = fs.readFileSync(path.resolve(metaLoc, 'meta.json'));
-  const meta = JSON.parse(metaRaw.toString());
+  const meta = readInputMeta();
 
-  for (const key of Object.keys(meta)) {
+  for (const key of Object.keys(meta.icons)) {
     console.log('Converting: ' + key + '.svg');
 
     // Check if SVG exists
