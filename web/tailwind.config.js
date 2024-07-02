@@ -3,6 +3,7 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}'
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -35,5 +36,8 @@ module.exports = {
       visibility: ['group-hover']
     }
   },
-  plugins: [require('@tailwindcss/container-queries')]
+  plugins: [
+    require('@tailwindcss/container-queries'),
+    require('@tailwindcss/typography')
+  ]
 };

@@ -1,6 +1,8 @@
 import Logo from '../Logo/logo';
+import ThemeButton from './DarkModeToggle';
 import * as Dialog from '@radix-ui/react-dialog';
 import Link from 'next/link';
+import { twMerge } from 'tailwind-merge';
 
 interface NavigationProps {
   active: 'Example UI' | 'Icons';
@@ -11,7 +13,7 @@ export default function Navigation({ active }: NavigationProps) {
     <nav className="flex flex-wrap items-center justify-end gap-x-10 gap-y-2 font-sans text-sm font-semibold tracking-tighter">
       <Link
         href="https://www.buymeacoffee.com/willk"
-        className="hidden shrink-0 items-center gap-1 rounded-lg bg-yellow-400 px-5 py-1 sm:flex"
+        className="hidden shrink-0 items-center gap-1 rounded-lg bg-yellow-400 px-5 py-1 sm:flex dark:bg-yellow-400 dark:text-gray-900"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
           <path
@@ -29,28 +31,30 @@ export default function Navigation({ active }: NavigationProps) {
         href="/"
         className={`hidden sm:inline ${
           active === 'Icons'
-            ? 'text-blue-600'
-            : 'transition-all hover:text-blue-600'
+            ? 'text-blue-600 dark:text-blue-400'
+            : 'transition-all hover:text-blue-600 dark:hover:text-blue-400'
         }`}
       >
         Icons
       </Link>
       <Link
         href="/ui"
-        className={`hidden sm:inline ${
+        className={twMerge(
+          'hidden sm:inline dark:text-gray-300',
           active === 'Example UI'
-            ? 'text-blue-600'
-            : 'transition-all hover:text-blue-600'
-        }`}
+            ? 'text-blue-600 dark:text-blue-400'
+            : 'transition-all hover:text-blue-600 dark:hover:text-blue-400'
+        )}
       >
         Example UI
       </Link>
       <Link
         href="https://github.com/wkelly1/IKONO"
-        className="hidden transition-all hover:text-blue-600 sm:inline"
+        className="hidden transition-all hover:text-blue-600 sm:inline dark:text-gray-300 dark:hover:text-blue-400"
       >
         React Library
       </Link>
+      <ThemeButton />
       <div className="inline sm:hidden">
         <Burger active={active} />
       </div>

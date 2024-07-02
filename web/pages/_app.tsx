@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import Version from '../version.json';
 import { Analytics } from '@vercel/analytics/react';
+import { ThemeProvider } from 'next-themes';
 import { Poppins, Archivo_Black } from 'next/font/google';
 import Head from 'next/head';
 import 'tailwindcss/tailwind.css';
@@ -17,7 +18,7 @@ const archivo_black = Archivo_Black({
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <ThemeProvider attribute="class">
       <Head>
         <title>IKONO</title>
         <link rel="icon" href="/favicon.ico" />
@@ -76,7 +77,7 @@ function MyApp({ Component, pageProps }) {
       </style>
       <Component {...pageProps} />
       <Analytics />
-    </>
+    </ThemeProvider>
   );
 }
 
