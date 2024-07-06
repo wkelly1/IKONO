@@ -11,6 +11,7 @@ import Meta from '../meta.json';
 import { AnimatePresence, LayoutGroup, motion } from 'framer-motion';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { DebounceInput } from 'react-debounce-input';
+import { twMerge } from 'tailwind-merge';
 
 interface HomeProps {
   s: string;
@@ -187,10 +188,10 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
           transition={{ stiffness: 100 }}
         >
           <div
-            className="mt-8 flex h-14 items-center border-blue-200 p-2"
+            className="mt-8 flex h-14 items-center border-blue-200 p-2 dark:border-blue-400"
             style={{ borderWidth: '3px' }}
           >
-            <div className="ml-1 text-blue-700">
+            <div className="ml-1 text-blue-700 dark:text-blue-300">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                 <path
                   fill="currentColor"
@@ -202,17 +203,17 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
               debounceTimeout={200}
               placeholder="Search"
               inputRef={searchInput}
-              className="ml-3 w-full border-none font-semibold text-blue-600 placeholder-blue-400 outline-none"
+              className="ml-3 w-full border-none font-semibold text-blue-600 placeholder-blue-400 outline-none dark:text-blue-300 dark:placeholder-blue-300"
               value={searchTerm}
               onChange={e => {
                 updateSearchParam('s', e.target.value);
                 setSearchTerm(e.target.value);
               }}
             />
-            <p className="mr-4 flex border-2 border-blue-200 px-2 py-1 text-sm font-normal text-blue-400">
+            <p className="mr-4 flex border-2 border-blue-200 px-2 py-1 text-sm font-normal text-blue-400 dark:border-blue-400">
               <span className="text-blue-400">⌘</span> K
             </p>
-            <p className="flex min-w-[50px] max-w-[50px] justify-end pr-2 text-xs font-semibold tracking-tighter">
+            <p className="flex min-w-[50px] max-w-[50px] justify-end pr-2 text-xs font-semibold tracking-tighter dark:text-blue-400">
               {noShowing}/{Object.keys(data).length}
             </p>
           </div>
@@ -226,11 +227,12 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
                     layout
                   >
                     <button
-                      className={`border-2 py-2 text-xs font-semibold tracking-tighter ${
+                      className={twMerge(
+                        'border-2 py-2 text-xs font-semibold tracking-tighter dark:border-blue-400',
                         circleMode
                           ? 'border-blue-600 bg-blue-600 text-white'
                           : 'border-blue-200 bg-transparent text-blue-400'
-                      }`}
+                      )}
                       style={{ borderWidth: '3px' }}
                       onClick={() => {
                         setSquareMode(false);
@@ -241,11 +243,12 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
                       Circle
                     </button>
                     <button
-                      className={`border-2 py-2 text-xs font-semibold tracking-tighter ${
+                      className={twMerge(
+                        'border-2 py-2 text-xs font-semibold tracking-tighter dark:border-blue-400',
                         squareMode
                           ? 'border-blue-600 bg-blue-600 text-white'
                           : 'border-blue-200 bg-transparent text-blue-400'
-                      }`}
+                      )}
                       style={{ borderWidth: '3px' }}
                       onClick={() => {
                         setCircleMode(false);
@@ -256,11 +259,12 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
                       Square
                     </button>
                     <button
-                      className={`border-2 py-2 text-xs font-semibold tracking-tighter ${
+                      className={twMerge(
+                        'border-2 py-2 text-xs font-semibold tracking-tighter dark:border-blue-400',
                         size === 'base'
                           ? 'border-blue-600 bg-blue-600 text-white'
                           : 'border-blue-200 bg-transparent text-blue-400'
-                      }`}
+                      )}
                       style={{ borderWidth: '3px' }}
                       onClick={() => {
                         setSize('base');
@@ -270,11 +274,12 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
                       Normal - <span className="font-normal">24x24</span>
                     </button>
                     <button
-                      className={`border-2 py-2 text-xs font-semibold tracking-tighter ${
+                      className={twMerge(
+                        'border-2 py-2 text-xs font-semibold tracking-tighter dark:border-blue-400',
                         size === 'sm'
                           ? 'border-blue-600 bg-blue-600 text-white'
                           : 'border-blue-200 bg-transparent text-blue-400'
-                      }`}
+                      )}
                       style={{ borderWidth: '3px' }}
                       onClick={() => {
                         setSize('sm');
@@ -373,7 +378,7 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
                                         ? data[icon].variants.standard.base.svg
                                         : data[icon].variants.standard.sm.svg
                                   }}
-                                  className="text-gray-800"
+                                  className="text-gray-800 dark:text-gray-200"
                                 ></div>
                               }
                             />

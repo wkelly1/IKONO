@@ -100,7 +100,9 @@ export function Markdown({ children }: MarkdownProps) {
         h3: ({ children }) => <Headings level={4}>{children}</Headings>,
         h4: ({ children }) => <Headings level={5}>{children}</Headings>,
         h5: ({ children }) => <Headings level={6}>{children}</Headings>,
-        hr: () => <hr className="-ml-5 border-gray-100 lg:-mx-5" />,
+        hr: () => (
+          <hr className="-ml-5 border-gray-100 dark:border-gray-600 lg:-mx-5" />
+        ),
         code({ className, ...props }) {
           const hasLang = /language-(\w+)/.exec(className || '');
 

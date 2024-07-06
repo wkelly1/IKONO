@@ -30,32 +30,17 @@ export function removeMarkdown(markdown: string) {
  * @param stripMarkdown Whether or not to remove the markdown and just return the string
  * @returns List of headings
  */
-export function getHeadings(
-  content: string,
-  headingLevel: HeadingLevel,
-  stripMarkdown?: boolean
-) {
+export function getHeadings(content: string, headingLevel: HeadingLevel) {
   const headingsRegex = headingMap[headingLevel];
-
-  console.log(headingsRegex);
-  // const matches = Array.from(content.matchAll(headingsRegex), m => m[1]);
-  // console.log(matches);
 
   const matches = content.match(headingsRegex);
 
-  console.log(matches, content);
   // If there are no matches, return an empty array
   if (!matches) {
     return [];
   }
   // Remove the markdown heading syntax and trim the results
   return matches.map(heading => heading.replace(/^#+ /, '').trim());
-
-  if (stripMarkdown) {
-    return matches.map(match => removeMarkdown(match));
-  }
-
-  return matches;
 }
 
 /**
@@ -65,10 +50,7 @@ export function getHeadings(
  * @returns The link
  */
 export function headingToLink(heading: string, addPrefix = true) {
-  const anchor = heading
-    .substring(2)
-    .toLowerCase()
-    .replace(/[^a-zA-Z0-9 ]/g, '');
+  const anchor = heading.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '');
 
   return `${addPrefix ? '#' : ''}${anchor.replace(/ /g, '-')}`;
 }

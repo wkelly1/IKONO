@@ -10,7 +10,7 @@ interface AuthorProps {
 export default function Author({ name, twitter, className }: AuthorProps) {
   return (
     <div className={twJoin(className, 'flex items-center gap-2')}>
-      <div className="flex aspect-square size-8 items-center justify-center rounded-full bg-blue-600 text-white">
+      <div className="flex aspect-square size-8 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white">
         {name.split(' ').map(subName => subName.charAt(0))}
       </div>
       <div className="flex flex-col leading-5">

@@ -12,7 +12,7 @@ export default function Navbar({ active, hideBody }: NavbarProps) {
     <>
       <Link
         href="https://www.buymeacoffee.com/willk"
-        className="visible flex w-full shrink-0 items-center justify-between gap-1 bg-yellow-400 px-5 py-2 font-sans text-sm font-semibold tracking-tighter shadow-sm dark:bg-yellow-600 sm:hidden"
+        className="visible flex w-full shrink-0 items-center justify-between gap-1 bg-yellow-400 px-5 py-2 font-sans text-sm font-semibold tracking-tighter text-black shadow-sm dark:bg-yellow-400 sm:hidden"
       >
         <div className="flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
@@ -48,7 +48,7 @@ export default function Navbar({ active, hideBody }: NavbarProps) {
         <Navigation active={active} />
       </header>
       {!hideBody && (
-        <div className="mt-10 px-5 sm:px-16 ">
+        <div className="mt-10 px-5 sm:px-16">
           <div className="flex h-60 flex-col justify-between bg-blue-600 px-10 py-6">
             <div className="flex items-center justify-end gap-2">
               <a

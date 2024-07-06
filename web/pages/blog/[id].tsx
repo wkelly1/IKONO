@@ -1,3 +1,4 @@
+import Footer from '../../components/Footer/Footer';
 import Author from '../../components/Markdown/Author';
 import { Markdown } from '../../components/Markdown/Markdown';
 import Navbar from '../../components/Navbar/Navbar';
@@ -14,12 +15,12 @@ interface BlogNavigationProps {
 }
 function BlogNavigation({ content }: BlogNavigationProps) {
   return (
-    <div className="sticky top-5 px-5">
+    <div className="sticky top-5 px-5 dark:text-gray-300">
       <label className="mt-5 block pb-3 text-sm font-medium uppercase">
         On this page
       </label>
       <div className="flex flex-col gap-1">
-        {getHeadings(content, 'h3', true).map(heading => (
+        {getHeadings(content, 'h3').map(heading => (
           <a
             href={headingToLink(heading)}
             key={heading}
@@ -66,7 +67,7 @@ const Post: React.FC<PostProps> = ({ postData }) => {
         <article className="container prose prose-stone relative px-5 py-6 dark:prose-invert prose-a:prose-headings:no-underline">
           <time
             dateTime={new Date(postData.date).toString()}
-            className="mb-4 ml-[calc(-1.25rem)] block border-l-2 border-solid border-blue-600 pl-5 text-sm font-light text-gray-600 dark:text-gray-400 "
+            className="mb-4 ml-[calc(-1.25rem)] block border-l-2 border-solid border-blue-600 pl-5 text-sm font-light text-gray-600 dark:text-gray-400"
           >
             {formatter.format(new Date(postData.date))}
           </time>
@@ -79,13 +80,14 @@ const Post: React.FC<PostProps> = ({ postData }) => {
             className="mb-12"
           />
           <Markdown>{postData.content}</Markdown>
-          <div className="absolute left-0 top-0 -z-10 h-full border border-dashed border-gray-100"></div>
+          <div className="absolute left-0 top-0 -z-10 h-full border border-dashed border-gray-100 dark:border-gray-600"></div>
         </article>
         <aside className="relative hidden lg:block">
           <BlogNavigation content={postData.content} />
-          <div className="absolute left-0 top-0 -z-10 h-full border border-dashed border-gray-100"></div>
+          <div className="absolute left-0 top-0 -z-10 h-full border border-dashed border-gray-100 dark:border-gray-600"></div>
         </aside>
       </main>
+      <Footer className="mt-0" />
     </div>
   );
 };

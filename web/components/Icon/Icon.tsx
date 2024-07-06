@@ -50,7 +50,7 @@ export default function Icon({
 
   return (
     <motion.button
-      className="group flex h-full w-full cursor-pointer flex-col items-center focus:outline-none"
+      className="group flex h-full w-full cursor-pointer flex-col items-center focus:outline-none dark:bg-gray-800"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={() => {
@@ -80,7 +80,7 @@ export default function Icon({
           'relative flex aspect-square w-full flex-col items-center justify-center p-2',
           showOpts || selected === name || hover
             ? 'border-blue-600 group-focus:outline group-focus:outline-2 group-focus:outline-blue-300'
-            : 'border-blue-200 group-focus:outline group-focus:outline-2 group-focus:outline-blue-500'
+            : 'border-blue-200 group-focus:outline group-focus:outline-2 group-focus:outline-blue-500 dark:border-blue-400'
         )}
         style={{ borderWidth: '3px' }}
         onMouseEnter={() => setShowOpts(true)}
@@ -134,11 +134,12 @@ export default function Icon({
       </div>
 
       <p
-        className={`${
+        className={twMerge(
           showOpts || selected === name || hover
             ? 'text-blue-600'
-            : 'text-black'
-        } mt-2 text-xs font-semibold tracking-tighter`}
+            : 'text-black dark:text-gray-200',
+          'mt-2 text-xs font-semibold tracking-tighter'
+        )}
       >
         {name}
       </p>

@@ -23,8 +23,8 @@ function BurgerLink({
     <Link
       href={to}
       className={twMerge(
-        'flex items-center justify-between hover:text-blue-500',
-        active ? 'text-blue-600' : 'transition-all ',
+        'flex items-center justify-between text-black hover:text-blue-500',
+        active ? 'text-blue-600' : 'transition-all',
         className
       )}
     >
@@ -110,7 +110,7 @@ function Burger({ active }: NavigationProps) {
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
-        <button className="inline-flex h-[35px] w-[35px]  items-center justify-center rounded-sm bg-white font-medium leading-none focus:shadow-[0_0_0_2px] focus:shadow-blue-600 focus:outline-none">
+        <button className="inline-flex h-[35px] w-[35px] items-center justify-center rounded-sm bg-white font-medium leading-none focus:shadow-[0_0_0_2px] focus:shadow-blue-600 focus:outline-none dark:bg-gray-800">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
             <path
               fill="none"
@@ -126,7 +126,7 @@ function Burger({ active }: NavigationProps) {
 
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-white/10 backdrop-blur-sm data-[state=open]:animate-overlayShow" />
-        <Dialog.Content className="fixed left-[50%] top-4 flex max-h-[85vh] w-[95vw] max-w-[450px] translate-x-[-50%] flex-col rounded-[4px] border border-gray-200 bg-white font-sans text-sm font-semibold tracking-tighter shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none data-[state=open]:animate-contentShow">
+        <Dialog.Content className="fixed left-[50%] top-4 flex max-h-[85vh] w-[95vw] translate-x-[-50%] flex-col rounded-[4px] border border-gray-200 bg-white font-sans text-sm font-semibold tracking-tighter shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none data-[state=open]:animate-contentShow">
           <Dialog.Close className="absolute right-4 top-4 flex h-[32px] w-[32px] items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
               <path
@@ -192,6 +192,8 @@ function Burger({ active }: NavigationProps) {
             </Link>
 
             <div className="flex gap-4">
+              <ThemeButton className="dark:text-gray-600 dark:hover:bg-gray-100" />
+              <span className="border-r"></span>
               <Link
                 href="https://github.com/wkelly1/IKONO"
                 className="text-gray-600 hover:text-blue-500"

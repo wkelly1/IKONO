@@ -4,6 +4,7 @@ import updateSearchParam from '../../lib/updateSearchParam';
 import Meta from '../../meta.json';
 import IconButton from '../Button/IconBtn';
 import ColourSelector from '../ColourPicker/ColourPicker';
+import CopyBtn from '../CopyBtn/CopyBtn';
 import Icon from '../Icon/Icon';
 import Tooltip from '../Tooltip/Tooltip';
 import * as Dialog from '@radix-ui/react-dialog';
@@ -93,7 +94,14 @@ export function IconInfoPanelPopup({
         modal={false}
       >
         <Dialog.Overlay className="fixed inset-0 z-10 block bg-white/10 backdrop-blur-sm sm:hidden" />
-        <Dialog.Content className="fixed inset-2 z-20 block rounded-sm bg-white focus:outline-none sm:hidden">
+        <Dialog.Content
+          onInteractOutside={e => {
+            if (window.innerWidth > 640) {
+              e.preventDefault();
+            }
+          }}
+          className="fixed inset-2 z-20 block rounded-sm bg-white focus:outline-none sm:hidden"
+        >
           {showDialog && (
             <IconInfoPanel
               selected={selected}
@@ -189,9 +197,11 @@ export function IconInfoPanel({
   }, [size, selected, data, color, colorDisabled]);
 
   return (
-    <div className="flex h-full w-full flex-col overflow-y-auto rounded-sm border-[3px] border-blue-600 bg-white px-6 pt-5">
+    <div className="flex h-full w-full flex-col overflow-y-auto rounded-sm border-[3px] border-blue-600 bg-white px-6 pt-5 dark:border-blue-400 dark:bg-gray-800">
       <div className="flex justify-between">
-        <h3 className="text-base font-semibold text-blue-600">{selected}</h3>
+        <h3 className="text-base font-semibold text-blue-600 dark:text-blue-400">
+          {selected}
+        </h3>
         <div className="flex items-center gap-1">
           <Tooltip tooltipChildren="Set icon colour">
             <IconButton onClick={() => setShowColourSelector(prev => !prev)}>
@@ -204,13 +214,13 @@ export function IconInfoPanel({
               >
                 <path
                   d="M10.4945 17.2559C5.71467 17.2559 2.68554 14.0164 2.68554 10C2.68554 5.96037 5.96031 2.68561 9.99994 2.68561C11.9946 2.68561 13.7165 3.58204 14.9506 4.77315C16.2107 5.98944 16.8525 7.401 16.8525 8.31027C16.8525 9.17197 16.8143 9.83383 16.6293 10.3741C16.459 10.8716 16.1548 11.291 15.5332 11.6411C14.8704 12.0145 14.4288 12.1663 13.9708 12.238C13.5274 12.3075 13.0531 12.307 12.3 12.3061C12.2119 12.306 12.12 12.3059 12.0239 12.3059C11.3418 12.3059 10.7736 12.6463 10.4843 13.2115C10.2097 13.748 10.234 14.3874 10.4736 14.9572C10.6138 15.2904 10.8714 15.599 11.0868 15.837C11.2095 15.9726 11.3685 16.1372 11.5148 16.2887C11.6126 16.3898 11.7046 16.4851 11.7764 16.562C11.9657 16.7647 12.0929 16.9188 12.1657 17.0338C12.0541 17.18 12.0165 17.1886 11.9782 17.1974C11.9741 17.1983 11.9699 17.1993 11.9657 17.2004C11.8877 17.221 11.7557 17.2392 11.5021 17.2482C11.2771 17.2561 10.9983 17.256 10.6255 17.2559C10.5831 17.2559 10.5395 17.2559 10.4945 17.2559ZM12.2205 17.1365C12.2205 17.1364 12.2202 17.1357 12.2197 17.1341C12.2203 17.1357 12.2205 17.1365 12.2205 17.1365Z"
-                  stroke="#151515"
+                  stroke="currentColor"
                   strokeWidth="1.5"
                 />
-                <circle cx="5.73987" cy="8.64804" r="1" fill="#151515" />
-                <circle cx="8.65564" cy="5.96457" r="1" fill="#151515" />
-                <circle cx="11.9077" cy="5.96457" r="1" fill="#151515" />
-                <circle cx="14.2295" cy="8.64804" r="1" fill="#151515" />
+                <circle cx="5.73987" cy="8.64804" r="1" fill="currentColor" />
+                <circle cx="8.65564" cy="5.96457" r="1" fill="currentColor" />
+                <circle cx="11.9077" cy="5.96457" r="1" fill="currentColor" />
+                <circle cx="14.2295" cy="8.64804" r="1" fill="currentColor" />
               </svg>
             </IconButton>
           </Tooltip>
@@ -282,7 +292,7 @@ export function IconInfoPanel({
       )}
       <div className="mt-4 flex items-center gap-5">
         <div
-          className={`relative flex h-36 w-full items-center justify-center border-blue-200 p-2 ${
+          className={`relative flex h-36 w-full items-center justify-center border-blue-200 p-2 text-gray-900 ${
             getBrightness(color) > 140 ? 'bg-black' : 'bg-white'
           }`}
           style={{ borderWidth: '3px' }}
@@ -298,7 +308,7 @@ export function IconInfoPanel({
         className="flex h-full flex-col overflow-x-visible px-[2px] pb-5"
         style={{ scrollbarWidth: 'none' }}
       >
-        <h3 className="mt-8 flex items-center text-base font-semibold text-blue-600">
+        <h3 className="mt-8 flex items-center text-base font-semibold text-blue-600 dark:text-blue-400">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
             <path
               fill="none"
@@ -308,14 +318,14 @@ export function IconInfoPanel({
               d="m10.692 6-3 13M6.385 9.5h12.5M16.192 6l-3 13M5 15.5h12.5"
             />
           </svg>
-          <span className="ml-1 text-xs text-blue-400">
+          <span className="ml-1 text-xs text-blue-400 dark:text-blue-300">
             {Meta[selected].keywords.join(', ')}
           </span>
         </h3>
 
         <div className="mt-7 flex justify-between gap-2">
           <button
-            className="relative flex h-10 w-full items-center justify-center bg-blue-600 bg-opacity-30 text-xs font-semibold tracking-tighter text-blue-600 transition-all hover:bg-opacity-50"
+            className="relative flex h-10 w-full items-center justify-center bg-blue-600 bg-opacity-30 text-xs font-semibold tracking-tighter text-blue-600 transition-all hover:bg-opacity-50 dark:bg-blue-400 dark:text-blue-900"
             onClick={() => {
               navigator.clipboard.writeText(svg);
               copySVGAnimation();
@@ -347,7 +357,7 @@ export function IconInfoPanel({
             </AnimatePresence>
           </button>
           <button
-            className="relative flex h-10 w-full items-center justify-center bg-blue-600 bg-opacity-30 text-xs font-semibold tracking-tighter text-blue-600 transition-all hover:bg-opacity-50"
+            className="relative flex h-10 w-full items-center justify-center bg-blue-600 bg-opacity-30 text-xs font-semibold tracking-tighter text-blue-600 transition-all hover:bg-opacity-50 dark:bg-blue-400 dark:text-blue-900"
             onClick={() => {
               navigator.clipboard.writeText(
                 size === 'base'
@@ -384,13 +394,8 @@ export function IconInfoPanel({
           </button>
         </div>
 
-        <h3 className="mt-8 flex items-center gap-1 text-xs font-semibold text-blue-400">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            className="text-blue-600"
-          >
+        <h3 className="mt-8 flex items-center gap-1 text-xs font-semibold text-blue-600 dark:text-blue-400">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
             <g fill="currentColor">
               <path
                 fillRule="evenodd"
@@ -407,18 +412,23 @@ export function IconInfoPanel({
               />
             </g>
           </svg>
-          <span>React Code</span>
+          <span className="text-blue-400 dark:text-blue-300">React Code</span>
         </h3>
-        <div className="mt-8 shrink-0 cursor-pointer overflow-x-auto rounded-sm border-2 border-blue-300 p-2 text-xs">
+        <div className="mt-8 shrink-0 cursor-pointer overflow-x-auto rounded-sm border-2 border-blue-300 p-2 text-xs dark:border-blue-400">
           <pre>
             <code>
               <span className="text-purple-400">import</span>{' '}
-              <span className="text-gray-500">{'{'}</span>
-              <span className="text-blue-600"> {snakeToCamel(selected)} </span>
-              <span className="text-gray-500">{'}'}</span>{' '}
+              <span className="text-gray-500 dark:text-gray-400">{'{'}</span>
+              <span className="text-blue-600 dark:text-blue-300">
+                {' '}
+                {snakeToCamel(selected)}{' '}
+              </span>
+              <span className="text-gray-500 dark:text-gray-400">{'}'}</span>{' '}
               <span className="text-purple-400">from</span>{' '}
-              <span className="text-blue-600">{'"@ikono/react"'}</span>
-              <span className="text-gray-500">;</span>
+              <span className="text-blue-600 dark:text-blue-300">
+                {'"@ikono/react"'}
+              </span>
+              <span className="text-gray-500 dark:text-gray-400">;</span>
               <br />
               <br />
               <span
@@ -430,9 +440,13 @@ export function IconInfoPanel({
                   );
                 }}
               >
-                <span className="text-gray-500">{'<'}</span>
-                <span className="text-blue-600">{snakeToCamel(selected)}</span>
-                <span className="text-gray-500">{' />'}</span>
+                <span className="text-gray-500 dark:text-gray-400">{'<'}</span>
+                <span className="text-blue-600 dark:text-blue-300">
+                  {snakeToCamel(selected)}
+                </span>
+                <span className="text-gray-500 dark:text-gray-400">
+                  {' />'}
+                </span>
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -468,13 +482,8 @@ export function IconInfoPanel({
           </pre>
         </div>
 
-        <h3 className="mt-8 flex items-center gap-1 text-xs font-semibold text-blue-400">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            className="text-blue-600"
-          >
+        <h3 className="mt-8 flex items-center gap-1 text-xs font-semibold text-blue-600 dark:text-blue-400">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
             <g fill="none">
               <path
                 stroke="currentColor"
@@ -487,7 +496,9 @@ export function IconInfoPanel({
               />
             </g>
           </svg>
-          <span>More like this...</span>
+          <span className="text-blue-400 dark:text-blue-300">
+            More like this...
+          </span>
         </h3>
 
         <div className="mt-8 w-full">
@@ -509,7 +520,7 @@ export function IconInfoPanel({
                           ? data[value].variants.standard.base.svg
                           : data[value].variants.standard.sm.svg
                     }}
-                    className="text-gray-800"
+                    className="text-gray-800 dark:text-gray-200"
                   ></div>
                 }
               />
