@@ -4,7 +4,6 @@ import updateSearchParam from '../../lib/updateSearchParam';
 import Meta from '../../meta.json';
 import IconButton from '../Button/IconBtn';
 import ColourSelector from '../ColourPicker/ColourPicker';
-import CopyBtn from '../CopyBtn/CopyBtn';
 import Icon from '../Icon/Icon';
 import Tooltip from '../Tooltip/Tooltip';
 import * as Dialog from '@radix-ui/react-dialog';

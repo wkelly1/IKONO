@@ -34,7 +34,7 @@ function UIImage({ src, date, title, alt }: UIImageProps) {
     >
       <Popup
         header={
-          <div className="flex flex-col ">
+          <div className="flex flex-col">
             <p className="leading-tight">{title}</p>
             <p className="text-xs font-medium leading-tight text-gray-500">
               {date}
@@ -45,7 +45,7 @@ function UIImage({ src, date, title, alt }: UIImageProps) {
         close={() => setOpen(false)}
       >
         <div className="h-[calc(100vh-3.2rem)] w-[100vw] p-0 pt-2 sm:h-auto sm:w-[80vw] sm:p-2 md:w-[70vw] md:p-5 lg:w-[60vw] xl:max-w-[1300px]">
-          <div className="relative aspect-[1600/1200]   w-full rounded-lg bg-cover ">
+          <div className="relative aspect-[1600/1200] w-full rounded-lg bg-cover">
             <Image
               alt={alt}
               src={src}
@@ -141,7 +141,7 @@ export default function Home() {
       className="flex min-h-screen flex-col justify-between font-sans"
       style={{ width: '100vw', overflowX: 'hidden' }}
     >
-      <Navbar active="Example UI" />
+      <Navbar active="Blog" />
       <div className="overflow-x-none flex flex-col items-center">
         <motion.main
           className="mt-10 w-full max-w-[2500px] px-5 sm:px-16"
