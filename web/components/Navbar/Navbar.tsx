@@ -3,7 +3,7 @@ import Navigation from './Navigation';
 import Link from 'next/link';
 
 interface NavbarProps {
-  active: 'Example UI' | 'Icons';
+  active: 'Blog' | 'Icons';
   hideBody?: boolean;
 }
 
@@ -12,7 +12,7 @@ export default function Navbar({ active, hideBody }: NavbarProps) {
     <>
       <Link
         href="https://www.buymeacoffee.com/willk"
-        className="visible flex w-full shrink-0 items-center justify-between gap-1 bg-yellow-400 px-5 py-2 font-sans text-sm font-semibold tracking-tighter shadow-sm sm:hidden dark:bg-yellow-600"
+        className="visible flex w-full shrink-0 items-center justify-between gap-1 bg-yellow-400 px-5 py-2 font-sans text-sm font-semibold tracking-tighter shadow-sm dark:bg-yellow-600 sm:hidden"
       >
         <div className="flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">

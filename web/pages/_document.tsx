@@ -10,9 +10,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head></Head>
-        <body
-          style={{ width: '100vw', overflowX: 'hidden', margin: 0, padding: 0 }}
-        >
+        <body className="pointer-events-auto m-0 w-screen overflow-x-hidden p-0">
           <Main />
           <NextScript />
         </body>

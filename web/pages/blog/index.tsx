@@ -25,7 +25,7 @@ const Blog: React.FC<BlogProps> = ({ allPostsData }) => {
   });
   return (
     <div className="flex min-h-full flex-col">
-      <Navbar active="Icons" hideBody />
+      <Navbar active="Blog" hideBody />
       <hr className="mt-12 border-gray-50 dark:border-gray-600" />
       <main className="flex h-full flex-grow flex-col px-5 sm:px-16">
         <div className="relative mx-auto  h-full max-w-[65ch] flex-grow  px-5">

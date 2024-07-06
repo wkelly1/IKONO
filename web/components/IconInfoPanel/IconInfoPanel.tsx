@@ -92,15 +92,8 @@ export function IconInfoPanelPopup({
         defaultOpen={false}
         modal={false}
       >
-        <Dialog.Overlay className="fixed inset-0 z-10 block bg-white/10 backdrop-blur-sm" />
-        <Dialog.Content
-          onInteractOutside={e => {
-            if (window.innerWidth > 640) {
-              e.preventDefault();
-            }
-          }}
-          className="fixed bottom-0 left-[20px] right-0 top-[20px] z-20 block h-[calc(100dvh-40px)] w-[calc(100%-40px)] rounded-sm bg-white focus:outline-none"
-        >
+        <Dialog.Overlay className="fixed inset-0 z-10 block bg-white/10 backdrop-blur-sm sm:hidden" />
+        <Dialog.Content className="fixed inset-2 z-20 block rounded-sm bg-white focus:outline-none sm:hidden">
           {showDialog && (
             <IconInfoPanel
               selected={selected}
@@ -196,7 +189,7 @@ export function IconInfoPanel({
   }, [size, selected, data, color, colorDisabled]);
 
   return (
-    <div className="flex h-full w-full flex-col rounded-sm border-[3px] border-blue-600 bg-white px-6 pt-5">
+    <div className="flex h-full w-full flex-col overflow-y-auto rounded-sm border-[3px] border-blue-600 bg-white px-6 pt-5">
       <div className="flex justify-between">
         <h3 className="text-base font-semibold text-blue-600">{selected}</h3>
         <div className="flex items-center gap-1">
@@ -498,7 +491,7 @@ export function IconInfoPanel({
         </h3>
 
         <div className="mt-8 w-full">
-          <div className="xs:grid-cols-3 grid w-full grid-flow-row grid-cols-2 gap-5">
+          <div className="xs:grid-cols-3 mb-4 grid w-full grid-flow-row grid-cols-2 gap-5">
             {findSimilar(selected).map(value => (
               <Icon
                 key={value}

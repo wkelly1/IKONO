@@ -4,8 +4,52 @@ import * as Dialog from '@radix-ui/react-dialog';
 import Link from 'next/link';
 import { twMerge } from 'tailwind-merge';
 
+interface BurgerLinkProps {
+  to: string;
+  children: string;
+  active: boolean;
+  subLabel?: string;
+  className?: string;
+}
+
+function BurgerLink({
+  to,
+  children,
+  subLabel,
+  active,
+  className
+}: BurgerLinkProps) {
+  return (
+    <Link
+      href={to}
+      className={twMerge(
+        'flex items-center justify-between hover:text-blue-500',
+        active ? 'text-blue-600' : 'transition-all ',
+        className
+      )}
+    >
+      <div className="flex flex-col">
+        <span>{children}</span>
+        {subLabel && (
+          <span className="text-xs font-normal text-gray-500">{subLabel}</span>
+        )}
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
+          d="m8 5 7.57 6.624a.5.5 0 0 1 0 .752L8 19"
+        />
+      </svg>
+    </Link>
+  );
+}
+
 interface NavigationProps {
-  active: 'Example UI' | 'Icons';
+  active: 'Blog' | 'Icons';
 }
 
 export default function Navigation({ active }: NavigationProps) {
@@ -13,7 +57,7 @@ export default function Navigation({ active }: NavigationProps) {
     <nav className="flex flex-wrap items-center justify-end gap-x-10 gap-y-2 font-sans text-sm font-semibold tracking-tighter">
       <Link
         href="https://www.buymeacoffee.com/willk"
-        className="hidden shrink-0 items-center gap-1 rounded-lg bg-yellow-400 px-5 py-1 sm:flex dark:bg-yellow-400 dark:text-gray-900"
+        className="hidden shrink-0 items-center gap-1 rounded-lg bg-yellow-400 px-5 py-1 dark:bg-yellow-400 dark:text-gray-900 sm:flex"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
           <path
@@ -38,19 +82,19 @@ export default function Navigation({ active }: NavigationProps) {
         Icons
       </Link>
       <Link
-        href="/ui"
+        href="/blog"
         className={twMerge(
-          'hidden sm:inline dark:text-gray-300',
-          active === 'Example UI'
+          'hidden dark:text-gray-300 sm:inline',
+          active === 'Blog'
             ? 'text-blue-600 dark:text-blue-400'
             : 'transition-all hover:text-blue-600 dark:hover:text-blue-400'
         )}
       >
-        Example UI
+        Blog
       </Link>
       <Link
         href="https://github.com/wkelly1/IKONO"
-        className="hidden transition-all hover:text-blue-600 sm:inline dark:text-gray-300 dark:hover:text-blue-400"
+        className="hidden transition-all hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 sm:inline"
       >
         React Library
       </Link>
@@ -66,7 +110,7 @@ function Burger({ active }: NavigationProps) {
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
-        <button className="inline-flex h-[35px] w-[35px] items-center justify-center rounded-sm bg-white font-medium leading-none focus:shadow-[0_0_0_2px] focus:shadow-blue-600 focus:outline-none">
+        <button className="inline-flex h-[35px] w-[35px]  items-center justify-center rounded-sm bg-white font-medium leading-none focus:shadow-[0_0_0_2px] focus:shadow-blue-600 focus:outline-none">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
             <path
               fill="none"
@@ -82,8 +126,8 @@ function Burger({ active }: NavigationProps) {
 
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-white/10 backdrop-blur-sm data-[state=open]:animate-overlayShow" />
-        <Dialog.Content className="fixed left-[50%] top-[29%] flex max-h-[85vh] w-[95vw] max-w-[450px] translate-x-[-50%] translate-y-[-50%] flex-col rounded-[4px] border border-gray-200 bg-white font-sans text-sm font-semibold tracking-tighter shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none data-[state=open]:animate-contentShow">
-          <Dialog.Close className="absolute right-4 top-4 h-[32px] w-[32px]">
+        <Dialog.Content className="fixed left-[50%] top-4 flex max-h-[85vh] w-[95vw] max-w-[450px] translate-x-[-50%] flex-col rounded-[4px] border border-gray-200 bg-white font-sans text-sm font-semibold tracking-tighter shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none data-[state=open]:animate-contentShow">
+          <Dialog.Close className="absolute right-4 top-4 flex h-[32px] w-[32px] items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
               <path
                 fill="none"
@@ -100,91 +144,35 @@ function Burger({ active }: NavigationProps) {
           </div>
           <div className="m-2 mt-0 flex flex-col gap-9 bg-gray-50 p-4 text-base">
             <hr className="invisible -my-3.5" />
-            <Link
-              href="/"
-              className={`flex justify-between ${
-                active === 'Icons'
-                  ? 'text-blue-600'
-                  : 'transition-all hover:text-gray-600'
-              }`}
-            >
+            <BurgerLink to="/" active={active === 'Icons'}>
               Icons
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                <path
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.5"
-                  d="m8 5 7.57 6.624a.5.5 0 0 1 0 .752L8 19"
-                />
-              </svg>
-            </Link>
+            </BurgerLink>
+
             <hr className="-my-3.5" />
-            <Link
-              href="/ui"
-              className={`flex justify-between ${
-                active === 'Example UI'
-                  ? 'text-blue-600'
-                  : 'transition-all hover:text-gray-600'
-              }`}
-            >
-              Example UI
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                <path
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.5"
-                  d="m8 5 7.57 6.624a.5.5 0 0 1 0 .752L8 19"
-                />
-              </svg>
-            </Link>
+            <BurgerLink to="/blog" active={active === 'Blog'}>
+              Blog
+            </BurgerLink>
+
             <hr className="-my-3.5" />
-            <Link
-              href="https://github.com/wkelly1/IKONO"
-              className="flex justify-between transition-all hover:text-gray-600 "
-            >
+            <BurgerLink to="https://github.com/wkelly1/IKONO" active={false}>
               React Library
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                <path
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.5"
-                  d="m8 5 7.57 6.624a.5.5 0 0 1 0 .752L8 19"
-                />
-              </svg>
-            </Link>
+            </BurgerLink>
+
             <hr className="invisible -my-3.5" />
           </div>
-          <Link
-            href={`https://www.will-kelly.co.uk/legal/privacy-policy`}
-            className="hover:text-gray-603 m-6 flex items-center justify-between text-base transition-all"
+          <BurgerLink
+            to="https://github.com/wkelly1/IKONO"
+            active={false}
+            subLabel="Terms of Service & Privacy Policy"
+            className="m-6"
           >
-            <div className="flex flex-col">
-              <span>Legal</span>
-              <span className="text-xs font-normal text-gray-500">
-                Terms of Service & Privacy Policy
-              </span>
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-              <path
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1.5"
-                d="m8 5 7.57 6.624a.5.5 0 0 1 0 .752L8 19"
-              />
-            </svg>
-          </Link>
+            Legal
+          </BurgerLink>
+
           <hr />
           <div className="flex justify-between gap-4 p-6">
-            <a
-              className="flex cursor-pointer items-center gap-2 text-base font-normal text-gray-600"
+            <Link
+              className="flex cursor-pointer items-center gap-2 text-base font-normal text-gray-600 hover:text-blue-500"
               href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
                 'Check out this icon pack IKONO by @WillKelly__ 😮'
               )}&url=${encodeURIComponent('https://ikono.will-kelly.co.uk')}`}
@@ -201,12 +189,12 @@ function Burger({ active }: NavigationProps) {
                   d="M15.68 7.946c-7.416.296-11.286 7.108-12.482 11.031a.444.444 0 0 0 .435.57c.183 0 .349-.11.426-.276 2.783-5.912 9.041-6.967 11.703-6.741.245.02.42.23.42.476v1.875a.5.5 0 0 0 .849.359l3.63-3.527a.5.5 0 0 0 .063-.641l-3.63-5.29a.5.5 0 0 0-.912.283v1.371a.518.518 0 0 1-.502.51Z"
                 />
               </svg>
-            </a>
+            </Link>
 
             <div className="flex gap-4">
               <Link
                 href="https://github.com/wkelly1/IKONO"
-                className="text-gray-600"
+                className="text-gray-600 hover:text-blue-500"
               >
                 <svg
                   width="24"
@@ -226,7 +214,7 @@ function Burger({ active }: NavigationProps) {
               </Link>
               <Link
                 href="https://www.figma.com/community/plugin/1230547475211377845/ikono-icons"
-                className="text-gray-600"
+                className="text-gray-600 hover:text-blue-500"
               >
                 <svg
                   width="24"
