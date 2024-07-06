@@ -18,7 +18,7 @@ const archivo_black = Archivo_Black({
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider attribute="class">
+    <>
       <Head>
         <title>IKONO</title>
         <link rel="icon" href="/favicon.ico" />
@@ -75,9 +75,11 @@ function MyApp({ Component, pageProps }) {
           }
         `}
       </style>
-      <Component {...pageProps} />
+      <ThemeProvider attribute="class" defaultTheme="light">
+        <Component {...pageProps} />
+      </ThemeProvider>
       <Analytics />
-    </ThemeProvider>
+    </>
   );
 }
 

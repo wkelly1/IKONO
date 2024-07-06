@@ -1,18 +1,34 @@
 'use client';
 
 import { useTheme } from 'next-themes';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-const ThemeButton = () => {
+export default function ThemeButton() {
+  const [mounted, setMounted] = useState(false);
+
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
 
+  // useEffect only runs on the client, so now we can safely show the UI
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <button
-      onClick={() =>
-        currentTheme == 'dark' ? setTheme('light') : setTheme('dark')
-      }
-      className="rounded-full p-1 text-2xl text-gray-600 transition-colors duration-100 hover:bg-gray-200 hover:text-gray-900 md:text-4xl dark:text-gray-300 dark:hover:bg-gray-600"
+      onClick={() => {
+        console.log(currentTheme);
+        if (currentTheme === 'dark') {
+          setTheme('light');
+        } else {
+          setTheme('dark');
+        }
+      }}
+      className="rounded-full p-1 text-2xl text-gray-600 transition-colors duration-100 hover:bg-gray-200 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-600 md:text-4xl"
     >
       {currentTheme === 'dark' ? (
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
@@ -45,6 +61,4 @@ const ThemeButton = () => {
       )}
     </button>
   );
-};
-
-export default ThemeButton;
+}

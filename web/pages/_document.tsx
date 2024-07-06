@@ -10,6 +10,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head></Head>
+
         <body className="pointer-events-auto m-0 w-screen overflow-x-hidden p-0">
           <Main />
           <NextScript />

@@ -181,7 +181,7 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
         />
 
         <motion.main
-          className="mt-10 px-5 sm:px-16 "
+          className="mt-10 px-5 sm:px-16"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ stiffness: 100 }}
@@ -220,13 +220,13 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
           <div className="mt-5 flex w-full justify-between">
             <LayoutGroup>
               <motion.div className="w-full @container" layout>
-                <div className="w-full ">
+                <div className="w-full">
                   <motion.div
                     className="mb-8 grid w-full grid-flow-row grid-cols-1 gap-5 @sm:grid-cols-4"
                     layout
                   >
                     <button
-                      className={`border-2  py-2 text-xs font-semibold tracking-tighter ${
+                      className={`border-2 py-2 text-xs font-semibold tracking-tighter ${
                         circleMode
                           ? 'border-blue-600 bg-blue-600 text-white'
                           : 'border-blue-200 bg-transparent text-blue-400'
@@ -241,7 +241,7 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
                       Circle
                     </button>
                     <button
-                      className={`border-2  py-2 text-xs font-semibold tracking-tighter ${
+                      className={`border-2 py-2 text-xs font-semibold tracking-tighter ${
                         squareMode
                           ? 'border-blue-600 bg-blue-600 text-white'
                           : 'border-blue-200 bg-transparent text-blue-400'
@@ -256,7 +256,7 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
                       Square
                     </button>
                     <button
-                      className={`border-2  py-2 text-xs font-semibold tracking-tighter ${
+                      className={`border-2 py-2 text-xs font-semibold tracking-tighter ${
                         size === 'base'
                           ? 'border-blue-600 bg-blue-600 text-white'
                           : 'border-blue-200 bg-transparent text-blue-400'
@@ -270,7 +270,7 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
                       Normal - <span className="font-normal">24x24</span>
                     </button>
                     <button
-                      className={`border-2  py-2 text-xs font-semibold tracking-tighter ${
+                      className={`border-2 py-2 text-xs font-semibold tracking-tighter ${
                         size === 'sm'
                           ? 'border-blue-600 bg-blue-600 text-white'
                           : 'border-blue-200 bg-transparent text-blue-400'
@@ -336,7 +336,7 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
 
                 <motion.div
                   layout
-                  className="grid  w-full grid-flow-row grid-cols-1 gap-5 @xs:grid-cols-2 @md:grid-cols-4 @2xl:grid-cols-6 @[59rem]:grid-cols-10"
+                  className="grid w-full grid-flow-row grid-cols-1 gap-5 @xs:grid-cols-2 @md:grid-cols-4 @2xl:grid-cols-6 @[59rem]:grid-cols-10"
                 >
                   <AnimatePresence>
                     {Object.keys(data).map(icon => {

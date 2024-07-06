@@ -283,7 +283,7 @@ export function IconInfoPanel({
       <div className="mt-4 flex items-center gap-5">
         <div
           className={`relative flex h-36 w-full items-center justify-center border-blue-200 p-2 ${
-            getBrightness(color) > 140 ? ' bg-black' : 'bg-white'
+            getBrightness(color) > 140 ? 'bg-black' : 'bg-white'
           }`}
           style={{ borderWidth: '3px' }}
         >
