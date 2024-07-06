@@ -9,6 +9,9 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-poppins)']
       },
+      colors: {
+        'dark-background': 'hsl(221, 40%, 10%)'
+      },
       keyframes: {
         overlayShow: {
           from: { opacity: '0' },

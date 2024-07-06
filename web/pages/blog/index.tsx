@@ -30,18 +30,21 @@ const Blog: React.FC<BlogProps> = ({ allPostsData }) => {
       <hr className="mt-12 border-gray-200 dark:border-gray-600" />
       <main className="flex h-full flex-grow flex-col px-5 sm:px-16">
         <div className="relative mx-auto h-full max-w-[65ch] flex-grow px-5">
-          <h1 className="py-14 text-3xl">Blog</h1>
+          <h1 className="pt-14 text-3xl font-semibold">Blog</h1>
+          <p className="pb-14 pt-2 text-sm font-light">
+            The latest updates from IKONO.
+          </p>
           <ul className="flex flex-col gap-10">
             {allPostsData.map(({ id, date, title }) => (
               <li key={id}>
                 <Link href={`/blog/${id}`}>
-                  <h2 className="mb-2 text-2xl font-bold text-gray-800 dark:text-gray-300">
+                  <h2 className="mb-2 text-xl font-bold text-gray-800 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
                     {title}
                   </h2>
                 </Link>
                 <time
                   dateTime={new Date(date).toString()}
-                  className="ml-[calc(-1.25rem)] block border-l-2 border-solid border-blue-600 pl-5 text-sm font-light text-gray-600 dark:text-gray-400"
+                  className="ml-[calc(-1.25rem)] block border-l-2 border-solid border-blue-600 pl-5 text-sm font-light text-gray-600 dark:border-blue-400 dark:text-gray-400"
                 >
                   {formatter.format(new Date(date))}
                 </time>

@@ -50,7 +50,7 @@ export default function Icon({
 
   return (
     <motion.button
-      className="group flex h-full w-full cursor-pointer flex-col items-center focus:outline-none dark:bg-gray-800"
+      className="dark:bg-dark-background group flex h-full w-full cursor-pointer flex-col items-center focus:outline-none"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={() => {

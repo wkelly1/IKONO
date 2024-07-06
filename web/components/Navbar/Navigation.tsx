@@ -110,7 +110,7 @@ function Burger({ active }: NavigationProps) {
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
-        <button className="inline-flex h-[35px] w-[35px] items-center justify-center rounded-sm bg-white font-medium leading-none focus:shadow-[0_0_0_2px] focus:shadow-blue-600 focus:outline-none dark:bg-gray-800">
+        <button className="dark:bg-dark-background inline-flex h-[35px] w-[35px] items-center justify-center rounded-sm bg-white font-medium leading-none focus:shadow-[0_0_0_2px] focus:shadow-blue-600 focus:outline-none">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
             <path
               fill="none"

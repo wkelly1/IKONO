@@ -11,7 +11,7 @@ export default function Footer({ className }: FooterProps) {
     <motion.footer
       layout
       className={twMerge(
-        'mt-10 flex h-32 w-full items-center justify-between bg-blue-200 px-5 py-10 dark:border-t-2 dark:border-gray-700 dark:bg-gray-800 sm:px-16 sm:py-14',
+        'dark:bg-dark-background mt-10 flex h-32 w-full items-center justify-between bg-blue-200 px-5 py-10 dark:border-t-2 dark:border-gray-700 sm:px-16 sm:py-14',
         className
       )}
     >

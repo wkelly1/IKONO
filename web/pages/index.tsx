@@ -203,7 +203,7 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
               debounceTimeout={200}
               placeholder="Search"
               inputRef={searchInput}
-              className="ml-3 w-full border-none font-semibold text-blue-600 placeholder-blue-400 outline-none dark:text-blue-300 dark:placeholder-blue-300"
+              className="dark:bg-dark-background ml-3 w-full border-none font-semibold text-blue-600 placeholder-blue-400 outline-none dark:text-blue-300 dark:placeholder-blue-300"
               value={searchTerm}
               onChange={e => {
                 updateSearchParam('s', e.target.value);
