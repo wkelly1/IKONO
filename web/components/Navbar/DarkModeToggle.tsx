@@ -1,5 +1,6 @@
 'use client';
 
+import IconButton from '../Button/IconBtn';
 import Tooltip from '../Tooltip/Tooltip';
 import { useTheme } from 'next-themes';
 import React, { useEffect, useState } from 'react';
@@ -26,7 +27,7 @@ export default function ThemeButton({ className }: ThemeButtonProps) {
 
   return (
     <Tooltip tooltipChildren={`Switch to ${systemTheme} mode`}>
-      <button
+      <IconButton
         onClick={() => {
           console.log(currentTheme);
           if (currentTheme === 'dark') {
@@ -35,10 +36,7 @@ export default function ThemeButton({ className }: ThemeButtonProps) {
             setTheme('dark');
           }
         }}
-        className={twMerge(
-          'rounded-full p-1 text-2xl text-gray-600 transition-colors duration-100 hover:bg-gray-200 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-600 md:text-4xl',
-          className
-        )}
+        className={twMerge(className, 'rounded-full')}
       >
         {currentTheme === 'dark' ? (
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
@@ -69,7 +67,7 @@ export default function ThemeButton({ className }: ThemeButtonProps) {
             />
           </svg>
         )}
-      </button>
+      </IconButton>
     </Tooltip>
   );
 }

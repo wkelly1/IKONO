@@ -1,8 +1,100 @@
 @tailwind base;
 
 @layer base {
+  :root {
+    --hue-primary: 221;
+    --color-primary: #2563EB;
+
+    /** Primatives */
+    /* Primary */
+    --primary-100: #DBEAFE;
+    --primary-300: #93C5FD;
+    --primary-500: #3B82F6;
+    --primary-700: #1D4ED8;
+    --primary-800: #1E40AF;
+
+    /* Neutrals */
+    --neutral-50: #F2F2F3;
+    --neutral-100: #E4E5E7;
+    --neutral-200: #C7CAD1;
+    --neutral-300: #A9AFBC;
+    --neutral-400: #8993A9;
+    --neutral-500: #677798;
+    --neutral-600: #505E7C;
+    --neutral-700: #394560;
+    --neutral-800: #252E41;
+    --neutral-900: #121721;
+    --neutral-950: #090B10;
+    /* White */
+    --white: #ffffff;
+    /* Black */
+    --black: #000000;
+
+    /** Semantic tokens */
+    /* Background */
+    --bg-primary: var(--white);
+    --bg-secondary: var(--neutral-50);
+    --bg-tertiary: var(--neutral-100);
+    --bg-accent-primary: var(--primary-700);
+    --bg-accent-secondary: var(--primary-100);
+    --bg-accent-secondary-hover: var(--primary-300);
+    --bg-primary-inverse: var(--neutral-900);
+
+    /* Content */
+    --fg-primary: var(--black);
+    --fg-primary-muted: var(--neutral-600);
+    --fg-primary-accent: var(--primary-700);
+    --fg-primary-accent-secondary: var(--primary-500);
+    --fg-primary-hover: var(--primary-700);
+    --fg-primary-inverse: var(--white);
+    --fg-secondary: var(--black);
+    --fg-tertiary: var(--black);
+    --fg-accent-primary: var(--white);
+    --fg-accent-secondary: var(--primary-700);
+    --fg-accent-secondary-hover: var(--primary-800);
+    
+
+    /* Border */
+    --border-primary: var(--primary-700);
+    --border-secondary: var(--primary-300);
+    --border-neutral-primary: var(--neutral-100);
+    --border-neutral-secondary: var(--neutral-200);
+  }
+
+  :root[class~="dark"] {
+    /** Semantic tokens */
+    /* Background */
+    --bg-primary: var(--neutral-900);
+    --bg-secondary: var(--neutral-800);
+    --bg-tertiary: var(--neutral-700);
+    --bg-accent-primary: var(--primary-500);
+    --bg-accent-secondary: var(--primary-300);
+    --bg-accent-secondary-hover: var(--primary-500);
+    --bg-primary-inverse: var(--white);
+
+    /* Content */
+    --fg-primary: var(--white);
+    --fg-primary-muted: var(--neutral-200);
+    --fg-primary-accent: var(--primary-500);
+    --fg-primary-accent-secondary: var(--primary-500);
+    --fg-primary-hover: var(--primary-500);
+    --fg-primary-inverse: var(--black);
+    --fg-secondary: var(--white);
+    --fg-tertiary: var(--white);
+    --fg-accent-primary: var(--white);
+    --fg-accent-secondary: var(--primary-800);
+    --fg-accent-secondary-hover: var(--white);
+
+    /* Border */
+    --border-primary: var(--primary-500);
+    --border-secondary: var(--primary-300);
+    --border-neutral-primary: var(--neutral-800);
+    --border-neutral-secondary: var(--neutral-700);
+  }
+
+
   body {
-    @apply bg-white dark:bg-dark-background;
+    @apply bg-bg-primary;
   }
 }
 

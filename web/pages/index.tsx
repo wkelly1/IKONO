@@ -188,10 +188,10 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
           transition={{ stiffness: 100 }}
         >
           <div
-            className="mt-8 flex h-14 items-center border-blue-200 p-2 dark:border-blue-400"
+            className="mt-8 flex h-14 items-center border-border-secondary p-2"
             style={{ borderWidth: '3px' }}
           >
-            <div className="ml-1 text-blue-700 dark:text-blue-300">
+            <div className="ml-1 text-fg-primary-accent">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                 <path
                   fill="currentColor"
@@ -203,17 +203,17 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
               debounceTimeout={200}
               placeholder="Search"
               inputRef={searchInput}
-              className="dark:bg-dark-background ml-3 w-full border-none font-semibold text-blue-600 placeholder-blue-400 outline-none dark:text-blue-300 dark:placeholder-blue-300"
+              className="ml-3 w-full border-none bg-bg-primary font-semibold text-fg-primary-accent outline-none placeholder:text-fg-primary-accent-secondary"
               value={searchTerm}
               onChange={e => {
                 updateSearchParam('s', e.target.value);
                 setSearchTerm(e.target.value);
               }}
             />
-            <p className="mr-4 flex border-2 border-blue-200 px-2 py-1 text-sm font-normal text-blue-400 dark:border-blue-400">
-              <span className="text-blue-400">⌘</span> K
+            <p className="mr-4 flex border-2 border-border-secondary px-2 py-1 text-sm font-normal text-fg-primary-accent-secondary">
+              <span className="text-fg-primary-accent-secondary">⌘</span> K
             </p>
-            <p className="flex min-w-[50px] max-w-[50px] justify-end pr-2 text-xs font-semibold tracking-tighter dark:text-blue-400">
+            <p className="flex min-w-[50px] max-w-[50px] justify-end pr-2 text-xs font-semibold tracking-tighter text-fg-primary-accent-secondary">
               {noShowing}/{Object.keys(data).length}
             </p>
           </div>
@@ -223,71 +223,75 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
               <motion.div className="w-full @container" layout>
                 <div className="w-full">
                   <motion.div
-                    className="mb-8 grid w-full grid-flow-row grid-cols-1 gap-5 @sm:grid-cols-4"
+                    className="mb-8 grid w-full grid-flow-row grid-cols-2 gap-5"
                     layout
                   >
-                    <button
-                      className={twMerge(
-                        'border-2 py-2 text-xs font-semibold tracking-tighter dark:border-blue-400',
-                        circleMode
-                          ? 'border-blue-600 bg-blue-600 text-white'
-                          : 'border-blue-200 bg-transparent text-blue-400'
-                      )}
-                      style={{ borderWidth: '3px' }}
-                      onClick={() => {
-                        setSquareMode(false);
-                        setCircleMode(v => !v);
-                      }}
-                      aria-pressed={circleMode}
-                    >
-                      Circle
-                    </button>
-                    <button
-                      className={twMerge(
-                        'border-2 py-2 text-xs font-semibold tracking-tighter dark:border-blue-400',
-                        squareMode
-                          ? 'border-blue-600 bg-blue-600 text-white'
-                          : 'border-blue-200 bg-transparent text-blue-400'
-                      )}
-                      style={{ borderWidth: '3px' }}
-                      onClick={() => {
-                        setCircleMode(false);
-                        setSquareMode(v => !v);
-                      }}
-                      aria-pressed={squareMode}
-                    >
-                      Square
-                    </button>
-                    <button
-                      className={twMerge(
-                        'border-2 py-2 text-xs font-semibold tracking-tighter dark:border-blue-400',
-                        size === 'base'
-                          ? 'border-blue-600 bg-blue-600 text-white'
-                          : 'border-blue-200 bg-transparent text-blue-400'
-                      )}
-                      style={{ borderWidth: '3px' }}
-                      onClick={() => {
-                        setSize('base');
-                      }}
-                      aria-pressed={squareMode}
-                    >
-                      Normal - <span className="font-normal">24x24</span>
-                    </button>
-                    <button
-                      className={twMerge(
-                        'border-2 py-2 text-xs font-semibold tracking-tighter dark:border-blue-400',
-                        size === 'sm'
-                          ? 'border-blue-600 bg-blue-600 text-white'
-                          : 'border-blue-200 bg-transparent text-blue-400'
-                      )}
-                      style={{ borderWidth: '3px' }}
-                      onClick={() => {
-                        setSize('sm');
-                      }}
-                      aria-pressed={squareMode}
-                    >
-                      Mini - <span className="font-normal">20x20</span>
-                    </button>
+                    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                      <button
+                        className={twMerge(
+                          'w-full text-nowrap border-2 py-2 text-xs font-semibold tracking-tighter',
+                          circleMode
+                            ? 'border-border-primary bg-bg-accent-primary text-fg-accent-primary'
+                            : 'border-border-secondary bg-transparent text-fg-primary-accent-secondary'
+                        )}
+                        style={{ borderWidth: '3px' }}
+                        onClick={() => {
+                          setSquareMode(false);
+                          setCircleMode(v => !v);
+                        }}
+                        aria-pressed={circleMode}
+                      >
+                        Circle
+                      </button>
+                      <button
+                        className={twMerge(
+                          'w-full text-nowrap border-2 py-2 text-xs font-semibold tracking-tighter',
+                          squareMode
+                            ? 'border-border-primary bg-bg-accent-primary text-fg-accent-primary'
+                            : 'border-border-secondary bg-transparent text-fg-primary-accent-secondary'
+                        )}
+                        style={{ borderWidth: '3px' }}
+                        onClick={() => {
+                          setCircleMode(false);
+                          setSquareMode(v => !v);
+                        }}
+                        aria-pressed={squareMode}
+                      >
+                        Square
+                      </button>
+                    </div>
+                    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                      <button
+                        className={twMerge(
+                          'w-full text-nowrap border-2 py-2 text-xs font-semibold tracking-tighter',
+                          size === 'base'
+                            ? 'border-border-primary bg-bg-accent-primary text-fg-accent-primary'
+                            : 'border-border-secondary bg-transparent text-fg-primary-accent-secondary'
+                        )}
+                        style={{ borderWidth: '3px' }}
+                        onClick={() => {
+                          setSize('base');
+                        }}
+                        aria-pressed={squareMode}
+                      >
+                        Normal - <span className="font-normal">24x24</span>
+                      </button>
+                      <button
+                        className={twMerge(
+                          'w-full text-nowrap border-2 py-2 text-xs font-semibold tracking-tighter',
+                          size === 'sm'
+                            ? 'border-border-primary bg-bg-accent-primary text-fg-accent-primary'
+                            : 'border-border-secondary bg-transparent text-fg-primary-accent-secondary'
+                        )}
+                        style={{ borderWidth: '3px' }}
+                        onClick={() => {
+                          setSize('sm');
+                        }}
+                        aria-pressed={squareMode}
+                      >
+                        Mini - <span className="font-normal">20x20</span>
+                      </button>
+                    </div>
                   </motion.div>
                 </div>
 
@@ -305,7 +309,7 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
                 }).length === 0 && (
                   <motion.div
                     layout
-                    className="flex w-full flex-col items-center justify-center gap-4 pt-3 text-blue-400 sm:pt-10 md:pt-14"
+                    className="flex w-full flex-col items-center justify-center gap-4 pt-3 text-fg-primary-accent-secondary sm:pt-10 md:pt-14"
                   >
                     <span className="scale-150">
                       <svg
@@ -341,7 +345,7 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
 
                 <motion.div
                   layout
-                  className="grid w-full grid-flow-row grid-cols-1 gap-5 @xs:grid-cols-2 @md:grid-cols-4 @2xl:grid-cols-6 @[59rem]:grid-cols-10"
+                  className="grid w-full grid-flow-row grid-cols-1 gap-5 @xs:grid-cols-2 @md:grid-cols-4 @3xl:grid-cols-6 @[70rem]:grid-cols-10"
                 >
                   <AnimatePresence>
                     {Object.keys(data).map(icon => {
@@ -361,7 +365,7 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
                             whileInView={{ y: 0, opacity: 1 }}
                             transition={{ stiffness: 100 }}
                             viewport={{ once: true }}
-                            className="bg-white"
+                            className="bg-bg-primary"
                           >
                             <Icon
                               setDialog={setShowDialog}
@@ -378,7 +382,7 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
                                         ? data[icon].variants.standard.base.svg
                                         : data[icon].variants.standard.sm.svg
                                   }}
-                                  className="text-gray-800 dark:text-gray-200"
+                                  className="text-fg-primary"
                                 ></div>
                               }
                             />

@@ -50,7 +50,7 @@ export default function Icon({
 
   return (
     <motion.button
-      className="dark:bg-dark-background group flex h-full w-full cursor-pointer flex-col items-center focus:outline-none"
+      className="group flex h-full w-full cursor-pointer flex-col items-center bg-bg-primary text-fg-primary focus:outline-none"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={() => {
@@ -79,8 +79,8 @@ export default function Icon({
         className={twMerge(
           'relative flex aspect-square w-full flex-col items-center justify-center p-2',
           showOpts || selected === name || hover
-            ? 'border-blue-600 group-focus:outline group-focus:outline-2 group-focus:outline-blue-300'
-            : 'border-blue-200 group-focus:outline group-focus:outline-2 group-focus:outline-blue-500 dark:border-blue-400'
+            ? 'border-border-primary group-focus:outline group-focus:outline-2 group-focus:outline-blue-300'
+            : 'border-border-secondary group-focus:outline group-focus:outline-2 group-focus:outline-blue-500'
         )}
         style={{ borderWidth: '3px' }}
         onMouseEnter={() => setShowOpts(true)}
@@ -93,7 +93,7 @@ export default function Icon({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="text-xs font-semibold tracking-tighter text-blue-500"
+              className="text-xs font-semibold tracking-tighter text-fg-primary-accent"
             >
               Copied!
             </motion.p>
@@ -136,8 +136,8 @@ export default function Icon({
       <p
         className={twMerge(
           showOpts || selected === name || hover
-            ? 'text-blue-600'
-            : 'text-black dark:text-gray-200',
+            ? 'text-content-hover'
+            : 'text-content-primary',
           'mt-2 text-xs font-semibold tracking-tighter'
         )}
       >

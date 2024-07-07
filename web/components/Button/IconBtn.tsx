@@ -1,5 +1,6 @@
 import { HTMLMotionProps, motion } from 'framer-motion';
 import { forwardRef } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 type IconButtonProps = {
   children: React.ReactNode;
@@ -7,12 +8,15 @@ type IconButtonProps = {
   HTMLMotionProps<'button'>;
 
 const IconButton: React.FC<IconButtonProps> = forwardRef(
-  ({ children, ...props }, ref) => {
+  ({ children, className, ...props }, ref) => {
     return (
       <motion.button
         {...props}
         ref={ref}
-        className="flex size-7 items-center justify-center rounded-sm text-gray-900 transition-all hover:bg-blue-50 dark:text-gray-200 dark:hover:text-gray-900"
+        className={twMerge(
+          'flex size-7 items-center justify-center rounded-sm text-fg-primary transition-all hover:bg-bg-accent-secondary hover:text-fg-accent-secondary',
+          className
+        )}
         whileTap={{ scale: 0.9 }}
       >
         {children}

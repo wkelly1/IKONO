@@ -49,11 +49,11 @@ export default function Navbar({ active, hideBody }: NavbarProps) {
       </header>
       {!hideBody && (
         <div className="mt-10 px-5 sm:px-16">
-          <div className="flex h-60 flex-col justify-between bg-blue-600 px-10 py-6">
+          <div className="flex h-60 flex-col justify-between bg-bg-accent-primary px-5 py-5 text-fg-accent-primary sm:px-10 sm:py-6">
             <div className="flex items-center justify-end gap-2">
               <a
                 href="https://www.figma.com/community/plugin/1230547475211377845/ikono-icons"
-                className="flex items-center gap-2 text-xs font-semibold text-white opacity-70 transition-opacity hover:opacity-100"
+                className="flex items-center gap-2 text-xs font-semibold transition-opacity hover:opacity-100"
               >
                 Figma Plugin
                 <svg
@@ -71,18 +71,16 @@ export default function Navbar({ active, hideBody }: NavbarProps) {
                   ></path>
                 </svg>
               </a>
-              <span className="text-white opacity-20">•</span>
+              <span className="opacity-20">•</span>
               <a
                 href="https://github.com/wkelly1/IKONO/blob/main/LICENCE"
-                className="flex items-center gap-2 text-xs font-semibold text-white opacity-70 transition-opacity hover:opacity-100"
+                className="flex items-center gap-2 text-xs font-semibold transition-opacity hover:opacity-100"
               >
                 MIT License
               </a>
             </div>
             <div className="flex flex-col gap-2">
-              <p className="text-3xl font-bold text-white">
-                ICONS ARE EASIER THAN WORDS
-              </p>
+              <p className="text-3xl font-bold">ICONS ARE EASIER THAN WORDS</p>
             </div>
           </div>
         </div>

@@ -23,7 +23,7 @@ export const Headings: React.FC<HeadingResolverProps> = ({
   const container = (children: React.ReactNode): JSX.Element => (
     <a id={anchor} href={`#${anchor}`} className="group relative">
       <span>{children}</span>
-      <div className="absolute -left-0 top-0 -translate-x-full text-gray-400 opacity-0 transition-opacity group-hover:opacity-100 md:-left-1">
+      <div className="absolute -left-0 top-0 -translate-x-full text-fg-primary opacity-0 transition-opacity group-hover:opacity-100 md:-left-1">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
           <path
             fill="none"
@@ -81,15 +81,10 @@ export function Markdown({ children }: MarkdownProps) {
                   src={image.properties.src}
                   width={width}
                   height={height}
-                  className="postImg"
                   alt={alt}
                   priority={isPriority}
                 />
-                {hasCaption ? (
-                  <div className="caption" aria-label={caption}>
-                    {caption}
-                  </div>
-                ) : null}
+                {hasCaption ? <div aria-label={caption}>{caption}</div> : null}
               </div>
             );
           }
@@ -101,7 +96,7 @@ export function Markdown({ children }: MarkdownProps) {
         h4: ({ children }) => <Headings level={5}>{children}</Headings>,
         h5: ({ children }) => <Headings level={6}>{children}</Headings>,
         hr: () => (
-          <hr className="-ml-5 border-gray-100 dark:border-gray-600 lg:-mx-5" />
+          <hr className="border-border-neutral-primary -ml-5 lg:-mx-5" />
         ),
         code({ className, ...props }) {
           const hasLang = /language-(\w+)/.exec(className || '');
@@ -114,7 +109,7 @@ export function Markdown({ children }: MarkdownProps) {
                 style={oneDark}
                 language={hasLang[1]}
                 PreTag="div"
-                className="scrollbar-thin scrollbar-track-base-content/5 scrollbar-thumb-base-content/40 scrollbar-track-rounded-md scrollbar-thumb-rounded m-0 text-base"
+                className="m-0 text-base"
                 showLineNumbers={true}
                 useInlineStyles={true}
               >

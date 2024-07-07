@@ -99,7 +99,7 @@ export function IconInfoPanelPopup({
               e.preventDefault();
             }
           }}
-          className="fixed inset-2 z-20 block rounded-sm bg-white focus:outline-none sm:hidden"
+          className="fixed inset-2 z-20 block rounded-sm bg-bg-primary focus:outline-none sm:hidden"
         >
           {showDialog && (
             <IconInfoPanel
@@ -196,9 +196,9 @@ export function IconInfoPanel({
   }, [size, selected, data, color, colorDisabled]);
 
   return (
-    <div className="dark:bg-dark-background flex h-full w-full flex-col overflow-y-auto rounded-sm border-[3px] border-blue-600 bg-white px-6 pt-5 dark:border-blue-400">
+    <div className="flex size-full flex-col overflow-y-auto rounded-sm border-[3px] border-border-primary bg-bg-primary px-6 pt-5">
       <div className="flex justify-between">
-        <h3 className="text-base font-semibold text-blue-600 dark:text-blue-400">
+        <h3 className="text-base font-semibold text-fg-primary-accent">
           {selected}
         </h3>
         <div className="flex items-center gap-1">
@@ -279,7 +279,6 @@ export function IconInfoPanel({
           colour={color}
           onChange={colour => {
             if (colour) {
-              console.log(colour.substring(1).toUpperCase());
               setColor(colour.substring(1).toUpperCase());
               setColorDisabled(false);
             } else {
@@ -291,8 +290,10 @@ export function IconInfoPanel({
       )}
       <div className="mt-4 flex items-center gap-5">
         <div
-          className={`relative flex h-36 w-full items-center justify-center border-blue-200 p-2 text-gray-900 ${
-            getBrightness(color) > 140 ? 'bg-black' : 'bg-white'
+          className={`relative flex h-36 w-full items-center justify-center border-border-secondary p-2 ${
+            getBrightness(color) > 140
+              ? 'bg-bg-primary-inverse text-fg-primary-inverse'
+              : 'bg-bg-primary text-fg-primary'
           }`}
           style={{ borderWidth: '3px' }}
         >
@@ -307,7 +308,7 @@ export function IconInfoPanel({
         className="flex h-full flex-col overflow-x-visible px-[2px] pb-5"
         style={{ scrollbarWidth: 'none' }}
       >
-        <h3 className="mt-8 flex items-center text-base font-semibold text-blue-600 dark:text-blue-400">
+        <h3 className="mt-8 flex items-center text-base font-semibold text-fg-primary-accent">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
             <path
               fill="none"
@@ -317,14 +318,14 @@ export function IconInfoPanel({
               d="m10.692 6-3 13M6.385 9.5h12.5M16.192 6l-3 13M5 15.5h12.5"
             />
           </svg>
-          <span className="ml-1 text-xs text-blue-400 dark:text-blue-300">
+          <span className="ml-1 text-xs text-fg-primary-accent-secondary">
             {Meta[selected].keywords.join(', ')}
           </span>
         </h3>
 
         <div className="mt-7 flex justify-between gap-2">
           <button
-            className="relative flex h-10 w-full items-center justify-center bg-blue-600 bg-opacity-30 text-xs font-semibold tracking-tighter text-blue-600 transition-all hover:bg-opacity-50 dark:bg-blue-400 dark:text-blue-900"
+            className="relative flex h-10 w-full items-center justify-center bg-bg-accent-secondary text-xs font-semibold tracking-tighter text-fg-accent-secondary transition-all hover:bg-bg-accent-secondary-hover hover:text-fg-accent-secondary-hover"
             onClick={() => {
               navigator.clipboard.writeText(svg);
               copySVGAnimation();
@@ -356,7 +357,7 @@ export function IconInfoPanel({
             </AnimatePresence>
           </button>
           <button
-            className="relative flex h-10 w-full items-center justify-center bg-blue-600 bg-opacity-30 text-xs font-semibold tracking-tighter text-blue-600 transition-all hover:bg-opacity-50 dark:bg-blue-400 dark:text-blue-900"
+            className="relative flex h-10 w-full items-center justify-center bg-bg-accent-secondary text-xs font-semibold tracking-tighter text-fg-accent-secondary transition-all hover:bg-bg-accent-secondary-hover hover:text-fg-accent-secondary-hover"
             onClick={() => {
               navigator.clipboard.writeText(
                 size === 'base'
@@ -393,7 +394,7 @@ export function IconInfoPanel({
           </button>
         </div>
 
-        <h3 className="mt-8 flex items-center gap-1 text-xs font-semibold text-blue-600 dark:text-blue-400">
+        <h3 className="mt-8 flex items-center gap-1 text-xs font-semibold text-fg-primary-accent">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
             <g fill="currentColor">
               <path
@@ -411,22 +412,20 @@ export function IconInfoPanel({
               />
             </g>
           </svg>
-          <span className="text-blue-400 dark:text-blue-300">React Code</span>
+          <span className="text-fg-primary-accent-secondary">React Code</span>
         </h3>
-        <div className="mt-8 shrink-0 cursor-pointer overflow-x-auto rounded-sm border-2 border-blue-300 p-2 text-xs dark:border-blue-400">
+        <div className="mt-8 shrink-0 cursor-pointer overflow-x-auto rounded-sm border-2 border-border-secondary p-2 text-xs">
           <pre>
             <code>
               <span className="text-purple-400">import</span>{' '}
               <span className="text-gray-500 dark:text-gray-400">{'{'}</span>
-              <span className="text-blue-600 dark:text-blue-300">
+              <span className="text-fg-primary-accent">
                 {' '}
                 {snakeToCamel(selected)}{' '}
               </span>
               <span className="text-gray-500 dark:text-gray-400">{'}'}</span>{' '}
               <span className="text-purple-400">from</span>{' '}
-              <span className="text-blue-600 dark:text-blue-300">
-                {'"@ikono/react"'}
-              </span>
+              <span className="text-fg-primary-accent">{'"@ikono/react"'}</span>
               <span className="text-gray-500 dark:text-gray-400">;</span>
               <br />
               <br />
@@ -440,7 +439,7 @@ export function IconInfoPanel({
                 }}
               >
                 <span className="text-gray-500 dark:text-gray-400">{'<'}</span>
-                <span className="text-blue-600 dark:text-blue-300">
+                <span className="text-fg-primary-accent">
                   {snakeToCamel(selected)}
                 </span>
                 <span className="text-gray-500 dark:text-gray-400">
@@ -450,9 +449,9 @@ export function IconInfoPanel({
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className="invisible relative ml-2 select-none rounded bg-blue-100 p-1 font-sans text-[0.6rem] text-blue-600 opacity-0 shadow transition-all group-hover:visible group-hover:opacity-100"
+                  className="invisible relative ml-2 select-none rounded bg-bg-accent-secondary p-1 font-sans text-[0.6rem] text-fg-accent-secondary opacity-0 shadow transition-all group-hover:visible group-hover:opacity-100"
                 >
-                  <div className="absolute -left-[5px] top-1/2 h-0 w-0 -translate-y-1/2 border-b-[5px] border-r-[6px] border-t-[5px] border-b-transparent border-r-blue-100 border-t-transparent"></div>
+                  <div className="absolute left-[-5px] top-1/2 size-0 -translate-y-1/2 border-y-[5px] border-r-[6px] border-y-transparent border-r-bg-accent-secondary"></div>
 
                   {codeCopied && (
                     <motion.p
@@ -481,7 +480,7 @@ export function IconInfoPanel({
           </pre>
         </div>
 
-        <h3 className="mt-8 flex items-center gap-1 text-xs font-semibold text-blue-600 dark:text-blue-400">
+        <h3 className="mt-8 flex items-center gap-1 text-xs font-semibold text-fg-primary-accent">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
             <g fill="none">
               <path
@@ -495,7 +494,7 @@ export function IconInfoPanel({
               />
             </g>
           </svg>
-          <span className="text-blue-400 dark:text-blue-300">
+          <span className="text-fg-primary-accent-secondary">
             More like this...
           </span>
         </h3>
@@ -519,7 +518,7 @@ export function IconInfoPanel({
                           ? data[value].variants.standard.base.svg
                           : data[value].variants.standard.sm.svg
                     }}
-                    className="text-gray-800 dark:text-gray-200"
+                    className="text-fg-primary"
                   ></div>
                 }
               />

@@ -4,7 +4,7 @@ export default function Logo() {
   return (
     <Link
       href="/"
-      className="font-display text-xl font-bold text-blue-600 dark:text-blue-400"
+      className="font-display text-xl font-bold text-fg-primary-accent"
     >
       IKONO
     </Link>

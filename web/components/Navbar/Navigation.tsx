@@ -23,15 +23,17 @@ function BurgerLink({
     <Link
       href={to}
       className={twMerge(
-        'flex items-center justify-between text-black hover:text-blue-500',
-        active ? 'text-blue-600' : 'transition-all',
+        'flex items-center justify-between transition-all hover:text-fg-primary-hover',
+        active ? 'text-fg-primary-accent' : 'text-fg-secondary',
         className
       )}
     >
       <div className="flex flex-col">
         <span>{children}</span>
         {subLabel && (
-          <span className="text-xs font-normal text-gray-500">{subLabel}</span>
+          <span className="text-xs font-normal text-fg-primary-muted">
+            {subLabel}
+          </span>
         )}
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
@@ -54,7 +56,7 @@ interface NavigationProps {
 
 export default function Navigation({ active }: NavigationProps) {
   return (
-    <nav className="flex flex-wrap items-center justify-end gap-x-10 gap-y-2 font-sans text-sm font-semibold tracking-tighter">
+    <nav className="flex flex-wrap items-center justify-end gap-x-5 gap-y-2 font-sans text-sm font-semibold tracking-tighter md:gap-x-10">
       <Link
         href="https://www.buymeacoffee.com/willk"
         className="hidden shrink-0 items-center gap-1 rounded-lg bg-yellow-400 px-5 py-1 dark:bg-yellow-400 dark:text-gray-900 sm:flex"
@@ -110,7 +112,7 @@ function Burger({ active }: NavigationProps) {
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
-        <button className="dark:bg-dark-background inline-flex h-[35px] w-[35px] items-center justify-center rounded-sm bg-white font-medium leading-none focus:shadow-[0_0_0_2px] focus:shadow-blue-600 focus:outline-none">
+        <button className="inline-flex size-[35px] items-center justify-center rounded-sm bg-bg-primary font-medium leading-none hover:bg-bg-accent-secondary-hover hover:text-fg-accent-secondary-hover focus:shadow-[0_0_0_2px] focus:shadow-blue-600 focus:outline-none">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
             <path
               fill="none"
@@ -126,8 +128,8 @@ function Burger({ active }: NavigationProps) {
 
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-white/10 backdrop-blur-sm data-[state=open]:animate-overlayShow" />
-        <Dialog.Content className="fixed left-[50%] top-4 flex max-h-[85vh] w-[95vw] translate-x-[-50%] flex-col rounded-[4px] border border-gray-200 bg-white font-sans text-sm font-semibold tracking-tighter shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none data-[state=open]:animate-contentShow">
-          <Dialog.Close className="absolute right-4 top-4 flex h-[32px] w-[32px] items-center justify-center">
+        <Dialog.Content className="border-border-neutral-primary fixed left-1/2 top-4 flex max-h-[85vh] w-[95vw] -translate-x-1/2 flex-col rounded-[4px] border bg-bg-primary font-sans text-sm font-semibold tracking-tighter shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none data-[state=open]:animate-contentShow">
+          <Dialog.Close className="absolute right-4 top-4 flex size-[32px] items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
               <path
                 fill="none"
@@ -142,18 +144,18 @@ function Burger({ active }: NavigationProps) {
           <div className="p-5">
             <Logo />
           </div>
-          <div className="m-2 mt-0 flex flex-col gap-9 bg-gray-50 p-4 text-base">
+          <div className="m-2 mt-0 flex flex-col gap-9 bg-bg-secondary p-4 text-base">
             <hr className="invisible -my-3.5" />
             <BurgerLink to="/" active={active === 'Icons'}>
               Icons
             </BurgerLink>
 
-            <hr className="-my-3.5" />
+            <hr className="border-border-neutral-secondary -my-3.5" />
             <BurgerLink to="/blog" active={active === 'Blog'}>
               Blog
             </BurgerLink>
 
-            <hr className="-my-3.5" />
+            <hr className="border-border-neutral-secondary -my-3.5" />
             <BurgerLink to="https://github.com/wkelly1/IKONO" active={false}>
               React Library
             </BurgerLink>
@@ -169,10 +171,10 @@ function Burger({ active }: NavigationProps) {
             Legal
           </BurgerLink>
 
-          <hr />
+          <hr className="border-border-neutral-primary" />
           <div className="flex justify-between gap-4 p-6">
             <Link
-              className="flex cursor-pointer items-center gap-2 text-base font-normal text-gray-600 hover:text-blue-500"
+              className="flex cursor-pointer items-center gap-2 text-base font-normal text-fg-primary-muted hover:text-fg-primary-accent"
               href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
                 'Check out this icon pack IKONO by @WillKelly__ 😮'
               )}&url=${encodeURIComponent('https://ikono.will-kelly.co.uk')}`}
@@ -192,11 +194,11 @@ function Burger({ active }: NavigationProps) {
             </Link>
 
             <div className="flex gap-4">
-              <ThemeButton className="dark:text-gray-600 dark:hover:bg-gray-100" />
-              <span className="border-r"></span>
+              <ThemeButton />
+              <span className="border-border-neutral-primary mr-2 border-r"></span>
               <Link
                 href="https://github.com/wkelly1/IKONO"
-                className="text-gray-600 hover:text-blue-500"
+                className="text-fg-primary hover:text-fg-primary-accent"
               >
                 <svg
                   width="24"
@@ -216,7 +218,7 @@ function Burger({ active }: NavigationProps) {
               </Link>
               <Link
                 href="https://www.figma.com/community/plugin/1230547475211377845/ikono-icons"
-                className="text-gray-600 hover:text-blue-500"
+                className="text-fg-primary hover:text-fg-primary-accent"
               >
                 <svg
                   width="24"

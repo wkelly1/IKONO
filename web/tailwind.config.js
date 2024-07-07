@@ -10,7 +10,29 @@ module.exports = {
         sans: ['var(--font-poppins)']
       },
       colors: {
-        'dark-background': 'hsl(221, 40%, 10%)'
+        primary: 'var(--color-primary)',
+        'bg-primary': 'var(--bg-primary)',
+        'bg-secondary': 'var(--bg-secondary)',
+        'bg-tertiary': 'var(--bg-tertiary)',
+        'bg-accent-primary': 'var(--bg-accent-primary)',
+        'bg-accent-secondary': 'var(--bg-accent-secondary)',
+        'bg-accent-secondary-hover': 'var(--bg-accent-secondary-hover)',
+        'bg-primary-inverse': 'var(--bg-primary-inverse)',
+        'fg-primary': 'var(--fg-primary)',
+        'fg-primary-muted': 'var(--fg-primary-muted)',
+        'fg-primary-accent': 'var(--fg-primary-accent)',
+        'fg-primary-accent-secondary': 'var(--fg-primary-accent-secondary)',
+        'fg-primary-hover': 'var(--fg-primary-hover)',
+        'fg-primary-inverse': 'var(--fg-primary-inverse)',
+        'fg-secondary': 'var(--fg-secondary)',
+        'fg-tertiary': 'var(--fg-tertiary)',
+        'fg-accent-primary': 'var(--fg-accent-primary)',
+        'fg-accent-secondary': 'var(--fg-accent-secondary)',
+        'fg-accent-secondary-hover': 'var(--fg-accent-secondary-hover)',
+        'border-primary': 'var(--border-primary)',
+        'border-secondary': 'var(--border-secondary)',
+        'border-neutral-primary': 'var(--border-neutral-primary)',
+        'border-neutral-secondary': 'var(--border-neutral-secondary)'
       },
       keyframes: {
         overlayShow: {
