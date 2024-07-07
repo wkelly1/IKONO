@@ -9,6 +9,7 @@ import Tooltip from '../Tooltip/Tooltip';
 import * as Dialog from '@radix-ui/react-dialog';
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { Dispatch, SetStateAction, useMemo, useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 interface IconInfoPanelProps {
   setSelected: Dispatch<SetStateAction<string>>;
@@ -290,11 +291,12 @@ export function IconInfoPanel({
       )}
       <div className="mt-4 flex items-center gap-5">
         <div
-          className={`relative flex h-36 w-full items-center justify-center border-border-secondary p-2 ${
+          className={twMerge(
+            'relative flex h-36 w-full items-center justify-center border-border-secondary bg-[length:18px_18px] bg-center p-2 [background-image:radial-gradient(circle,var(--border-neutral-primary)_1px,rgba(0,0,0,0)_1px)]',
             getBrightness(color) > 140
               ? 'bg-bg-primary-inverse text-fg-primary-inverse'
               : 'bg-bg-primary text-fg-primary'
-          }`}
+          )}
           style={{ borderWidth: '3px' }}
         >
           <div
