@@ -223,10 +223,10 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
               <motion.div className="w-full @container" layout>
                 <div className="w-full">
                   <motion.div
-                    className="mb-8 grid w-full grid-flow-row grid-cols-2 gap-5"
+                    className="mb-8 grid w-full grid-flow-row grid-cols-2 gap-5 @container"
                     layout
                   >
-                    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                    <div className="grid grid-cols-1 gap-5 @sm:grid-cols-2">
                       <button
                         className={twMerge(
                           'w-full text-nowrap border-2 py-2 text-xs font-semibold tracking-tighter',
@@ -260,7 +260,7 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
                         Square
                       </button>
                     </div>
-                    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                    <div className="grid grid-cols-1 gap-5 @sm:grid-cols-2">
                       <button
                         className={twMerge(
                           'w-full text-nowrap border-2 py-2 text-xs font-semibold tracking-tighter',
