@@ -63,7 +63,7 @@ const ColourButton: React.FC<ColourButtonProps> = forwardRef(
       <Tooltip tooltipChildren={tooltip}>
         <button
           className={twMerge(
-            'active:border:blue-500 m-[1px] w-full rounded-sm p-1 outline outline-2 outline-transparent hover:m-0 hover:border-2 hover:border-blue-500 focus:outline focus:outline-2 focus:outline-blue-300',
+            'border-border-neutral-primary m-[1px] w-full rounded-sm p-1 outline outline-2 outline-transparent hover:m-0 hover:border-2 hover:border-border-primary focus:outline focus:outline-2 focus:outline-border-secondary',
             className,
             active ? 'm-0 border-2 border-blue-500' : 'border'
           )}
@@ -93,12 +93,12 @@ export default function ColourSelector({
   const [isCustomColour, setIsCustomColour] = useState(false);
   const [currentlyActive, setCurrentlyActive] = useState(-1);
   return (
-    <div className="mb-2 mt-4 border-[3px] border-blue-200 p-2 dark:border-blue-400">
+    <div className="mb-2 mt-4 border-[3px] border-border-secondary p-2">
       <p className="mb-2 text-xs font-medium tracking-tight">Colour</p>
       <div className="flex gap-2">
         <Tooltip tooltipChildren="Remove Colour">
           <button
-            className="active:border:blue-500 m-[1px] flex w-full items-center justify-center rounded-sm border p-1 outline outline-2 outline-transparent hover:m-0 hover:border-2 hover:border-blue-500 focus:outline focus:outline-2 focus:outline-blue-300"
+            className="border-border-neutral-primary m-px flex w-full items-center justify-center rounded-sm border p-1 outline outline-2 outline-transparent hover:m-0 hover:border-2 hover:border-border-primary focus:outline focus:outline-2 focus:outline-border-secondary"
             onClick={() => {
               onChange(null);
               setIsCustomColour(false);
