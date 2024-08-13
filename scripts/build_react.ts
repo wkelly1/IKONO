@@ -2,8 +2,8 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 const generatedMetaLoc = '.' + path.sep + 'output' + path.sep + 'meta.json';
-const generatesIconJsLoc = '.' + path.sep + 'react' + path.sep + 'icons';
-const generatesIndexJsLoc = '.' + path.sep + 'react';
+const srcLoc = path.join('.', 'react', 'src');
+const iconOutputLoc = path.join(srcLoc, 'icons');
 
 function snakeToCamel(str: string) {
   return str
@@ -31,16 +31,12 @@ function openMeta() {
 
 function generateProps() {
   return {
-    type: `export interface IconProps extends React.ComponentPropsWithRef<'svg'> {
-      color: string,
-      size: "sm" | "base"
-    }`,
     props: `{ color, size, ...props }`
   };
 }
 
 function generateImports() {
-  return "import React, { forwardRef } from 'react';\n";
+  return "import React, { forwardRef } from 'react';\nimport { type IconProps } from '@/types';\n\n";
 }
 
 function updateColour(svg: string) {
@@ -72,13 +68,31 @@ function generateIconComponent(
     ${iconVariants
       .map(variant =>
         variant.size === 'base'
-          ? `return (${addKeysToSVG(updateColour(variant.jsx))})`
+          ? `return (<${snakeToCamel(
+              name + variant.size
+            )} ref={ref} color={color} {...props} />)`
           : `if (size === "${variant.size}") {
-      return (${addKeysToSVG(updateColour(variant.jsx))})
+      return (<${snakeToCamel(
+        name + variant.size
+      )} ref={ref} color={color} {...props} />)
     }`
       )
       .join('\n')}
   });`;
+}
+
+function generateSubComponents(
+  iconVariants: { size: string; jsx: string }[],
+  name: string
+) {
+  return iconVariants
+    .map(
+      ({ size, jsx }) => `const ${snakeToCamel(
+        name + size
+      )}: React.FC<Omit<IconProps, 'size'>> = forwardRef(
+  ({ color, ...props }, ref) => (${addKeysToSVG(updateColour(jsx))}));`
+    )
+    .join('\n\n');
 }
 
 function main() {
@@ -86,28 +100,27 @@ function main() {
   console.log('----Building React Library----');
 
   // Clear out icons file
-  fs.rmdirSync(generatesIconJsLoc, { recursive: true });
-  fs.mkdirSync(generatesIconJsLoc);
+  fs.rmdirSync(iconOutputLoc, { recursive: true });
+  fs.mkdirSync(iconOutputLoc);
 
   const imports = [];
 
   const meta = openMeta();
   for (const key of Object.keys(meta)) {
+    const variants = Object.keys(meta[key].variants.standard).map(size => ({
+      size,
+      jsx: meta[key].variants.standard[size].jsx
+    }));
+
     // Generate text for .js file
     const js =
       generateImports() +
-      generateProps().type +
-      generateIconComponent(
-        Object.keys(meta[key].variants.standard).map(size => ({
-          size,
-          jsx: meta[key].variants.standard[size].jsx
-        })),
-        key
-      ) +
+      generateSubComponents(variants, key) +
+      generateIconComponent(variants, key) +
       `\nexport default ${snakeToCamel(key)};`;
 
     fs.writeFile(
-      generatesIconJsLoc + path.sep + snakeToCamel(key) + '.tsx',
+      iconOutputLoc + path.sep + snakeToCamel(key) + '.tsx',
       js,
       'utf-8',
       err => {
@@ -125,20 +138,15 @@ function main() {
     imports.map(value => `import ${value} from "./icons/${value}";`).join('\n');
   indexjs += `\n\nexport { ${imports.join(',')}} ;`;
 
-  if (!fs.existsSync(generatesIconJsLoc)) {
-    fs.mkdirSync(generatesIconJsLoc, { recursive: true });
+  if (!fs.existsSync(iconOutputLoc)) {
+    fs.mkdirSync(iconOutputLoc, { recursive: true });
   }
 
-  fs.writeFile(
-    generatesIndexJsLoc + path.sep + 'index.ts',
-    indexjs,
-    'utf-8',
-    err => {
-      if (err) {
-        console.log(err);
-      }
+  fs.writeFile(srcLoc + path.sep + 'index.ts', indexjs, 'utf-8', err => {
+    if (err) {
+      console.log(err);
     }
-  );
+  });
   console.log('------------Done--------------');
   console.log('------------------------------\n');
 }

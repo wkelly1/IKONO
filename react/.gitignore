@@ -4,3 +4,5 @@ dist
 index.js
 icons/
 out.tsc
+src/icons
+src/index.ts
