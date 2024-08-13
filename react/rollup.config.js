@@ -25,13 +25,11 @@ export default {
       exclude: 'node_modules/**',
       extensions: ['.js', '.ts', '.tsx', '.jsx'],
       presets: ['@babel/preset-typescript']
-      // plugins: [ '@babel/external-helpers' ]
     }),
     resolve(),
     commonjs(),
     typescript({
-      declaration: true /* Generates corresponding '.d.ts' file. */,
-      declarationDir: `dist/types`
+      tsconfig: './tsconfig.json'
     })
   ]
 };

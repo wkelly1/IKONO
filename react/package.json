@@ -7,10 +7,12 @@
   "licence": "MIT",
   "types": "dist/types/index.d.ts",
   "files": [
-    "dist"
+    "dist/types",
+    "dist/bundle.cjs.js",
+    "dist/bundle.esm.js"
   ],
   "scripts": {
-    "build": "rollup -c && tsc --declaration --emitDeclarationOnly",
+    "build": "tsc --emitDeclarationOnly && rollup -c",
     "prepare": "npm run build"
   },
   "peerDependencies": {

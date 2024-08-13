@@ -31,7 +31,7 @@ function openMeta() {
 
 function generateProps() {
   return {
-    props: `{ color, size, ...props }`
+    props: `{ color="currentColor", size="base", ...props }`
   };
 }
 
@@ -100,7 +100,7 @@ function main() {
   console.log('----Building React Library----');
 
   // Clear out icons file
-  fs.rmdirSync(iconOutputLoc, { recursive: true });
+  fs.rmSync(iconOutputLoc, { recursive: true });
   fs.mkdirSync(iconOutputLoc);
 
   const imports = [];
