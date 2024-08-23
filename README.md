@@ -25,7 +25,7 @@ IKONO is now built into Figma! Explore the plugin [here](https://www.figma.com/c
 Install the package via [npm](https://www.npmjs.com/package/@ikono/react)
 
 ```
-npm install @ikono/react
+pnpm install @ikono/react
 ```
 
 Then to use the icon import and insert into jsx.
