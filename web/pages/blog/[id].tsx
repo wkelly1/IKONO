@@ -1,6 +1,7 @@
 import Footer from '../../components/Footer/Footer';
 import Author from '../../components/Markdown/Author';
 import { Markdown } from '../../components/Markdown/Markdown';
+import WhatsNext from '../../components/Markdown/WhatsNext';
 import Navbar from '../../components/Navbar/Navbar';
 import { getHeadings, headingToLink, removeMarkdown } from '../../lib/markdown';
 import { getAllPostIds, getPostData, PostData } from '../../lib/posts';
@@ -13,21 +14,21 @@ interface PostProps {
 interface BlogNavigationProps {
   content: string;
 }
+
 function BlogNavigation({ content }: BlogNavigationProps) {
   return (
     <div className="sticky top-5 px-5 text-fg-primary">
       <label className="mt-5 block pb-3 text-sm font-medium uppercase">
         On this page
       </label>
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-2">
         {getHeadings(content, 'h3').map(heading => (
-          <a
-            href={headingToLink(heading)}
-            key={heading}
-            className="hover:underline"
-          >
-            <h4 className="text-sm">{removeMarkdown(heading)}</h4>
-          </a>
+          <div className="flex items-center" key={heading}>
+            <span className="mb-2 size-2 border-b border-l"></span>
+            <a href={headingToLink(heading)} className="ml-2 hover:underline">
+              <h4 className="text-sm">{removeMarkdown(heading)}</h4>
+            </a>
+          </div>
         ))}
       </div>
     </div>
@@ -62,7 +63,7 @@ const Post: React.FC<PostProps> = ({ postData }) => {
   return (
     <div className="scroll-smooth">
       <Navbar active="Blog" hideBody />
-      <hr className="border-border-neutral-primary mt-12" />
+      <hr className="mt-12 border-border-neutral-primary" />
       <main className="flex justify-center px-5 sm:px-16">
         <article className="container prose prose-stone relative px-5 py-6 dark:prose-invert prose-a:prose-headings:no-underline">
           <time
@@ -80,11 +81,12 @@ const Post: React.FC<PostProps> = ({ postData }) => {
             className="mb-12"
           />
           <Markdown>{postData.content}</Markdown>
-          <div className="border-border-neutral-primary absolute left-0 top-0 -z-10 h-full border border-dashed"></div>
+          <div className="absolute left-0 top-0 -z-10 h-full border border-dashed border-border-neutral-primary"></div>
+          <WhatsNext />
         </article>
         <aside className="relative hidden lg:block">
           <BlogNavigation content={postData.content} />
-          <div className="border-border-neutral-primary absolute left-0 top-0 -z-10 h-full border border-dashed"></div>
+          <div className="absolute left-0 top-0 -z-10 h-full border border-dashed border-border-neutral-primary"></div>
         </aside>
       </main>
       <Footer className="mt-0" />

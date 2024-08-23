@@ -27,7 +27,7 @@ const Blog: React.FC<BlogProps> = ({ allPostsData }) => {
   return (
     <div className="flex min-h-full flex-col">
       <Navbar active="Blog" hideBody />
-      <hr className="border-border-neutral-primary mt-12" />
+      <hr className="mt-12 border-border-neutral-primary" />
       <main className="flex h-full grow flex-col px-5 sm:px-16">
         <div className="relative mx-auto h-full max-w-prose grow px-5">
           <h1 className="pt-14 text-3xl font-semibold">Blog</h1>
@@ -51,7 +51,7 @@ const Blog: React.FC<BlogProps> = ({ allPostsData }) => {
               </li>
             ))}
           </ul>
-          <div className="border-border-neutral-primary absolute left-0 top-0 -z-10 h-full border border-dashed"></div>
+          <div className="absolute left-0 top-0 -z-10 h-full border border-dashed border-border-neutral-primary"></div>
         </div>
       </main>
       <Footer className="mt-0" />

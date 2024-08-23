@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { ReactNode } from 'react';
 import MarkdownPrimitive from 'react-markdown';
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
@@ -50,6 +51,28 @@ export const Headings: React.FC<HeadingResolverProps> = ({
   }
 };
 
+interface CodeBlockProps {
+  children: ReactNode;
+  language: string;
+}
+
+export function CodeBlock({ language, children }: CodeBlockProps) {
+  return (
+    <div className="my-6">
+      <SyntaxHighlighter
+        customStyle={{ padding: undefined }}
+        style={oneDark}
+        language={language}
+        className="m-0 text-base"
+        showLineNumbers={true}
+        useInlineStyles={true}
+      >
+        {String(children).replace(/\n$/, '')}
+      </SyntaxHighlighter>
+    </div>
+  );
+}
+
 interface MarkdownProps {
   children: string;
 }
@@ -96,7 +119,7 @@ export function Markdown({ children }: MarkdownProps) {
         h4: ({ children }) => <Headings level={5}>{children}</Headings>,
         h5: ({ children }) => <Headings level={6}>{children}</Headings>,
         hr: () => (
-          <hr className="border-border-neutral-primary -ml-5 lg:-mx-5" />
+          <hr className="-ml-5 border-border-neutral-primary lg:-mx-5" />
         ),
         code({ className, ...props }) {
           const hasLang = /language-(\w+)/.exec(className || '');
@@ -104,17 +127,7 @@ export function Markdown({ children }: MarkdownProps) {
           return hasLang ? (
             <div>
               <div>{hasLang[1]}</div>
-              <SyntaxHighlighter
-                customStyle={{ padding: undefined }}
-                style={oneDark}
-                language={hasLang[1]}
-                PreTag="div"
-                className="m-0 text-base"
-                showLineNumbers={true}
-                useInlineStyles={true}
-              >
-                {String(props.children).replace(/\n$/, '')}
-              </SyntaxHighlighter>
+              <CodeBlock language={hasLang[1]}>{props.children}</CodeBlock>
             </div>
           ) : (
             <code className={className} {...props} />
