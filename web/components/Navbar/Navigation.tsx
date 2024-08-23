@@ -1,4 +1,5 @@
 import Logo from '../Logo/logo';
+import Tooltip from '../Tooltip/Tooltip';
 import ThemeButton from './DarkModeToggle';
 import * as Dialog from '@radix-ui/react-dialog';
 import Link from 'next/link';
@@ -51,15 +52,15 @@ function BurgerLink({
 }
 
 interface NavigationProps {
-  active: 'Blog' | 'Icons';
+  active: 'Blog' | 'Icons' | 'React';
 }
 
 export default function Navigation({ active }: NavigationProps) {
   return (
-    <nav className="flex flex-wrap items-center justify-end gap-x-5 gap-y-2 font-sans text-sm font-semibold tracking-tighter md:gap-x-10">
+    <nav className="flex flex-wrap items-center justify-end gap-x-10 gap-y-2 font-sans text-sm font-semibold tracking-tighter">
       <Link
         href="https://www.buymeacoffee.com/willk"
-        className="hidden shrink-0 items-center gap-1 rounded-lg bg-yellow-400 px-5 py-1 dark:bg-yellow-400 dark:text-gray-900 sm:flex"
+        className="hidden shrink-0 items-center gap-1 rounded-lg bg-yellow-400 px-5 py-1 dark:bg-yellow-400 dark:text-gray-900 [@media(min-width:810px)]:flex"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
           <path
@@ -75,10 +76,10 @@ export default function Navigation({ active }: NavigationProps) {
       </Link>
       <Link
         href="/"
-        className={`hidden sm:inline ${
+        className={`hidden [@media(min-width:810px)]:inline ${
           active === 'Icons'
-            ? 'text-blue-600 dark:text-blue-400'
-            : 'transition-all hover:text-blue-600 dark:hover:text-blue-400'
+            ? 'text-fg-primary-accent'
+            : 'transition-all hover:text-fg-primary-accent-secondary'
         }`}
       >
         Icons
@@ -86,22 +87,52 @@ export default function Navigation({ active }: NavigationProps) {
       <Link
         href="/blog"
         className={twMerge(
-          'hidden dark:text-gray-300 sm:inline',
+          'hidden [@media(min-width:810px)]:inline',
           active === 'Blog'
-            ? 'text-blue-600 dark:text-blue-400'
-            : 'transition-all hover:text-blue-600 dark:hover:text-blue-400'
+            ? 'text-fg-primary-accent'
+            : 'transition-all hover:text-fg-primary-accent-secondary'
         )}
       >
         Blog
       </Link>
       <Link
-        href="https://github.com/wkelly1/IKONO"
-        className="hidden transition-all hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 sm:inline"
+        href="/react"
+        className={twMerge(
+          'hidden [@media(min-width:810px)]:inline',
+          active === 'React'
+            ? 'text-fg-primary-accent'
+            : 'transition-all hover:text-fg-primary-accent-secondary'
+        )}
       >
         React Library
       </Link>
-      <ThemeButton />
-      <div className="inline sm:hidden">
+      <span className="-mx-5 hidden h-6 border-r [@media(min-width:810px)]:inline" />
+      <div className="flex items-center gap-2">
+        <ThemeButton />
+        <Tooltip tooltipChildren={`View on Github`}>
+          <Link
+            href="https://github.com/wkelly1/IKONO"
+            className="flex size-7 items-center justify-center rounded-full text-fg-primary transition-all hover:bg-bg-accent-secondary hover:text-fg-accent-secondary"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 15 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.49933 0.25C3.49635 0.25 0.25 3.49593 0.25 7.50024C0.25 10.703 2.32715 13.4206 5.2081 14.3797C5.57084 14.446 5.70302 14.2222 5.70302 14.0299C5.70302 13.8576 5.69679 13.4019 5.69323 12.797C3.67661 13.235 3.25112 11.825 3.25112 11.825C2.92132 10.9874 2.44599 10.7644 2.44599 10.7644C1.78773 10.3149 2.49584 10.3238 2.49584 10.3238C3.22353 10.375 3.60629 11.0711 3.60629 11.0711C4.25298 12.1788 5.30335 11.8588 5.71638 11.6732C5.78225 11.205 5.96962 10.8854 6.17658 10.7043C4.56675 10.5209 2.87415 9.89918 2.87415 7.12104C2.87415 6.32925 3.15677 5.68257 3.62053 5.17563C3.54576 4.99226 3.29697 4.25521 3.69174 3.25691C3.69174 3.25691 4.30015 3.06196 5.68522 3.99973C6.26337 3.83906 6.8838 3.75895 7.50022 3.75583C8.1162 3.75895 8.73619 3.83906 9.31523 3.99973C10.6994 3.06196 11.3069 3.25691 11.3069 3.25691C11.7026 4.25521 11.4538 4.99226 11.3795 5.17563C11.8441 5.68257 12.1245 6.32925 12.1245 7.12104C12.1245 9.9063 10.4292 10.5192 8.81452 10.6985C9.07444 10.9224 9.30633 11.3648 9.30633 12.0413C9.30633 13.0102 9.29742 13.7922 9.29742 14.0299C9.29742 14.2239 9.42828 14.4496 9.79591 14.3788C12.6746 13.4179 14.75 10.7025 14.75 7.50024C14.75 3.49593 11.5036 0.25 7.49933 0.25Z"
+                fill="currentColor"
+                fillRule="evenodd"
+                clipRule="evenodd"
+              ></path>
+            </svg>
+          </Link>
+        </Tooltip>
+      </div>
+      <span className="-mx-4 h-6 border-r [@media(min-width:810px)]:hidden" />
+      <div className="flex items-center gap-2 [@media(min-width:810px)]:hidden">
         <Burger active={active} />
       </div>
     </nav>
@@ -128,7 +159,7 @@ function Burger({ active }: NavigationProps) {
 
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-white/10 backdrop-blur-sm data-[state=open]:animate-overlayShow" />
-        <Dialog.Content className="border-border-neutral-primary fixed left-1/2 top-4 flex max-h-[85vh] w-[95vw] -translate-x-1/2 flex-col rounded-[4px] border bg-bg-primary font-sans text-sm font-semibold tracking-tighter shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none data-[state=open]:animate-contentShow">
+        <Dialog.Content className="fixed left-1/2 top-4 flex max-h-[85vh] w-[95vw] -translate-x-1/2 flex-col rounded-[4px] border border-border-neutral-primary bg-bg-primary font-sans text-sm font-semibold tracking-tighter shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none data-[state=open]:animate-contentShow">
           <Dialog.Close className="absolute right-4 top-4 flex size-[32px] items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
               <path
@@ -150,13 +181,13 @@ function Burger({ active }: NavigationProps) {
               Icons
             </BurgerLink>
 
-            <hr className="border-border-neutral-secondary -my-3.5" />
+            <hr className="-my-3.5 border-border-neutral-secondary" />
             <BurgerLink to="/blog" active={active === 'Blog'}>
               Blog
             </BurgerLink>
 
-            <hr className="border-border-neutral-secondary -my-3.5" />
-            <BurgerLink to="https://github.com/wkelly1/IKONO" active={false}>
+            <hr className="-my-3.5 border-border-neutral-secondary" />
+            <BurgerLink to="/react" active={active === 'React'}>
               React Library
             </BurgerLink>
 
@@ -195,7 +226,7 @@ function Burger({ active }: NavigationProps) {
 
             <div className="flex gap-4">
               <ThemeButton />
-              <span className="border-border-neutral-primary mr-2 border-r"></span>
+              <span className="mr-2 border-r border-border-neutral-primary"></span>
               <Link
                 href="https://github.com/wkelly1/IKONO"
                 className="text-fg-primary hover:text-fg-primary-accent"

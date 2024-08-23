@@ -1,9 +1,10 @@
+import version from '../../version.json';
 import Logo from '../Logo/logo';
 import Navigation from './Navigation';
 import Link from 'next/link';
 
 interface NavbarProps {
-  active: 'Blog' | 'Icons';
+  active: 'Blog' | 'Icons' | 'React';
   hideBody?: boolean;
 }
 
@@ -44,12 +45,17 @@ export default function Navbar({ active, hideBody }: NavbarProps) {
       </Link>
 
       <header className="flex items-center justify-between px-5 pt-10 sm:px-16 sm:pt-14">
-        <Logo />
+        <div className="flex items-center gap-2">
+          <Logo />
+          <p className="rounded-full bg-bg-secondary px-2 py-1 text-xs font-medium text-fg-secondary">
+            v{version.version}
+          </p>
+        </div>
         <Navigation active={active} />
       </header>
       {!hideBody && (
         <div className="mt-10 px-5 sm:px-16">
-          <div className="flex h-60 flex-col justify-between bg-bg-accent-primary px-5 py-5 text-fg-accent-primary sm:px-10 sm:py-6">
+          <div className="flex h-60 flex-col justify-between bg-bg-accent-primary px-5 py-6 text-fg-accent-primary sm:px-10">
             <div className="flex items-center justify-end gap-2">
               <a
                 href="https://www.figma.com/community/plugin/1230547475211377845/ikono-icons"
