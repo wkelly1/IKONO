@@ -59,14 +59,14 @@ async function getHashes(
 }
 
 async function getChecksum(path: string): Promise<string> {
-  return await new Promise(function (resolve, reject) {
+  return await new Promise<string>(function (resolve, reject) {
     const hash = crypto.createHash('md5');
     const input = fs.createReadStream(path);
 
     input.on('error', reject);
 
     input.on('data', function (chunk) {
-      hash.update(chunk);
+      hash.update(chunk as crypto.BinaryLike);
     });
 
     input.on('close', function () {

@@ -47,7 +47,7 @@ jobs:
         env:
           RELEASE_TYPE: ${{ github.event.inputs.release-type }}
 
-      - name: Bump all sub-packages to new version
+      - name: Bump all sub-packages to new version and update meta.json/CHANGELOG
         run: |
           npm run version
 
