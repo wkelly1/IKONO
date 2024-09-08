@@ -1,8 +1,6 @@
+import { CodeBlock } from './CodeBlock';
 import Image from 'next/image';
-import { ReactNode } from 'react';
 import MarkdownPrimitive from 'react-markdown';
-import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { oneDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 type HeadingResolverProps = {
   level: number;
@@ -50,28 +48,6 @@ export const Headings: React.FC<HeadingResolverProps> = ({
       return <h6>{container(children)}</h6>;
   }
 };
-
-interface CodeBlockProps {
-  children: ReactNode;
-  language: string;
-}
-
-export function CodeBlock({ language, children }: CodeBlockProps) {
-  return (
-    <div className="my-6">
-      <SyntaxHighlighter
-        customStyle={{ padding: undefined }}
-        style={oneDark}
-        language={language}
-        className="m-0 text-base"
-        showLineNumbers={true}
-        useInlineStyles={true}
-      >
-        {String(children).replace(/\n$/, '')}
-      </SyntaxHighlighter>
-    </div>
-  );
-}
 
 interface MarkdownProps {
   children: string;

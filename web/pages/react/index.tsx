@@ -1,5 +1,5 @@
 import Footer from '../../components/Footer/Footer';
-import { CodeBlock } from '../../components/Markdown/Markdown';
+import { CodeBlock } from '../../components/Markdown/CodeBlock';
 import WhatsNext from '../../components/Markdown/WhatsNext';
 import Navbar from '../../components/Navbar/Navbar';
 
@@ -58,7 +58,7 @@ export default function () {
           <h3>Icon Props</h3>
           <div className="overflow-x-auto">
             <table>
-              <thead>
+              <thead className="rounded-t-md">
                 <tr>
                   <th>Prop</th>
                   <th>Type</th>
