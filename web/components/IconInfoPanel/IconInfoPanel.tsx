@@ -303,6 +303,11 @@ export function IconInfoPanel({
             dangerouslySetInnerHTML={{
               __html: svg
             }}
+            className={twMerge(
+              getBrightness(color) > 140
+                ? 'bg-bg-primary-inverse text-fg-primary-inverse'
+                : 'bg-bg-primary text-fg-primary'
+            )}
           ></div>
         </div>
       </div>
