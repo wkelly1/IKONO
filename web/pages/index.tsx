@@ -30,6 +30,7 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
   const [noShowing, setNoShowing] = useState<number>(Object.keys(Meta).length);
   const [selected, setSelected] = useState<string>(selectedParam || '');
   const [searchTerm, setSearchTerm] = useState<string>(s || '');
+  const [prevSearchTerm, setPrevSearchTerm] = useState<string>(searchTerm);
   const [circleMode, setCircleMode] = useState<boolean>(false);
   const [squareMode, setSquareMode] = useState<boolean>(false);
   const [size, setSize] = useState<'sm' | 'base'>(sizeParam || 'base');
@@ -108,25 +109,21 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
     [initialData, generateSquares]
   );
 
-  useEffect(() => {
-    if (circleMode) {
+  if (circleMode) {
+    if (JSON.stringify(data) !== JSON.stringify(circleData)) {
       setData(circleData);
-    } else {
+    }
+  } else if (squareMode) {
+    if (JSON.stringify(data) !== JSON.stringify(squareData)) {
+      setData(squareData);
+    }
+  } else {
+    if (JSON.stringify(data) !== JSON.stringify(initialData)) {
       setData(initialData);
     }
-  }, [circleMode, circleData, initialData]);
+  }
 
-  useEffect(() => {
-    if (squareMode) {
-      setData(squareData);
-    } else {
-      if (!circleMode) {
-        setData(initialData);
-      }
-    }
-  }, [squareMode, squareData, initialData, circleMode]);
-
-  useEffect(() => {
+  if (searchTerm !== prevSearchTerm) {
     let no = 0;
     Object.keys(data).map(icon => {
       if (
@@ -138,7 +135,8 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
       }
     });
     setNoShowing(no);
-  }, [searchTerm, data]);
+    setPrevSearchTerm(searchTerm);
+  }
 
   const handleKeyPress = useCallback((e: globalThis.KeyboardEvent) => {
     if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
