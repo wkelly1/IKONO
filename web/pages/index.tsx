@@ -163,7 +163,7 @@ export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
     <div
       className={`flex min-h-screen flex-col items-center justify-between font-sans`}
     >
-      <div className="max-w-screen-3xl w-full overflow-x-hidden overflow-y-hidden">
+      <div className="w-full max-w-screen-2xl overflow-hidden">
         <Navbar active={'Icons'} />
 
         <IconInfoPanelPopup
