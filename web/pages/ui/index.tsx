@@ -25,10 +25,16 @@ function UIImage({ src, date, title, alt }: UIImageProps) {
   const [loading, setLoading] = useState(true);
 
   return (
-    <div className="flex flex-col ">
+    <motion.div
+      initial={{ y: 20, opacity: 0.6 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ stiffness: 100 }}
+      viewport={{ once: true }}
+      className="flex flex-col"
+    >
       <Popup
         header={
-          <div className="flex flex-col ">
+          <div className="flex flex-col">
             <p className="leading-tight">{title}</p>
             <p className="text-xs font-medium leading-tight text-gray-500">
               {date}
@@ -39,7 +45,7 @@ function UIImage({ src, date, title, alt }: UIImageProps) {
         close={() => setOpen(false)}
       >
         <div className="h-[calc(100vh-3.2rem)] w-[100vw] p-0 pt-2 sm:h-auto sm:w-[80vw] sm:p-2 md:w-[70vw] md:p-5 lg:w-[60vw] xl:max-w-[1300px]">
-          <div className="relative aspect-[1600/1200]   w-full rounded-lg bg-cover ">
+          <div className="relative aspect-[1600/1200] w-full rounded-lg bg-cover">
             <Image
               alt={alt}
               src={src}
@@ -55,7 +61,7 @@ function UIImage({ src, date, title, alt }: UIImageProps) {
           scale: 1.03,
           transition: { duration: 0.2, type: 'spring' }
         }}
-        className="relative aspect-[1600/1200] w-full  cursor-pointer rounded-lg bg-cover"
+        className="relative z-0 aspect-[1600/1200] w-full cursor-pointer rounded-lg bg-cover"
         onClick={() => setOpen(true)}
       >
         <Image
@@ -75,19 +81,74 @@ function UIImage({ src, date, title, alt }: UIImageProps) {
         <p className="text-sm font-semibold">{title}</p>
         <p className="text-xs font-normal">{date}</p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
 export default function Home() {
+  const images = [
+    {
+      src: ui1,
+      title: 'E-Commerce',
+      date: 'Jan 22, 2023',
+      alt: 'UI mockup for an E-Commerce site'
+    },
+    {
+      src: ui2,
+      title: 'Travel Planner',
+      date: 'Jan 22, 2023',
+      alt: 'UI mockup for a travel planner site'
+    },
+    {
+      src: ui3,
+      title: 'File Explorer',
+      date: 'Jan 22, 2023',
+      alt: 'UI mockup for a file exploring site'
+    },
+    {
+      src: ui4,
+      title: 'Product Page',
+      date: 'Jan 22, 2023',
+      alt: 'UI mockup for a product page'
+    },
+    {
+      src: ui5,
+      title: 'Signup Page',
+      date: 'Jan 24, 2023',
+      alt: 'UI mockup for a signup page'
+    },
+    {
+      src: ui6,
+      title: 'Dashboard',
+      date: 'Jan 24, 2023',
+      alt: 'UI mockup for a dashboard'
+    },
+    {
+      src: ui7,
+      title: 'Web Dashboard',
+      date: 'Jan 24, 2023',
+      alt: 'UI mockup for a web dashboard'
+    },
+    {
+      src: ui8,
+      title: 'Email Client',
+      date: 'Jan 25, 2023',
+      alt: 'UI mockup for an email client'
+    }
+  ];
   return (
     <div
       className="flex min-h-screen flex-col justify-between font-sans"
       style={{ width: '100vw', overflowX: 'hidden' }}
     >
-      <Navbar active="Example UI" />
+      <Navbar active="Blog" />
       <div className="overflow-x-none flex flex-col items-center">
-        <main className="mt-10 w-full max-w-[2500px] px-5 sm:px-16">
+        <motion.main
+          className="mt-10 w-full max-w-[2500px] px-5 sm:px-16"
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ stiffness: 100 }}
+        >
           <div className="pt-5">
             <p className="text-xl font-semibold text-blue-600">Example UIs</p>
             <p className="text-sm font-medium text-gray-500">
@@ -96,56 +157,17 @@ export default function Home() {
           </div>
 
           <div className="mt-7 grid grid-flow-row auto-rows-fr grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            <UIImage
-              src={ui1}
-              title="E-Commerce"
-              date="Jan 22, 2023"
-              alt="UI mockup for an E-Commerce site"
-            />
-            <UIImage
-              src={ui2}
-              title="Travel Planner"
-              date="Jan 22, 2023"
-              alt="UI mockup for a travel planner site"
-            />
-            <UIImage
-              src={ui3}
-              title="File Explorer"
-              date="Jan 22, 2023"
-              alt="UI mockup for a file exploring site"
-            />
-            <UIImage
-              src={ui4}
-              title="Product Page"
-              date="Jan 22, 2023"
-              alt="UI mockup for a product page"
-            />
-            <UIImage
-              src={ui5}
-              title="Signup Page"
-              date="Jan 24, 2023"
-              alt="UI mockup for a signup page"
-            />
-            <UIImage
-              src={ui6}
-              title="Dashboard"
-              date="Jan 24, 2023"
-              alt="UI mockup for a dashboard"
-            />
-            <UIImage
-              src={ui7}
-              title="Web Dashboard"
-              date="Jan 24, 2023"
-              alt="UI mockup for a web dashboard"
-            />
-            <UIImage
-              src={ui8}
-              title="Email Client"
-              date="Jan 25, 2023"
-              alt="UI mockup for an email client"
-            />
+            {images.map(image => (
+              <UIImage
+                key={image.title}
+                src={image.src}
+                title={image.title}
+                date={image.date}
+                alt={image.alt}
+              />
+            ))}
           </div>
-        </main>
+        </motion.main>
       </div>
       <Footer />
     </div>

@@ -33,11 +33,10 @@ export default function Popup({ header, show, close, children }: PopupProps) {
           animate={{ opacity: 1, scaleY: 1, originY: 1 }}
           exit={{ opacity: 0 }}
           transition={{
-            duration: 0.3,
-            type: 'spring'
+            stiffness: 100
           }}
           onClick={() => close()}
-          className="fixed top-0 left-0 right-0 z-20 flex h-screen justify-center overflow-y-auto pt-0 backdrop-blur-sm sm:pt-10"
+          className="absolute top-0 left-0 right-0 z-50 flex h-screen justify-center pt-0 backdrop-blur-sm sm:pt-10"
         >
           <div className="">
             <div

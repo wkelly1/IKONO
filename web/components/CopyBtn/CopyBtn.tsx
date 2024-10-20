@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { twMerge } from 'tailwind-merge';
 
 interface CopyBtnProps {
   className: string;
@@ -12,12 +13,13 @@ export default function CopyBtn({ className, onClick, title }: CopyBtnProps) {
       whileTap={{
         scale: 1.1
       }}
-      className={`mx-2 flex h-full cursor-pointer items-center justify-center bg-blue-600 bg-opacity-30 hover:bg-opacity-50 ${
-        className || ''
-      }`}
+      className={twMerge(
+        'bg-bg-accent-secondary hover:bg-bg-accent-secondary-hover text-fg-accent-secondary hover:text-fg-accent-secondary-hover mx-2 flex h-full cursor-pointer items-center justify-center',
+        className
+      )}
       onClick={onClick}
     >
-      <p className="cursor-pointer text-xs font-semibold tracking-tighter text-blue-600">
+      <p className="cursor-pointer text-xs font-semibold tracking-tighter">
         {title}
       </p>
     </motion.button>
