@@ -30,6 +30,10 @@ jobs:
           registry-url: https://registry.npmjs.org/
           node-version: 20
 
+      # Install package dependencies
+      - name: Install IKONO package dependencies
+        run: npm ci
+
       # Configure Git
       - name: Git configuration
         run: |
