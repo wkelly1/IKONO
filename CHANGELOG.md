@@ -46,7 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed `money_dollars` icon - `base`/`standard`
 - Changed `add_circle` icon - `base`/`standard`
 
-## [1.8.0]
+## [1.8.0] - 2023-01-20
 
 ### Added
 
