@@ -11,7 +11,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head></Head>
 
-        <body className="pointer-events-auto m-0 w-screen overflow-x-hidden p-0">
+        <body className="pointer-events-auto m-0 w-full overflow-x-hidden p-0">
           <Main />
           <NextScript />
         </body>
