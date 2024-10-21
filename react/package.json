@@ -5,7 +5,7 @@
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
   "licence": "MIT",
-  "types": "dist/types/index.d.ts",
+  "types": "dist/types/src/index.d.ts",
   "files": [
     "dist/types",
     "dist/bundle.cjs.js",

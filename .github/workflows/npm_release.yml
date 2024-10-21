@@ -15,8 +15,10 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: Install IKONO package dependencies and build 🔧
         run: npm ci && npm run build:web
+      - name: Install IKONO/react package dependencies
+        run: cd react && npm ci && cd ..
       - name: Build IKONO/react package 🔧
-        run: npm run build:react
+        run: npm run build:react_library
       - name: Publish IKONO package to NPM 📦
         run: npm publish
         env:

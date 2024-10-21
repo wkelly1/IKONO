@@ -36,7 +36,7 @@ function generateProps() {
 }
 
 function generateImports() {
-  return "import React, { forwardRef } from 'react';\nimport { type IconProps } from '@/types';\n\n";
+  return "import React, { forwardRef } from 'react';\nimport { type IconProps } from '../types';\n\n";
 }
 
 function updateColour(svg: string) {
@@ -100,7 +100,9 @@ function main() {
   console.log('----Building React Library----');
 
   // Clear out icons file
-  fs.rmSync(iconOutputLoc, { recursive: true });
+  if (fs.existsSync(iconOutputLoc)) {
+    fs.rmSync(iconOutputLoc, { recursive: true });
+  }
   fs.mkdirSync(iconOutputLoc);
 
   const imports = [];
