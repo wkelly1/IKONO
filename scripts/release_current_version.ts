@@ -99,7 +99,6 @@ function updateChangelog(
     changelog.slice(unreleasedIndex + unreleasedLine.length);
 
   console.log('Saving new changelog');
-  //   console.log(modifiedData);
   fs.writeFileSync(changelogPath, modifiedData);
 }
 
@@ -137,13 +136,14 @@ async function main() {
 
   const meta = readInputMeta();
 
-  iterateVariants((variant, size) => {
+  await iterateVariants(async (variant, size) => {
     Object.keys(meta.icons).forEach(key => {
       const history =
         meta.icons[key].history[generateSizeVariantKey(variant, size)];
 
       if (history) {
         if (history.created === unreleasedString) {
+          console.log(size, 'unreleased ');
           additions.push(generateString('addition', size, variant, key));
         }
         if (history.removed && history.removed === unreleasedString) {
