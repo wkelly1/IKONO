@@ -36,25 +36,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Updated
 
 - Updated `info_circle` icon - `base`/`standard`
-- Updated `info_circle` icon - `sm`/`standard`
 - Updated `question_circle` icon - `base`/`standard`
-- Updated `question_circle` icon - `sm`/`standard`
 - Updated `warning_circle` icon - `base`/`standard`
-- Updated `warning_circle` icon - `sm`/`standard`
 - Updated `calendar` icon - `base`/`standard`
-- Updated `calendar` icon - `sm`/`standard`
 - Updated `dial_phone` icon - `base`/`standard`
-- Updated `dial_phone` icon - `sm`/`standard`
 - Updated `camera_flip` icon - `base`/`standard`
-- Updated `camera_flip` icon - `sm`/`standard`
 - Updated `tick_circle` icon - `base`/`standard`
-- Updated `tick_circle` icon - `sm`/`standard`
 - Updated `money_pounds` icon - `base`/`standard`
-- Updated `money_pounds` icon - `sm`/`standard`
 - Updated `money_dollars` icon - `base`/`standard`
-- Updated `money_dollars` icon - `sm`/`standard`
 - Updated `add_circle` icon - `base`/`standard`
-- Updated `add_circle` icon - `sm`/`standard`
 
 ## [1.8.0]
 
@@ -86,7 +76,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Updated
 
 - Updated `filter_outlined` icon - `base`/`standard`
-- Updated `filter_outlined` icon - `sm`/`standard`
 
 ## [1.7.0]
 
@@ -102,47 +91,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Updated
 
 - Updated `folder_open_simple` icon - `base`/`standard`
-- Updated `folder_open_simple` icon - `sm`/`standard`
 - Updated `message` icon - `base`/`standard`
-- Updated `message` icon - `sm`/`standard`
 - Updated `message_filled` icon - `base`/`standard`
-- Updated `message_filled` icon - `sm`/`standard`
 - Updated `heart` icon - `base`/`standard`
-- Updated `heart` icon - `sm`/`standard`
 - Updated `code` icon - `base`/`standard`
-- Updated `code` icon - `sm`/`standard`
 - Updated `star` icon - `base`/`standard`
-- Updated `star` icon - `sm`/`standard`
 - Updated `star_outlined` icon - `base`/`standard`
-- Updated `star_outlined` icon - `sm`/`standard`
 - Updated `battery_full` icon - `base`/`standard`
-- Updated `battery_full` icon - `sm`/`standard`
 - Updated `battery_medium` icon - `base`/`standard`
-- Updated `battery_medium` icon - `sm`/`standard`
 - Updated `battery_low` icon - `base`/`standard`
-- Updated `battery_low` icon - `sm`/`standard`
 - Updated `battery_empty` icon - `base`/`standard`
-- Updated `battery_empty` icon - `sm`/`standard`
 - Updated `battery_warning` icon - `base`/`standard`
-- Updated `battery_warning` icon - `sm`/`standard`
 - Updated `battery_charging` icon - `base`/`standard`
-- Updated `battery_charging` icon - `sm`/`standard`
 - Updated `wi-fi` icon - `base`/`standard`
-- Updated `wi-fi` icon - `sm`/`standard`
 - Updated `code_tag` icon - `base`/`standard`
-- Updated `code_tag` icon - `sm`/`standard`
 - Updated `exit` icon - `base`/`standard`
-- Updated `exit` icon - `sm`/`standard`
 - Updated `wc` icon - `base`/`standard`
-- Updated `wc` icon - `sm`/`standard`
 - Updated `home_outlined` icon - `base`/`standard`
-- Updated `home_outlined` icon - `sm`/`standard`
 - Updated `bike` icon - `base`/`standard`
-- Updated `bike` icon - `sm`/`standard`
 - Updated `ergo` icon - `base`/`standard`
-- Updated `ergo` icon - `sm`/`standard`
 - Updated `rss` icon - `base`/`standard`
-- Updated `rss` icon - `sm`/`standard`
 
 ## [1.6.0]
 
@@ -193,63 +161,39 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Updated
 
 - Updated `percent` icon - `base`/`standard`
-- Updated `percent` icon - `sm`/`standard`
 - Updated `question` icon - `base`/`standard`
-- Updated `question` icon - `sm`/`standard`
 - Updated `warning` icon - `base`/`standard`
-- Updated `warning` icon - `sm`/`standard`
 - Updated `hand` icon - `base`/`standard`
-- Updated `hand` icon - `sm`/`standard`
 - Updated `hand_point` icon - `base`/`standard`
-- Updated `hand_point` icon - `sm`/`standard`
 - Updated `play` icon - `base`/`standard`
-- Updated `play` icon - `sm`/`standard`
 - Updated `play_outlined` icon - `base`/`standard`
-- Updated `play_outlined` icon - `sm`/`standard`
 - Updated `exit_text` icon - `base`/`standard`
-- Updated `exit_text` icon - `sm`/`standard`
 - Updated `key` icon - `base`/`standard`
-- Updated `key` icon - `sm`/`standard`
 - Updated `lowercase` icon - `base`/`standard`
-- Updated `lowercase` icon - `sm`/`standard`
 - Updated `uppercase` icon - `base`/`standard`
-- Updated `uppercase` icon - `sm`/`standard`
 - Updated `profile_outlined` icon - `base`/`standard`
-- Updated `profile_outlined` icon - `sm`/`standard`
 - Updated `profile_pair` icon - `base`/`standard`
-- Updated `profile_pair` icon - `sm`/`standard`
 - Updated `cd` icon - `base`/`standard`
-- Updated `cd` icon - `sm`/`standard`
 - Updated `cut` icon - `base`/`standard`
-- Updated `cut` icon - `sm`/`standard`
 - Updated `home_outlined` icon - `base`/`standard`
-- Updated `home_outlined` icon - `sm`/`standard`
 - Updated `calculator` icon - `base`/`standard`
-- Updated `calculator` icon - `sm`/`standard`
 - Updated `shield` icon - `base`/`standard`
-- Updated `shield` icon - `sm`/`standard`
 
 ## [1.4.0]
 
 ### Updated
 
 - Updated `wi-fi` icon - `base`/`standard`
-- Updated `wi-fi` icon - `sm`/`standard`
 - Updated `speaker_full` icon - `base`/`standard`
-- Updated `speaker_full` icon - `sm`/`standard`
 - Updated `code_tag` icon - `base`/`standard`
-- Updated `code_tag` icon - `sm`/`standard`
 - Updated `dial_phone` icon - `base`/`standard`
-- Updated `dial_phone` icon - `sm`/`standard`
 - Updated `hangup_phone` icon - `base`/`standard`
-- Updated `hangup_phone` icon - `sm`/`standard`
 
 ## [1.2.0]
 
 ### Updated
 
 - Updated `cloud` icon - `base`/`standard`
-- Updated `cloud` icon - `sm`/`standard`
 
 ## [1.1.1]
 
@@ -260,7 +204,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Updated
 
 - Updated `profile_pair` icon - `base`/`standard`
-- Updated `profile_pair` icon - `sm`/`standard`
 
 ## [1.1.0]
 
