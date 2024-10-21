@@ -7,7 +7,7 @@
     "optimize": "ts-node ./scripts/build.ts",
     "build:react_library": "ts-node ./scripts/build.ts && ts-node ./scripts/build_react.ts && cd react && npm run build",
     "build:web": "ts-node ./scripts/build.ts",
-    "version": "ts-node ./scripts/bump_all.ts && ts-node ./scripts/release_current_version.ts",
+    "bump:version": "ts-node ./scripts/bump_all.ts && ts-node ./scripts/release_current_version.ts",
     "fetchIcons": "ts-node ./scripts/fetch_icons.ts",
     "test": "ts-node ./test/validate_meta.ts"
   },

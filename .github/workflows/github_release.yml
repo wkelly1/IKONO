@@ -5,6 +5,15 @@ on:
       release-type:
         description: 'Release type (one of): patch, minor, major, prepatch, preminor, premajor, prerelease'
         required: true
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+          - prepatch
+          - preminor
+          - premajor
+          - prerelease
 
 jobs:
   release:
@@ -49,7 +58,7 @@ jobs:
 
       - name: Bump all sub-packages to new version and update meta.json/CHANGELOG
         run: |
-          npm run version
+          npm run bump:version
 
       # Update changelog unreleased section with new version
       - name: Update changelog
