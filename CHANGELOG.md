@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.9.0]
+## [1.9.0] - 2023-05-19
 
 ### Added
 
@@ -77,7 +77,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Updated `filter_outlined` icon - `base`/`standard`
 
-## [1.7.0]
+## [1.7.0] - 2023-01-19
 
 ### Added
 
@@ -112,7 +112,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated `ergo` icon - `base`/`standard`
 - Updated `rss` icon - `base`/`standard`
 
-## [1.6.0]
+## [1.6.0] - 2023-01-19
 
 ### Added
 
@@ -179,7 +179,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated `calculator` icon - `base`/`standard`
 - Updated `shield` icon - `base`/`standard`
 
-## [1.4.0]
+## [1.4.0] - 2022-01-20
 
 ### Updated
 
@@ -189,13 +189,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated `dial_phone` icon - `base`/`standard`
 - Updated `hangup_phone` icon - `base`/`standard`
 
-## [1.2.0]
+## [1.2.0] - 2021-09-19
 
 ### Updated
 
 - Updated `cloud` icon - `base`/`standard`
 
-## [1.1.1]
+## [1.1.1] - 2021-09-21
 
 ### Added
 
@@ -205,7 +205,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Updated `profile_pair` icon - `base`/`standard`
 
-## [1.1.0]
+## [1.1.0] - 2021-09-21
 
 ### Added
 
@@ -258,7 +258,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `shield` icon - `base`/`standard`
 - Added `add_circle` icon - `base`/`standard`
 
-## [1.0.0]
+## [1.0.0] - 2021-09-08
 
 ### Added
 

@@ -143,7 +143,6 @@ async function main() {
 
       if (history) {
         if (history.created === unreleasedString) {
-          console.log(size, 'unreleased ');
           additions.push(generateString('addition', size, variant, key));
         }
         if (history.removed && history.removed === unreleasedString) {
