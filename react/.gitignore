@@ -1,0 +1,8 @@
+node_modules
+dist
+.ds_store
+index.js
+icons/
+out.tsc
+src/icons
+src/index.ts

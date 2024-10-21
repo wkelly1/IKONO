@@ -11,6 +11,9 @@ const withPWA = require('next-pwa')({
 
 module.exports = withPWA({
   reactStrictMode: true,
+  env: {
+    BASE_URL: process.env.BASE_URL
+  },
   async headers() {
     return [
       {

@@ -1,5 +1,7 @@
 import '../styles/globals.css';
+import Version from '../version.json';
 import { Analytics } from '@vercel/analytics/react';
+import { ThemeProvider } from 'next-themes';
 import { Poppins, Archivo_Black } from 'next/font/google';
 import Head from 'next/head';
 import 'tailwindcss/tailwind.css';
@@ -28,14 +30,18 @@ function MyApp({ Component, pageProps }) {
           property="og:description"
           content="IKONO icons are a large collection of high quality, hand-crafted SVG icons with an MIT license. They are accompanied by their own Figma plugin and React library."
         />
-        <meta property="og:title" content="IKONO" />
+        <meta property="og:title" content="IKONO Icons" />
         <meta
           property="og:image"
-          content="https://ikono.will-kelly.co.uk/banner.png"
+          content={`${process.env.BASE_URL}/api/og?icon=${
+            pageProps.selectedParam
+          }&variant=${pageProps.variant}&size=${[
+            pageProps.sizeParam
+          ]}&version=${Version.version}&similar_count=6`}
         />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@WillKelly__" />
-        <meta name="twitter:title" content="IKONO" />
+        <meta name="twitter:title" content="IKONO Icons" />
         <meta name="twitter:text:title" content="IKONO" />
         <meta
           name="twitter:description"
@@ -69,7 +75,9 @@ function MyApp({ Component, pageProps }) {
           }
         `}
       </style>
-      <Component {...pageProps} />
+      <ThemeProvider attribute="class" defaultTheme="light">
+        <Component {...pageProps} />
+      </ThemeProvider>
       <Analytics />
     </>
   );

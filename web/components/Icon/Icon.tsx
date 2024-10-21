@@ -2,6 +2,7 @@ import updateSearchParam from '../../lib/updateSearchParam';
 import CopyBtn from '../CopyBtn/CopyBtn';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Dispatch, SetStateAction, useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 interface IconProps {
   setDialog: Dispatch<SetStateAction<boolean>>;
@@ -9,13 +10,21 @@ interface IconProps {
   setSelected: Dispatch<SetStateAction<string>>;
   name: string;
   data: {
-    tags: string[];
-    jsx: string;
-    jsxMini: string;
-    svg: string;
-    svgMini: string;
+    keywords: string[];
+    variants: {
+      standard: {
+        base: {
+          svg: string;
+          jsx: string;
+        };
+        sm: {
+          svg: string;
+          jsx: string;
+        };
+      };
+    };
   };
-  size: 'small' | 'normal';
+  size: 'sm' | 'base';
   icon: JSX.Element;
 }
 
@@ -40,8 +49,8 @@ export default function Icon({
   };
 
   return (
-    <motion.div
-      className="flex cursor-pointer flex-col items-center"
+    <motion.button
+      className="group flex h-full w-full cursor-pointer flex-col items-center bg-bg-primary text-fg-primary focus:outline-none"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={() => {
@@ -49,22 +58,30 @@ export default function Icon({
           setDialog(true);
           setSelected(name);
           updateSearchParam('selected', name);
+          updateSearchParam('size', size);
+          updateSearchParam('variant', 'standard');
         } else if (selected === name) {
           setDialog(false);
           setSelected('');
           updateSearchParam('selected', '');
+          updateSearchParam('size', '');
+          updateSearchParam('variant', '');
         } else {
+          setDialog(true);
           setSelected(name);
           updateSearchParam('selected', name);
+          updateSearchParam('size', size);
+          updateSearchParam('variant', 'standard');
         }
       }}
     >
       <div
-        className={`${
+        className={twMerge(
+          'relative flex aspect-square w-full flex-col items-center justify-center p-2',
           showOpts || selected === name || hover
-            ? 'border-blue-600'
-            : 'border-blue-200'
-        }  relative  flex h-28 w-full flex-col items-center justify-center p-2`}
+            ? 'border-border-primary group-focus:outline group-focus:outline-2 group-focus:outline-blue-300'
+            : 'border-border-secondary group-focus:outline group-focus:outline-2 group-focus:outline-blue-500'
+        )}
         style={{ borderWidth: '3px' }}
         onMouseEnter={() => setShowOpts(true)}
         onMouseLeave={() => setShowOpts(false)}
@@ -76,7 +93,7 @@ export default function Icon({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="text-xs font-semibold tracking-tighter text-blue-500"
+              className="text-xs font-semibold tracking-tighter text-fg-primary-accent"
             >
               Copied!
             </motion.p>
@@ -86,11 +103,13 @@ export default function Icon({
         {showOpts && !copied && (
           <div className="absolute flex h-full w-full flex-col">
             <CopyBtn
-              className="mt-2 mb-1"
+              className="mb-1 mt-2"
               title={'Copy SVG'}
               onClick={e => {
                 navigator.clipboard.writeText(
-                  size === 'normal' ? data.svg : data.svgMini
+                  size === 'base'
+                    ? data.variants.standard.base.svg
+                    : data.variants.standard.sm.svg
                 );
                 e.stopPropagation();
                 copyAnimation();
@@ -98,11 +117,13 @@ export default function Icon({
             />
 
             <CopyBtn
-              className="mt-1 mb-2"
+              className="mb-2 mt-1"
               title={'Copy JSX'}
               onClick={e => {
                 navigator.clipboard.writeText(
-                  size === 'normal' ? data.jsx : data.jsxMini
+                  size === 'base'
+                    ? data.variants.standard.base.jsx
+                    : data.variants.standard.sm.jsx
                 );
                 e.stopPropagation();
                 copyAnimation();
@@ -113,14 +134,15 @@ export default function Icon({
       </div>
 
       <p
-        className={`${
+        className={twMerge(
           showOpts || selected === name || hover
-            ? 'text-blue-600'
-            : 'text-black'
-        } mt-2 text-xs font-semibold tracking-tighter`}
+            ? 'text-content-hover'
+            : 'text-content-primary',
+          'mt-2 text-xs font-semibold tracking-tighter'
+        )}
       >
         {name}
       </p>
-    </motion.div>
+    </motion.button>
   );
 }

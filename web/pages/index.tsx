@@ -1,22 +1,27 @@
 import Footer from '../components/Footer/Footer';
 import Icon from '../components/Icon/Icon';
-import IconInfoPanel from '../components/IconInfoPanel/IconInfoPanel';
+import {
+  IconInfoPanelSideBar,
+  IconInfoPanelPopup
+} from '../components/IconInfoPanel/IconInfoPanel';
 import Navbar from '../components/Navbar/Navbar';
+import { wrapInCircle, wrapInSquare } from '../lib/svgAdjustments';
 import updateSearchParam from '../lib/updateSearchParam';
 import Meta from '../meta.json';
 import { AnimatePresence, LayoutGroup, motion } from 'framer-motion';
-import parse from 'node-html-parser';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { DebounceInput } from 'react-debounce-input';
+import { twMerge } from 'tailwind-merge';
 
 interface HomeProps {
   s: string;
   selectedParam: string;
+  sizeParam: 'sm' | 'base';
 }
 
 export type MetaType = typeof Meta;
 
-export default function Home({ s, selectedParam }: HomeProps) {
+export default function Home({ s, selectedParam, sizeParam }: HomeProps) {
   const [showDialog, setShowDialog] = useState<boolean>(
     selectedParam !== undefined
   );
@@ -25,9 +30,10 @@ export default function Home({ s, selectedParam }: HomeProps) {
   const [noShowing, setNoShowing] = useState<number>(Object.keys(Meta).length);
   const [selected, setSelected] = useState<string>(selectedParam || '');
   const [searchTerm, setSearchTerm] = useState<string>(s || '');
+  const [prevSearchTerm, setPrevSearchTerm] = useState<string>(searchTerm);
   const [circleMode, setCircleMode] = useState<boolean>(false);
   const [squareMode, setSquareMode] = useState<boolean>(false);
-  const [size, setSize] = useState<'small' | 'normal'>('normal');
+  const [size, setSize] = useState<'sm' | 'base'>(sizeParam || 'base');
 
   const searchInput = useRef(null);
 
@@ -42,146 +48,98 @@ export default function Home({ s, selectedParam }: HomeProps) {
     });
   };
 
-  const wrapInCircle = (
-    svgInput: string,
-    size: 'mini' | 'normal' = 'normal'
-  ) => {
-    const svg = parse(svgInput);
-    const pathString =
-      size === 'mini'
-        ? '<path d="M19.1718 10C19.1718 15.0655 15.0654 19.1718 9.99994 19.1718C4.93449 19.1718 0.828125 15.0655 0.828125 10C0.828125 4.93455 4.93449 0.828186 9.99994 0.828186C15.0654 0.828186 19.1718 4.93455 19.1718 10Z" fill="none" stroke="currentColor" stroke-width="1.5"/>'
-        : '<path d="M23.25 12C23.25 18.2132 18.2132 23.25 12 23.25C5.7868 23.25 0.75 18.2132 0.75 12C0.75 5.7868 5.7868 0.75 12 0.75C18.2132 0.75 23.25 5.7868 23.25 12Z" fill="none" stroke="currentColor" stroke-width="1.5"/>';
-    const path = parse(pathString);
-
-    const g = parse(
-      `<g transform='scale(0.7) translate(${
-        size === 'mini' ? '4.166, 4.166' : '5, 5'
-      })'/>`
-    );
-    svg.childNodes[0].childNodes.forEach(child =>
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      g.childNodes[0].appendChild(child)
-    );
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    svg.childNodes[0].appendChild(g);
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    svg.childNodes[0].appendChild(path);
-    return svg;
-  };
-
-  const generateCircles = (dataToConvert: MetaType): MetaType => {
+  const generateCircles = useCallback((dataToConvert: MetaType): MetaType => {
     const newData = {};
 
     Object.entries(dataToConvert).forEach(function ([key, value]) {
-      const svg = wrapInCircle(value.svg);
-      const svgMini = wrapInCircle(value.svgMini, 'mini');
+      const svg = wrapInCircle(value.variants.standard.base.svg);
+      const svgMini = wrapInCircle(value.variants.standard.sm.svg, 'mini');
 
       newData[key] = {
-        svg: svg.toString(),
-        svgMini: svgMini.toString(),
-        jsx: convertToJSX(svg.toString()),
-        jsxMini: convertToJSX(svgMini.toString()),
-        tags: value.tags
+        variants: {
+          standard: {
+            base: {
+              jsx: convertToJSX(svg.toString()),
+              svg: svg.toString()
+            },
+            sm: {
+              jsx: convertToJSX(svgMini.toString()),
+              svg: svgMini.toString()
+            }
+          }
+        },
+        keywords: value.keywords
       };
     });
     return newData as MetaType;
-  };
+  }, []);
 
-  const wrapInSquare = (
-    svgInput: string,
-    size: 'mini' | 'normal' = 'normal'
-  ) => {
-    const svg = parse(svgInput);
-
-    const pathString =
-      size === 'mini'
-        ? '<path d="M15.6667 1.5H4.33333C2.76853 1.5 1.5 2.84315 1.5 4.5V15.5C1.5 17.1569 2.76853 18.5 4.33333 18.5H15.6667C17.2315 18.5 18.5 17.1569 18.5 15.5V4.5C18.5 2.84315 17.2315 1.5 15.6667 1.5Z" stroke="currentColor" stroke-width="1.25" fill="none"/>'
-        : '<rect x="1.75" y="1.75" width="20.5" height="20.5" rx="3" stroke="currentColor" stroke-width="1.5" fill="none"/>';
-    const path = parse(pathString);
-
-    const g = parse(
-      `<g transform='scale(0.7) translate(${
-        size === 'mini' ? '4.166, 4.166' : '5, 5'
-      })'/>`
-    );
-    svg.childNodes[0].childNodes.forEach(child =>
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      g.childNodes[0].appendChild(child)
-    );
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    svg.childNodes[0].appendChild(g);
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    svg.childNodes[0].appendChild(path);
-    return svg;
-  };
-
-  const generateSquares = (dataToConvert: MetaType): MetaType => {
+  const generateSquares = useCallback((dataToConvert: MetaType): MetaType => {
     const newData = {};
 
     Object.entries(dataToConvert).forEach(function ([key, value]) {
-      const svg = wrapInSquare(value.svg);
-      const svgMini = wrapInSquare(value.svgMini, 'mini');
+      const svg = wrapInSquare(value.variants.standard.base.svg);
+      const svgMini = wrapInSquare(value.variants.standard.sm.svg, 'mini');
 
       newData[key] = {
-        svg: svg.toString(),
-        svgMini: svgMini.toString(),
-        jsx: convertToJSX(svg.toString()),
-        jsxMini: convertToJSX(svgMini.toString()),
-        tags: value.tags
+        variants: {
+          standard: {
+            base: {
+              jsx: convertToJSX(svg.toString()),
+              svg: svg.toString()
+            },
+            sm: {
+              jsx: convertToJSX(svgMini.toString()),
+              svg: svgMini.toString()
+            }
+          }
+        },
+        keywords: value.keywords
       };
     });
     return newData as MetaType;
-  };
+  }, []);
 
   const circleData: MetaType = useMemo(
     () => generateCircles(initialData),
-    [initialData]
+    [initialData, generateCircles]
   );
   const squareData: MetaType = useMemo(
     () => generateSquares(initialData),
-    [initialData]
+    [initialData, generateSquares]
   );
 
-  useEffect(() => {
-    if (circleMode) {
+  if (circleMode) {
+    if (JSON.stringify(data) !== JSON.stringify(circleData)) {
       setData(circleData);
-    } else {
+    }
+  } else if (squareMode) {
+    if (JSON.stringify(data) !== JSON.stringify(squareData)) {
+      setData(squareData);
+    }
+  } else {
+    if (JSON.stringify(data) !== JSON.stringify(initialData)) {
       setData(initialData);
     }
-  }, [circleMode]);
+  }
 
-  useEffect(() => {
-    if (squareMode) {
-      setData(squareData);
-    } else {
-      if (!circleMode) {
-        setData(initialData);
-      }
-    }
-  }, [squareMode]);
-
-  useEffect(() => {
+  if (searchTerm !== prevSearchTerm) {
     let no = 0;
     Object.keys(data).map(icon => {
       if (
         (searchTerm !== '' && icon.includes(searchTerm)) ||
         searchTerm === '' ||
-        data[icon].tags.some((value: string) => value.includes(searchTerm))
+        data[icon].keywords.some((value: string) => value.includes(searchTerm))
       ) {
         no++;
       }
     });
     setNoShowing(no);
-  }, [searchTerm, data]);
+    setPrevSearchTerm(searchTerm);
+  }
 
   const handleKeyPress = useCallback((e: globalThis.KeyboardEvent) => {
-    if (e.metaKey && e.key === 'k') {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
       e.preventDefault();
       searchInput.current.focus();
     }
@@ -197,38 +155,45 @@ export default function Home({ s, selectedParam }: HomeProps) {
     };
   }, [handleKeyPress]);
 
+  let wrapper: 'none' | 'circle' | 'square' = 'none';
+  if (circleMode) wrapper = 'circle';
+  if (squareMode) wrapper = 'square';
+
   return (
-    <div className="flex min-h-screen flex-col justify-between font-sans ">
-      <div className="overflow-x-hidden">
+    <div
+      className={`flex min-h-screen flex-col items-center justify-between font-sans`}
+    >
+      <div className="w-full max-w-screen-2xl overflow-hidden">
         <Navbar active={'Icons'} />
 
-        <div className="visible fixed top-0 right-0 z-10 max-h-screen w-5/6 sm:hidden">
-          <IconInfoPanel
-            size={size}
-            setSelected={setSelected}
-            setDialog={setShowDialog}
-            showDialog={showDialog}
-            selected={selected}
-            setShowDialog={setShowDialog}
-            data={data}
-          />
-        </div>
+        <IconInfoPanelPopup
+          size={size}
+          setSelected={setSelected}
+          setDialog={setShowDialog}
+          showDialog={showDialog}
+          allowDownload={true}
+          selected={selected}
+          setShowDialog={setShowDialog}
+          data={data}
+          className="block sm:hidden"
+          wrapper={wrapper}
+        />
 
-        <main className="mt-10 px-5 sm:px-16 ">
+        <motion.main
+          className="mt-10 px-5 sm:px-16"
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ stiffness: 100 }}
+        >
           <div
-            className="mt-8 flex h-14 items-center border-blue-200 p-2"
+            className="mt-8 flex h-14 items-center border-border-secondary p-2"
             style={{ borderWidth: '3px' }}
           >
-            <div className="ml-1 text-blue-700">
-              <svg
-                height="24"
-                width="24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+            <div className="ml-1 text-fg-primary-accent">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                 <path
-                  d="M21.293 22.707a1 1 0 0 0 1.414-1.414l-1.414 1.414ZM17 10a7 7 0 0 1-7 7v2a9 9 0 0 0 9-9h-2Zm-7 7a7 7 0 0 1-7-7H1a9 9 0 0 0 9 9v-2Zm-7-7a7 7 0 0 1 7-7V1a9 9 0 0 0-9 9h2Zm7-7a7 7 0 0 1 7 7h2a9 9 0 0 0-9-9v2Zm4.793 13.207 6.5 6.5 1.414-1.414-6.5-6.5-1.414 1.414Z"
                   fill="currentColor"
+                  d="M20.338 21.399a.75.75 0 0 0 1.06-1.062l-1.06 1.062Zm-3.767-11.173a6.344 6.344 0 0 1-6.345 6.345v1.5a7.844 7.844 0 0 0 7.845-7.845h-1.5Zm-6.345 6.345a6.344 6.344 0 0 1-6.344-6.345h-1.5a7.844 7.844 0 0 0 7.844 7.845v-1.5Zm-6.344-6.345a6.344 6.344 0 0 1 6.344-6.344v-1.5a7.844 7.844 0 0 0-7.844 7.844h1.5Zm6.344-6.344a6.344 6.344 0 0 1 6.345 6.344h1.5a7.844 7.844 0 0 0-7.845-7.844v1.5Zm4.478 11.9 5.634 5.617 1.06-1.062-5.635-5.617-1.059 1.063Z"
                 />
               </svg>
             </div>
@@ -236,87 +201,95 @@ export default function Home({ s, selectedParam }: HomeProps) {
               debounceTimeout={200}
               placeholder="Search"
               inputRef={searchInput}
-              className="ml-3 w-full border-none font-semibold text-blue-600 placeholder-blue-400 outline-none"
+              className="ml-3 w-full border-none bg-bg-primary font-semibold text-fg-primary-accent outline-none placeholder:text-fg-primary-accent-secondary"
               value={searchTerm}
               onChange={e => {
                 updateSearchParam('s', e.target.value);
                 setSearchTerm(e.target.value);
               }}
-            ></DebounceInput>
-            <p className="mr-4 flex border-2 border-blue-100 px-2 py-1 text-sm font-normal text-blue-300">
-              <span className="text-blue-200">⌘</span> K
+            />
+            <p className="mr-4 flex border-2 border-border-secondary px-2 py-1 text-sm font-normal text-fg-primary-accent-secondary">
+              <span className="text-fg-primary-accent-secondary">⌘</span> K
             </p>
-            <p className="flex min-w-[50px] max-w-[50px] justify-end pr-2 text-xs font-semibold tracking-tighter">
+            <p className="flex min-w-[50px] max-w-[50px] justify-end pr-2 text-xs font-semibold tracking-tighter text-fg-primary-accent-secondary">
               {noShowing}/{Object.keys(data).length}
             </p>
           </div>
 
           <div className="mt-5 flex w-full justify-between">
             <LayoutGroup>
-              <motion.div className="w-full" layout>
+              <motion.div className="w-full @container" layout>
                 <div className="w-full">
                   <motion.div
-                    className="mb-8 grid w-full grid-flow-row grid-cols-2 gap-5 sm:grid-cols-4"
+                    className="mb-8 grid w-full grid-flow-row grid-cols-2 gap-5 @container"
                     layout
                   >
-                    <button
-                      className={`border-2  py-2 text-xs font-semibold tracking-tighter ${
-                        circleMode
-                          ? 'border-blue-600 bg-blue-600 text-white'
-                          : 'border-blue-200 bg-transparent text-blue-400'
-                      }`}
-                      style={{ borderWidth: '3px' }}
-                      onClick={() => {
-                        setSquareMode(false);
-                        setCircleMode(v => !v);
-                      }}
-                      aria-pressed={circleMode}
-                    >
-                      Circle
-                    </button>
-                    <button
-                      className={`border-2  py-2 text-xs font-semibold tracking-tighter ${
-                        squareMode
-                          ? 'border-blue-600 bg-blue-600 text-white'
-                          : 'border-blue-200 bg-transparent text-blue-400'
-                      }`}
-                      style={{ borderWidth: '3px' }}
-                      onClick={() => {
-                        setCircleMode(false);
-                        setSquareMode(v => !v);
-                      }}
-                      aria-pressed={squareMode}
-                    >
-                      Square
-                    </button>
-                    <button
-                      className={`border-2  py-2 text-xs font-semibold tracking-tighter ${
-                        size === 'small'
-                          ? 'border-blue-600 bg-blue-600 text-white'
-                          : 'border-blue-200 bg-transparent text-blue-400'
-                      }`}
-                      style={{ borderWidth: '3px' }}
-                      onClick={() => {
-                        setSize('small');
-                      }}
-                      aria-pressed={squareMode}
-                    >
-                      Mini - <span className="font-normal">20x20</span>
-                    </button>
-                    <button
-                      className={`border-2  py-2 text-xs font-semibold tracking-tighter ${
-                        size === 'normal'
-                          ? 'border-blue-600 bg-blue-600 text-white'
-                          : 'border-blue-200 bg-transparent text-blue-400'
-                      }`}
-                      style={{ borderWidth: '3px' }}
-                      onClick={() => {
-                        setSize('normal');
-                      }}
-                      aria-pressed={squareMode}
-                    >
-                      Normal - <span className="font-normal">24x24</span>
-                    </button>
+                    <div className="grid grid-cols-1 gap-5 @sm:grid-cols-2">
+                      <button
+                        className={twMerge(
+                          'w-full text-nowrap border-2 py-2 text-xs font-semibold tracking-tighter',
+                          circleMode
+                            ? 'border-border-primary bg-bg-accent-primary text-fg-accent-primary'
+                            : 'border-border-secondary bg-transparent text-fg-primary-accent-secondary'
+                        )}
+                        style={{ borderWidth: '3px' }}
+                        onClick={() => {
+                          setSquareMode(false);
+                          setCircleMode(v => !v);
+                        }}
+                        aria-pressed={circleMode}
+                      >
+                        Circle
+                      </button>
+                      <button
+                        className={twMerge(
+                          'w-full text-nowrap border-2 py-2 text-xs font-semibold tracking-tighter',
+                          squareMode
+                            ? 'border-border-primary bg-bg-accent-primary text-fg-accent-primary'
+                            : 'border-border-secondary bg-transparent text-fg-primary-accent-secondary'
+                        )}
+                        style={{ borderWidth: '3px' }}
+                        onClick={() => {
+                          setCircleMode(false);
+                          setSquareMode(v => !v);
+                        }}
+                        aria-pressed={squareMode}
+                      >
+                        Square
+                      </button>
+                    </div>
+                    <div className="grid grid-cols-1 gap-5 @sm:grid-cols-2">
+                      <button
+                        className={twMerge(
+                          'w-full text-nowrap border-2 py-2 text-xs font-semibold tracking-tighter',
+                          size === 'base'
+                            ? 'border-border-primary bg-bg-accent-primary text-fg-accent-primary'
+                            : 'border-border-secondary bg-transparent text-fg-primary-accent-secondary'
+                        )}
+                        style={{ borderWidth: '3px' }}
+                        onClick={() => {
+                          setSize('base');
+                        }}
+                        aria-pressed={squareMode}
+                      >
+                        Normal - <span className="font-normal">24x24</span>
+                      </button>
+                      <button
+                        className={twMerge(
+                          'w-full text-nowrap border-2 py-2 text-xs font-semibold tracking-tighter',
+                          size === 'sm'
+                            ? 'border-border-primary bg-bg-accent-primary text-fg-accent-primary'
+                            : 'border-border-secondary bg-transparent text-fg-primary-accent-secondary'
+                        )}
+                        style={{ borderWidth: '3px' }}
+                        onClick={() => {
+                          setSize('sm');
+                        }}
+                        aria-pressed={squareMode}
+                      >
+                        Mini - <span className="font-normal">20x20</span>
+                      </button>
+                    </div>
                   </motion.div>
                 </div>
 
@@ -325,7 +298,7 @@ export default function Home({ s, selectedParam }: HomeProps) {
                     (searchTerm !== '' &&
                       icon.includes(searchTerm.toLowerCase())) ||
                     searchTerm === '' ||
-                    data[icon].tags.some((value: string) =>
+                    data[icon].keywords.some((value: string) =>
                       value.toLowerCase().includes(searchTerm.toLowerCase())
                     )
                   ) {
@@ -334,7 +307,7 @@ export default function Home({ s, selectedParam }: HomeProps) {
                 }).length === 0 && (
                   <motion.div
                     layout
-                    className="flex w-full flex-col items-center justify-center gap-4 pt-3 text-blue-400 sm:pt-10 md:pt-14"
+                    className="flex w-full flex-col items-center justify-center gap-4 pt-3 text-fg-primary-accent-secondary sm:pt-10 md:pt-14"
                   >
                     <span className="scale-150">
                       <svg
@@ -370,7 +343,7 @@ export default function Home({ s, selectedParam }: HomeProps) {
 
                 <motion.div
                   layout
-                  className="xs:grid-cols-2 grid w-full grid-flow-row grid-cols-2 gap-5 sm:grid-cols-2 lg:grid-cols-6 xl:grid-cols-8"
+                  className="grid w-full grid-flow-row grid-cols-1 gap-5 @xs:grid-cols-2 @md:grid-cols-4 @3xl:grid-cols-6 @[70rem]:grid-cols-10"
                 >
                   <AnimatePresence>
                     {Object.keys(data).map(icon => {
@@ -378,7 +351,7 @@ export default function Home({ s, selectedParam }: HomeProps) {
                         (searchTerm !== '' &&
                           icon.includes(searchTerm.toLowerCase())) ||
                         searchTerm === '' ||
-                        data[icon].tags.some((value: string) =>
+                        data[icon].keywords.some((value: string) =>
                           value.toLowerCase().includes(searchTerm.toLowerCase())
                         )
                       ) {
@@ -386,14 +359,11 @@ export default function Home({ s, selectedParam }: HomeProps) {
                           <motion.div
                             key={icon}
                             layout
-                            initial={{ scale: 0.6, origin: 'center' }}
-                            animate={{
-                              scale: 1,
-                              origin: 'center',
-                              transition: { type: 'spring' }
-                            }}
-                            exit={{ opacity: 0, origin: 'center' }}
-                            className="bg-white"
+                            initial={{ y: 20, opacity: 0.6 }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            transition={{ stiffness: 100 }}
+                            viewport={{ once: true }}
+                            className="bg-bg-primary"
                           >
                             <Icon
                               setDialog={setShowDialog}
@@ -406,11 +376,11 @@ export default function Home({ s, selectedParam }: HomeProps) {
                                 <div
                                   dangerouslySetInnerHTML={{
                                     __html:
-                                      size === 'normal'
-                                        ? data[icon].svg
-                                        : data[icon].svgMini
+                                      size === 'base'
+                                        ? data[icon].variants.standard.base.svg
+                                        : data[icon].variants.standard.sm.svg
                                   }}
-                                  className="text-gray-800"
+                                  className="text-fg-primary"
                                 ></div>
                               }
                             />
@@ -422,8 +392,8 @@ export default function Home({ s, selectedParam }: HomeProps) {
                 </motion.div>
               </motion.div>
 
-              <IconInfoPanel
-                className="xs:block ml-5 hidden sm:block lg:block"
+              <IconInfoPanelSideBar
+                className="hidden sm:block"
                 showDialog={showDialog}
                 selected={selected}
                 setSelected={setSelected}
@@ -431,11 +401,12 @@ export default function Home({ s, selectedParam }: HomeProps) {
                 setShowDialog={setShowDialog}
                 data={data}
                 size={size}
-                allowDownload={!circleMode && !squareMode}
+                allowDownload={true}
+                wrapper={wrapper}
               />
             </LayoutGroup>
           </div>
-        </main>
+        </motion.main>
       </div>
       <Footer />
     </div>
@@ -443,6 +414,6 @@ export default function Home({ s, selectedParam }: HomeProps) {
 }
 
 Home.getInitialProps = async ({ query }) => {
-  const { s, selected } = query;
-  return { s, selectedParam: selected };
+  const { s, selected, size, variant } = query;
+  return { s, selectedParam: selected, sizeParam: size, variant };
 };
