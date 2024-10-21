@@ -29,7 +29,7 @@ function generateString(
       actionString = 'Added';
       break;
     case 'update':
-      actionString = 'Updated';
+      actionString = 'Changed';
       break;
     case 'removal':
       actionString = 'Removed';

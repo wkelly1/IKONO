@@ -33,18 +33,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `fullscreen` icon - `base`/`standard`
 - Added `life_ring` icon - `base`/`standard`
 
-### Updated
+### Changed
 
-- Updated `info_circle` icon - `base`/`standard`
-- Updated `question_circle` icon - `base`/`standard`
-- Updated `warning_circle` icon - `base`/`standard`
-- Updated `calendar` icon - `base`/`standard`
-- Updated `dial_phone` icon - `base`/`standard`
-- Updated `camera_flip` icon - `base`/`standard`
-- Updated `tick_circle` icon - `base`/`standard`
-- Updated `money_pounds` icon - `base`/`standard`
-- Updated `money_dollars` icon - `base`/`standard`
-- Updated `add_circle` icon - `base`/`standard`
+- Changed `info_circle` icon - `base`/`standard`
+- Changed `question_circle` icon - `base`/`standard`
+- Changed `warning_circle` icon - `base`/`standard`
+- Changed `calendar` icon - `base`/`standard`
+- Changed `dial_phone` icon - `base`/`standard`
+- Changed `camera_flip` icon - `base`/`standard`
+- Changed `tick_circle` icon - `base`/`standard`
+- Changed `money_pounds` icon - `base`/`standard`
+- Changed `money_dollars` icon - `base`/`standard`
+- Changed `add_circle` icon - `base`/`standard`
 
 ## [1.8.0]
 
@@ -73,9 +73,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `clock_twelve_oclock` icon - `base`/`standard`
 - Added `clock_two_oclock` icon - `base`/`standard`
 
-### Updated
+### Changed
 
-- Updated `filter_outlined` icon - `base`/`standard`
+- Changed `filter_outlined` icon - `base`/`standard`
 
 ## [1.7.0] - 2023-01-19
 
@@ -88,29 +88,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `neutral` icon - `base`/`standard`
 - Added `sad` icon - `base`/`standard`
 
-### Updated
+### Changed
 
-- Updated `folder_open_simple` icon - `base`/`standard`
-- Updated `message` icon - `base`/`standard`
-- Updated `message_filled` icon - `base`/`standard`
-- Updated `heart` icon - `base`/`standard`
-- Updated `code` icon - `base`/`standard`
-- Updated `star` icon - `base`/`standard`
-- Updated `star_outlined` icon - `base`/`standard`
-- Updated `battery_full` icon - `base`/`standard`
-- Updated `battery_medium` icon - `base`/`standard`
-- Updated `battery_low` icon - `base`/`standard`
-- Updated `battery_empty` icon - `base`/`standard`
-- Updated `battery_warning` icon - `base`/`standard`
-- Updated `battery_charging` icon - `base`/`standard`
-- Updated `wi-fi` icon - `base`/`standard`
-- Updated `code_tag` icon - `base`/`standard`
-- Updated `exit` icon - `base`/`standard`
-- Updated `wc` icon - `base`/`standard`
-- Updated `home_outlined` icon - `base`/`standard`
-- Updated `bike` icon - `base`/`standard`
-- Updated `ergo` icon - `base`/`standard`
-- Updated `rss` icon - `base`/`standard`
+- Changed `folder_open_simple` icon - `base`/`standard`
+- Changed `message` icon - `base`/`standard`
+- Changed `message_filled` icon - `base`/`standard`
+- Changed `heart` icon - `base`/`standard`
+- Changed `code` icon - `base`/`standard`
+- Changed `star` icon - `base`/`standard`
+- Changed `star_outlined` icon - `base`/`standard`
+- Changed `battery_full` icon - `base`/`standard`
+- Changed `battery_medium` icon - `base`/`standard`
+- Changed `battery_low` icon - `base`/`standard`
+- Changed `battery_empty` icon - `base`/`standard`
+- Changed `battery_warning` icon - `base`/`standard`
+- Changed `battery_charging` icon - `base`/`standard`
+- Changed `wi-fi` icon - `base`/`standard`
+- Changed `code_tag` icon - `base`/`standard`
+- Changed `exit` icon - `base`/`standard`
+- Changed `wc` icon - `base`/`standard`
+- Changed `home_outlined` icon - `base`/`standard`
+- Changed `bike` icon - `base`/`standard`
+- Changed `ergo` icon - `base`/`standard`
+- Changed `rss` icon - `base`/`standard`
 
 ## [1.6.0] - 2023-01-19
 
@@ -158,42 +158,42 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `key_outlined` icon - `base`/`standard`
 - Added `speaker_error` icon - `base`/`standard`
 
-### Updated
+### Changed
 
-- Updated `percent` icon - `base`/`standard`
-- Updated `question` icon - `base`/`standard`
-- Updated `warning` icon - `base`/`standard`
-- Updated `hand` icon - `base`/`standard`
-- Updated `hand_point` icon - `base`/`standard`
-- Updated `play` icon - `base`/`standard`
-- Updated `play_outlined` icon - `base`/`standard`
-- Updated `exit_text` icon - `base`/`standard`
-- Updated `key` icon - `base`/`standard`
-- Updated `lowercase` icon - `base`/`standard`
-- Updated `uppercase` icon - `base`/`standard`
-- Updated `profile_outlined` icon - `base`/`standard`
-- Updated `profile_pair` icon - `base`/`standard`
-- Updated `cd` icon - `base`/`standard`
-- Updated `cut` icon - `base`/`standard`
-- Updated `home_outlined` icon - `base`/`standard`
-- Updated `calculator` icon - `base`/`standard`
-- Updated `shield` icon - `base`/`standard`
+- Changed `percent` icon - `base`/`standard`
+- Changed `question` icon - `base`/`standard`
+- Changed `warning` icon - `base`/`standard`
+- Changed `hand` icon - `base`/`standard`
+- Changed `hand_point` icon - `base`/`standard`
+- Changed `play` icon - `base`/`standard`
+- Changed `play_outlined` icon - `base`/`standard`
+- Changed `exit_text` icon - `base`/`standard`
+- Changed `key` icon - `base`/`standard`
+- Changed `lowercase` icon - `base`/`standard`
+- Changed `uppercase` icon - `base`/`standard`
+- Changed `profile_outlined` icon - `base`/`standard`
+- Changed `profile_pair` icon - `base`/`standard`
+- Changed `cd` icon - `base`/`standard`
+- Changed `cut` icon - `base`/`standard`
+- Changed `home_outlined` icon - `base`/`standard`
+- Changed `calculator` icon - `base`/`standard`
+- Changed `shield` icon - `base`/`standard`
 
 ## [1.4.0] - 2022-01-20
 
-### Updated
+### Changed
 
-- Updated `wi-fi` icon - `base`/`standard`
-- Updated `speaker_full` icon - `base`/`standard`
-- Updated `code_tag` icon - `base`/`standard`
-- Updated `dial_phone` icon - `base`/`standard`
-- Updated `hangup_phone` icon - `base`/`standard`
+- Changed `wi-fi` icon - `base`/`standard`
+- Changed `speaker_full` icon - `base`/`standard`
+- Changed `code_tag` icon - `base`/`standard`
+- Changed `dial_phone` icon - `base`/`standard`
+- Changed `hangup_phone` icon - `base`/`standard`
 
 ## [1.2.0] - 2021-09-19
 
-### Updated
+### Changed
 
-- Updated `cloud` icon - `base`/`standard`
+- Changed `cloud` icon - `base`/`standard`
 
 ## [1.1.1] - 2021-09-21
 
@@ -201,9 +201,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added `preferences` icon - `base`/`standard`
 
-### Updated
+### Changed
 
-- Updated `profile_pair` icon - `base`/`standard`
+- Changed `profile_pair` icon - `base`/`standard`
 
 ## [1.1.0] - 2021-09-21
 
