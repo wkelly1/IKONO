@@ -31,18 +31,20 @@ jobs:
         run: |
           # Fetch the package.json version from the previous commit
           BASE_VERSION=$(git show ${{ steps.previous_commit.outputs.commit_hash }}:package.json | jq -r .version)
+          echo "Previous version: $BASE_VERSION"
           echo "base_version=$BASE_VERSION" >> $GITHUB_OUTPUT
 
       - name: Get the current package.json version (after merge)
         run: |
           # Extract the current package.json version at the HEAD
           CURRENT_VERSION=$(jq -r .version package.json)
+          echo "Current version: $CURRENT_VERSION"
           echo "current_version=$CURRENT_VERSION" >> $GITHUB_OUTPUT
 
       - name: Compare versions
         if: ${{ steps.previous_commit.outputs.commit_hash }}
         run: |
-          if [ "${{ steps.previous_commit.outputs.base_version }}" != "${{ steps.previous_commit.outputs.current_version }}" ]; then
+          if [ "${{ steps.previous_commit.outputs.BASE_VERSION }}" != "${{ steps.previous_commit.outputs.CURRENT_VERSION }}" ]; then
             echo "Version has changed"
             echo "version_changed=true" >> $GITHUB_OUTPUT
           else
