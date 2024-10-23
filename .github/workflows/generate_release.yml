@@ -24,7 +24,7 @@ jobs:
         run: |
           git fetch origin main --prune
           # Get the commit hash before the most recent one
-          PREVIOUS_COMMIT=$($(git rev-parse HEAD^))
+          PREVIOUS_COMMIT=$(git rev-parse HEAD^)
           echo "commit_hash=$PREVIOUS_COMMIT" >> $GITHUB_OUTPUT
 
       - name: Get the package.json version from previous commit
