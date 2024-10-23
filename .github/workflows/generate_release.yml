@@ -49,7 +49,15 @@ jobs:
         run: |
           if [ "${{ steps.get_base_version.outputs.BASE_VERSION }}" != "${{ steps.get_current_version.outputs.CURRENT_VERSION }}" ]; then
             echo "Version has changed"
-            echo "version_changed=true" >> $GITHUB_OUTPUT
+            
+            latest_version=$(printf '%s\n' "${{ steps.get_base_version.outputs.BASE_VERSION }}" "${{ steps.get_current_version.outputs.CURRENT_VERSION }}" | sort -V | tail -n 1)
+            if [ "$latest_version" != "${{ steps.get_current_version.outputs.CURRENT_VERSION }}"]; then
+              echo "Newly added version (${{ steps.get_base_version.outputs.BASE_VERSION }}) is older than current version (${{ steps.get_base_version.outputs.BASE_VERSION }})"
+              echo "version_changed=false" >> $GITHUB_OUTPUT
+            else
+              echo "Newly added version (${{ steps.get_base_version.outputs.BASE_VERSION }}) is newer than current version (${{ steps.get_base_version.outputs.BASE_VERSION }})"
+              echo "version_changed=true" >> $GITHUB_OUTPUT 
+            fi
           else
             echo "Version did not change"
             echo "version_changed=false" >> $GITHUB_OUTPUT
@@ -57,19 +65,19 @@ jobs:
 
       # Read version changelog
       - id: get-changelog
-        if: steps.previous_commit.outputs.version_changed == 'true'
+        if: steps.compare_versions.outputs.version_changed == 'true'
         name: Get version changelog
         uses: superfaceai/release-changelog-action@v1
         with:
           path-to-changelog: CHANGELOG.md
-          version: ${{ env.CURRENT_VERSION }}
+          version: ${{ steps.get_current_version.outputs.CURRENT_VERSION }}
           operation: read
 
       # Commit changes
       - name: Create tag
         if: steps.compare_versions.outputs.version_changed == 'true'
         run: |
-          git tag ${{ env.CURRENT_VERSION }}
+          git tag ${{ steps.get_current_version.outputs.CURRENT_VERSION }}
 
       # Push repository changes
       - name: Push tag to repository
@@ -84,7 +92,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         if: steps.compare_versions.outputs.version_changed == 'true'
         with:
-          tag_name: ${{ env.CURRENT_VERSION }}
+          tag_name: ${{ steps.get_current_version.outputs.CURRENT_VERSION }}
           body: ${{ steps.get-changelog.outputs.changelog }}
           ## Pre-releases not currently supported
           # prerelease: ${{ startsWith(github.event.inputs.release-type, 'pre') }}
