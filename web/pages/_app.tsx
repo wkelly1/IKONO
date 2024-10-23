@@ -17,6 +17,11 @@ const archivo_black = Archivo_Black({
 });
 
 function MyApp({ Component, pageProps }) {
+  const ogImage = `${process.env.BASE_URL}/api/og?icon=${
+    pageProps.selectedParam
+  }&variant=${pageProps.variant}&size=${[pageProps.sizeParam]}&version=${
+    Version.version
+  }&similar_count=6`;
   return (
     <>
       <Head>
@@ -31,13 +36,14 @@ function MyApp({ Component, pageProps }) {
           content="IKONO icons are a large collection of high quality, hand-crafted SVG icons with an MIT license. They are accompanied by their own Figma plugin and React library."
         />
         <meta property="og:title" content="IKONO Icons" />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:secure_url" content={ogImage} />
         <meta
-          property="og:image"
-          content={`${process.env.BASE_URL}/api/og?icon=${
-            pageProps.selectedParam
-          }&variant=${pageProps.variant}&size=${[
-            pageProps.sizeParam
-          ]}&version=${Version.version}&similar_count=6`}
+          property="og:image:alt"
+          content="IKONO icons are a large collection of high quality, hand-crafted SVG icons with an MIT license. They are accompanied by their own Figma plugin and React library."
         />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@WillKelly__" />
@@ -50,10 +56,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:app:name:iphone" content="IKONO" />
         <meta name="twitter:app:name:ipad" content="IKONO" />
         <meta name="twitter:app:name:googleplay" content="IKONO" />
-        <meta
-          name="twitter:image"
-          content="https://ikono.will-kelly.co.uk/banner.png"
-        />
+        <meta name="twitter:image" content={ogImage} />
 
         <link
           rel="apple-touch-icon"
