@@ -16,1639 +16,2451 @@
   },
   "icons": {
     "hamburger": {
-      "keywords": ["burger", "menu", "side-bar", "hamburger"],
+      "keywords": [
+        "burger",
+        "menu",
+        "side-bar",
+        "hamburger"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "burger_advanced": {
-      "keywords": ["burger", "menu", "side-bar", "hamburger"],
+      "keywords": [
+        "burger",
+        "menu",
+        "side-bar",
+        "hamburger"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "search": {
-      "keywords": ["search", "find", "magnifying-glass"],
+      "keywords": [
+        "search",
+        "find",
+        "magnifying-glass"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "graph_desc": {
-      "keywords": ["line", "bar", "chart", "data", "analysis"],
+      "keywords": [
+        "line",
+        "bar",
+        "chart",
+        "data",
+        "analysis"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "graph_asc": {
-      "keywords": ["line", "bar", "chart", "data", "analysis"],
+      "keywords": [
+        "line",
+        "bar",
+        "chart",
+        "data",
+        "analysis"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "chart_asc": {
-      "keywords": ["line", "bar", "chart", "data", "graph", "analysis"],
+      "keywords": [
+        "line",
+        "bar",
+        "chart",
+        "data",
+        "graph",
+        "analysis"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "chart_desc": {
-      "keywords": ["line", "bar", "chart", "data", "graph", "analysis"],
+      "keywords": [
+        "line",
+        "bar",
+        "chart",
+        "data",
+        "graph",
+        "analysis"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "phone_modern": {
-      "keywords": ["phone", "contact", "message", "talk", "iphone", "android"],
+      "keywords": [
+        "phone",
+        "contact",
+        "message",
+        "talk",
+        "iphone",
+        "android"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "phone": {
-      "keywords": ["phone", "contact", "message", "talk", "iphone", "android"],
+      "keywords": [
+        "phone",
+        "contact",
+        "message",
+        "talk",
+        "iphone",
+        "android"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "phone_old": {
-      "keywords": ["phone", "contact", "talk"],
+      "keywords": [
+        "phone",
+        "contact",
+        "talk"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "incoming_phone": {
-      "keywords": ["phone", "contact", "talk", "incoming", "answer"],
+      "keywords": [
+        "phone",
+        "contact",
+        "talk",
+        "incoming",
+        "answer"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "outgoing_phone": {
-      "keywords": ["phone", "contact", "talk", "outgoing", "end", "hangup"],
+      "keywords": [
+        "phone",
+        "contact",
+        "talk",
+        "outgoing",
+        "end",
+        "hangup"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "chevron_right": {
-      "keywords": ["direction", "right", "arrow", "forward"],
+      "keywords": [
+        "direction",
+        "right",
+        "arrow",
+        "forward"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "chevron_left": {
-      "keywords": ["direction", "left", "arrow", "backward"],
+      "keywords": [
+        "direction",
+        "left",
+        "arrow",
+        "backward"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "chevron_up": {
-      "keywords": ["direction", "up", "arrow"],
+      "keywords": [
+        "direction",
+        "up",
+        "arrow"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "chevron_down": {
-      "keywords": ["direction", "down", "arrow"],
+      "keywords": [
+        "direction",
+        "down",
+        "arrow"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "arrow_right_large": {
-      "keywords": ["direction", "right", "arrow", "forward"],
+      "keywords": [
+        "direction",
+        "right",
+        "arrow",
+        "forward"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "arrow_left_large": {
-      "keywords": ["direction", "left", "arrow", "back"],
+      "keywords": [
+        "direction",
+        "left",
+        "arrow",
+        "back"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "arrow_up_large": {
-      "keywords": ["direction", "up", "arrow"],
+      "keywords": [
+        "direction",
+        "up",
+        "arrow"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "arrow_down_large": {
-      "keywords": ["direction", "down", "arrow"],
+      "keywords": [
+        "direction",
+        "down",
+        "arrow"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "arrow_right": {
-      "keywords": ["direction", "right", "arrow", "forward"],
+      "keywords": [
+        "direction",
+        "right",
+        "arrow",
+        "forward"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "arrow_left": {
-      "keywords": ["direction", "left", "arrow", "back"],
+      "keywords": [
+        "direction",
+        "left",
+        "arrow",
+        "back"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "arrow_up": {
-      "keywords": ["direction", "up", "arrow"],
+      "keywords": [
+        "direction",
+        "up",
+        "arrow"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "arrow_down": {
-      "keywords": ["direction", "down", "arrow"],
+      "keywords": [
+        "direction",
+        "down",
+        "arrow"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "folder": {
-      "keywords": ["folder", "file", "data"],
+      "keywords": [
+        "folder",
+        "file",
+        "data"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "folder_open": {
-      "keywords": ["folder", "file", "data", "open"],
+      "keywords": [
+        "folder",
+        "file",
+        "data",
+        "open"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "folder_open_simple": {
-      "keywords": ["folder", "file", "data", "open"],
+      "keywords": [
+        "folder",
+        "file",
+        "data",
+        "open"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.7.0", "unreleased"]
+          "updated": [
+            "1.7.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "message": {
-      "keywords": ["message", "msg", "text", "memo"],
+      "keywords": [
+        "message",
+        "msg",
+        "text",
+        "memo"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.7.0", "unreleased"]
+          "updated": [
+            "1.7.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "message_filled": {
-      "keywords": ["message", "msg", "text", "memo"],
+      "keywords": [
+        "message",
+        "msg",
+        "text",
+        "memo"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.7.0", "unreleased"]
+          "updated": [
+            "1.7.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "download": {
-      "keywords": ["save"],
+      "keywords": [
+        "save"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "upload": {
-      "keywords": ["save"],
+      "keywords": [
+        "save"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "heart": {
-      "keywords": ["love", "like", "save", "beat"],
+      "keywords": [
+        "love",
+        "like",
+        "save",
+        "beat"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.7.0", "unreleased"]
+          "updated": [
+            "1.7.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "heart_outlined": {
-      "keywords": ["love", "like", "save", "beat"],
+      "keywords": [
+        "love",
+        "like",
+        "save",
+        "beat"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "heart_broken": {
-      "keywords": ["love", "like", "save", "beat", "broken", "destroyed"],
+      "keywords": [
+        "love",
+        "like",
+        "save",
+        "beat",
+        "broken",
+        "destroyed"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "heart_beat": {
-      "keywords": ["love", "alive", "doctor", "nurse", "hospital", "dead"],
+      "keywords": [
+        "love",
+        "alive",
+        "doctor",
+        "nurse",
+        "hospital",
+        "dead"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "code": {
-      "keywords": ["algorithm", "program", "programming"],
+      "keywords": [
+        "algorithm",
+        "program",
+        "programming"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.7.0", "unreleased"]
+          "updated": [
+            "1.7.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "share_arrow": {
-      "keywords": ["social"],
+      "keywords": [
+        "social"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "share": {
-      "keywords": ["social"],
+      "keywords": [
+        "social"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "share_mobile": {
-      "keywords": ["social"],
+      "keywords": [
+        "social"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "profile": {
-      "keywords": ["person", "avatar", "user"],
+      "keywords": [
+        "person",
+        "avatar",
+        "user"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "star": {
-      "keywords": ["like", "rate", "space"],
+      "keywords": [
+        "like",
+        "rate",
+        "space"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.7.0", "unreleased"]
+          "updated": [
+            "1.7.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "star_outlined": {
-      "keywords": ["like", "rate", "space"],
+      "keywords": [
+        "like",
+        "rate",
+        "space"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.7.0", "unreleased"]
+          "updated": [
+            "1.7.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "ellipsis": {
-      "keywords": ["menu", "more", "info", "dot", "meatballs"],
+      "keywords": [
+        "menu",
+        "more",
+        "info",
+        "dot",
+        "meatballs"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "dot": {
-      "keywords": ["full stop", "end"],
+      "keywords": [
+        "full stop",
+        "end"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "compass": {
-      "keywords": ["direction", "location"],
+      "keywords": [
+        "direction",
+        "location"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "add": {
-      "keywords": ["plus", "more", "save", "maths"],
+      "keywords": [
+        "plus",
+        "more",
+        "save",
+        "maths"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "cross": {
-      "keywords": ["exit", "multiply", "times", "close", "maths"],
+      "keywords": [
+        "exit",
+        "multiply",
+        "times",
+        "close",
+        "maths"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "divide": {
-      "keywords": ["division", "maths"],
+      "keywords": [
+        "division",
+        "maths"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "divide_straight": {
-      "keywords": ["division", "maths"],
+      "keywords": [
+        "division",
+        "maths"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "percent": {
-      "keywords": ["proportion", "maths"],
+      "keywords": [
+        "proportion",
+        "maths"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.6.0", "unreleased"]
+          "updated": [
+            "1.6.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "info": {
-      "keywords": ["information", "notification"],
+      "keywords": [
+        "information",
+        "notification"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "info_circle": {
-      "keywords": ["information", "notification"],
+      "keywords": [
+        "information",
+        "notification"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.9.0", "unreleased"]
+          "updated": [
+            "1.9.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "question": {
-      "keywords": ["notification"],
+      "keywords": [
+        "notification"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.6.0", "unreleased"]
+          "updated": [
+            "1.6.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "question_circle": {
-      "keywords": ["notification"],
+      "keywords": [
+        "notification"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.9.0", "unreleased"]
+          "updated": [
+            "1.9.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "warning": {
-      "keywords": ["notification", "error"],
+      "keywords": [
+        "notification",
+        "error"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.6.0", "unreleased"]
+          "updated": [
+            "1.6.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "warning_circle": {
-      "keywords": ["notification", "error"],
+      "keywords": [
+        "notification",
+        "error"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.9.0", "unreleased"]
+          "updated": [
+            "1.9.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "bin": {
-      "keywords": ["waste", "dustbin", "trash", "delete", "discard"],
+      "keywords": [
+        "waste",
+        "dustbin",
+        "trash",
+        "delete",
+        "discard"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "battery_full": {
-      "keywords": ["charge"],
+      "keywords": [
+        "charge"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.7.0", "unreleased"]
+          "updated": [
+            "1.7.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "battery_medium": {
-      "keywords": ["charge"],
+      "keywords": [
+        "charge"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.7.0", "unreleased"]
+          "updated": [
+            "1.7.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "battery_low": {
-      "keywords": ["charge"],
+      "keywords": [
+        "charge"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.7.0", "unreleased"]
+          "updated": [
+            "1.7.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "battery_empty": {
-      "keywords": ["charge"],
+      "keywords": [
+        "charge"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.7.0", "unreleased"]
+          "updated": [
+            "1.7.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "battery_warning": {
-      "keywords": ["charge"],
+      "keywords": [
+        "charge"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.7.0", "unreleased"]
+          "updated": [
+            "1.7.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "battery_charging": {
-      "keywords": ["charge"],
+      "keywords": [
+        "charge"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.7.0", "unreleased"]
+          "updated": [
+            "1.7.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "wi-fi": {
-      "keywords": ["internet", "wifi", "network"],
+      "keywords": [
+        "internet",
+        "wifi",
+        "network"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.4.0", "1.7.0", "unreleased"]
+          "updated": [
+            "1.4.0",
+            "1.7.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "visible": {
-      "keywords": ["see", "eye", "look", "show"],
+      "keywords": [
+        "see",
+        "eye",
+        "look",
+        "show"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "not_visible": {
-      "keywords": ["see", "eye", "look", "hide"],
+      "keywords": [
+        "see",
+        "eye",
+        "look",
+        "hide"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "ice_cream": {
-      "keywords": ["food", "dessert"],
+      "keywords": [
+        "food",
+        "dessert"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "shopping_cart": {
-      "keywords": ["basket", "tab"],
+      "keywords": [
+        "basket",
+        "tab"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "basket": {
-      "keywords": ["shopping", "tab"],
+      "keywords": [
+        "shopping",
+        "tab"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "hashtag": {
-      "keywords": ["numbers", "social", "link", "octothorpe"],
+      "keywords": [
+        "numbers",
+        "social",
+        "link",
+        "octothorpe"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "hand": {
-      "keywords": ["drag", "pointer", "cursor", "mouse"],
+      "keywords": [
+        "drag",
+        "pointer",
+        "cursor",
+        "mouse"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.6.0", "unreleased"]
+          "updated": [
+            "1.6.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "hand_point": {
-      "keywords": ["point", "pointer", "cursor", "mouse"],
+      "keywords": [
+        "point",
+        "pointer",
+        "cursor",
+        "mouse"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.6.0", "unreleased"]
+          "updated": [
+            "1.6.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "pointer": {
-      "keywords": ["point", "cursor", "mouse"],
+      "keywords": [
+        "point",
+        "cursor",
+        "mouse"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "pointer_pressed": {
-      "keywords": ["point", "cursor", "pressed", "mouse"],
+      "keywords": [
+        "point",
+        "cursor",
+        "pressed",
+        "mouse"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "refresh": {
-      "keywords": ["reload", "recycle"],
+      "keywords": [
+        "reload",
+        "recycle"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "play": {
-      "keywords": ["media", "continue"],
+      "keywords": [
+        "media",
+        "continue"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.6.0", "unreleased"]
+          "updated": [
+            "1.6.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "play_outlined": {
-      "keywords": ["media", "continue"],
+      "keywords": [
+        "media",
+        "continue"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.6.0", "unreleased"]
+          "updated": [
+            "1.6.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "pause": {
-      "keywords": ["media", "stop"],
+      "keywords": [
+        "media",
+        "stop"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "fast_forward": {
-      "keywords": ["media", "skip"],
+      "keywords": [
+        "media",
+        "skip"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "fast_forward_outlined": {
-      "keywords": ["media", "skip"],
+      "keywords": [
+        "media",
+        "skip"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "rewind": {
-      "keywords": ["media", "skip"],
+      "keywords": [
+        "media",
+        "skip"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "rewind_outlined": {
-      "keywords": ["media", "skip"],
+      "keywords": [
+        "media",
+        "skip"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "speaker": {
-      "keywords": ["media", "sound", "volume", "music"],
+      "keywords": [
+        "media",
+        "sound",
+        "volume",
+        "music"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "speaker_full": {
-      "keywords": ["media", "sound", "volume", "music"],
+      "keywords": [
+        "media",
+        "sound",
+        "volume",
+        "music"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.4.0", "unreleased"]
+          "updated": [
+            "1.4.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "speaker_medium": {
-      "keywords": ["media", "sound", "volume", "music"],
+      "keywords": [
+        "media",
+        "sound",
+        "volume",
+        "music"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "speaker_low": {
-      "keywords": ["media", "sound", "volume", "music"],
+      "keywords": [
+        "media",
+        "sound",
+        "volume",
+        "music"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "speaker_off": {
-      "keywords": ["media", "sound", "volume"],
+      "keywords": [
+        "media",
+        "sound",
+        "volume"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "speaker_muted": {
-      "keywords": ["media", "sound", "volume", "music"],
+      "keywords": [
+        "media",
+        "sound",
+        "volume",
+        "music"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "speaker_warning": {
-      "keywords": ["media", "sound", "volume", "music"],
+      "keywords": [
+        "media",
+        "sound",
+        "volume",
+        "music"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "clock": {
-      "keywords": ["time", "hour"],
+      "keywords": [
+        "time",
+        "hour"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "code_tag": {
-      "keywords": ["algorithm", "program", "programming"],
+      "keywords": [
+        "algorithm",
+        "program",
+        "programming"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.4.0", "1.7.0", "unreleased"]
+          "updated": [
+            "1.4.0",
+            "1.7.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "exit_text": {
-      "keywords": ["exit", "emergency", "door"],
+      "keywords": [
+        "exit",
+        "emergency",
+        "door"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.6.0", "unreleased"]
+          "updated": [
+            "1.6.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "exit": {
-      "keywords": ["exit", "emergency", "door", "logout"],
+      "keywords": [
+        "exit",
+        "emergency",
+        "door",
+        "logout"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["1.7.0", "unreleased"]
+          "updated": [
+            "1.7.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "power": {
-      "keywords": ["on", "off"],
+      "keywords": [
+        "on",
+        "off"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "dishwasher": {
-      "keywords": ["appliance", "kitchen", "dishes"],
+      "keywords": [
+        "appliance",
+        "kitchen",
+        "dishes"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "washing_machine": {
-      "keywords": ["appliance", "laundry", "cloths"],
+      "keywords": [
+        "appliance",
+        "laundry",
+        "cloths"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "oven": {
-      "keywords": ["appliance", "kitchen", "cook", "cooking"],
+      "keywords": [
+        "appliance",
+        "kitchen",
+        "cook",
+        "cooking"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "bulb": {
-      "keywords": ["light", "bright", "off"],
+      "keywords": [
+        "light",
+        "bright",
+        "off"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "bulb_on": {
-      "keywords": ["light", "bright", "on"],
+      "keywords": [
+        "light",
+        "bright",
+        "on"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "qr": {
-      "keywords": ["code", "scan"],
+      "keywords": [
+        "code",
+        "scan"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "qr_detailed": {
-      "keywords": ["code", "scan"],
+      "keywords": [
+        "code",
+        "scan"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "email": {
-      "keywords": ["mail", "message", "inbox", "compose", "post"],
+      "keywords": [
+        "mail",
+        "message",
+        "inbox",
+        "compose",
+        "post"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "send": {
-      "keywords": ["deliver", "compose", "mail"],
+      "keywords": [
+        "deliver",
+        "compose",
+        "mail"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "draft": {
-      "keywords": ["document", "mail", "file"],
+      "keywords": [
+        "document",
+        "mail",
+        "file"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "archive": {
-      "keywords": ["folder", "save", "mail"],
+      "keywords": [
+        "folder",
+        "save",
+        "mail"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "compose": {
-      "keywords": ["mail", "message", "new"],
+      "keywords": [
+        "mail",
+        "message",
+        "new"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "print": {
-      "keywords": ["document"],
+      "keywords": [
+        "document"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "inbox": {
-      "keywords": ["mail"],
+      "keywords": [
+        "mail"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "camera": {
-      "keywords": ["video", "call", "photo"],
+      "keywords": [
+        "video",
+        "call",
+        "photo"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "camera_outlined": {
-      "keywords": ["video", "call", "photo"],
+      "keywords": [
+        "video",
+        "call",
+        "photo"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "microphone": {
-      "keywords": ["audio", "record", "call"],
+      "keywords": [
+        "audio",
+        "record",
+        "call"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "microphone_outlined": {
-      "keywords": ["audio", "record", "call"],
+      "keywords": [
+        "audio",
+        "record",
+        "call"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "microphone_muted": {
-      "keywords": ["audio", "record", "call", "off", "mute"],
+      "keywords": [
+        "audio",
+        "record",
+        "call",
+        "off",
+        "mute"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "microphone_muted_outlined": {
-      "keywords": ["audio", "record", "call", "off", "mute"],
+      "keywords": [
+        "audio",
+        "record",
+        "call",
+        "off",
+        "mute"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "save": {
-      "keywords": ["document", "file"],
+      "keywords": [
+        "document",
+        "file"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "notification_alarm": {
-      "keywords": ["bell", "messages"],
+      "keywords": [
+        "bell",
+        "messages"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "key": {
-      "keywords": ["lock", "unlock", "security"],
+      "keywords": [
+        "lock",
+        "unlock",
+        "security"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["1.6.0", "unreleased"]
+          "updated": [
+            "1.6.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "padlock_outlined": {
-      "keywords": ["lock", "unlock", "security", "password"],
+      "keywords": [
+        "lock",
+        "unlock",
+        "security",
+        "password"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "padlock_unlocked_outlined": {
-      "keywords": ["lock", "unlock", "security", "password"],
+      "keywords": [
+        "lock",
+        "unlock",
+        "security",
+        "password"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "padlock": {
-      "keywords": ["lock", "unlock", "security", "password"],
+      "keywords": [
+        "lock",
+        "unlock",
+        "security",
+        "password"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "padlock_unlocked": {
-      "keywords": ["lock", "unlock", "security", "password"],
+      "keywords": [
+        "lock",
+        "unlock",
+        "security",
+        "password"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "lowercase": {
-      "keywords": ["text", "uppercase", "case", "caps"],
+      "keywords": [
+        "text",
+        "uppercase",
+        "case",
+        "caps"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["1.6.0", "unreleased"]
+          "updated": [
+            "1.6.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "uppercase": {
-      "keywords": ["text", "lowercase", "case", "caps"],
+      "keywords": [
+        "text",
+        "lowercase",
+        "case",
+        "caps"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["1.6.0", "unreleased"]
+          "updated": [
+            "1.6.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "upper_lower": {
-      "keywords": ["text", "lowercase", "case", "caps", "uppercase"],
+      "keywords": [
+        "text",
+        "lowercase",
+        "case",
+        "caps",
+        "uppercase"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "profile_outlined": {
-      "keywords": ["person", "avatar", "user"],
+      "keywords": [
+        "person",
+        "avatar",
+        "user"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["1.6.0", "unreleased"]
+          "updated": [
+            "1.6.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "profile_pair": {
-      "keywords": ["person", "avatar", "user"],
+      "keywords": [
+        "person",
+        "avatar",
+        "user"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["1.1.1", "1.6.0", "unreleased"]
+          "updated": [
+            "1.1.1",
+            "1.6.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
@@ -1665,517 +2477,781 @@
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "male_toilet": {
-      "keywords": ["female_toilet", "sign"],
+      "keywords": [
+        "female_toilet",
+        "sign"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "female_toilet": {
-      "keywords": ["male_toilet", "sign"],
+      "keywords": [
+        "male_toilet",
+        "sign"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "wc": {
-      "keywords": ["toilet", "female", "male", "sign"],
+      "keywords": [
+        "toilet",
+        "female",
+        "male",
+        "sign"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["1.7.0", "unreleased"]
+          "updated": [
+            "1.7.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "wc_sign": {
-      "keywords": ["toilet", "female", "male", "sign"],
+      "keywords": [
+        "toilet",
+        "female",
+        "male",
+        "sign"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "disabled_toilet": {
-      "keywords": ["toilet", "female", "male", "sign"],
+      "keywords": [
+        "toilet",
+        "female",
+        "male",
+        "sign"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "coffee": {
-      "keywords": ["drink", "food", "mug", "cup"],
+      "keywords": [
+        "drink",
+        "food",
+        "mug",
+        "cup"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "lamp": {
-      "keywords": ["light", "bulb", "house", "bedroom", "livingroom"],
+      "keywords": [
+        "light",
+        "bulb",
+        "house",
+        "bedroom",
+        "livingroom"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "video_cassette": {
-      "keywords": ["media", "video", "tape", "film", "tunes", "song", "album"],
+      "keywords": [
+        "media",
+        "video",
+        "tape",
+        "film",
+        "tunes",
+        "song",
+        "album"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "cd": {
-      "keywords": ["media", "video", "tape", "film", "tunes", "song", "album"],
+      "keywords": [
+        "media",
+        "video",
+        "tape",
+        "film",
+        "tunes",
+        "song",
+        "album"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["1.6.0", "unreleased"]
+          "updated": [
+            "1.6.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "music": {
-      "keywords": ["sound", "notes", "tunes", "song", "album"],
+      "keywords": [
+        "sound",
+        "notes",
+        "tunes",
+        "song",
+        "album"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "cut": {
-      "keywords": ["paste", "document", "file"],
+      "keywords": [
+        "paste",
+        "document",
+        "file"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["1.6.0", "unreleased"]
+          "updated": [
+            "1.6.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "pin": {
-      "keywords": ["save", "location"],
+      "keywords": [
+        "save",
+        "location"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "calendar": {
-      "keywords": ["date", "schedule"],
+      "keywords": [
+        "date",
+        "schedule"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["1.9.0", "unreleased"]
+          "updated": [
+            "1.9.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "pen": {
-      "keywords": ["write", "edit", "note"],
+      "keywords": [
+        "write",
+        "edit",
+        "note"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "pencil": {
-      "keywords": ["write", "edit", "note"],
+      "keywords": [
+        "write",
+        "edit",
+        "note"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "cloud": {
-      "keywords": ["internet", "files", "documents"],
+      "keywords": [
+        "internet",
+        "files",
+        "documents"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["1.2.0", "unreleased"]
+          "updated": [
+            "1.2.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "dial_phone": {
-      "keywords": ["phone", "contact", "talk"],
+      "keywords": [
+        "phone",
+        "contact",
+        "talk"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["1.4.0", "1.9.0", "unreleased"]
+          "updated": [
+            "1.4.0",
+            "1.9.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "camera_flip": {
-      "keywords": ["rotate", "spin", "photo"],
+      "keywords": [
+        "rotate",
+        "spin",
+        "photo"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["1.9.0", "unreleased"]
+          "updated": [
+            "1.9.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "hangup_phone": {
-      "keywords": ["phone", "contact", "talk", "end"],
+      "keywords": [
+        "phone",
+        "contact",
+        "talk",
+        "end"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["1.4.0", "unreleased"]
+          "updated": [
+            "1.4.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "attachment": {
-      "keywords": ["document", "file", "image", "picture"],
+      "keywords": [
+        "document",
+        "file",
+        "image",
+        "picture"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "settings": {
-      "keywords": ["preferences", "gear", "cog", "password"],
+      "keywords": [
+        "preferences",
+        "gear",
+        "cog",
+        "password"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "profile_circle": {
-      "keywords": ["person", "avatar", "user"],
+      "keywords": [
+        "person",
+        "avatar",
+        "user"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "tick": {
-      "keywords": ["accept", "agree", "check"],
+      "keywords": [
+        "accept",
+        "agree",
+        "check"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "tick_circle": {
-      "keywords": ["accept", "agree", "check"],
+      "keywords": [
+        "accept",
+        "agree",
+        "check"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["1.9.0", "unreleased"]
+          "updated": [
+            "1.9.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "money_pounds": {
-      "keywords": ["currency"],
+      "keywords": [
+        "currency"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["1.9.0", "unreleased"]
+          "updated": [
+            "1.9.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "money_dollars": {
-      "keywords": ["currency"],
+      "keywords": [
+        "currency"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["1.9.0", "unreleased"]
+          "updated": [
+            "1.9.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "new_document": {
-      "keywords": ["file", "add"],
+      "keywords": [
+        "file",
+        "add"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "home": {
-      "keywords": ["house", "family"],
+      "keywords": [
+        "house",
+        "family"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "home_outlined": {
-      "keywords": ["house", "family"],
+      "keywords": [
+        "house",
+        "family"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["1.6.0", "1.7.0", "unreleased"]
+          "updated": [
+            "1.6.0",
+            "1.7.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "calculator": {
-      "keywords": ["maths", "sum", "add", "multiply", "subtract", "divide"],
+      "keywords": [
+        "maths",
+        "sum",
+        "add",
+        "multiply",
+        "subtract",
+        "divide"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["1.6.0", "unreleased"]
+          "updated": [
+            "1.6.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "shopping_cart_reversed": {
-      "keywords": ["basket", "tab"],
+      "keywords": [
+        "basket",
+        "tab"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "picture": {
-      "keywords": ["image", "camera"],
+      "keywords": [
+        "image",
+        "camera"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "swap": {
-      "keywords": ["change", "reverse"],
+      "keywords": [
+        "change",
+        "reverse"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "swap_vertical": {
-      "keywords": ["change", "reverse"],
+      "keywords": [
+        "change",
+        "reverse"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "shield": {
-      "keywords": ["protect", "security"],
+      "keywords": [
+        "protect",
+        "security"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["1.6.0", "unreleased"]
+          "updated": [
+            "1.6.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "add_circle": {
-      "keywords": ["plus", "more", "save", "maths"],
+      "keywords": [
+        "plus",
+        "more",
+        "save",
+        "maths"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.0",
-          "updated": ["1.9.0", "unreleased"]
+          "updated": [
+            "1.9.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "preferences": {
-      "keywords": ["settings", "options", "filters"],
+      "keywords": [
+        "settings",
+        "options",
+        "filters"
+      ],
       "history": {
         "standard_base": {
           "created": "1.1.1",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "fire_outlined": {
-      "keywords": ["flame", "burn", "hot", "warm", "heat"],
+      "keywords": [
+        "flame",
+        "burn",
+        "hot",
+        "warm",
+        "heat"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "fire": {
-      "keywords": ["flame", "burn", "hot", "warm", "heat"],
+      "keywords": [
+        "flame",
+        "burn",
+        "hot",
+        "warm",
+        "heat"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
@@ -2193,10 +3269,13 @@
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["1.7.0", "unreleased"]
+          "updated": [
+            "1.7.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
@@ -2213,10 +3292,13 @@
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["1.7.0", "unreleased"]
+          "updated": [
+            "1.7.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
@@ -2234,10 +3316,12 @@
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
@@ -2255,10 +3339,12 @@
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
@@ -2276,413 +3362,599 @@
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "alarm": {
-      "keywords": ["wake", "clock", "time"],
+      "keywords": [
+        "wake",
+        "clock",
+        "time"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "graduation": {
-      "keywords": ["university", "school", "high school", "secondary school"],
+      "keywords": [
+        "university",
+        "school",
+        "high school",
+        "secondary school"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "graduation_outlined": {
-      "keywords": ["university", "school", "high school", "secondary school"],
+      "keywords": [
+        "university",
+        "school",
+        "high school",
+        "secondary school"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "moon": {
-      "keywords": ["night", "dark", "darkmode", "sky"],
+      "keywords": [
+        "night",
+        "dark",
+        "darkmode",
+        "sky"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "moon_outlined": {
-      "keywords": ["night", "dark", "darkmode", "sky"],
+      "keywords": [
+        "night",
+        "dark",
+        "darkmode",
+        "sky"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "rss": {
-      "keywords": ["feed"],
+      "keywords": [
+        "feed"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["1.7.0", "unreleased"]
+          "updated": [
+            "1.7.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "rss_outlined": {
-      "keywords": ["feed"],
+      "keywords": [
+        "feed"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "thumbprint": {
-      "keywords": ["biometrics"],
+      "keywords": [
+        "biometrics"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "accessibility": {
-      "keywords": ["wcag", "person"],
+      "keywords": [
+        "wcag",
+        "person"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "accessibility_outlined": {
-      "keywords": ["wcag", "person"],
+      "keywords": [
+        "wcag",
+        "person"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "female": {
-      "keywords": ["gender"],
+      "keywords": [
+        "gender"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "infinity": {
-      "keywords": ["infinite"],
+      "keywords": [
+        "infinite"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "link": {
-      "keywords": ["chain", "url", "address"],
+      "keywords": [
+        "chain",
+        "url",
+        "address"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "male": {
-      "keywords": ["gender"],
+      "keywords": [
+        "gender"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "mouse": {
-      "keywords": ["computer", "input"],
+      "keywords": [
+        "computer",
+        "input"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "shield_outlined": {
-      "keywords": ["protect", "security"],
+      "keywords": [
+        "protect",
+        "security"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "sun": {
-      "keywords": ["day", "light", "lightmode", "sky", "weather"],
+      "keywords": [
+        "day",
+        "light",
+        "lightmode",
+        "sky",
+        "weather"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "rain": {
-      "keywords": ["weather", "cloud", "water", "raining"],
+      "keywords": [
+        "weather",
+        "cloud",
+        "water",
+        "raining"
+      ],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "snow": {
-      "keywords": ["weather", "cloud", "ice"],
+      "keywords": [
+        "weather",
+        "cloud",
+        "ice"
+      ],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "hail": {
-      "keywords": ["weather", "cloud", "ice"],
+      "keywords": [
+        "weather",
+        "cloud",
+        "ice"
+      ],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "lightning": {
-      "keywords": ["weather", "cloud", "water", "raining", "thunder"],
+      "keywords": [
+        "weather",
+        "cloud",
+        "water",
+        "raining",
+        "thunder"
+      ],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "sunny_rain": {
-      "keywords": ["weather", "cloud", "sun", "sunny"],
+      "keywords": [
+        "weather",
+        "cloud",
+        "sun",
+        "sunny"
+      ],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "sun_outlined": {
-      "keywords": ["day", "light", "lightmode", "sky", "weather"],
+      "keywords": [
+        "day",
+        "light",
+        "lightmode",
+        "sky",
+        "weather"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "transgender": {
-      "keywords": ["gender"],
+      "keywords": [
+        "gender"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "loading_spinner": {
-      "keywords": ["progress"],
+      "keywords": [
+        "progress"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "mountain": {
-      "keywords": ["hill", "outdoors"],
+      "keywords": [
+        "hill",
+        "outdoors"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "mountain_outlined": {
-      "keywords": ["hill", "outdoors"],
+      "keywords": [
+        "hill",
+        "outdoors"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "bento": {
-      "keywords": ["navigation", "menu", "more", "info", "dot"],
+      "keywords": [
+        "navigation",
+        "menu",
+        "more",
+        "info",
+        "dot"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "doner": {
-      "keywords": ["navigation", "menu", "filter"],
+      "keywords": [
+        "navigation",
+        "menu",
+        "filter"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "grid_view": {
-      "keywords": ["navigation", "menu", "ellipsis", "more", "info"],
+      "keywords": [
+        "navigation",
+        "menu",
+        "ellipsis",
+        "more",
+        "info"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "kebab": {
-      "keywords": ["navigation", "menu", "ellipsis", "more", "info", "dot"],
+      "keywords": [
+        "navigation",
+        "menu",
+        "ellipsis",
+        "more",
+        "info",
+        "dot"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
@@ -2699,10 +3971,12 @@
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
@@ -2719,10 +3993,12 @@
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
@@ -2739,758 +4015,1089 @@
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "filter": {
-      "keywords": ["sort", "funnel"],
+      "keywords": [
+        "sort",
+        "funnel"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "filter_outlined": {
-      "keywords": ["sort", "funnel"],
+      "keywords": [
+        "sort",
+        "funnel"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["1.8.0", "unreleased"]
+          "updated": [
+            "1.8.0",
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "key_outlined": {
-      "keywords": ["lock", "unlock", "security"],
+      "keywords": [
+        "lock",
+        "unlock",
+        "security"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "terminal": {
-      "keywords": ["algorithm", "program", "programming", "code"],
+      "keywords": [
+        "algorithm",
+        "program",
+        "programming",
+        "code"
+      ],
       "history": {
         "standard_base": {
           "created": "1.7.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "cursor_text": {
-      "keywords": ["pointer", "cursor", "mouse", "text", "type"],
+      "keywords": [
+        "pointer",
+        "cursor",
+        "mouse",
+        "text",
+        "type"
+      ],
       "history": {
         "standard_base": {
           "created": "1.7.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "angry": {
-      "keywords": ["face", "emotion", "feeling"],
+      "keywords": [
+        "face",
+        "emotion",
+        "feeling"
+      ],
       "history": {
         "standard_base": {
           "created": "1.7.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "happy": {
-      "keywords": ["face", "emotion", "feeling"],
+      "keywords": [
+        "face",
+        "emotion",
+        "feeling"
+      ],
       "history": {
         "standard_base": {
           "created": "1.7.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "neutral": {
-      "keywords": ["face", "emotion", "feeling"],
+      "keywords": [
+        "face",
+        "emotion",
+        "feeling"
+      ],
       "history": {
         "standard_base": {
           "created": "1.7.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "sad": {
-      "keywords": ["face", "emotion", "feeling"],
+      "keywords": [
+        "face",
+        "emotion",
+        "feeling"
+      ],
       "history": {
         "standard_base": {
           "created": "1.7.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "flag": {
-      "keywords": ["country", "continent", "location", "pinpoint"],
+      "keywords": [
+        "country",
+        "continent",
+        "location",
+        "pinpoint"
+      ],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "flag_filled": {
-      "keywords": ["country", "continent", "location", "pinpoint"],
+      "keywords": [
+        "country",
+        "continent",
+        "location",
+        "pinpoint"
+      ],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "weight": {
-      "keywords": ["gym", "activity", "exercise", "workout"],
+      "keywords": [
+        "gym",
+        "activity",
+        "exercise",
+        "workout"
+      ],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "world": {
-      "keywords": ["globe", "network"],
+      "keywords": [
+        "globe",
+        "network"
+      ],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "basketball": {
-      "keywords": ["movement", "activity", "exercise", "sport"],
+      "keywords": [
+        "movement",
+        "activity",
+        "exercise",
+        "sport"
+      ],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "football": {
-      "keywords": ["movement", "activity", "exercise", "sport"],
+      "keywords": [
+        "movement",
+        "activity",
+        "exercise",
+        "sport"
+      ],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "cricket_ball": {
-      "keywords": ["movement", "activity", "exercise", "sport"],
+      "keywords": [
+        "movement",
+        "activity",
+        "exercise",
+        "sport"
+      ],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "rugby_ball": {
-      "keywords": ["movement", "activity", "exercise", "sport"],
+      "keywords": [
+        "movement",
+        "activity",
+        "exercise",
+        "sport"
+      ],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "tennis_ball": {
-      "keywords": ["movement", "activity", "exercise", "sport"],
+      "keywords": [
+        "movement",
+        "activity",
+        "exercise",
+        "sport"
+      ],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "american_football": {
-      "keywords": ["movement", "activity", "exercise", "sport"],
+      "keywords": [
+        "movement",
+        "activity",
+        "exercise",
+        "sport"
+      ],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "clock_eight_oclock": {
-      "keywords": ["time", "hour", "8"],
+      "keywords": [
+        "time",
+        "hour",
+        "8"
+      ],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "clock_eleven_oclock": {
-      "keywords": ["time", "hour", "11"],
+      "keywords": [
+        "time",
+        "hour",
+        "11"
+      ],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "clock_five_oclock": {
-      "keywords": ["time", "hour", "5"],
+      "keywords": [
+        "time",
+        "hour",
+        "5"
+      ],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "clock_four_oclock": {
-      "keywords": ["time", "hour", "4"],
+      "keywords": [
+        "time",
+        "hour",
+        "4"
+      ],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "clock_nine_oclock": {
-      "keywords": ["time", "hour", "9"],
+      "keywords": [
+        "time",
+        "hour",
+        "9"
+      ],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "clock_one_oclock": {
-      "keywords": ["time", "hour", "1"],
+      "keywords": [
+        "time",
+        "hour",
+        "1"
+      ],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "clock_seven_oclock": {
-      "keywords": ["time", "hour", "7"],
+      "keywords": [
+        "time",
+        "hour",
+        "7"
+      ],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "clock_six_oclock": {
-      "keywords": ["time", "hour", "6"],
+      "keywords": [
+        "time",
+        "hour",
+        "6"
+      ],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "clock_ten_oclock": {
-      "keywords": ["time", "hour", "10"],
+      "keywords": [
+        "time",
+        "hour",
+        "10"
+      ],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "clock_three_oclock": {
-      "keywords": ["time", "hour", "3"],
+      "keywords": [
+        "time",
+        "hour",
+        "3"
+      ],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "clock_twelve_oclock": {
-      "keywords": ["time", "hour", "12"],
+      "keywords": [
+        "time",
+        "hour",
+        "12"
+      ],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "clock_two_oclock": {
-      "keywords": ["time", "hour", "2"],
+      "keywords": [
+        "time",
+        "hour",
+        "2"
+      ],
       "history": {
         "standard_base": {
           "created": "1.8.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "bag": {
-      "keywords": ["shopping", "tab"],
+      "keywords": [
+        "shopping",
+        "tab"
+      ],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "bag_outlined": {
-      "keywords": ["shopping", "tab"],
+      "keywords": [
+        "shopping",
+        "tab"
+      ],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "basket_simple": {
-      "keywords": ["shopping", "tab"],
+      "keywords": [
+        "shopping",
+        "tab"
+      ],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "car": {
-      "keywords": ["travel", "vehicle"],
+      "keywords": [
+        "travel",
+        "vehicle"
+      ],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "chevron_updown": {
-      "keywords": ["direction", "expand", "arrow"],
+      "keywords": [
+        "direction",
+        "expand",
+        "arrow"
+      ],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "minus": {
-      "keywords": ["less", "remove", "maths", "delete"],
+      "keywords": [
+        "less",
+        "remove",
+        "maths",
+        "delete"
+      ],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "moped": {
-      "keywords": ["travel", "vehicle", "bike"],
+      "keywords": [
+        "travel",
+        "vehicle",
+        "bike"
+      ],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "train": {
-      "keywords": ["travel", "vehicle", "tram"],
+      "keywords": [
+        "travel",
+        "vehicle",
+        "tram"
+      ],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "translate": {
-      "keywords": ["language"],
+      "keywords": [
+        "language"
+      ],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "bookmark": {
-      "keywords": ["save"],
+      "keywords": [
+        "save"
+      ],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "bookmark_outlined": {
-      "keywords": ["save"],
+      "keywords": [
+        "save"
+      ],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "money_note": {
-      "keywords": ["currency", "note"],
+      "keywords": [
+        "currency",
+        "note"
+      ],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "cross_circle": {
-      "keywords": ["exit", "multiply", "times", "close", "maths"],
+      "keywords": [
+        "exit",
+        "multiply",
+        "times",
+        "close",
+        "maths"
+      ],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "expand": {
-      "keywords": ["fullscreen", "arrow"],
+      "keywords": [
+        "fullscreen",
+        "arrow"
+      ],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "fullscreen": {
-      "keywords": ["expand", "arrow"],
+      "keywords": [
+        "expand",
+        "arrow"
+      ],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "life_ring": {
-      "keywords": ["life guard", "safety", "water", "life boat"],
+      "keywords": [
+        "life guard",
+        "safety",
+        "water",
+        "life boat"
+      ],
       "history": {
         "standard_base": {
           "created": "1.9.0",
-          "updated": ["unreleased"]
+          "updated": [
+            "2.0.0"
+          ]
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "burger_simple": {
-      "keywords": ["burger", "menu", "side-bar", "hamburger"],
+      "keywords": [
+        "burger",
+        "menu",
+        "side-bar",
+        "hamburger"
+      ],
       "history": {
         "standard_base": {
           "created": "1.0.0",
           "updated": [],
-          "removed": "unreleased"
+          "removed": "2.0.0"
         }
       }
     },
     "speaker_error": {
-      "keywords": ["media", "sound", "volume", "music"],
+      "keywords": [
+        "media",
+        "sound",
+        "volume",
+        "music"
+      ],
       "history": {
         "standard_base": {
           "created": "1.6.0",
           "updated": [],
-          "removed": "unreleased"
+          "removed": "2.0.0"
         }
       }
     },
     "apple": {
-      "keywords": ["fruit", "food"],
+      "keywords": [
+        "fruit",
+        "food"
+      ],
       "history": {
         "standard_base": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "crop": {
-      "keywords": ["scale", "clip", "trim", "cut"],
+      "keywords": [
+        "scale",
+        "clip",
+        "trim",
+        "cut"
+      ],
       "history": {
         "standard_base": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "forward": {
-      "keywords": ["arrow", "right", "corner"],
+      "keywords": [
+        "arrow",
+        "right",
+        "corner"
+      ],
       "history": {
         "standard_base": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "map": {
-      "keywords": ["pin", "location"],
+      "keywords": [
+        "pin",
+        "location"
+      ],
       "history": {
         "standard_base": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "recycle": {
-      "keywords": ["rubbish", "reuse", "salvage"],
+      "keywords": [
+        "rubbish",
+        "reuse",
+        "salvage"
+      ],
       "history": {
         "standard_base": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "reply": {
-      "keywords": ["respond", "email", "mail", "answer"],
+      "keywords": [
+        "respond",
+        "email",
+        "mail",
+        "answer"
+      ],
       "history": {
         "standard_base": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "reply_all": {
-      "keywords": ["respond", "email", "mail", "answer"],
+      "keywords": [
+        "respond",
+        "email",
+        "mail",
+        "answer"
+      ],
       "history": {
         "standard_base": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "stop": {
-      "keywords": ["pause", "media"],
+      "keywords": [
+        "pause",
+        "media"
+      ],
       "history": {
         "standard_base": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
     },
     "train_side": {
-      "keywords": ["travel", "vehicle", "tram"],
+      "keywords": [
+        "travel",
+        "vehicle",
+        "tram"
+      ],
       "history": {
         "standard_base": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         },
         "standard_sm": {
-          "created": "unreleased",
+          "created": "2.0.0",
           "updated": []
         }
       }
