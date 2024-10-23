@@ -25,7 +25,7 @@ export default function WhatsNext() {
           </span>
         </Link>
         <Link
-          href="blog"
+          href="/blog"
           className="flex flex-col gap-1 rounded border border-border-neutral-primary p-4 no-underline hover:border-border-neutral-secondary dark:bg-bg-secondary"
         >
           <span className="tracking-tighter">Blog</span>
