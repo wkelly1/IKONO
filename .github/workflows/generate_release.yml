@@ -51,7 +51,7 @@ jobs:
             echo "Version has changed"
             
             latest_version=$(printf '%s\n' "${{ steps.get_base_version.outputs.BASE_VERSION }}" "${{ steps.get_current_version.outputs.CURRENT_VERSION }}" | sort -V | tail -n 1)
-            if [ "$latest_version" != "${{ steps.get_current_version.outputs.CURRENT_VERSION }}"]; then
+            if [ "$latest_version" != "${{ steps.get_current_version.outputs.CURRENT_VERSION }}" ]; then
               echo "Newly added version (${{ steps.get_base_version.outputs.BASE_VERSION }}) is older than current version (${{ steps.get_base_version.outputs.BASE_VERSION }})"
               echo "version_changed=false" >> $GITHUB_OUTPUT
             else

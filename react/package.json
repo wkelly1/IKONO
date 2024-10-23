@@ -12,8 +12,7 @@
     "dist/bundle.esm.js"
   ],
   "scripts": {
-    "build": "tsc --emitDeclarationOnly && rollup -c",
-    "prepare": "npm run build"
+    "build": "tsc --emitDeclarationOnly && rollup -c"
   },
   "peerDependencies": {
     "react": ">=17.0.2"

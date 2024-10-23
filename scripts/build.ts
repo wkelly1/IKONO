@@ -96,9 +96,12 @@ async function buildIcons(
 
   // Add any missing values to meta
   files.forEach(file => {
-    if (!meta[file]) {
+    if (!meta.icons[file]) {
       console.log(`meta missing key ${file} - adding`);
-      meta[file] = [];
+      meta.icons[file] = {
+        keywords: [],
+        history: {}
+      };
     }
   });
 
