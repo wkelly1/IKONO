@@ -10,10 +10,11 @@ on:
           - patch
           - minor
           - major
-          - prepatch
-          - preminor
-          - premajor
-          - prerelease
+          ## Pre-releases not currently supported
+          # - prepatch
+          # - preminor
+          # - premajor
+          # - prerelease
 
 jobs:
   release:
@@ -76,16 +77,10 @@ jobs:
       - name: Commit CHANGELOG.md and package.json changes and create tag
         run: |
           git add "package.json"
+          git add "react/package.json"
           git add "CHANGELOG.md"
           git commit -m "release ${{ env.NEW_VERSION }}"
           git tag ${{ env.NEW_VERSION }}
-
-      # Push repository changes
-      - name: Push changes to repository
-        env:
-          GITHUB_TOKEN: ${{ secrets.IKONO_TOKEN }}
-        run: |
-          git push origin && git push --tags
 
       # Read version changelog
       - id: get-changelog
@@ -96,12 +91,17 @@ jobs:
           version: ${{ env.NEW_VERSION }}
           operation: read
 
-      # Update GitHub release with changelog
-      - name: Update GitHub release documentation
-        uses: softprops/action-gh-release@v1
+      - name: Create Pull Request with new version
+        uses: peter-evans/create-pull-request@v5
         with:
-          tag_name: ${{ env.NEW_VERSION }}
-          body: ${{ steps.get-changelog.outputs.changelog }}
-          prerelease: ${{ startsWith(github.event.inputs.release-type, 'pre') }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.IKONO_TOKEN }}
+          token: ${{ secrets.IKONO_TOKEN }} # Use default GITHUB_TOKEN
+          commit-message: 'Release IKONO ${{ env.NEW_VERSION }}'
+          title: 'Release IKONO ${{ env.NEW_VERSION }}'
+          body: |
+            This is an automatically generated MR to release IKONO ${{ env.NEW_VERSION }}.
+
+            Changelog:
+            ${{ steps.get-changelog.outputs.changelog }}
+          base: main # The branch to merge into
+          branch: release-${{ env.NEW_VERSION}} # The branch where the commit is made
+          labels: automated-pr
