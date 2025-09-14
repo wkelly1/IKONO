@@ -18,27 +18,33 @@ module.exports = withPWA({
     return [
       {
         source: '/:path*',
-        headers: nextSafe({
-          isDev,
-          contentSecurityPolicy: {
-            'base-uri': "'none'",
-            'child-src': "'none'",
-            'connect-src': "'self'",
-            'default-src': "'self'",
-            'font-src': "'self'",
-            'form-action': "'self'",
-            'frame-ancestors': "'none'",
-            'frame-src': "'none'",
-            'img-src': "'self'",
-            'manifest-src': "'self'",
-            'object-src': "'none'",
-            'prefetch-src': "'self'",
-            'script-src': "'self'",
-            'style-src': "'self' 'unsafe-inline'",
-            'worker-src': "'self'",
-            reportOnly: false
+        headers: [
+          ...nextSafe({
+            isDev,
+            contentSecurityPolicy: {
+              'base-uri': "'none'",
+              'child-src': "'none'",
+              'connect-src': "'self'",
+              'default-src': "'self'",
+              'font-src': "'self'",
+              'form-action': "'self'",
+              'frame-ancestors': "'none'",
+              'frame-src': "'none'",
+              'img-src': "'self'",
+              'manifest-src': "'self'",
+              'object-src': "'none'",
+              'prefetch-src': "'self'",
+              'script-src': "'self'",
+              'style-src': "'self' 'unsafe-inline'",
+              'worker-src': "'self'",
+              reportOnly: false
+            }
+          }),
+          {
+            key: 'Permissions-Policy',
+            value: 'clipboard-write=(self)'
           }
-        })
+        ]
       }
     ];
   }
